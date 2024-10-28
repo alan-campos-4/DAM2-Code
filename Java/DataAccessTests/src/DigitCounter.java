@@ -1,3 +1,4 @@
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class DigitCounter
@@ -18,9 +19,9 @@ public class DigitCounter
 	 * Los números con 2 dígitos serían del 1 hasta el número más grande de 2 cifras (99) menos los números de 1 cifra.
 	 * 		99 - 9 = 90 números de 2 cifras
 	 * Los números con 3 dígitos serían del 1 hasta el 999 menos los números de 2 cifras y de 1 cifra.
-	 * 		999 - 99 - 9 = 900 números de 3 cifras
+	 * 		999 - 90 - 9 = 900 números de 3 cifras
 	 * Los números con 4 dígitos serían del 1 hasta el 9999 menos los números de 3, 2 y 1 cifras.
-	 * 		9999 - 999 - 99 - 9 = 9000 números de 4 cifras
+	 * 		9999 - 900 - 90 - 9 = 9000 números de 4 cifras
 	 * 
 	 * Observamos que siempre obtenemos un número que empieza por 9 seguido de una cantidad de ceros igual a la cantidad
 	 * 	de dígitos que buscamos menos 1. Esto se puede escribir como x = 9*10^(c-1)
@@ -33,37 +34,58 @@ public class DigitCounter
 	
 	public static void main(String[] args)
 	{
-		int d, resultDif, resultRec, resultPow;
+		int d=0;
 		input = new Scanner(System.in);
 		
-		System.out.print("Introduce un número de dígitos: ");
-		d = input.nextInt();
-		
-		resultDif = Method1(d);
-		resultRec = Method2(d);
-		resultPow = Method3(d);
-		
-		System.out.println("\nCon "+d+" dígito"+(d==1 ? "" : "s")+" existen:");
-		System.out.println(" - "+resultDif);
-		System.out.println(" - "+resultRec);
-		System.out.println(" - "+resultPow);
+		do {
+			System.out.print("Introduce un número de dígitos: ");
+			try
+			{
+				d = input.nextInt();
+				if (d!=0)
+				{
+					System.out.println("Con "+d+" dígito"+(d==1 ? "" : "s")+" existen:");
+					System.out.println(" - "+Method1(d));
+					System.out.println(" - "+Method2(d));
+					System.out.println(" - "+Method3(d));
+					System.out.println("\n");
+				}
+			}
+			catch (InputMismatchException e)	{System.out.print("Entrada no válida.");}
+		} while (d!=0);
 	}
+	
+	
+	
 	
 	public static int Method1(int digit)
 	{
-		int max = generate99(digit);;
-		int min = 10*(digit-1);
-		return max - min + 1;
+		if (digit==1)
+			return 9;
+		else
+			return (int) (generate99(digit) - Math.pow(10, digit-1) + 1);
 	}
 	
 	public static int Method2(int digit)
 	{
-		return 0;
+		if (digit==1)
+			return 9;
+		else
+		{
+			int res = generate99(digit);
+			int i = 1;
+			while (i<digit)
+			{
+				res -= 9*Math.pow(10, digit-1);
+				i++;
+			}
+			return res;
+		}
 	}
 	
 	public static int Method3(int digit)
 	{
-		return (int) (9 * Math.pow(10,digit-1));
+		return (int) (9 * Math.pow(10, digit-1));
 	}
 	
 	
