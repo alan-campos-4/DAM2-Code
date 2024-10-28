@@ -1,0 +1,85 @@
+import java.util.Scanner;
+
+public class DigitCounter
+{
+	static Scanner input;
+	
+	/*
+	 * ¿Cuántos números hay por cada cantidad de dígitos?
+	 * 
+	 * Sin contar el 0, los números enteros de 1 cifra son del 1 hasta el 9.
+	 * Los números con 2 dígitos serían del 10 hasta el 99. Por lo que tendríamos 99-10+1=90 números con 2 dígitos.
+	 * Se suma un 1 al final para que se incluyan todos los números en la diferencia.
+	 * Los números con 3 dígitos serían del 100 hasta el 999. Por lo que tendríamos 999-100+1=900 números con 3 dígitos.
+	 * Si repetimos con 4 dígitos tendríamos 9999-1000+1=9000 números con 4 dígitos.
+	 * 
+	 * Otra forma de calcular esta progresión es tomar el número más grande de una cantidad de cifras y restarle
+	 * los números de cantidad de cifras inferiores
+	 * Los números con 2 dígitos serían del 1 hasta el número más grande de 2 cifras (99) menos los números de 1 cifra.
+	 * 		99 - 9 = 90 números de 2 cifras
+	 * Los números con 3 dígitos serían del 1 hasta el 999 menos los números de 2 cifras y de 1 cifra.
+	 * 		999 - 99 - 9 = 900 números de 3 cifras
+	 * Los números con 4 dígitos serían del 1 hasta el 9999 menos los números de 3, 2 y 1 cifras.
+	 * 		9999 - 999 - 99 - 9 = 9000 números de 4 cifras
+	 * 
+	 * Observamos que siempre obtenemos un número que empieza por 9 seguido de una cantidad de ceros igual a la cantidad
+	 * 	de dígitos que buscamos menos 1. Esto se puede escribir como x = 9*10^(c-1)
+	 * 		donde x es la cantidad de números con c cifras.
+	 * 
+	 * En esta clase se calcula el número de una dada cantidad de cifras de las tres formas indicadas:
+	 * 	diferencial, recursiva y potencial.
+	 * 
+	 */
+	
+	public static void main(String[] args)
+	{
+		int d, resultDif, resultRec, resultPow;
+		input = new Scanner(System.in);
+		
+		System.out.print("Introduce un número de dígitos: ");
+		d = input.nextInt();
+		
+		resultDif = Method1(d);
+		resultRec = Method2(d);
+		resultPow = Method3(d);
+		
+		System.out.println("\nCon "+d+" dígito"+(d==1 ? "" : "s")+" existen:");
+		System.out.println(" - "+resultDif);
+		System.out.println(" - "+resultRec);
+		System.out.println(" - "+resultPow);
+	}
+	
+	public static int Method1(int digit)
+	{
+		int max = generate99(digit);;
+		int min = 10*(digit-1);
+		return max - min + 1;
+	}
+	
+	public static int Method2(int digit)
+	{
+		return 0;
+	}
+	
+	public static int Method3(int digit)
+	{
+		return (int) (9 * Math.pow(10,digit-1));
+	}
+	
+	
+	public static int generate99(int digit)
+	{
+		String res="";
+		for (int i=0; i<digit; i++)
+		{
+			res += "9";
+		}
+		return Integer.parseInt(res);
+	}
+	
+	
+	
+	
+	
+	
+}
