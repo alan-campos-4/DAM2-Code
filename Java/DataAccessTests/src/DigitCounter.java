@@ -31,33 +31,31 @@ public class DigitCounter
 	 * 	diferencial, recursiva y potencial.
 	 * 
 	 */
-	
 	public static void main(String[] args)
 	{
 		int d=0;
 		input = new Scanner(System.in);
 		
-		do {
-			System.out.print("Introduce un número de dígitos: ");
-			try
+		System.out.print("Introduce un número de dígitos: ");
+		try
+		{
+			d = input.nextInt();
+			if (d!=0)
 			{
-				d = input.nextInt();
-				if (d!=0)
-				{
-					System.out.println("Con "+d+" dígito"+(d==1 ? "" : "s")+" existen:");
-					System.out.println(" - "+Method1(d));
-					System.out.println(" - "+Method2(d));
-					System.out.println(" - "+Method3(d));
-					System.out.println("\n");
-				}
+				System.out.println("\nCon "+d+" dígito"+(d==1 ? "" : "s")+" existen");
+				System.out.println("  "+Method1(d) + " (diferencial)");
+				System.out.println("  "+Method2(d) + " (recursivo)");
+				System.out.println("  "+Method3(d) + " (potencial)");
+				System.out.println("  números posibles.");
 			}
-			catch (InputMismatchException e)	{System.out.print("Entrada no válida.");}
-		} while (d!=0);
+			else {System.out.print("Valor no válido.");}
+		}
+		catch (InputMismatchException e)	{System.out.print("Entrada no válida.");}
+		catch (NumberFormatException e)		{System.out.print("Valor no válido.");}
 	}
 	
 	
-	
-	
+	/* Método 1: Cálculo de Resta de mínimo y máximo */
 	public static int Method1(int digit)
 	{
 		if (digit==1)
@@ -66,40 +64,36 @@ public class DigitCounter
 			return (int) (generate99(digit) - Math.pow(10, digit-1) + 1);
 	}
 	
+	/* Método 2: Cálculo de Resta Recursiva */
 	public static int Method2(int digit)
 	{
-		if (digit==1)
-			return 9;
-		else
+		int res = generate99(digit);
+		int i = 1;
+		while (i<digit)
 		{
-			int res = generate99(digit);
-			int i = 1;
-			while (i<digit)
-			{
-				res -= 9*Math.pow(10, digit-1);
-				i++;
-			}
-			return res;
+			res -= (int) (9*Math.pow(10, digit-i-1));
+			i++;
 		}
+		return res;
 	}
 	
+	/* Método 3: Cálculo Potencial */
 	public static int Method3(int digit)
 	{
 		return (int) (9 * Math.pow(10, digit-1));
 	}
 	
 	
-	public static int generate99(int digit)
+	/* Genera un número compuesto de n cifras 9 */
+	public static int generate99(int n)
 	{
 		String res="";
-		for (int i=0; i<digit; i++)
+		for (int i=0; i<n; i++)
 		{
 			res += "9";
 		}
 		return Integer.parseInt(res);
 	}
-	
-	
 	
 	
 	

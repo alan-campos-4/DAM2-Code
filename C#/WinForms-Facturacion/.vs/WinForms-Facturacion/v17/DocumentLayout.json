@@ -3,11 +3,7 @@
   "WorkspaceRootPath": "C:\\Users\\DAM-A\\Sync\\DAM-2-Code\\C#\\WinForms-Facturacion\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{FAC36B81-3911-4CBE-A54A-04DA14C2CC6C}|WinForms-Facturacion.csproj|C:\\Users\\DAM-A\\Sync\\DAM-2-Code\\C#\\WinForms-Facturacion\\palta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FAC36B81-3911-4CBE-A54A-04DA14C2CC6C}|WinForms-Facturacion.csproj|solutionrelative:palta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FAC36B81-3911-4CBE-A54A-04DA14C2CC6C}|WinForms-Facturacion.csproj|c:\\users\\dam-a\\sync\\dam-2-code\\c#\\winforms-facturacion\\pprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{FAC36B81-3911-4CBE-A54A-04DA14C2CC6C}|WinForms-Facturacion.csproj|C:\\Users\\DAM-A\\Sync\\DAM-2-Code\\C#\\WinForms-Facturacion\\pprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FAC36B81-3911-4CBE-A54A-04DA14C2CC6C}|WinForms-Facturacion.csproj|solutionrelative:pprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -15,20 +11,16 @@
       "RelativeMoniker": "D:0:0:{FAC36B81-3911-4CBE-A54A-04DA14C2CC6C}|WinForms-Facturacion.csproj|solutionrelative:pprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FAC36B81-3911-4CBE-A54A-04DA14C2CC6C}|WinForms-Facturacion.csproj|C:\\Users\\DAM-A\\Sync\\DAM-2-Code\\C#\\WinForms-Facturacion\\palta.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FAC36B81-3911-4CBE-A54A-04DA14C2CC6C}|WinForms-Facturacion.csproj|solutionrelative:palta.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{FAC36B81-3911-4CBE-A54A-04DA14C2CC6C}|WinForms-Facturacion.csproj|C:\\Users\\DAM-A\\Sync\\DAM-2-Code\\C#\\WinForms-Facturacion\\palta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{FAC36B81-3911-4CBE-A54A-04DA14C2CC6C}|WinForms-Facturacion.csproj|solutionrelative:palta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FAC36B81-3911-4CBE-A54A-04DA14C2CC6C}|WinForms-Facturacion.csproj|C:\\Users\\DAM-A\\Sync\\DAM-2-Code\\C#\\WinForms-Facturacion\\itemlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FAC36B81-3911-4CBE-A54A-04DA14C2CC6C}|WinForms-Facturacion.csproj|solutionrelative:itemlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FAC36B81-3911-4CBE-A54A-04DA14C2CC6C}|WinForms-Facturacion.csproj|C:\\Users\\DAM-A\\Sync\\DAM-2-Code\\C#\\WinForms-Facturacion\\palta.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FAC36B81-3911-4CBE-A54A-04DA14C2CC6C}|WinForms-Facturacion.csproj|solutionrelative:palta.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FAC36B81-3911-4CBE-A54A-04DA14C2CC6C}|WinForms-Facturacion.csproj|C:\\Users\\DAM-A\\Sync\\DAM-2-Code\\C#\\WinForms-Facturacion\\item.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FAC36B81-3911-4CBE-A54A-04DA14C2CC6C}|WinForms-Facturacion.csproj|solutionrelative:item.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FAC36B81-3911-4CBE-A54A-04DA14C2CC6C}|WinForms-Facturacion.csproj|c:\\users\\dam-a\\sync\\dam-2-code\\c#\\winforms-facturacion\\palta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FAC36B81-3911-4CBE-A54A-04DA14C2CC6C}|WinForms-Facturacion.csproj|solutionrelative:palta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,11 +30,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 79,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "PPrincipal.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\DAM-A\\Sync\\DAM-2-Code\\C#\\WinForms-Facturacion\\PPrincipal.cs",
               "RelativeDocumentMoniker": "PPrincipal.cs",
@@ -55,13 +47,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "PPrincipal.cs",
               "DocumentMoniker": "C:\\Users\\DAM-A\\Sync\\DAM-2-Code\\C#\\WinForms-Facturacion\\PPrincipal.cs",
               "RelativeDocumentMoniker": "PPrincipal.cs",
               "ToolTip": "C:\\Users\\DAM-A\\Sync\\DAM-2-Code\\C#\\WinForms-Facturacion\\PPrincipal.cs",
               "RelativeToolTip": "PPrincipal.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAgwDQAAABLAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-22T07:22:41.274Z",
               "IsPinned": true,
@@ -69,7 +61,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
               "Title": "PAlta.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\DAM-A\\Sync\\DAM-2-Code\\C#\\WinForms-Facturacion\\PAlta.cs",
               "RelativeDocumentMoniker": "PAlta.cs",
@@ -82,13 +74,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "PAlta.cs",
               "DocumentMoniker": "C:\\Users\\DAM-A\\Sync\\DAM-2-Code\\C#\\WinForms-Facturacion\\PAlta.cs",
               "RelativeDocumentMoniker": "PAlta.cs",
               "ToolTip": "C:\\Users\\DAM-A\\Sync\\DAM-2-Code\\C#\\WinForms-Facturacion\\PAlta.cs",
               "RelativeToolTip": "PAlta.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAgwCIAAAANAAAAAAAAAA==",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAwwDQAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-22T07:25:02.744Z",
               "IsPinned": true,
@@ -115,32 +107,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ItemList.cs",
-              "DocumentMoniker": "C:\\Users\\DAM-A\\Sync\\DAM-2-Code\\C#\\WinForms-Facturacion\\ItemList.cs",
-              "RelativeDocumentMoniker": "ItemList.cs",
-              "ToolTip": "C:\\Users\\DAM-A\\Sync\\DAM-2-Code\\C#\\WinForms-Facturacion\\ItemList.cs",
-              "RelativeToolTip": "ItemList.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-23T12:21:31.73Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Item.cs",
-              "DocumentMoniker": "C:\\Users\\DAM-A\\Sync\\DAM-2-Code\\C#\\WinForms-Facturacion\\Item.cs",
-              "RelativeDocumentMoniker": "Item.cs",
-              "ToolTip": "C:\\Users\\DAM-A\\Sync\\DAM-2-Code\\C#\\WinForms-Facturacion\\Item.cs",
-              "RelativeToolTip": "Item.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-23T12:20:58.665Z",
-              "EditorCaption": ""
             }
           ]
         }

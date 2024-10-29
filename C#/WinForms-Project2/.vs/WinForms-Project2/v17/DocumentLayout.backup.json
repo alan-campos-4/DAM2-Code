@@ -7,15 +7,15 @@
       "RelativeMoniker": "D:0:0:{095E5DA7-1123-49A3-87F6-E31DFE95887D}|WinForms-Project2.csproj|solutionrelative:palumnosalta.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{095E5DA7-1123-49A3-87F6-E31DFE95887D}|WinForms-Project2.csproj|c:\\users\\dam-a\\sync\\dam-2-code\\c#\\winforms-project2\\palumnosalta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{095E5DA7-1123-49A3-87F6-E31DFE95887D}|WinForms-Project2.csproj|C:\\Users\\DAM-A\\Sync\\DAM-2-Code\\C#\\WinForms-Project2\\palumnosalta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{095E5DA7-1123-49A3-87F6-E31DFE95887D}|WinForms-Project2.csproj|solutionrelative:palumnosalta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{095E5DA7-1123-49A3-87F6-E31DFE95887D}|WinForms-Project2.csproj|c:\\users\\dam-a\\sync\\dam-2-code\\c#\\winforms-project2\\palumnosalta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{095E5DA7-1123-49A3-87F6-E31DFE95887D}|WinForms-Project2.csproj|C:\\Users\\DAM-A\\Sync\\DAM-2-Code\\C#\\WinForms-Project2\\palumnosalta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{095E5DA7-1123-49A3-87F6-E31DFE95887D}|WinForms-Project2.csproj|solutionrelative:palumnosalta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{095E5DA7-1123-49A3-87F6-E31DFE95887D}|WinForms-Project2.csproj|c:\\users\\dam-a\\sync\\dam-2-code\\c#\\winforms-project2\\pnotas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{095E5DA7-1123-49A3-87F6-E31DFE95887D}|WinForms-Project2.csproj|C:\\Users\\DAM-A\\Sync\\DAM-2-Code\\C#\\WinForms-Project2\\pnotas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{095E5DA7-1123-49A3-87F6-E31DFE95887D}|WinForms-Project2.csproj|solutionrelative:pnotas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -27,7 +27,7 @@
       "RelativeMoniker": "D:0:0:{095E5DA7-1123-49A3-87F6-E31DFE95887D}|WinForms-Project2.csproj|solutionrelative:palumnos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{095E5DA7-1123-49A3-87F6-E31DFE95887D}|WinForms-Project2.csproj|c:\\users\\dam-a\\sync\\dam-2-code\\c#\\winforms-project2\\palumnos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{095E5DA7-1123-49A3-87F6-E31DFE95887D}|WinForms-Project2.csproj|C:\\Users\\DAM-A\\Sync\\DAM-2-Code\\C#\\WinForms-Project2\\palumnos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{095E5DA7-1123-49A3-87F6-E31DFE95887D}|WinForms-Project2.csproj|solutionrelative:palumnos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
@@ -38,7 +38,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 79,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
@@ -50,8 +50,15 @@
               "RelativeToolTip": "PAlumnos.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-22T06:23:15.438Z",
-              "IsPinned": true,
-              "EditorCaption": " [Dise\u00F1o]"
+              "IsPinned": true
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
             },
             {
               "$type": "Document",
@@ -61,7 +68,7 @@
               "RelativeDocumentMoniker": "PAlumnosAlta.Designer.cs",
               "ToolTip": "C:\\Users\\DAM-A\\Sync\\DAM-2-Code\\C#\\WinForms-Project2\\PAlumnosAlta.Designer.cs",
               "RelativeToolTip": "PAlumnosAlta.Designer.cs",
-              "ViewState": "AgIAAEgAAAAAAAAAAAAAAEgAAAAPAAAAAAAAAA==",
+              "ViewState": "AgIAAFEAAAAAAAAAAAAAAFEAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-23T10:48:31.304Z",
               "EditorCaption": ""
@@ -76,8 +83,7 @@
               "RelativeToolTip": "PAlumnosAlta.cs",
               "ViewState": "AgIAACAAAAAAAAAAAADgvz8AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-23T10:46:12.031Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-23T10:46:12.031Z"
             },
             {
               "$type": "Document",
@@ -88,8 +94,7 @@
               "ToolTip": "C:\\Users\\DAM-A\\Sync\\DAM-2-Code\\C#\\WinForms-Project2\\PAlumnosAlta.cs [Dise\u00F1o]",
               "RelativeToolTip": "PAlumnosAlta.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-23T10:46:10.491Z",
-              "EditorCaption": " [Dise\u00F1o]"
+              "WhenOpened": "2024-10-23T10:46:10.491Z"
             },
             {
               "$type": "Document",
@@ -101,16 +106,7 @@
               "RelativeToolTip": "PNotas.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAD8AAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-23T10:46:02.598Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+              "WhenOpened": "2024-10-23T10:46:02.598Z"
             },
             {
               "$type": "Document",
@@ -122,8 +118,7 @@
               "RelativeToolTip": "PAlumnos.cs",
               "ViewState": "AgIAAFEAAAAAAAAAAAD4v9UAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-22T07:07:30.999Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-22T07:07:30.999Z"
             },
             {
               "$type": "Document",
@@ -134,8 +129,7 @@
               "ToolTip": "C:\\Users\\DAM-A\\Sync\\DAM-2-Code\\C#\\WinForms-Project2\\PNotas.cs [Dise\u00F1o]",
               "RelativeToolTip": "PNotas.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-22T06:45:24.583Z",
-              "EditorCaption": " [Dise\u00F1o]"
+              "WhenOpened": "2024-10-22T06:45:24.583Z"
             }
           ]
         }
