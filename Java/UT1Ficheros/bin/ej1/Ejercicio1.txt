@@ -13,6 +13,6 @@ El paquete java.io permite controlar la entrada y salida de datos a través de c
 (File, FilePermission, FileReader, FilePermission, BufferedReader, BufferedWriter, etc.) 
 y clases que trabajan con flujos de datos (FileInputStream, FileOutputStream, BufferedInputStream, BufferedOutputStream, etc.)
 
-El paquete java.nio, alternativamente, permite controlar la entrada y salida de datos a través de buffers, que funcionan como contenedores de datos asíncronos
+El paquete java.nio, alternativamente, permite controlar la entrada y salida de datos a través de buffers (ByteBuffer, CharBuffer, IntBuffer, DoubleBuffer, etc.), que funcionan como contenedores de datos asíncronos
 
 

@@ -1,10 +1,10 @@
-package RandomAccess;
 /*
  * 18. Consulta
  * Crea un programa que consulte los datos de un empleado del fichero aleatorio.
  * El programa se ejecutará desde la línea de comandos y debe recibir un identificador de empleado.
  * Si el empleado existe se visualizarán los datos, si no existe se visualizará un mensaje indicándolo.
  */
+package RandomAccess;
 import java.io.EOFException;
 import java.io.File;
 import java.io.FileNotFoundException;
