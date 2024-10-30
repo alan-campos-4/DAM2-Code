@@ -1,11 +1,15 @@
 package com.example.pruebakotlin
 
+import java.time.LocalDate
+import java.time.Year
+
 fun main()
 {
-    println("Ejercicios 2, 3, 4, 5, 6, 7, 8, 9, 10: ")
+    println("Ejercicios 2, 3, 4, 5, 6, 7, 8, 9, 10.")
     print("Elije uno: ")
 
     val stringInput = readLine()!!
+    println()
 
     when (stringInput.toInt())
     {
@@ -73,9 +77,9 @@ fun Ejercicio4()
     Kelvin a Celsius: °C = K - 273.15
     De Fahrenheit a Kelvin: K = 5/9 (°F - 32) + 273.15
     */
-    printFinalTemperature(27,"C","F",)
-    printFinalTemperature(350,"K","C",)
-    printFinalTemperature(10,"F","K",)
+    //printFinalTemperature(27,"C","F",)
+    //printFinalTemperature(350,"K","C",)
+    //printFinalTemperature(10,"F","K",)
 }
 fun printFinalTemperature(
     initialMeasurement: Double,
@@ -92,15 +96,44 @@ fun printFinalTemperature(
 
 fun Ejercicio5()
 {
-    //
+    var Song1 = Song("Made in Heaven", "Queen", 1991, 50000)
+    Song1.printDesc()
 }
+class Song(val title:String, val artist:String, val releaseYear:Int, var replays:Int)
+{
+    var popular:Boolean
+    init {
+        if (replays<1000)   popular = false;
+        else                popular = true;
+    }
+    fun printDesc() { println("$title, interpretada por $artist, se lanzó en $releaseYear") }
+}
+
 
 
 
 fun Ejercicio6()
 {
-    //
+    val amanda = Person("Amanda", 33, "play tennis", null)
+    val atiqah = Person("Atiqah", 28, "climb", amanda)
+
+    amanda.showProfile()
+    atiqah.showProfile()
 }
+class Person(val name: String, val age: Int, val hobby: String?, val referrer: Person?)
+{
+    fun showProfile()
+    {
+        println("Name: $name")
+        println("Age: $age")
+        print("Likes to $hobby.")
+        if (referrer==null)
+            println(" Doesn't have a referrer.\n")
+        else
+            println(" Has a referrer named ${referrer.name}, who likes to ${referrer.hobby}.\n")
+    }
+}
+
 
 
 
