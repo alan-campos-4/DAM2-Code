@@ -31,25 +31,30 @@ public class Ejercicio2
 			int wordCount = 0;
 			String line;
 			String[] words;
+			//Se utiliza BufferedReader	por su eficiencia en leer caracteres y líneas.
 			BufferedReader br = new BufferedReader(new FileReader(new File(args[0])));
 			
+			//Mientras la línea que se lee no sea nula,
 			while ((line = br.readLine()) != null)
 			{
+				//si la línea no está vacía,
 	            if (!line.equals(""))
 	            {
+	            	//se añaden las palabras leídas a la cuenta.
 	                words = line.split("\\s+"); 
 	                wordCount += words.length;
 	            }
 	        }
 			
+			//Imprime por pantalla el número de palabras.
 			System.out.println(" Este archivo contiene "+wordCount+" palabras.");
 			br.close();
 		}
 		//Se lanza cuando no se ha introducido el argumento
-		catch (ArrayIndexOutOfBoundsException e)	{System.out.println(" Se debe pasar 1 argumento.");}
+		catch (ArrayIndexOutOfBoundsException e)	{System.out.println("  Se debe pasar 1 argumento.");}
 		//Se lanza cuando la ruta de fichero por argumento no es valida
-		catch (FileNotFoundException e)				{System.out.println(" No se encontró el archivo.");}
-		//Es lanzado por BufferedReader.readLine()
+		catch (FileNotFoundException e)				{System.out.println("  No se encontró el archivo.");}
+		//Lnzado por BufferedReader.readLine()
 		catch (IOException e)						{e.printStackTrace();}
 		
 		System.out.println();

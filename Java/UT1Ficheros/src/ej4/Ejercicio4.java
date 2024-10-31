@@ -43,6 +43,7 @@ import java.util.Scanner;
 public class Ejercicio4
 {
 	static Scanner input;
+	static File recordfile;
 	
 	public static void clear()
 	{
@@ -86,26 +87,19 @@ public class Ejercicio4
 				{aut = aut.substring(0, 30);}
 			this.autor = aut.toCharArray();
 		}
-		
-		public void mostratLibro()
-		{
-			System.out.println("- "+this.titulo.toString());
-			System.out.println("    "+this.autor.toString()+" ("+this.anio+")");
-			System.out.println("    "+this.disp);
-		}
 	}
 	/* Tamaño total en bytes de una instancia de la clase Libro
 	 * 		id		int			4 bytes
-	 * 		titulo	char[50]	2*50 bytes
-	 *		autor	char[30]	2*30 bytes
+	 * 		titulo	char[50]	2 bytes*50
+	 *		autor	char[30]	2 bytes*30
 	 *		anio	int			4 bytes
 	 *		disp	boolean		1 bytes
 	 * 		4 + 2*50 + 2*30 + 4 + 1 = 169 bytes */
 	public static int sizeOfLibro = 196;
 	
 	
-	/* Método para encontrar el ID de un libro. Devuelve -1 si no lo encuentra */
-	public static int findID(RandomAccessFile file, String idToFind)
+	/* Método para encontrar el ID de un libro. Devuelve -1 si no lo encuentra. */
+	public static int findID(RandomAccessFile file, int idToFind)
 	{
 		int posicion = 0, id;
 		boolean found = false;
@@ -118,7 +112,7 @@ public class Ejercicio4
 				file.seek(posicion);	//nos colocamos en posicion
 				id = file.readInt();	//obtenemos el id de empleado
 				
-				if (idToFind.equals(String.valueOf(id)))
+				if (idToFind==id)
 				{
 					found = true;		//si coincide con el id que buscamos
 					break;				//se considera encontrado y termina el bucle 
@@ -136,8 +130,103 @@ public class Ejercicio4
 	
 	
 	
+	
+	
+	// El usuario introducirá la información necesaria para agregar un nuevo libro a la biblioteca.
+	public static void anadirLibro()
+	{
+		//
+	}
+	
+	
+	
+	
+	// Se buscará un libro por su ID y se mostrarán sus detalles (si existe).
+	public static void consultarLibro()
+	{
+		try
+		{
+			RandomAccessFile raf = new RandomAccessFile(recordfile, "rw");
+			
+			System.out.print("Introduce el id: ");
+			int idToFind = input.nextInt();
+			
+			int posicion = findID(raf, idToFind);
+			
+			//Si la posicion existe
+			if (posicion!=-1)
+			{
+				int id, year;
+				char[] title = new char[50];
+				char[] author = new char[30];
+				boolean disp;
+				
+				//Lee los elementos
+				id = raf.readInt();
+				for (int i=0; i<title.length; i++)
+				{
+					title[i] = raf.readChar();
+				}
+				for (int i=0; i<author.length; i++)
+				{
+					author[i] = raf.readChar();
+				}
+				year = raf.readInt();
+				disp = raf.readBoolean();
+				
+				//Y los imprime
+				System.out.println("\n- "+id+") "+title.toString());
+				System.out.println("    "+author.toString()+" ("+year+")");
+				System.out.println("    "+(disp? "Disponible" : "No disponible")+".");
+			}
+			else {System.out.println("  El libro no existe.");}
+			
+			raf.close();
+		}
+		//Se lanza cuando no se ha introducido el argumento
+		catch (ArrayIndexOutOfBoundsException e)	{System.out.println(" Se debe pasar 1 argumento.");}
+		//Se lanza cuando la ruta de fichero por argumento no es valida
+		catch (FileNotFoundException e)				{System.out.println(" No se encontró el archivo.");}
+		//Es lanzado por BufferedReader.readLine()
+		catch (IOException e)						{e.printStackTrace();}
+	}
+	
+	
+	
+	
+	// Permitir al usuario modificar el título, el autor o el año de publicación de un libro existente.
+	public static void modificarLibro()
+	{
+		//
+	}
+	
+	
+	
+	
+	// Marcar un libro como no disponible, eliminándolo lógicamente (sin borrar el registro del fichero).
+	public static void eliminarLibro()
+	{
+		//
+	}
+	
+	
+	
+	
+	// Mostrar en pantalla los libros que están disponibles para préstamo.
+	public static void listarLibrosDisponibles()
+	{
+		//
+	}
+	
+	
+	
+	
+	
+	
+	// MAIN
 	public static void main(String[] args)
 	{
+		recordfile = new File("libros.dat");
 		input = new Scanner(System.in);
 		int op = 0;
 		
@@ -150,7 +239,7 @@ public class Ejercicio4
 			System.out.println("5. Listar todos los libros disponibles.");
 			System.out.println("0. Salir");
 			System.out.print("\nSelecciona una opcion: ");
-
+			
 			try
 			{
 				op = input.nextInt();
@@ -171,92 +260,7 @@ public class Ejercicio4
 			catch (InputMismatchException e)	{System.out.println("\nOpción no válida.");}
 		
 		} while (op!=0);
-		
-		
-		
-		
-		
-		
-		
-		
-				
 	}
-	
-	
-	
-	
-	/* o	Añadir un nuevo libro:
-	 * El usuario introducirá la información necesaria para agregar un nuevo libro a la biblioteca. */
-	public static void anadirLibro()
-	{
-		//
-	}
-	
-	
-	
-	
-	/* o	Consultar libro por ID:
-	 * Se buscará un libro por su ID y se mostrarán sus detalles (si existe). */
-	public static void consultarLibro()
-	{
-		try
-		{
-			RandomAccessFile raf = new RandomAccessFile(new File(""), "rw");
-			
-				
-			int posicion = findID(raf, "");
-				
-			raf.close();
-				
-			if (posicion!=-1)
-				{System.out.println("  El empleado está en la posicion "+posicion+".");}
-			else
-				{System.out.println("  El empleado no existe.");}
-			
-			
-		}
-		//Se lanza cuando no se ha introducido el argumento
-		catch (ArrayIndexOutOfBoundsException e)	{System.out.println(" Se debe pasar 1 argumento.");}
-		//Se lanza cuando la ruta de fichero por argumento no es valida
-		catch (FileNotFoundException e)				{System.out.println(" No se encontró el archivo.");}
-		//Es lanzado por BufferedReader.readLine()
-		catch (IOException e)						{e.printStackTrace();}
-	}
-	
-	
-	
-	
-	/* o	Modificar los datos de un libro: 
-	 * Permitir al usuario modificar el título, el autor o el año de publicación de un libro existente. */
-	public static void modificarLibro()
-	{
-		//
-	}
-	
-	
-	
-	
-	/* o	Eliminar un libro: 
-	 * Marcar un libro como no disponible, eliminándolo lógicamente (sin borrar el registro del fichero). */
-	public static void eliminarLibro()
-	{
-		//
-	}
-	
-	
-	
-	
-	/* o	Listar todos los libros disponibles: 
-	 * Mostrar en pantalla los libros que están disponibles para préstamo.*/
-	public static void listarLibrosDisponibles()
-	{
-		//
-	}
-	
-	
-	
-	
-	
 	
 	
 	

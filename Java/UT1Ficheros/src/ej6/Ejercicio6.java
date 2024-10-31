@@ -14,6 +14,11 @@ package ej6;
 
 public class Ejercicio6
 {
+	public static class Entrada
+	{
+		
+	}
+	
 	public static void main(String[] args)
 	{
 		//
