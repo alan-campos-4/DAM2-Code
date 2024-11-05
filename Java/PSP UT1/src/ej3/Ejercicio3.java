@@ -8,12 +8,17 @@ import java.util.Optional;
 
 public class Ejercicio3
 {
+	/*
+	 * Error en el programa:
+	 * El proceso de la aplicación de calculadora "calc.exe" se considera terminado por este programa antes de que se cierre
+	 * porque el proceso que se lanza no es el mismo que la aplicación
+	 */
     public static void main(String[] args)
     {
     	ArrayList<String> commands = new ArrayList<String>();
     	commands.add("mspaint");
-    	//commands.add("Taskmgr");
-    	//commands.add("calc");
+    	commands.add("Taskmgr");
+    	commands.add("\"C:\\Windows\\System32\\calc.exe\"");
     	for (String command : commands)
     	{
     		try

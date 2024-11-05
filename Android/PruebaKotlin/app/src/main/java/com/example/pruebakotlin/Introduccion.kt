@@ -77,9 +77,9 @@ fun Ejercicio4()
     Kelvin a Celsius: °C = K - 273.15
     De Fahrenheit a Kelvin: K = 5/9 (°F - 32) + 273.15
     */
-    //printFinalTemperature(27,"C","F",)
-    //printFinalTemperature(350,"K","C",)
-    //printFinalTemperature(10,"F","K",)
+    printFinalTemperature(27.0,"C","F") {9.0 / 5.0 * it + 32}
+    printFinalTemperature(350.0,"K","C") {it - 273.15}
+    printFinalTemperature(10.0,"F","K") {5.0 / 9.0 * (it - 32) + 273.15}
 }
 fun printFinalTemperature(
     initialMeasurement: Double,

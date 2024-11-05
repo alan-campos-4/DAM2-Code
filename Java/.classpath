@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<classpath>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-	<classpathentry kind="src" path="AD Práctica Ficheros/src"/>
-	<classpathentry kind="src" path="DataAccessTests/src"/>
-	<classpathentry kind="src" path="ProcessProgTests/src"/>
-	<classpathentry kind="src" path="PSP UT1/src"/>
-	<classpathentry kind="output" path="DataAccessTests/bin"/>
-</classpath>
