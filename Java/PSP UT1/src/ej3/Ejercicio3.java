@@ -18,7 +18,7 @@ public class Ejercicio3
     	ArrayList<String> commands = new ArrayList<String>();
     	commands.add("mspaint");
     	commands.add("Taskmgr");
-    	commands.add("\"C:\\Windows\\System32\\calc.exe\"");
+    	commands.add("notepad");
     	for (String command : commands)
     	{
     		try

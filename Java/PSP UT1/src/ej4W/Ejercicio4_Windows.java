@@ -86,8 +86,7 @@ public class Ejercicio4_Windows
 		
 		
 		
-		//String command = "powershell.exe -Command tasklist /fi \"STATUS eq running\"";
-		String[] command = {"powershell.exe", "-Command", "tasklist"}; // Sample PowerShell command
+		String[] command = {"cmd.exe", "/c", "tasklist /fi \"STATUS eq running\""};
         try
         {
             ProcessBuilder processBuilder = new ProcessBuilder(command); // Split command into arguments
