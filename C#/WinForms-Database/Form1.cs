@@ -21,8 +21,6 @@ namespace WinForms_Database
         }
 
         public static string connectionString = "Server=localhost;Database=instituto;User ID=root;Password=root;SslMode=none";
-        public static string table1 = "alumnos";
-        public static string table2 = "notas";
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -38,11 +36,6 @@ namespace WinForms_Database
             string query1 = "SELECT * FROM alumnos";
             MySqlCommand comando = new MySqlCommand(query1, connection);
             MySqlDataReader reader1 = comando.ExecuteReader();
-            dataGridStudents.Columns.Clear();
-            for (var col = 0; col < reader1.FieldCount; col++)
-            {
-                dataGridStudents.Columns.Add(reader1.GetName(col), reader1.GetName(col));
-            }
             while (reader1.Read())
             {
                 object[] newrow = new object[reader1.FieldCount];
@@ -53,6 +46,7 @@ namespace WinForms_Database
                 dataGridStudents.Rows.Add(newrow);
             }
             reader1.Close();
+            //dataGridStudents.Columns["codigo"].Visible = false;
 
             // 
             // Load colummns and items in DataGridScores
@@ -60,11 +54,6 @@ namespace WinForms_Database
             string query2 = "SELECT * FROM notas";
             MySqlCommand comando2 = new MySqlCommand(query2, connection);
             MySqlDataReader reader2 = comando2.ExecuteReader();
-            dataGridScores.Columns.Clear();
-            for (var col = 0; col < reader2.FieldCount; col++)
-            {
-                dataGridScores.Columns.Add(reader2.GetName(col), reader2.GetName(col));
-            }
             while (reader2.Read())
             {
                 object[] newrow = new object[reader2.FieldCount];
@@ -75,10 +64,8 @@ namespace WinForms_Database
                 dataGridScores.Rows.Add(newrow);
             }
             reader2.Close();
-            foreach (DataGridViewRow row in dataGridScores.Rows)
-            {
-                row.Visible = true;
-            }
+            //dataGridScores.Columns["codigo"].Visible = false;
+            //dataGridScores.Columns["CodigoAlumno"].Visible = false;
 
             // 
             // Load Provincias in ComboBox
@@ -96,83 +83,13 @@ namespace WinForms_Database
             dataGridStudents.ClearSelection();
             dataGridScores.ClearSelection();
 
-            UpdateAverage();
-
-            connection.Close();
-        }
-
-        public void UpdateDataGrid(DataGridView dgv, string tablename)
-        {
-            MySqlConnection connection = new MySqlConnection(connectionString);
-            connection.Open();
-            string query = "SELECT * FROM "+tablename;
-            MySqlCommand comando = new MySqlCommand(query, connection);
-            MySqlDataReader reader = comando.ExecuteReader();
-
-            while (reader.Read())
-            {
-                object[] newrow = new object[reader.FieldCount];
-                for (var cell = 0; cell < reader.FieldCount; cell++)
-                {
-                    newrow[cell] = reader.GetValue(cell);
-                }
-                dgv.Rows.Add(newrow);
-            }
-            reader.Close();
-            connection.Close();
-        }
-
-        public void UpdateAverage()
-        {
-            MySqlConnection connection = new MySqlConnection(connectionString);
-            connection.Open();
-            string query = "SELECT * FROM notas";
-            MySqlCommand comando = new MySqlCommand(query, connection);
-            MySqlDataReader reader = comando.ExecuteReader();
-
-            double sum = 0.0;
-            int total = 0;
-
-            while (reader.Read())
-            {
-                foreach (DataGridViewRow row in dataGridScores.Rows)
-                {
-                    if (row.Visible == true)
-                    {
-                        sum += (double)reader["nota"];
-                        total++;
-                    }
-                }
-            }
-            toolStripStatusLabel1.Text = (sum / total).ToString();
-
-            reader.Close();
-            connection.Close();
+            toolStripStatusLabel1.Text = "";
         }
 
 
 
         
 
-
-        private void ComboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            foreach (DataGridViewRow row in dataGridStudents.Rows)
-            {
-                row.Visible = true;
-            }
-            if (comboBox1.SelectedIndex != 0)
-            {
-                for (int i = 0; i < dataGridStudents.Rows.Count; i++)
-                {
-                    if (!dataGridStudents.Rows[i].Cells[4].Value.Equals(comboBox1.SelectedItem.ToString()))
-                    {
-                        dataGridStudents.Rows[i].Visible = false;
-                    }
-                }
-            }
-            UpdateAverage();
-        }
 
         private void BorrarToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -221,19 +138,17 @@ namespace WinForms_Database
                     PantallaMod.textBoxLName.Text = reader["apellidos"].ToString();
                     PantallaMod.textBoxPhone.Text = reader["telefono"].ToString();
                     PantallaMod.textBoxProvince.Text = reader["provincia"].ToString();
-                    PantallaMod.textBoxScore.Text = reader["nota"].ToString();
                 }
                 reader.Close();
                 
                 if (PantallaMod.ShowDialog() == DialogResult.OK) 
                 {
-                    string updateQuery = "UPDATE alumnos SET nombre=@Nom, apellidos=@Apel, telefono=@Tele, provincia=@Prov, nota=@Note WHERE codigo=@ID";
+                    string updateQuery = "UPDATE alumnos SET nombre=@Nom, apellidos=@Apel, telefono=@Tele, provincia=@Prov WHERE codigo=@ID";
                     MySqlCommand updateCommand = new MySqlCommand(updateQuery, connection);
                     updateCommand.Parameters.AddWithValue("@Nom",   PantallaMod.textBoxName.Text);
                     updateCommand.Parameters.AddWithValue("@Apel",  PantallaMod.textBoxLName.Text);
                     updateCommand.Parameters.AddWithValue("@Tele",  PantallaMod.textBoxPhone.Text);
                     updateCommand.Parameters.AddWithValue("@Prov",  PantallaMod.textBoxProvince.Text);
-                    updateCommand.Parameters.AddWithValue("@Note",  PantallaMod.textBoxScore.Text);
                     updateCommand.Parameters.AddWithValue("@ID",    idSeleccion);
 
                     try
@@ -248,11 +163,196 @@ namespace WinForms_Database
                     catch (Exception ex) { MessageBox.Show($"Error al modificar el registro: {ex.Message}"); }
                 }
                 
-                //UpdateDataGrid();
                 UpdateAverage();
                 connection.Close();
             }
             else {MessageBox.Show("Ninguna fila seleccionada");}
         }
+
+
+
+
+
+
+        private void ComboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            foreach (DataGridViewRow row in dataGridStudents.Rows)
+            {
+                row.Visible = true;
+            }
+            if (comboBox1.SelectedIndex != 0)
+            {
+                for (int i = 0; i < dataGridStudents.Rows.Count; i++)
+                {
+                    if (!dataGridStudents.Rows[i].Cells[4].Value.Equals(comboBox1.SelectedItem.ToString()))
+                    {
+                        dataGridStudents.Rows[i].Visible = false;
+                    }
+                }
+            }
+        }
+
+        private void DataGridStudents_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (dataGridStudents.SelectedRows.Count > 0)
+            {
+                MySqlConnection connection = new MySqlConnection(connectionString);
+                connection.Open();
+
+                int idSeleccion = int.Parse(dataGridStudents.SelectedRows[0].Cells[0].Value.ToString());
+
+                string selectQuery = "SELECT * FROM notas WHERE CodigoAlumno = @ID";
+                MySqlCommand selectCommand = new MySqlCommand(selectQuery, connection);
+                selectCommand.Parameters.AddWithValue("@ID", idSeleccion);
+                MySqlDataReader reader = selectCommand.ExecuteReader();
+
+                dataGridScores.Rows.Clear();
+                while (reader.Read())
+                {
+                    object[] newrow = new object[reader.FieldCount];
+                    for (var cell = 0; cell < reader.FieldCount; cell++)
+                    {
+                        newrow[cell] = reader.GetValue(cell);
+                    }
+                    dataGridScores.Rows.Add(newrow);
+                }
+                reader.Close();
+                connection.Close();
+
+                dataGridScores.ClearSelection();
+                UpdateAverage();
+            }
+        }
+
+        public void UpdateAverage()
+        {
+            double sum = 0.0;
+            int total = 0;
+            foreach (DataGridViewRow row in dataGridScores.Rows)
+            {
+                sum += (double)row.Cells[3].Value;
+                total++;
+            }
+            toolStripStatusLabel1.Text = (sum / total).ToString();
+        }
+
+
+
+
+
+
+        private void buttonAddScore_Click(object sender, EventArgs e)
+        {
+            MySqlConnection connection = new MySqlConnection(connectionString);
+            connection.Open();
+            PModNota PantallaMod = new PModNota();
+
+            if (PantallaMod.ShowDialog() == DialogResult.OK)
+            {
+                string insertQuery = "INSERT INTO notas (Codigo, CodigoAlumno, Asignatura, Nota) VALUES (@Cod, @CodAl, @Asig, @Nota)";
+                MySqlCommand updateCommand = new MySqlCommand(insertQuery, connection);
+                updateCommand.Parameters.AddWithValue("@Cod", PantallaMod.textBoxCode1.Text);
+                updateCommand.Parameters.AddWithValue("@CodAl", PantallaMod.textBoxCode2.Text);
+                updateCommand.Parameters.AddWithValue("@Asig", PantallaMod.textBoxSubject.Text);
+                updateCommand.Parameters.AddWithValue("@Nota", PantallaMod.textBoxScore.Text);
+
+                try
+                {
+                    int filasAfectadas = updateCommand.ExecuteNonQuery();
+
+                    if (filasAfectadas > 0)
+                    { MessageBox.Show("Registro añadido correctamente."); }
+                    else
+                    { MessageBox.Show("Registro no encontrado."); }
+                }
+                catch (Exception ex) { MessageBox.Show($"Error al modificar el registro: {ex.Message}"); }
+            }
+
+            UpdateAverage();
+            connection.Close();
+        }
+
+        private void buttonModScore_Click(object sender, EventArgs e)
+        {
+            if (dataGridScores.SelectedRows.Count > 0)
+            {
+                MySqlConnection connection = new MySqlConnection(connectionString);
+                connection.Open();
+
+                int idSeleccion = int.Parse(dataGridScores.SelectedRows[0].Cells[0].Value.ToString());
+
+                string selectQuery = "SELECT * FROM notas WHERE CodigoAlumno = @ID";
+                MySqlCommand selectCommand = new MySqlCommand(selectQuery, connection);
+                selectCommand.Parameters.AddWithValue("@ID", idSeleccion);
+                MySqlDataReader reader = selectCommand.ExecuteReader();
+
+                PModNota PantallaMod = new PModNota();
+                while (reader.Read())
+                {
+                    PantallaMod.textBoxCode1.Text = reader["Codigo"].ToString();
+                    PantallaMod.textBoxCode2.Text = reader["CodigoAlumno"].ToString();
+                    PantallaMod.textBoxSubject.Text = reader["Asignatura"].ToString();
+                    PantallaMod.textBoxScore.Text = reader["Nota"].ToString();
+                }
+                reader.Close();
+
+                if (PantallaMod.ShowDialog() == DialogResult.OK)
+                {
+                    string updateQuery = "UPDATE notas SET asignatura=@Asig, nota=@Nota WHERE codigo=@ID";
+                    MySqlCommand updateCommand = new MySqlCommand(updateQuery, connection);
+                    updateCommand.Parameters.AddWithValue("@Asig", PantallaMod.textBoxSubject.Text);
+                    updateCommand.Parameters.AddWithValue("@Nota", PantallaMod.textBoxScore.Text);
+                    updateCommand.Parameters.AddWithValue("@ID", idSeleccion);
+
+                    try
+                    {
+                        int filasAfectadas = updateCommand.ExecuteNonQuery();
+
+                        if (filasAfectadas > 0)
+                            { MessageBox.Show("Registro modificado correctamente."); }
+                        else
+                            { MessageBox.Show("Registro no encontrado."); }
+                    }
+                    catch (Exception ex) { MessageBox.Show($"Error al modificar el registro: {ex.Message}"); }
+                }
+
+                UpdateAverage();
+                connection.Close();
+            }
+            else { MessageBox.Show("Ninguna fila seleccionada"); }
+        }
+
+        private void buttonDeleteScore_Click(object sender, EventArgs e)
+        {
+            if (dataGridScores.SelectedRows.Count > 0)
+            {
+                MySqlConnection connection = new MySqlConnection(connectionString);
+                connection.Open();
+
+                int idSeleccion = int.Parse(dataGridScores.SelectedRows[0].Cells[0].Value.ToString());
+
+                string deleteQuery = "DELETE FROM notas WHERE codigo=@ID";
+                MySqlCommand updateCommand = new MySqlCommand(deleteQuery, connection);
+                updateCommand.Parameters.AddWithValue("@ID", idSeleccion);
+
+                try
+                {
+                    int filasAfectadas = updateCommand.ExecuteNonQuery();
+
+                    if (filasAfectadas > 0)
+                    { MessageBox.Show("Registro borrado correctamente."); }
+                    else
+                    { MessageBox.Show("Registro no encontrado."); }
+                }
+                catch (Exception ex) { MessageBox.Show($"Error al modificar el registro: {ex.Message}"); }
+                
+                UpdateAverage();
+                connection.Close();
+            }
+            else { MessageBox.Show("Ninguna fila seleccionada"); }
+        }
+
+
+
     }
 }

@@ -110,6 +110,12 @@
     <Compile Include="PMod.Designer.cs">
       <DependentUpon>PMod.cs</DependentUpon>
     </Compile>
+    <Compile Include="PModNota.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PModNota.Designer.cs">
+      <DependentUpon>PModNota.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
@@ -117,6 +123,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PMod.resx">
       <DependentUpon>PMod.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PModNota.resx">
+      <DependentUpon>PModNota.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

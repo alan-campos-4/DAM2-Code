@@ -16,5 +16,17 @@ namespace WinForms_Database
         {
             InitializeComponent();
         }
+
+        private void buttonOk_Click(object sender, EventArgs e)
+        {
+            if (String.IsNullOrEmpty(textBoxCode.Text) ||
+                String.IsNullOrEmpty(textBoxName.Text) ||
+                String.IsNullOrEmpty(textBoxLName.Text) ||
+                String.IsNullOrEmpty(textBoxPhone.Text) ||
+                String.IsNullOrEmpty(textBoxProvince.Text) )
+            {
+                DialogResult = DialogResult.None;
+            }
+        }
     }
 }

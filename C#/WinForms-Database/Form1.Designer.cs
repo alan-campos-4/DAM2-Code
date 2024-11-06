@@ -29,9 +29,6 @@
         private void InitializeComponent()
         {
             this.dataGridStudents = new System.Windows.Forms.DataGridView();
-            this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Apellidos = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
@@ -40,10 +37,18 @@
             this.ToolStripMenuModificar = new System.Windows.Forms.ToolStripMenuItem();
             this.borrarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dataGridScores = new System.Windows.Forms.DataGridView();
+            this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Apellidos = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Provincia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.codigoN = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.codigoAlumno = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Asignatura = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nota = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.buttonAddScore = new System.Windows.Forms.Button();
+            this.buttonModScore = new System.Windows.Forms.Button();
+            this.buttonDeleteScore = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridStudents)).BeginInit();
             this.statusStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -61,40 +66,25 @@
             this.dataGridStudents.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Codigo,
             this.Nombre,
-            this.Apellidos});
-            this.dataGridStudents.Location = new System.Drawing.Point(25, 114);
+            this.Apellidos,
+            this.Telefono,
+            this.Provincia});
+            this.dataGridStudents.Location = new System.Drawing.Point(27, 111);
             this.dataGridStudents.MultiSelect = false;
             this.dataGridStudents.Name = "dataGridStudents";
             this.dataGridStudents.ReadOnly = true;
             this.dataGridStudents.RowHeadersVisible = false;
             this.dataGridStudents.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dataGridStudents.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridStudents.Size = new System.Drawing.Size(366, 266);
+            this.dataGridStudents.Size = new System.Drawing.Size(484, 176);
             this.dataGridStudents.TabIndex = 1;
-            // 
-            // Codigo
-            // 
-            this.Codigo.HeaderText = "Codigo";
-            this.Codigo.Name = "Codigo";
-            this.Codigo.ReadOnly = true;
-            // 
-            // Nombre
-            // 
-            this.Nombre.HeaderText = "Nombre";
-            this.Nombre.Name = "Nombre";
-            this.Nombre.ReadOnly = true;
-            // 
-            // Apellidos
-            // 
-            this.Apellidos.HeaderText = "Apellidos";
-            this.Apellidos.Name = "Apellidos";
-            this.Apellidos.ReadOnly = true;
+            this.dataGridStudents.MouseClick += new System.Windows.Forms.MouseEventHandler(this.DataGridStudents_MouseClick);
             // 
             // comboBox1
             // 
             this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(112, 65);
+            this.comboBox1.Location = new System.Drawing.Point(81, 58);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 21);
             this.comboBox1.TabIndex = 2;
@@ -103,7 +93,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(55, 68);
+            this.label1.Location = new System.Drawing.Point(24, 61);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(51, 13);
             this.label1.TabIndex = 3;
@@ -113,9 +103,9 @@
             // 
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel1});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 428);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 491);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(800, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(879, 22);
             this.statusStrip1.TabIndex = 4;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -132,7 +122,7 @@
             this.borrarToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(879, 24);
             this.menuStrip1.TabIndex = 5;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -163,27 +153,60 @@
             this.codigoAlumno,
             this.Asignatura,
             this.Nota});
-            this.dataGridScores.Location = new System.Drawing.Point(417, 114);
+            this.dataGridScores.Location = new System.Drawing.Point(517, 111);
             this.dataGridScores.MultiSelect = false;
             this.dataGridScores.Name = "dataGridScores";
             this.dataGridScores.ReadOnly = true;
             this.dataGridScores.RowHeadersVisible = false;
             this.dataGridScores.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dataGridScores.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridScores.Size = new System.Drawing.Size(348, 150);
+            this.dataGridScores.Size = new System.Drawing.Size(335, 271);
             this.dataGridScores.TabIndex = 6;
+            // 
+            // Codigo
+            // 
+            this.Codigo.HeaderText = "Codigo";
+            this.Codigo.Name = "Codigo";
+            this.Codigo.ReadOnly = true;
+            this.Codigo.Width = 50;
+            // 
+            // Nombre
+            // 
+            this.Nombre.HeaderText = "Nombre";
+            this.Nombre.Name = "Nombre";
+            this.Nombre.ReadOnly = true;
+            // 
+            // Apellidos
+            // 
+            this.Apellidos.HeaderText = "Apellidos";
+            this.Apellidos.Name = "Apellidos";
+            this.Apellidos.ReadOnly = true;
+            // 
+            // Telefono
+            // 
+            this.Telefono.HeaderText = "Telefono";
+            this.Telefono.Name = "Telefono";
+            this.Telefono.ReadOnly = true;
+            // 
+            // Provincia
+            // 
+            this.Provincia.HeaderText = "Provincia";
+            this.Provincia.Name = "Provincia";
+            this.Provincia.ReadOnly = true;
             // 
             // codigoN
             // 
             this.codigoN.HeaderText = "Código";
             this.codigoN.Name = "codigoN";
             this.codigoN.ReadOnly = true;
+            this.codigoN.Width = 40;
             // 
             // codigoAlumno
             // 
-            this.codigoAlumno.HeaderText = "Código Alumno";
+            this.codigoAlumno.HeaderText = "Alumno";
             this.codigoAlumno.Name = "codigoAlumno";
             this.codigoAlumno.ReadOnly = true;
+            this.codigoAlumno.Width = 50;
             // 
             // Asignatura
             // 
@@ -197,11 +220,44 @@
             this.Nota.Name = "Nota";
             this.Nota.ReadOnly = true;
             // 
+            // buttonAddScore
+            // 
+            this.buttonAddScore.Location = new System.Drawing.Point(548, 388);
+            this.buttonAddScore.Name = "buttonAddScore";
+            this.buttonAddScore.Size = new System.Drawing.Size(86, 32);
+            this.buttonAddScore.TabIndex = 7;
+            this.buttonAddScore.Text = "Alta";
+            this.buttonAddScore.UseVisualStyleBackColor = true;
+            this.buttonAddScore.Click += new System.EventHandler(this.buttonAddScore_Click);
+            // 
+            // buttonModScore
+            // 
+            this.buttonModScore.Location = new System.Drawing.Point(640, 388);
+            this.buttonModScore.Name = "buttonModScore";
+            this.buttonModScore.Size = new System.Drawing.Size(86, 32);
+            this.buttonModScore.TabIndex = 8;
+            this.buttonModScore.Text = "Modificar";
+            this.buttonModScore.UseVisualStyleBackColor = true;
+            this.buttonModScore.Click += new System.EventHandler(this.buttonModScore_Click);
+            // 
+            // buttonDeleteScore
+            // 
+            this.buttonDeleteScore.Location = new System.Drawing.Point(732, 388);
+            this.buttonDeleteScore.Name = "buttonDeleteScore";
+            this.buttonDeleteScore.Size = new System.Drawing.Size(86, 32);
+            this.buttonDeleteScore.TabIndex = 9;
+            this.buttonDeleteScore.Text = "Borrar";
+            this.buttonDeleteScore.UseVisualStyleBackColor = true;
+            this.buttonDeleteScore.Click += new System.EventHandler(this.buttonDeleteScore_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(879, 513);
+            this.Controls.Add(this.buttonDeleteScore);
+            this.Controls.Add(this.buttonModScore);
+            this.Controls.Add(this.buttonAddScore);
             this.Controls.Add(this.dataGridScores);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.menuStrip1);
@@ -233,14 +289,19 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem borrarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ToolStripMenuModificar;
+        private System.Windows.Forms.DataGridView dataGridScores;
         private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn Apellidos;
-        private System.Windows.Forms.DataGridView dataGridScores;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Telefono;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Provincia;
         private System.Windows.Forms.DataGridViewTextBoxColumn codigoN;
         private System.Windows.Forms.DataGridViewTextBoxColumn codigoAlumno;
         private System.Windows.Forms.DataGridViewTextBoxColumn Asignatura;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nota;
+        private System.Windows.Forms.Button buttonAddScore;
+        private System.Windows.Forms.Button buttonModScore;
+        private System.Windows.Forms.Button buttonDeleteScore;
     }
 }
 

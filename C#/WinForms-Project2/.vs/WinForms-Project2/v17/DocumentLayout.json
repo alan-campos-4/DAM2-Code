@@ -38,20 +38,20 @@
       "DocumentGroups": [
         {
           "DockedWidth": 79,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "PAlumnos.cs [Design]",
+              "Title": "PAlumnos.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\DAM-A\\Sync\\DAM2-Code\\C#\\WinForms-Project2\\PAlumnos.cs",
               "RelativeDocumentMoniker": "PAlumnos.cs",
-              "ToolTip": "C:\\Users\\DAM-A\\Sync\\DAM2-Code\\C#\\WinForms-Project2\\PAlumnos.cs [Design]",
-              "RelativeToolTip": "PAlumnos.cs [Design]",
+              "ToolTip": "C:\\Users\\DAM-A\\Sync\\DAM2-Code\\C#\\WinForms-Project2\\PAlumnos.cs [Dise\u00F1o]",
+              "RelativeToolTip": "PAlumnos.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-22T06:23:15.438Z",
               "IsPinned": true,
-              "EditorCaption": " [Design]"
+              "EditorCaption": " [Dise\u00F1o]"
             },
             {
               "$type": "Bookmark",
@@ -60,6 +60,10 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
             },
             {
               "$type": "Document",
@@ -116,7 +120,7 @@
               "RelativeDocumentMoniker": "PAlumnos.cs",
               "ToolTip": "C:\\Users\\DAM-A\\Sync\\DAM2-Code\\C#\\WinForms-Project2\\PAlumnos.cs",
               "RelativeToolTip": "PAlumnos.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwBkAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAKEAAAAAAAAAAAAuwL0AAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-22T07:07:30.999Z",
               "EditorCaption": ""

@@ -85,3 +85,4 @@ C:\Users\DAM-A\Sync\DAM2-Code\C#\WinForms-Database\obj\Debug\WinForms.96FF648F.U
 C:\Users\DAM-A\Sync\DAM2-Code\C#\WinForms-Database\obj\Debug\WinForms-Database.exe
 C:\Users\DAM-A\Sync\DAM2-Code\C#\WinForms-Database\obj\Debug\WinForms-Database.pdb
 C:\Users\DAM-A\Sync\DAM2-Code\C#\WinForms-Database\obj\Debug\WinForms_Database.PMod.resources
+C:\Users\DAM-A\Sync\DAM2-Code\C#\WinForms-Database\obj\Debug\WinForms_Database.PModNota.resources
