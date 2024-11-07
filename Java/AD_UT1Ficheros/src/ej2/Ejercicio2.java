@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.Scanner;
 
 /*
  * Ejercicio 2 – Ficheros de texto - Contar palabras – 1.5 ptos
@@ -24,6 +25,19 @@ import java.io.IOException;
 
 public class Ejercicio2
 {
+	public static void pressAnyKey()
+	{
+		Scanner input = new Scanner(System.in);
+		
+		System.out.println("\nPress any key to continue.");
+        try {
+            System.in.read();
+            input.nextLine();
+        } catch (Exception e) {e.printStackTrace();}
+        
+        input.close();
+	}
+	
 	public static void main(String[] args)
 	{
 		try
@@ -49,6 +63,8 @@ public class Ejercicio2
 			//Imprime por pantalla el número de palabras.
 			System.out.println(" Este archivo contiene "+wordCount+" palabras.");
 			br.close();
+			
+			pressAnyKey();
 		}
 		//Se lanza cuando no se ha introducido el argumento
 		catch (ArrayIndexOutOfBoundsException e)	{System.out.println("  Se debe pasar 1 argumento.");}
@@ -58,5 +74,6 @@ public class Ejercicio2
 		catch (IOException e)						{e.printStackTrace();}
 		
 		System.out.println();
+		
 	}
 }
