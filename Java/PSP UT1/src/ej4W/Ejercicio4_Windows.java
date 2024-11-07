@@ -22,11 +22,11 @@ public class Ejercicio4_Windows
 		String[] command = {"cmd.exe", "/c", "tasklist /fi \"STATUS eq running\""};
         try
         {
-        	//Construye el proceso a partir del comando y lo empieza
+        	//Construye el proceso a partir del comando y lo ejecuta.
             ProcessBuilder pb = new ProcessBuilder(command);
             Process process = pb.start();
             
-            //Construye un BufferedReader para leer el comando pasa por pipe.
+            //Lee la salida del comando ejecutado.
             BufferedReader reader = new BufferedReader(new InputStreamReader(process.getInputStream()));
             
             //Lee cada línea del resultado y lo guarda en el StringBuilder.
@@ -37,16 +37,10 @@ public class Ejercicio4_Windows
                 output.append(line).append("\n");
             }
             
-            //Termina a que acabe el proceso
-            int exitCode = process.waitFor();
-            
             //Muestra el resultado del comando.
-            System.out.println("Comando ejecutado con codido de salida " + exitCode);
-            System.out.println("\n"+output.toString());
+            System.out.println(output.toString());
         }
 		//Lanzada por BufferedReader.readLine().
-        catch (IOException e)			{e.printStackTrace();} 
-		//Lanzada por Process.waitFor().
-		catch (InterruptedException e)	{e.printStackTrace();}
+        catch (IOException e)			{e.printStackTrace();}
 	}
 }

@@ -10,7 +10,7 @@ import java.util.ArrayList;
  * Deseamos obtener información de la carpeta “Windows” o la carpeta “/usr/bin”. 
  * Para este propósito vamos a realizar un programa que combinando 
  * la funcionalidad de los comandos anteriores y los programas auxiliares antes descritos nos indique: 
- *  
+ * 
  *  1. Tamaño de los ficheros de la carpeta. Sería equivalente a: 
  *  	dir \windows | java Columna 3  
  *  	ls -al /usr/bin | java Columna 5 
@@ -48,11 +48,11 @@ public class Ejercicio5_Windows
         {
 			try
 	        {
-				//Construye el proceso a partir del comando y lo empieza
+				//Construye el proceso a partir del comando y lo ejecuta.
 	            ProcessBuilder pb = new ProcessBuilder(command);
 	            Process process = pb.start();
 	            
-	            //Construye un BufferedReader para leer el comando pasa por pipe.
+	            //Lee la salida del comando.
 	            BufferedReader reader = new BufferedReader(new InputStreamReader(process.getInputStream()));
 	            
 	            //Lee cada línea del resultado y lo guarda en el StringBuilder.

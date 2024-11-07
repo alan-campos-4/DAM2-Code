@@ -17,17 +17,32 @@ public class Mayor
 			//Lee el resultado del comando recibido por pipe.
 			BufferedReader input = new BufferedReader(new InputStreamReader(System.in));
 	        String line = null;
-	        double max = 0.0, newline = 0.0;
+	        double newNum = 0.0, max = 0.0;
+	        
 	        //Por cada una de las líneas
 	        while( (line = input.readLine()) != null )
 	        {
-	        	newline = Double.parseDouble(line);
-	        	if (newline > max)
+	        	//Solo si la línea no es ni un directorio ni un comentario.
+	        	if (!line.contains("<DIR>") && 
+	        		!line.contains("archivos") && 
+	        		!line.contains("dirs"))
 	        	{
-	        		max = newline;
+	        		//Si tienes más de una comilla la elimina
+	        		if ( (line.length() - line.replace(",", "").length()) > 1 )
+	        		{
+	        			StringBuilder sb = new StringBuilder(line);
+	        			sb.deleteCharAt(line.indexOf(','));
+	        			line = sb.toString();
+	        		}
+	        		//Reemplaza la comilla con un punto para poder considerarse como double.
+	        		line = line.replace(',', '.');
+	        		//Pasa la línea como doble y comprueba si es el máximo.
+	        		newNum = Double.parseDouble(line);
+	        		if (newNum > max)
+	        			{max = newNum;}
 	        	}
 	        }
-	        System.out.println("Mayor = "+max);
+	        System.out.println(max);
 		}
 		//Lanzado por BufferedReader.readLine().
 		catch (IOException e)	{e.printStackTrace();}

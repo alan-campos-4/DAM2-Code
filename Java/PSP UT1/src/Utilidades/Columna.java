@@ -19,26 +19,6 @@ import java.io.InputStreamReader;
 
 public class Columna
 {
-	/* 
-	 * Cuando se ejecuta en el Símbolo de Sistema de Windows, el comando dir tiene este formato:
-	 * ***
-	 *  El volumen de la unidad C no tiene etiqueta.
-	 *  El número de serie del volumen es: 1E93-F5D8
-	 *  
-	 *  Directorio de C:\Windows
-	 * 
-	 * 04/11/2024  11:40    <DIR>          .
-	 * 07/10/2024  11:57    <DIR>          AppReadiness
-	 * 22/10/2024  09:15    <DIR>          assembly
-	 * 09/10/2024  12:58           122.880 bfsvc.exe
-	 * 27/09/2024  11:17             2.667 DtcInstall.log
-	 *               21 archivos      8.509.923 bytes
-	 *               78 dirs  299.814.277.120 bytes libres
-	 * 
-	 * ***
-	 * Este programa ha sido diseñado recopilar el tamaño de cada archivo en el directorio,
-	 * ignorando las filas vacías o que contengan información innecesaria.
-	 * */
 	public static void main(String[] args)
 	{
 		int index = 0;
@@ -70,14 +50,10 @@ public class Columna
 		        		res = line.split("\\s+|\t");
 		        		try
 		        		{
-		        			//Se asegura que la columna es un número, si no es una carpeta.
-		        			Double.parseDouble(res[index]);
-		        			//Escribe el espacio del archivo.
 		        			System.out.println(res[index]);
 		        		}
-		        		//Si no es un número o no se encuentra la columna pasa a la siguiente línea.
+		        		//Si no se encuentra la columna pasa a la siguiente línea.
 		        		catch (ArrayIndexOutOfBoundsException e)	{}
-		        		catch (NumberFormatException e)				{}
 		        	}
 		            linecount++;
 		        }

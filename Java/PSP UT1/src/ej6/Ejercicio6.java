@@ -13,42 +13,86 @@ public class Ejercicio6
 	 * Estudia el problema e intenta solventarlo con un ejemplo.
 	 */
 	
+	//Obtiene el tamaño que ocupan todos los ficheros de un directorio.
+	public static double readSize(String direc) throws NumberFormatException, IOException
+	{
+		//Comando para leer el espacio de los ficheros.
+		String[] c2	= {"cmd.exe", "/c", "dir "+direc+" | "
+			+ "java .\\src\\Utilidades\\Columna.java 3 | java .\\src\\Utilidades\\Suma.java"};
+		ProcessBuilder pb = new ProcessBuilder(c2);
+        Process p = pb.start();
+        
+        //Lee la salida del comando.
+        BufferedReader reader = new BufferedReader(new InputStreamReader(p.getInputStream()));
+        
+        //Devuelve la salia del comando.
+        String line = reader.readLine();
+		return Double.parseDouble(line);
+	}
+	
+	//Obtiene todos los directorios existentes dentro de una ruta.
+	public static ArrayList<String> getDirectories(String direc) throws IOException
+	{
+		//Obtiene todos los directorios dentro del directorio dado.
+		String[] c	= {"cmd.exe", "/c", "dir "+direc+" | java .\\src\\Utilidades\\Columna.java 4 "};
+		ProcessBuilder pb = new ProcessBuilder(c);
+	    Process p = pb.start();
+	    ArrayList<String> results = new ArrayList<String>();
+	    
+		try
+		{
+			//Lee la salida del comando.
+			BufferedReader input = new BufferedReader(new InputStreamReader(p.getInputStream()));
+	        
+	        //Por cada una de las líneas
+			String line;
+	        while( (line = input.readLine()) != null )
+	        {
+	        	//Solo si la línea no es número ni fichero se añade a la lista de directorios.
+	        	if (!Character.isDigit(line.charAt(0)) &&
+	        		!line.contains("."))
+	        	{
+	        		results.add(line);
+	        	}
+	        }
+		}
+		//Lanzado por BufferedReader.readLine().
+		catch (IOException e)	{e.printStackTrace();} 
+		
+		return results;
+	}
+	
+	//Examina los ficheros y directorios de una ruta recursivamente y obtiene el espacio.
+	public static double examinePath(String path)
+	{
+		double size = 0.0;
+		try
+		{
+			//Lee el espacio de los ficheros y los directorios de la ruta.
+			size = readSize(path);
+			ArrayList<String> directories = getDirectories(path);
+			
+			//Si no tiene más directorios dentro finaliza la búsqueda.
+			if (directories.isEmpty())	{System.out.println("Path "+path+" contains "+size+" bytes");}
+			//Si tiene más directorios los examina recursivamente.
+			else
+			{
+				for (String dir : directories)
+					{size += examinePath(path+"\\"+dir);}
+			}
+		}
+		//Lanzada por BufferedReader.readLine().
+        catch (IOException e)			{e.printStackTrace();}
+		
+		return size;
+	}
+	
+	
 	public static void main(String[] args)
 	{
-		//Tamaño de los ficheros de la carpeta.
-		String[] c1 = {"cmd.exe", "/c", "dir C:\\Windows | java .\\src\\Utilidades\\Columna.java 3"};
+		String ruta = "C:\\Windows";
+		double espacio = examinePath(ruta);
 		
-		//Todos los comandos a ejecutar
-		ArrayList<String[]> Commands = new ArrayList<>();
-		Commands.add(c1);
-		
-		//Por cada comando
-        for (String[] command : Commands)
-        {
-			try
-	        {
-				//Construye el proceso a partir del comando y lo empieza
-	            ProcessBuilder pb = new ProcessBuilder(command);
-	            Process process = pb.start();
-	            
-	            //Construye un BufferedReader para leer el comando pasa por pipe.
-	            BufferedReader reader = new BufferedReader(new InputStreamReader(process.getInputStream()));
-	            
-	            //Lee cada línea del resultado y lo guarda en el StringBuilder.
-	            StringBuilder output = new StringBuilder();
-	            String line;
-	            while ((line = reader.readLine()) != null)
-	            {
-	                output.append(line).append("\n");
-	            }
-	            
-	            //Muestra el resultado del comando.
-	            System.out.println("Comando ejecutado con codido de salida ");
-	            System.out.println("\n"+output.toString());
-	            System.out.println("\n\n");
-	        }
-			//Lanzada por BufferedReader.readLine().
-	        catch (IOException e)			{e.printStackTrace();}
-        }
+		System.out.println("El tamaño de "+ruta+" es "+espacio+".");
 	}
 }
