@@ -305,8 +305,8 @@ public class Exer15_17_FileAccess_Solved
 		{ 
 			this.id = id; 
 			this.descripcion = descripcion;
-			this.unidades=unidades;
-			this.precio=precio;
+			this.unidades = unidades;
+			this.precio = precio;
 		}
 		
 		public void setId(int id)				{this.id = id;}
@@ -362,7 +362,10 @@ public class Exer15_17_FileAccess_Solved
 		        // Mientras haya objetos
 		        while (true)
 		        {
-		        	System.out.println(aux);
+		        	System.out.println(aux.getId());
+		        	System.out.println("  "+aux.getDes());
+		        	System.out.println("  "+aux.getUnidades());
+		        	System.out.println("  "+aux.getPrecio()+"\n");
 		        	aux = (Producto) ois.readObject();
 		        }
 		         

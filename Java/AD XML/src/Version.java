@@ -16,11 +16,4 @@ public class Version
 	{
 		return " Version => Numero: " + numero + ", Nombre: " + nombre + ", API: " + api;
 	}
-	
-//	public Version(double num, String nom, int api)
-//	{
-//		setNumero(num);
-//		setNombre(nom);
-//		setApi(api);
-//	}
 }

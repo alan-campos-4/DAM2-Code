@@ -243,7 +243,7 @@ public class Exer15_17_FileAccess
 		}
 		public void mostrar()
 		{
-			ReadListFromFile(listProd, fichero);
+			ReadListFromFile(listProd, fichProd);
 		}
 	}
 	

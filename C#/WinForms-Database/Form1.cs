@@ -30,6 +30,7 @@ namespace WinForms_Database
             MySqlConnection connection = new MySqlConnection(connectionString);
             connection.Open();
 
+
             // 
             // Load colummns and items in DataGridViews
             // 
@@ -46,7 +47,7 @@ namespace WinForms_Database
                 dataGridStudents.Rows.Add(newrow);
             }
             reader1.Close();
-            //dataGridStudents.Columns["codigo"].Visible = false;
+
 
             // 
             // Load colummns and items in DataGridScores
@@ -64,8 +65,7 @@ namespace WinForms_Database
                 dataGridScores.Rows.Add(newrow);
             }
             reader2.Close();
-            //dataGridScores.Columns["codigo"].Visible = false;
-            //dataGridScores.Columns["CodigoAlumno"].Visible = false;
+            
 
             // 
             // Load Provincias in ComboBox
@@ -79,6 +79,7 @@ namespace WinForms_Database
                 comboBox1.Items.Add(reader3["provincia"]);
             }
             reader3.Close();
+
 
             dataGridStudents.ClearSelection();
             dataGridScores.ClearSelection();
@@ -194,6 +195,11 @@ namespace WinForms_Database
 
         private void DataGridStudents_MouseClick(object sender, MouseEventArgs e)
         {
+            ReloadDataGrid();
+        }
+
+        private void ReloadDataGrid()
+        {
             if (dataGridStudents.SelectedRows.Count > 0)
             {
                 MySqlConnection connection = new MySqlConnection(connectionString);
@@ -261,15 +267,15 @@ namespace WinForms_Database
                     int filasAfectadas = updateCommand.ExecuteNonQuery();
 
                     if (filasAfectadas > 0)
-                    { MessageBox.Show("Registro añadido correctamente."); }
+                        { MessageBox.Show("Registro añadido correctamente."); }
                     else
-                    { MessageBox.Show("Registro no encontrado."); }
+                        { MessageBox.Show("Registro no encontrado."); }
                 }
                 catch (Exception ex) { MessageBox.Show($"Error al modificar el registro: {ex.Message}"); }
             }
-
-            UpdateAverage();
             connection.Close();
+
+            ReloadDataGrid();
         }
 
         private void buttonModScore_Click(object sender, EventArgs e)
@@ -315,9 +321,9 @@ namespace WinForms_Database
                     }
                     catch (Exception ex) { MessageBox.Show($"Error al modificar el registro: {ex.Message}"); }
                 }
-
-                UpdateAverage();
                 connection.Close();
+
+                ReloadDataGrid();
             }
             else { MessageBox.Show("Ninguna fila seleccionada"); }
         }
@@ -340,17 +346,19 @@ namespace WinForms_Database
                     int filasAfectadas = updateCommand.ExecuteNonQuery();
 
                     if (filasAfectadas > 0)
-                    { MessageBox.Show("Registro borrado correctamente."); }
+                        { MessageBox.Show("Registro borrado correctamente."); }
                     else
-                    { MessageBox.Show("Registro no encontrado."); }
+                        { MessageBox.Show("Registro no encontrado."); }
                 }
                 catch (Exception ex) { MessageBox.Show($"Error al modificar el registro: {ex.Message}"); }
                 
-                UpdateAverage();
                 connection.Close();
+
+                ReloadDataGrid();
             }
             else { MessageBox.Show("Ninguna fila seleccionada"); }
         }
+
 
 
 

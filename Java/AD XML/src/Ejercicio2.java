@@ -22,7 +22,6 @@ public class Ejercicio2
 //
 //			// Parsing the XML Document
 //			saxParser.parse(xmlFile, userHandler);
-
 		}
 		catch (Exception e) {e.printStackTrace();}
 	}

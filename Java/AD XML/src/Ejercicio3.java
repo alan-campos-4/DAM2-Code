@@ -7,9 +7,7 @@ import org.xml.sax.helpers.DefaultHandler;
 
 /*
  * 3. Utilizando el fichero "versiones.xml", realizar la lectura de dicho fichero utilizando la clase Version.java.
- */
- //
-/*
+ * 
  * <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 	<versiones>
 	    <version numero="1.5">
@@ -42,7 +40,7 @@ public class Ejercicio3
 		double numero;
 		String nombre;
 		int api;
-
+		
 		public void startElement(String uri, String localName, String qName, Attributes attributes) throws SAXException
 		{
 			if (qName.equals("versiones"))
@@ -91,13 +89,13 @@ public class Ejercicio3
 			// Creating a DocumentBuilder Object
 			SAXParserFactory factory = SAXParserFactory.newInstance();
 			SAXParser saxParser = factory.newSAXParser();
-
+			
 			// Reading the XML
 			File xmlFile = new File("src/versiones.xml");
-
+			
 			// Creating UserHandler object
 			UserHandler userHandler = new UserHandler();
-
+			
 			// Parsing the XML Document
 			saxParser.parse(xmlFile, userHandler);
 		}

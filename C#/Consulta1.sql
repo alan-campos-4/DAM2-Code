@@ -1,1 +1,1 @@
-SELECT * FROM notas;
+SELECT AVG(nota) FROM notas WHERE codigoAlumno=1001;
