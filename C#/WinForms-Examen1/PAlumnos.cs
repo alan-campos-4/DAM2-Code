@@ -101,9 +101,9 @@ namespace WinForms_Examen1
                     dataGridView1.SelectedRows[0].Cells[3].Value = pModificar.textBoxPhone.Text;
                     dataGridView1.SelectedRows[0].Cells[4].Value = pModificar.textBoxProvince.Text;
                     dataGridView1.SelectedRows[0].Cells[5].Value =
-                        pModificar.textBoxNote1.Text + ", " +
-                        pModificar.textBoxNote2.Text + ", " +
-                        pModificar.textBoxNote3.Text;
+                        pModificar.textBoxNote1.Text.Replace(',', '.') + ", " +
+                        pModificar.textBoxNote2.Text.Replace(',', '.') + ", " +
+                        pModificar.textBoxNote3.Text.Replace(',', '.');
                     dataGridView1.SelectedRows[0].Cells[6].Value = GetStudentAverage(
                         pModificar.textBoxNote1.Text, 
                         pModificar.textBoxNote2.Text, 
