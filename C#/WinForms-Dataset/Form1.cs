@@ -25,10 +25,16 @@ namespace WinForms_Dataset
             MySqlConnection connection = new MySqlConnection(connectionString);
             connection.Open();
             DataSet dataSet = new DataSet();
-            string query = "SELECT * FROM Alumnos";
+            string query = "SELECT * FROM alumnos";
             MySqlDataAdapter adapter = new MySqlDataAdapter(query, connectionString);
-            adapter.Fill(dataSet, "Alumnos");
+            adapter.Fill(dataSet, "alumnos");
             dataGridView1.DataSource = dataSet.Tables["Alumnos"];
+        }
+
+        private void provinciasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Provincias provincias = new Provincias();
+            provincias.ShowDialog();
         }
     }
 }
