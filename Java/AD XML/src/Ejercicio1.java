@@ -75,13 +75,13 @@ public class Ejercicio1
 			Document doc = db.newDocument();
 			
 			// Creating the root element
-			Element rootElement = doc.createElement("cars");
+			Element rootElement = doc.createElement("productos");
 			doc.appendChild(rootElement);
 			
 			// Appending elements to the root element
-			Element supercar = doc.createElement("supercars");
-			rootElement.appendChild(supercar);
-			supercar.appendChild(doc.createTextNode("Ferrari"));
+			Element product = doc.createElement("producto");
+			rootElement.appendChild(product);
+			product.appendChild(doc.createTextNode("producto1"));
 			
 			// writing the content into XML file
 			TransformerFactory transformerFactory = TransformerFactory.newInstance();
