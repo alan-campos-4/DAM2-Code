@@ -46,6 +46,8 @@ namespace WinForms_Dataset
 
             string query = "SELECT municipio FROM municipios WHERE id = @ID";
             MySqlDataAdapter adapter = new MySqlDataAdapter(query, connectionString);
+            
+            
             //adapter.
 
             connection.Close();

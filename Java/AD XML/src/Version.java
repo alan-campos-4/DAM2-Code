@@ -12,6 +12,13 @@ public class Version
 	public void setNombre(String nombre)	{this.nombre = nombre;}
 	public void setApi(int api)				{this.api = api;}
 	
+	public Version(double num, String nom, int api)
+	{
+		this.numero = num;
+		this.nombre = nom;
+		this.api = api;
+	}
+	
 	public String toString()
 	{
 		return " Version => Numero: " + numero + ", Nombre: " + nombre + ", API: " + api;

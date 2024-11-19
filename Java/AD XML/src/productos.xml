@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<productos>
+    <producto codigo="1">
+        <descripcion>P1</descripcion>
+        <unidades>14</unidades>
+        <precio>12.3</precio>
+    </producto>
+    <producto codigo="2">
+        <descripcion>P2</descripcion>
+        <unidades>15</unidades>
+        <precio>34.5</precio>
+    </producto>
+    <producto codigo="3">
+        <descripcion>P3</descripcion>
+        <unidades>13</unidades>
+        <precio>28.9</precio>
+    </producto>
+    <producto codigo="4">
+        <descripcion>P4</descripcion>
+        <unidades>17</unidades>
+        <precio>16.3</precio>
+    </producto>
+</productos>

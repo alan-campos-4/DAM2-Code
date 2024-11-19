@@ -1,9 +1,3 @@
-
-/*
- * 2. Utilizando el fichero "productos.xml" creado anteriormente, 
- * realizar la lectura de dicho fichero XML utilizando SAX.
- */
-
 import java.io.File;
 import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;
@@ -11,51 +5,91 @@ import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;
 import org.xml.sax.helpers.DefaultHandler;
 
+/*
+ * 2. Utilizando el fichero "productos.xml" creado anteriormente, 
+ * realizar la lectura de dicho fichero XML utilizando SAX.
+ * 
+ * <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+	<productos>
+	    <producto codigo="1">
+	        <descripcion>P1</descripcion>
+	        <unidades>14</unidades>
+	        <precio>12.3</precio>
+	    </producto>
+	    <producto codigo="2">
+	        <descripcion>P2</descripcion>
+	        <unidades>15</unidades>
+	        <precio>34.5</precio>
+	    </producto>
+	    <producto codigo="3">
+	        <descripcion>P3</descripcion>
+	        <unidades>13</unidades>
+	        <precio>28.9</precio>
+	    </producto>
+	    <producto codigo="4">
+	        <descripcion>P4</descripcion>
+	        <unidades>17</unidades>
+	        <precio>16.3</precio>
+	    </producto>
+	</productos>
+ */
+
+
+
 public class Ejercicio2
 {
 	static class UserHandler extends DefaultHandler
 	{
-		boolean hasName = false;
-		boolean hasAPI = false;
+		boolean has1 = false;
+		boolean has2 = false;
+		boolean has3 = false;
 		
-		String numero;
-		String nombre;
-		int api;
+		int codigo;
+		String desc;
+		int unidades;
+		double precio;
 		
 		public void startElement(String uri, String localName, String qName, Attributes attributes) throws SAXException
 		{
-			if (qName.equals("college"))
+			if (qName.equals("productos"))
 			{
 				System.out.println("Root Element: " + qName + "\n");
 			}
-			if (qName.equals("department"))
+			if (qName.equals("producto"))
 			{
-				numero = attributes.getValue("deptcode");
+				codigo = Integer.parseInt(attributes.getValue("codigo"));
 			}
-			if (qName.equals("name"))	{hasName = true;}
-			if (qName.equals("staffCount"))	{hasAPI = true;}
+			if (qName.equals("descripcion"))	{has1 = true;}
+			if (qName.equals("unidades"))		{has2 = true;}
+			if (qName.equals("precio"))			{has3 = true;}
 		}
 		
 		public void characters(char[] ch, int start, int length) throws SAXException
 		{
-			if (hasName)
+			if (has1)
 			{
-				nombre = new String(ch, start, length);
-				hasName = false;
+				desc = new String(ch, start, length);
+				has1 = false;
 			}
-			if (hasAPI)
+			if (has2)
 			{
-				api = Integer.parseInt(new String(ch, start, length));
-				hasAPI = false;
+				unidades = Integer.parseInt(new String(ch, start, length));
+				has2 = false;
+			}
+			if (has3)
+			{
+				precio = Double.parseDouble(new String(ch, start, length));
+				has3 = false;
 			}
 		}
 		
 		public void endElement(String uri, String localName, String qName)
 		{
-			if (qName.equals("department"))
+			if (qName.equals("producto"))
 			{
-				System.out.println("Departemnt "+numero+" : "+nombre);
-				System.out.println(api+" miembros");
+				System.out.println("Producto "+codigo+" : "+desc);
+				System.out.println(unidades+" unidades");
+				System.out.println(precio+" €");
 				System.out.println("\n");
 			}
 		}
@@ -70,7 +104,7 @@ public class Ejercicio2
 			SAXParser saxParser = factory.newSAXParser();
 
 			// Reading the XML
-			File xmlFile = new File("src/college.xml");
+			File xmlFile = new File("src/productos.xml");
 
 			// Creating UserHandler object
 			UserHandler userHandler = new UserHandler();

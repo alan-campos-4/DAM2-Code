@@ -19,9 +19,10 @@ namespace WinForms_Dataset
             InitializeComponent();
         }
 
+        string connectionString = "Server=localhost;Database=instituto;User ID=root;Password=root;SslMode=none";
+
         private void Form1_Load(object sender, EventArgs e)
         {
-            string connectionString = "Server=localhost;Database=instituto;User ID=root;Password=root;SslMode=none"; ;
             MySqlConnection connection = new MySqlConnection(connectionString);
             connection.Open();
             DataSet dataSet = new DataSet();

@@ -3,20 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\DAM-A\\Sync\\Code\\C#\\WinForms-Dataset\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A9EB6FFE-24D7-4D9D-8EAD-D52EC8052363}|WinForms-Dataset.csproj|C:\\Users\\DAM-A\\Sync\\Code\\C#\\WinForms-Dataset\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{A9EB6FFE-24D7-4D9D-8EAD-D52EC8052363}|WinForms-Dataset.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A9EB6FFE-24D7-4D9D-8EAD-D52EC8052363}|WinForms-Dataset.csproj|C:\\Users\\DAM-A\\Sync\\Code\\C#\\WinForms-Dataset\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A9EB6FFE-24D7-4D9D-8EAD-D52EC8052363}|WinForms-Dataset.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A9EB6FFE-24D7-4D9D-8EAD-D52EC8052363}|WinForms-Dataset.csproj|c:\\users\\dam-a\\sync\\code\\c#\\winforms-dataset\\provincias.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A9EB6FFE-24D7-4D9D-8EAD-D52EC8052363}|WinForms-Dataset.csproj|solutionrelative:provincias.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A9EB6FFE-24D7-4D9D-8EAD-D52EC8052363}|WinForms-Dataset.csproj|c:\\users\\dam-a\\sync\\code\\c#\\winforms-dataset\\provincias.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{A9EB6FFE-24D7-4D9D-8EAD-D52EC8052363}|WinForms-Dataset.csproj|C:\\Users\\DAM-A\\Sync\\Code\\C#\\WinForms-Dataset\\provincias.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{A9EB6FFE-24D7-4D9D-8EAD-D52EC8052363}|WinForms-Dataset.csproj|solutionrelative:provincias.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A9EB6FFE-24D7-4D9D-8EAD-D52EC8052363}|WinForms-Dataset.csproj|c:\\users\\dam-a\\sync\\code\\c#\\winforms-dataset\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A9EB6FFE-24D7-4D9D-8EAD-D52EC8052363}|WinForms-Dataset.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A9EB6FFE-24D7-4D9D-8EAD-D52EC8052363}|WinForms-Dataset.csproj|C:\\Users\\DAM-A\\Sync\\Code\\C#\\WinForms-Dataset\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{A9EB6FFE-24D7-4D9D-8EAD-D52EC8052363}|WinForms-Dataset.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,17 +26,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 79,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "Form1.cs",
               "DocumentMoniker": "C:\\Users\\DAM-A\\Sync\\Code\\C#\\WinForms-Dataset\\Form1.cs",
               "RelativeDocumentMoniker": "Form1.cs",
               "ToolTip": "C:\\Users\\DAM-A\\Sync\\Code\\C#\\WinForms-Dataset\\Form1.cs",
               "RelativeToolTip": "Form1.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAIA3wB4AAABBAAAAAAAAAA==",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAiwCYAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-06T13:03:29.693Z",
               "IsPinned": true,
@@ -44,7 +44,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "Form1.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\DAM-A\\Sync\\Code\\C#\\WinForms-Dataset\\Form1.cs",
               "RelativeDocumentMoniker": "Form1.cs",
@@ -69,7 +69,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "Provincias.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\DAM-A\\Sync\\Code\\C#\\WinForms-Dataset\\Provincias.cs",
               "RelativeDocumentMoniker": "Provincias.cs",
@@ -81,13 +81,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "Provincias.cs",
               "DocumentMoniker": "C:\\Users\\DAM-A\\Sync\\Code\\C#\\WinForms-Dataset\\Provincias.cs",
               "RelativeDocumentMoniker": "Provincias.cs",
               "ToolTip": "C:\\Users\\DAM-A\\Sync\\Code\\C#\\WinForms-Dataset\\Provincias.cs",
               "RelativeToolTip": "Provincias.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAWwCIAAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAWwDAAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-13T12:51:35.949Z",
               "EditorCaption": ""

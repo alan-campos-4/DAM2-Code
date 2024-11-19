@@ -73,10 +73,7 @@ public class Ejercicio3
 		{
 			if (qName.equals("version"))
 			{
-				Version v = new Version();
-				v.setNumero(numero);
-				v.setNombre(nombre);
-				v.setApi(api);
+				Version v = new Version(numero, nombre, api);
 				System.out.println(v.toString());
 			}
 		}
