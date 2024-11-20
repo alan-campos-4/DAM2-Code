@@ -2,5 +2,5 @@
     <string name="app_name">EjemploIntent</string>
     <string name="saludo">Bienvenido a la APP</string>
     <string name="abrir">Abrir</string>
-    <string name="base">%s</string>
+    <string name="base">Hola %s, bienvenid@</string>
 </resources>

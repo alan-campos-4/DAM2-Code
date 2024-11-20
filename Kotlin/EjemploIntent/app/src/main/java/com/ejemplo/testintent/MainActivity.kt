@@ -1,6 +1,7 @@
 package com.ejemplo.testintent
 
 import android.content.Intent
+import android.graphics.Color
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
@@ -16,15 +17,14 @@ class MainActivity : AppCompatActivity() {
 
         val et = findViewById<EditText>(R.id.etNombre)
         val btn = findViewById<Button>(R.id.btn)
-        btn.setOnClickListener{
-            if (et.text.any())
-            {
+        btn.setBackgroundColor(Color.RED)
+        btn.setOnClickListener {
+            if (et.text.any()) {
                 val intent = Intent(this@MainActivity, NextActivity::class.java)
                 intent.putExtra("NAME", et.text.toString())
                 startActivity(intent)
             }
-            else
-            {
+            else {
                 Toast.makeText(this, "El EditText está vacío", Toast.LENGTH_SHORT).show()
             }
         }
