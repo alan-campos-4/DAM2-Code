@@ -6,8 +6,7 @@ import org.xml.sax.SAXException;
 import org.xml.sax.helpers.DefaultHandler;
 
 /*
- * 2. Utilizando el fichero "productos.xml" creado anteriormente, 
- * realizar la lectura de dicho fichero XML utilizando SAX.
+ * 2. Utilizando el fichero "productos.xml" creado anteriormente, realizar la lectura de dicho fichero XML utilizando SAX.
  * 
  * <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 	<productos>

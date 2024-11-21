@@ -1,4 +1,7 @@
 import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 
 import javax.xml.parsers.SAXParser;
@@ -12,10 +15,10 @@ import org.xml.sax.helpers.DefaultHandler;
  */
 
 
-
-
 public class Ejercicio4
 {
+	static ObjectOutputStream OOS;
+	
 	static class UserHandler extends DefaultHandler
 	{
 		boolean hasName = false;
@@ -58,7 +61,11 @@ public class Ejercicio4
 			if (qName.equals("version"))
 			{
 				Version v = new Version(numero, nombre, api);
-				List.add(v);
+				try
+				{
+					OOS.writeObject(v);
+				}
+				catch (IOException e) {e.printStackTrace();}
 			}
 		}
 	}
@@ -69,7 +76,7 @@ public class Ejercicio4
 	{
 		try
 		{
-			List = new ArrayList<>();
+			OOS = new ObjectOutputStream(new FileOutputStream(new File("src/versiones.dat")));
 			
 			SAXParserFactory factory = SAXParserFactory.newInstance();
 			SAXParser saxParser = factory.newSAXParser();

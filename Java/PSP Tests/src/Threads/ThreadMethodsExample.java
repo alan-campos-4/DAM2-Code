@@ -1,3 +1,5 @@
+package Threads;
+
 public class ThreadMethodsExample extends Thread
 {
 	ThreadMethodsExample (ThreadGroup group, String name)

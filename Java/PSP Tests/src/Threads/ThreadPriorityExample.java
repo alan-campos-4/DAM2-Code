@@ -1,3 +1,5 @@
+package Threads;
+
 class ThreadPriority extends Thread
 {
 	private int c = 0;

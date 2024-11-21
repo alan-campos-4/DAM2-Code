@@ -1,5 +1,8 @@
-public class Version
+import java.io.Serializable;
+
+public class Version implements Serializable
 {
+	private static final long serialVersionUID = 177371289254759620L;
 	private double numero;
 	private String nombre;
 	private int api;
