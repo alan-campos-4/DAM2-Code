@@ -32,6 +32,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.labelProv = new System.Windows.Forms.Label();
+            this.labelQuery = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -73,11 +75,31 @@
             this.comboBox2.Size = new System.Drawing.Size(121, 21);
             this.comboBox2.TabIndex = 3;
             // 
+            // labelProv
+            // 
+            this.labelProv.AutoSize = true;
+            this.labelProv.Location = new System.Drawing.Point(129, 140);
+            this.labelProv.Name = "labelProv";
+            this.labelProv.Size = new System.Drawing.Size(13, 13);
+            this.labelProv.TabIndex = 4;
+            this.labelProv.Text = "_";
+            // 
+            // labelQuery
+            // 
+            this.labelQuery.AutoSize = true;
+            this.labelQuery.Location = new System.Drawing.Point(129, 166);
+            this.labelQuery.Name = "labelQuery";
+            this.labelQuery.Size = new System.Drawing.Size(16, 13);
+            this.labelQuery.TabIndex = 5;
+            this.labelQuery.Text = "...";
+            // 
             // Provincias
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(534, 311);
+            this.Controls.Add(this.labelQuery);
+            this.Controls.Add(this.labelProv);
             this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label2);
@@ -96,5 +118,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.Label labelProv;
+        private System.Windows.Forms.Label labelQuery;
     }
 }

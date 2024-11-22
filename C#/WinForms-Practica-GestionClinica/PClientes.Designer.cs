@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.menuStripClients = new System.Windows.Forms.MenuStrip();
             this.altaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.modificaciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.borrarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.menuStrip1.SuspendLayout();
+            this.menuStripClients.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -54,17 +54,16 @@
             this.dataGridView1.Size = new System.Drawing.Size(810, 350);
             this.dataGridView1.TabIndex = 0;
             // 
-            // menuStrip1
+            // menuStripClients
             // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menuStripClients.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.altaToolStripMenuItem,
             this.modificaciónToolStripMenuItem,
             this.borrarToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(834, 24);
-            this.menuStrip1.TabIndex = 1;
-            this.menuStrip1.Text = "menuStrip1";
+            this.menuStripClients.Location = new System.Drawing.Point(0, 0);
+            this.menuStripClients.Name = "menuStripClients";
+            this.menuStripClients.Size = new System.Drawing.Size(834, 24);
+            this.menuStripClients.TabIndex = 1;
             // 
             // altaToolStripMenuItem
             // 
@@ -90,14 +89,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(834, 461);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.menuStrip1);
-            this.MainMenuStrip = this.menuStrip1;
+            this.Controls.Add(this.menuStripClients);
+            this.MainMenuStrip = this.menuStripClients;
             this.Name = "PClientes";
             this.Text = "Clientes";
             this.Load += new System.EventHandler(this.PClientes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
+            this.menuStripClients.ResumeLayout(false);
+            this.menuStripClients.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -106,7 +105,7 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.MenuStrip menuStripClients;
         private System.Windows.Forms.ToolStripMenuItem altaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem modificaciónToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem borrarToolStripMenuItem;

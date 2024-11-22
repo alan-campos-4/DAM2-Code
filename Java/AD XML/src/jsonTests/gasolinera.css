@@ -1,0 +1,32 @@
+body
+{
+	text-align: center;
+}
+table, th, td
+{
+	border-bottom: 1px solid grey;
+	border-collapse: collapse;
+	padding: 3px;
+}
+table
+{
+	margin: auto;
+}
+th
+{
+	background-color: #660000;
+	color: white;
+	width: 100px;
+}
+.der
+{
+	text-align: right;
+}
+.izq
+{
+	text-align: left;
+}
+.total
+{
+	background-color: #ffb3b3;
+}

@@ -1,4 +1,10 @@
+package xmlTests;
 import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectOutputStream;
+import java.util.ArrayList;
+
 import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;
 import org.xml.sax.Attributes;
@@ -6,32 +12,14 @@ import org.xml.sax.SAXException;
 import org.xml.sax.helpers.DefaultHandler;
 
 /*
- * 3. Utilizando el fichero "versiones.xml", realizar la lectura de dicho fichero utilizando la clase Version.java.
- * 
- * <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-	<versiones>
-	    <version numero="1.5">
-	        <nombre>Cupcake</nombre>
-	        <api>3</api>
-	    </version>
-	    <version numero="1.6">
-	        <nombre>Donut</nombre>
-	        <api>4</api>
-	    </version>
-	    <version numero="2.3">
-	        <nombre>Gingerbread</nombre>
-	        <api>9</api>
-	    </version>
-	    <version numero="3">
-	        <nombre>Honeycomb</nombre>
-	        <api>11</api>
-	    </version>
-	</versiones>
+ * 4. A partir del fichero versiones.xml crear un fichero de objetos de versiones.
  */
 
 
-public class Ejercicio3
+public class Ejercicio4
 {
+	static ObjectOutputStream OOS;
+	
 	static class UserHandler extends DefaultHandler
 	{
 		boolean hasName = false;
@@ -74,26 +62,30 @@ public class Ejercicio3
 			if (qName.equals("version"))
 			{
 				Version v = new Version(numero, nombre, api);
-				System.out.println(v.toString());
+				try
+				{
+					OOS.writeObject(v);
+				}
+				catch (IOException e) {e.printStackTrace();}
 			}
 		}
 	}
+	
+	public static ArrayList<Version> List;
 	
 	public static void main(String args[])
 	{
 		try
 		{
-			// Creating a DocumentBuilder Object
+			OOS = new ObjectOutputStream(new FileOutputStream(new File("src/versiones.dat")));
+			
 			SAXParserFactory factory = SAXParserFactory.newInstance();
 			SAXParser saxParser = factory.newSAXParser();
 			
-			// Reading the XML
 			File xmlFile = new File("src/versiones.xml");
 			
-			// Creating UserHandler object
 			UserHandler userHandler = new UserHandler();
 			
-			// Parsing the XML Document
 			saxParser.parse(xmlFile, userHandler);
 		}
 		catch (Exception e) {e.printStackTrace();}

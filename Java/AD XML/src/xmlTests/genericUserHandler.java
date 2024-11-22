@@ -1,4 +1,4 @@
-package GenericUserHandler;
+package xmlTests;
 import java.io.File;
 import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;
@@ -8,8 +8,7 @@ import org.xml.sax.helpers.DefaultHandler;
 
 
 
-
-public class UserHandlerTest
+public class genericUserHandler
 {
 	public static class UserHandler extends DefaultHandler
 	{

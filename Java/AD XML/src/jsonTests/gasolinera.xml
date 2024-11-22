@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="gasolinera.xsl"?>
+<gasolinera>
+	<año id="2016">
+		<mes id="1">
+			<gasolina_95>48000</gasolina_95>
+			<gasolina_98>7000</gasolina_98>
+			<gasoleo_a>20000</gasoleo_a>
+			<gasoleo_b>25000</gasoleo_b>
+		</mes>
+		<mes id="2">
+			<gasolina_95>54000</gasolina_95>
+			<gasolina_98>45000</gasolina_98>
+			<gasoleo_a>23000</gasoleo_a>
+			<gasoleo_b>12200</gasoleo_b>
+		</mes>
+		<mes id="3">
+			<gasolina_95>64000</gasolina_95>
+			<gasolina_98>55000</gasolina_98>
+			<gasoleo_a>23600</gasoleo_a>
+			<gasoleo_b>24000</gasoleo_b>
+		</mes>
+		<mes id="4">
+			<gasolina_95>12000</gasolina_95>
+			<gasolina_98>29000</gasolina_98>
+			<gasoleo_a>34500</gasoleo_a>
+			<gasoleo_b>21000</gasoleo_b>
+		</mes>
+		<mes id="5">
+			<gasolina_95>34000</gasolina_95>
+			<gasolina_98>19000</gasolina_98>
+			<gasoleo_a>62000</gasoleo_a>
+			<gasoleo_b>21500</gasoleo_b>
+		</mes>
+		<mes id="6">
+			<gasolina_95>41000</gasolina_95>
+			<gasolina_98>12300</gasolina_98>
+			<gasoleo_a>32000</gasoleo_a>
+			<gasoleo_b>89000</gasoleo_b>
+		</mes>
+		<mes id="7">
+			<gasolina_95>54000</gasolina_95>
+			<gasolina_98>21000</gasolina_98>
+			<gasoleo_a>45500</gasoleo_a>
+			<gasoleo_b>12400</gasoleo_b>
+		</mes>
+		<mes id="8">
+			<gasolina_95>32180</gasolina_95>
+			<gasolina_98>13200</gasolina_98>
+			<gasoleo_a>34000</gasoleo_a>
+			<gasoleo_b>21300</gasoleo_b>
+		</mes>
+		<mes id="9">
+			<gasolina_95>23100</gasolina_95>
+			<gasolina_98>43900</gasolina_98>
+			<gasoleo_a>32600</gasoleo_a>
+			<gasoleo_b>12000</gasoleo_b>
+		</mes>
+		<mes id="10">
+			<gasolina_95>43000</gasolina_95>
+			<gasolina_98>34000</gasolina_98>
+			<gasoleo_a>12500</gasoleo_a>
+			<gasoleo_b>31600</gasoleo_b>
+		</mes>
+		<mes id="11">
+			<gasolina_95>23400</gasolina_95>
+			<gasolina_98>43200</gasolina_98>
+			<gasoleo_a>54000</gasoleo_a>
+			<gasoleo_b>90800</gasoleo_b>
+		</mes>
+		<mes id="12">
+			<gasolina_95>37000</gasolina_95>
+			<gasolina_98>21000</gasolina_98>
+			<gasoleo_a>75600</gasoleo_a>
+			<gasoleo_b>9500</gasoleo_b>
+		</mes>
+	</año>
+	<año id="2017">
+		<mes id="1">
+			<gasolina_95>15000</gasolina_95>
+			<gasolina_98>7000</gasolina_98>
+			<gasoleo_a>20000</gasoleo_a>
+			<gasoleo_b>25000</gasoleo_b>
+		</mes>
+		<mes id="2">
+			<gasolina_95>34000</gasolina_95>
+			<gasolina_98>45000</gasolina_98>
+			<gasoleo_a>23000</gasoleo_a>
+			<gasoleo_b>12000</gasoleo_b>
+		</mes>
+		<mes id="3">
+			<gasolina_95>64000</gasolina_95>
+			<gasolina_98>55000</gasolina_98>
+			<gasoleo_a>23000</gasoleo_a>
+			<gasoleo_b>24000</gasoleo_b>
+		</mes>
+		<mes id="4">
+			<gasolina_95>12000</gasolina_95>
+			<gasolina_98>29000</gasolina_98>
+			<gasoleo_a>3430</gasoleo_a>
+			<gasoleo_b>21000</gasoleo_b>
+		</mes>
+		<mes id="5">
+			<gasolina_95>34000</gasolina_95>
+			<gasolina_98>19000</gasolina_98>
+			<gasoleo_a>62000</gasoleo_a>
+			<gasoleo_b>21000</gasoleo_b>
+		</mes>
+		<mes id="6">
+			<gasolina_95>41000</gasolina_95>
+			<gasolina_98>12300</gasolina_98>
+			<gasoleo_a>32000</gasoleo_a>
+			<gasoleo_b>89000</gasoleo_b>
+		</mes>
+		<mes id="7">
+			<gasolina_95>54000</gasolina_95>
+			<gasolina_98>21000</gasolina_98>
+			<gasoleo_a>45500</gasoleo_a>
+			<gasoleo_b>12400</gasoleo_b>
+		</mes>
+		<mes id="8">
+			<gasolina_95>32180</gasolina_95>
+			<gasolina_98>43200</gasolina_98>
+			<gasoleo_a>34000</gasoleo_a>
+			<gasoleo_b>21300</gasoleo_b>
+		</mes>
+		<mes id="9">
+			<gasolina_95>23100</gasolina_95>
+			<gasolina_98>43900</gasolina_98>
+			<gasoleo_a>42600</gasoleo_a>
+			<gasoleo_b>12000</gasoleo_b>
+		</mes>
+		<mes id="10">
+			<gasolina_95>83000</gasolina_95>
+			<gasolina_98>34000</gasolina_98>
+			<gasoleo_a>12500</gasoleo_a>
+			<gasoleo_b>31600</gasoleo_b>
+		</mes>
+		<mes id="11">
+			<gasolina_95>23400</gasolina_95>
+			<gasolina_98>43200</gasolina_98>
+			<gasoleo_a>54000</gasoleo_a>
+			<gasoleo_b>90800</gasoleo_b>
+		</mes>
+		<mes id="12">
+			<gasolina_95>32000</gasolina_95>
+			<gasolina_98>29000</gasolina_98>
+			<gasoleo_a>75600</gasoleo_a>
+			<gasoleo_b>9510</gasoleo_b>
+		</mes>
+	</año>
+</gasolinera>

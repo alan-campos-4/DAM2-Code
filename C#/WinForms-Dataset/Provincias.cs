@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace WinForms_Dataset
 {
@@ -34,21 +35,27 @@ namespace WinForms_Dataset
             comboBox1.DisplayMember = "provincia";
             comboBox1.ValueMember = "id";
             
+
+
             connection.Close();
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string id = comboBox1.SelectedValue.ToString();
+            string idProv = comboBox1.SelectedIndex.ToString();
 
             MySqlConnection connection = new MySqlConnection(connectionString);
             connection.Open();
 
-            string query = "SELECT municipio FROM municipios WHERE id = @ID";
+            string query = "SELECT id, municipio FROM municipios WHERE provincia=" + idProv;
+            
             MySqlDataAdapter adapter = new MySqlDataAdapter(query, connectionString);
-            
-            
-            //adapter.
+            DataTable Tmunicipios = new DataTable();
+            adapter.Fill(Tmunicipios);
+            comboBox2.DataSource = Tmunicipios;
+            comboBox2.DisplayMember = "municipio";
+            comboBox2.ValueMember = "id";
+
 
             connection.Close();
         }

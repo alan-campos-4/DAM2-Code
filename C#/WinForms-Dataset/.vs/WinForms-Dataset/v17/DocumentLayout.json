@@ -39,7 +39,8 @@
               "ViewState": "AgIAAAcAAAAAAAAAAAAiwCYAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-06T13:03:29.693Z",
-              "IsPinned": true
+              "IsPinned": true,
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -51,7 +52,8 @@
               "RelativeToolTip": "Form1.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-06T13:03:14.134Z",
-              "IsPinned": true
+              "IsPinned": true,
+              "EditorCaption": " [Dise\u00F1o]"
             },
             {
               "$type": "Bookmark",
@@ -85,7 +87,7 @@
               "RelativeDocumentMoniker": "Provincias.cs",
               "ToolTip": "C:\\Users\\DAM-A\\Sync\\Code\\C#\\WinForms-Dataset\\Provincias.cs",
               "RelativeToolTip": "Provincias.cs",
-              "ViewState": "AgIAABcAAAAAAAAAAAAWwDAAAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAACEAAAAAAAAAAAAswCsAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-13T12:51:35.949Z",
               "EditorCaption": ""

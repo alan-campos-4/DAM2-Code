@@ -31,7 +31,12 @@
             this.dataGridPets = new System.Windows.Forms.DataGridView();
             this.comboBoxOwners = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.menuStripPets = new System.Windows.Forms.MenuStrip();
+            this.añadirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.modificiarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.borrarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridPets)).BeginInit();
+            this.menuStripPets.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridPets
@@ -50,6 +55,7 @@
             this.dataGridPets.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridPets.Size = new System.Drawing.Size(550, 250);
             this.dataGridPets.TabIndex = 2;
+            this.dataGridPets.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridPets_CellContentClick);
             // 
             // comboBoxOwners
             // 
@@ -70,6 +76,35 @@
             this.label1.TabIndex = 4;
             this.label1.Text = "Dueñ@";
             // 
+            // menuStripPets
+            // 
+            this.menuStripPets.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.añadirToolStripMenuItem,
+            this.modificiarToolStripMenuItem,
+            this.borrarToolStripMenuItem});
+            this.menuStripPets.Location = new System.Drawing.Point(0, 0);
+            this.menuStripPets.Name = "menuStripPets";
+            this.menuStripPets.Size = new System.Drawing.Size(834, 24);
+            this.menuStripPets.TabIndex = 5;
+            // 
+            // añadirToolStripMenuItem
+            // 
+            this.añadirToolStripMenuItem.Name = "añadirToolStripMenuItem";
+            this.añadirToolStripMenuItem.Size = new System.Drawing.Size(54, 20);
+            this.añadirToolStripMenuItem.Text = "Añadir";
+            // 
+            // modificiarToolStripMenuItem
+            // 
+            this.modificiarToolStripMenuItem.Name = "modificiarToolStripMenuItem";
+            this.modificiarToolStripMenuItem.Size = new System.Drawing.Size(70, 20);
+            this.modificiarToolStripMenuItem.Text = "Modificar";
+            // 
+            // borrarToolStripMenuItem
+            // 
+            this.borrarToolStripMenuItem.Name = "borrarToolStripMenuItem";
+            this.borrarToolStripMenuItem.Size = new System.Drawing.Size(51, 20);
+            this.borrarToolStripMenuItem.Text = "Borrar";
+            // 
             // PMascotas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -78,10 +113,14 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.comboBoxOwners);
             this.Controls.Add(this.dataGridPets);
+            this.Controls.Add(this.menuStripPets);
+            this.MainMenuStrip = this.menuStripPets;
             this.Name = "PMascotas";
             this.Text = "Mascotas";
             this.Load += new System.EventHandler(this.PMascotas_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridPets)).EndInit();
+            this.menuStripPets.ResumeLayout(false);
+            this.menuStripPets.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -91,5 +130,9 @@
         private System.Windows.Forms.DataGridView dataGridPets;
         private System.Windows.Forms.ComboBox comboBoxOwners;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.MenuStrip menuStripPets;
+        private System.Windows.Forms.ToolStripMenuItem añadirToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem modificiarToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem borrarToolStripMenuItem;
     }
 }

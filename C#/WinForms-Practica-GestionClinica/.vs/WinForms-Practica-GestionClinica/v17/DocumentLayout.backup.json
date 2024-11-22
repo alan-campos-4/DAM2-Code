@@ -119,7 +119,7 @@
               "RelativeDocumentMoniker": "PMascotas.cs",
               "ToolTip": "C:\\Users\\DAM-A\\Sync\\Code\\C#\\WinForms-Practica-GestionClinica\\PMascotas.cs",
               "RelativeToolTip": "PMascotas.cs",
-              "ViewState": "AgIAACcAAAAAAAAAAAArwD4AAAAUAAAAAAAAAA==",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAlwBsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-20T11:50:05.508Z",
               "IsPinned": true,
@@ -135,7 +135,8 @@
               "RelativeToolTip": "PCitas.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-20T11:50:36.397Z",
-              "IsPinned": true
+              "IsPinned": true,
+              "EditorCaption": " [Dise\u00F1o]"
             },
             {
               "$type": "Document",
@@ -148,7 +149,8 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-20T11:51:02.112Z",
-              "IsPinned": true
+              "IsPinned": true,
+              "EditorCaption": ""
             },
             {
               "$type": "Bookmark",

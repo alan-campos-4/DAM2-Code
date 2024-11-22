@@ -1,3 +1,4 @@
+package xmlTests;
 import java.io.Serializable;
 
 public class Version implements Serializable
