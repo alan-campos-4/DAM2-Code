@@ -1,0 +1,5 @@
+ int resultado = 0;
+        for (int i = fin - 1; i >= inicio; i--) {
+            resultado = (resultado << 8) | (bytes[i] & 0xFF);
+        }
+        return resultado;
