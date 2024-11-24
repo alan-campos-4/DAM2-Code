@@ -24,6 +24,7 @@ import java.io.IOException;
 
 public class Ejercicio3 
 {
+	//Pasa el grupo de bits entre el inicio y el fin a un entero.
 	public static int bytesToInt(byte[] bytes, int inicio, int fin)
 	{
 		int resultado = 0;
@@ -40,6 +41,7 @@ public class Ejercicio3
 	{
 		try
 		{
+			//Lee el fichero pasado por argumento y crea el DataInputStream.
 			File f = new File(args[0]);
 			DataInputStream dis = new DataInputStream(new FileInputStream(f));
 			

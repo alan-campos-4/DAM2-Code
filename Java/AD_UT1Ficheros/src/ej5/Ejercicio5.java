@@ -49,8 +49,7 @@ public class Ejercicio5
 		{
 			Url = new URL(url);
 		}
-		catch (MalformedURLException e)	{e.printStackTrace();}
-		
+		catch (MalformedURLException e)	{e.printStackTrace();}		
 		
 		//Intenta acceder al contenido de la página web (openStream) y leerlo (BufferedReader).
         try (var br = new BufferedReader(new InputStreamReader(Url.openStream())))
@@ -77,13 +76,16 @@ public class Ejercicio5
                     cotValor = Double.parseDouble(cotizacion);
                     
                     //Sigue leyendo hasta que encuentra la línea que almacena la hora,
-                    while ((line = br.readLine()) != null)
-                    {
-                    	if (line.contains(":"))	{break;}
-                    }
+                    br.readLine();
+                    br.readLine();
+                    br.readLine();
+                    br.readLine();
+                    br.readLine();
+                    br.readLine();
+                    br.readLine();
+                    line = br.readLine();
                     //la divide de forma que:	<td>13:31</td>  ->  13:31
                     hora = line.substring(line.lastIndexOf("<td>")+4, line.lastIndexOf("</td"));
-                    
                     
                     //Guarda los valores el HashMap.
                     cotizacionesHM.put(nombreEmpresa, new Cotizacion(cotValor, fecha.toString(), hora));

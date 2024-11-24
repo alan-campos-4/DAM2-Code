@@ -25,19 +25,6 @@ import java.util.Scanner;
 
 public class Ejercicio2
 {
-	public static void pressAnyKey()
-	{
-		Scanner input = new Scanner(System.in);
-		
-		System.out.println("\nPress any key to continue.");
-        try {
-            System.in.read();
-            input.nextLine();
-        } catch (Exception e) {e.printStackTrace();}
-        
-        input.close();
-	}
-	
 	public static void main(String[] args)
 	{
 		try
@@ -45,6 +32,7 @@ public class Ejercicio2
 			int wordCount = 0;
 			String line;
 			String[] words;
+			
 			//Se utiliza BufferedReader	por su eficiencia en leer caracteres y líneas.
 			BufferedReader br = new BufferedReader(new FileReader(new File(args[0])));
 			
@@ -54,8 +42,9 @@ public class Ejercicio2
 				//si la línea no está vacía,
 	            if (!line.equals(""))
 	            {
-	            	//se añaden las palabras leídas a la cuenta.
-	                words = line.split("\\s+"); 
+	            	//divide la linea leída por espacios en blanco.
+	                words = line.split("\\s+");
+	                //se añaden las palabras leídas a la cuenta.
 	                wordCount += words.length;
 	            }
 	        }
@@ -63,8 +52,6 @@ public class Ejercicio2
 			//Imprime por pantalla el número de palabras.
 			System.out.println(" Este archivo contiene "+wordCount+" palabras.");
 			br.close();
-			
-			pressAnyKey();
 		}
 		//Se lanza cuando no se ha introducido el argumento
 		catch (ArrayIndexOutOfBoundsException e)	{System.out.println("  Se debe pasar 1 argumento.");}
