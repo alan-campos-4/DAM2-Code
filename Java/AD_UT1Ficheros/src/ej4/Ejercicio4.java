@@ -44,10 +44,7 @@ import java.util.Scanner;
 
 public class Ejercicio4
 {
-	public static void clear()
-	{
-		System.out.println("\n\n\n\n");
-	}
+	/***** MAIN *****/
 	public static void main(String[] args)
 	{
 		int op;
@@ -83,12 +80,14 @@ public class Ejercicio4
 				if (op!=0)	{clear();}
 				
 			} while (op!=0);
+			
+			input.close();
 		}
 		//Puede ser lanzada si la opción introducida no es un entero.
 		catch (InputMismatchException e)	{System.out.println("\nOpción no válida.");}
 		//Puede ser lanzada cada vez que se declara un nuevo fichero de acceso aleatorio.
 		catch (FileNotFoundException e)		{System.out.println("\n  No se ha encontrado el fichero.");}
-		//Puede ser lanzada por las funciones del fichero de acceso aleatorio.
+		//Puede ser lanzada cada vez que se ejecuta un método de el fichero de acceso aleatorio.
 		catch (IOException e)				{e.printStackTrace();}
 	}
 	
@@ -113,33 +112,17 @@ public class Ejercicio4
 	 *		disp	boolean		1 bytes
 	 * 		4 + 2*50 + 2*30 + 4 + 1 = 169 bytes */
 	
-	//Definición de la clase Libro
-	/*public static class Libro
+	
+	
+	
+	
+	/***** Funciones adicionales *****/
+	
+	/* Limpia el terminal. */
+	public static void clear()
 	{
-		public int id;
-		public String title;
-		public String author;
-		public int year;
-		public boolean disp;
-		
-		public Libro (int i, String titulo, String autor, int anio, boolean d)
-		{
-			this.id = i;
-			this.year = anio;
-			this.disp = d;
-			
-			StringBuffer b1 = new StringBuffer(titulo);
-			StringBuffer b2 = new StringBuffer(autor);
-			b1.setLength(TitleLength);
-			b2.setLength(AuthorLength);
-			
-			this.title = b1.toString();
-			this.author = b2.toString();
-		}
-	}*/
-	
-	
-	
+		System.out.println("\n\n\n\n\n");
+	}
 	
 	/* Devuelve la posición de un libro dentro del fichero si existe, y -1 si no existe. */
 	public static int getPosicion(int idToFind) throws IOException
@@ -172,10 +155,10 @@ public class Ejercicio4
 		return -1;
 	}
 	
-	/* Cuenta cuántos libros existan ya y devuelve un ID para un nuevo libro. */
+	/* Cuenta cuántos libros tiene el fichero y devuelve un ID para uno nuevo. */
 	public static int getNewID() throws IOException
 	{
-		int idCount=0, posicion;
+		int idCount = 0, posicion;
 		
 		try
 		{
@@ -204,28 +187,26 @@ public class Ejercicio4
 		return idCount + 1;
 	}
 	
-	
 	/* Devuelve el titulo de un libro como string tras leerlo caracter a caracter. 
 	 * Se debe llamar con el fichero de acceso aleatorio abierto.*/
 	public static String readTitle() throws IOException
 	{
-		char titulo[] = new char[TitleLength], aux;
+		char titulo[] = new char[TitleLength];
 		for (int i=0; i<TitleLength; i++)
 		{
-			aux = RAF.readChar();
-			titulo[i] = aux;
+			titulo[i] = RAF.readChar();;
 		}
 		return new String(titulo);
 	}
+	
 	/* Devuelve el autor de un libro como string tras leerlo caracter a caracter.
 	 * Se debe llamar con el fichero de acceso aleatorio abierto. */
 	public static String readAuthor() throws IOException
 	{
-		char autor[] = new char[AuthorLength], aux;
+		char autor[] = new char[AuthorLength];
 		for (int i=0; i<AuthorLength; i++)
 		{
-			aux = RAF.readChar();
-			autor[i] = aux;
+			autor[i] = RAF.readChar();
 		}
 		return new String(autor);
 	}
@@ -233,11 +214,18 @@ public class Ejercicio4
 	
 	
 	
+	
+	/***** Funciones principales *****/
+	
 	/* El usuario introducirá la información necesaria para agregar un nuevo libro a la biblioteca. */
 	public static void anadirLibro() throws IOException, FileNotFoundException
 	{
 		try
 		{
+			int id, anio;
+			String titulo, autor;
+			StringBuffer buffer1 = null, buffer2 = null;
+			
 			//Declara el fichero de acceso aleatorio con lectura y escritura.
 			RAF = new RandomAccessFile(fichero, "rw");
 			//Se coloca al final del fichero.
@@ -246,14 +234,13 @@ public class Ejercicio4
 			input.nextLine(); //Salta la línea para poder leer después del entero op.
 			
 			//Lee todos los datos por línea.
-			int id = getNewID();
+			id = getNewID();
 			System.out.println("Este libro se añadirá con el ID "+id+".");
-			System.out.print("Titulo: ");	String titulo = input.nextLine();
-			System.out.print("Autor: ");	String autor = input.nextLine();
-			System.out.print("Año: ");		int anio = input.nextInt();
+			System.out.print("Titulo: ");	titulo = input.nextLine();
+			System.out.print("Autor: ");	autor = input.nextLine();
+			System.out.print("Año: ");		anio = input.nextInt();
 			
 			//Pasa las cadenas a buffers para darles una longitud máxima.
-			StringBuffer buffer1 = null, buffer2 = null;
 			buffer1 = new StringBuffer(titulo);
 			buffer2 = new StringBuffer(autor);
 			buffer1.setLength(TitleLength);
@@ -277,22 +264,21 @@ public class Ejercicio4
 	
 	
 	
-	
 	/* Se buscará un libro por su ID y se mostrarán sus detalles (si existe). */
 	public static void consultarLibro() throws IOException, FileNotFoundException
 	{
-		//Declara el fichero de acceso aleatorio con lectura.
-		RAF = new RandomAccessFile(fichero, "r");
-		
-		int id, anio;
+		int id, anio, posicion, idToFind;
 		boolean disp;
 		String tituloS, autorS;
 		
+		//Declara el fichero de acceso aleatorio con lectura.
+		RAF = new RandomAccessFile(fichero, "r");
+		
 		//Preguntamos el ID a buscar.
 		System.out.print("Introduce el ID: ");
-		int idToFind = input.nextInt();
+		idToFind = input.nextInt();
 		//Busca la posicion del libro basado en el ID.
-		int posicion = getPosicion(idToFind);
+		posicion = getPosicion(idToFind);
 		
 		//Si el libro existe,
 		if (posicion!=-1)
@@ -325,22 +311,21 @@ public class Ejercicio4
 	
 	
 	
-	
 	/* Permitir al usuario modificar el título, el autor o el año de publicación de un libro existente.*/
 	public static void modificarLibro() throws IOException, FileNotFoundException
 	{
-		//Declara el fichero de acceso aleatorio con lectura y escritura.
-		RAF = new RandomAccessFile(fichero, "rw");
-		
-		int id, anio;
+		int id, anio, posicion, idToFind;
 		boolean disp;
 		String tituloS, autorS;
 		
+		//Declara el fichero de acceso aleatorio con lectura y escritura.
+		RAF = new RandomAccessFile(fichero, "rw");
+		
 		//Preguntamos el ID a buscar.
 		System.out.print("Introduce el ID: ");
-		int idToFind = input.nextInt();
+		idToFind = input.nextInt();
 		//Busca la posicion del libro basado en el ID.
-		int posicion = getPosicion(idToFind);
+		posicion = getPosicion(idToFind);
 		
 		//Si el libro existe,
 		if (posicion!=-1)
@@ -365,15 +350,13 @@ public class Ejercicio4
 			System.out.println("  Año:    "+anio);
 			System.out.println("  "+(disp ? "Disponible" : "No disponible")+"\n" );
 			
-			
 			char opt;
 			StringBuffer sb1 = null, sb2 = null;
 			input.nextLine();  //Salta la línea para poder leer después del entero idToFind.
 			
 			try
 			{
-				//Pregunta si quiere modificar el titulo guardado.
-				// Si acepta escribe, y si no lee.
+				//Pregunta y lee si quiere modificar el titulo guardado.
 				System.out.print("Quieres modificar el título (s/n): ");
 				opt = input.nextLine().charAt(0);
 				if (opt=='S' || opt=='s')
@@ -381,8 +364,7 @@ public class Ejercicio4
 					System.out.print("Titulo: ");
 					tituloS = input.nextLine();
 				}
-				//Pregunta si quiere modificar el autor guardado.
-				// Si acepta escribe, y si no lee.
+				//Pregunta y lee si quiere modificar el autor guardado.
 				System.out.print("Quieres modificar el autor (s/n): ");
 				opt = input.nextLine().charAt(0);
 				if (opt=='S' || opt=='s')
@@ -390,8 +372,7 @@ public class Ejercicio4
 					System.out.print("Autor: ");
 					autorS = input.nextLine();
 				}
-				//Pregunta si quiere modificar el año guardado.
-				// Si acepta escribe, y si no lee.
+				//Pregunta y lee si quiere modificar el año guardado.
 				System.out.print("Quieres modificar el el año de publicación (s/n): ");
 				opt = input.nextLine().charAt(0);
 				if (opt=='S' || opt=='s')
@@ -420,20 +401,18 @@ public class Ejercicio4
 		else {System.out.println("\n  El libro no existe.");}
 		
 		RAF.close();
-			
 	}
-	
 	
 	
 	
 	/* Marcar un libro como no disponible, eliminándolo lógicamente (sin borrar el registro del fichero). */
 	public static void eliminarLibro() throws IOException, FileNotFoundException
 	{
-		//Declara el fichero de acceso aleatorio con lectura y escritura.
-		RAF = new RandomAccessFile(fichero, "rw");
-		
 		int idToFind, posicion;
 		String tituloS, autorS;
+		
+		//Declara el fichero de acceso aleatorio con lectura y escritura.
+		RAF = new RandomAccessFile(fichero, "rw");
 		
 		//Preguntamos el ID a buscar.
 		System.out.print("Introduce el ID: ");
@@ -465,7 +444,6 @@ public class Ejercicio4
 		else {System.out.println("\n  El libro no existe.");}
 		
 		RAF.close();
-		
 	}
 	
 	
@@ -476,12 +454,12 @@ public class Ejercicio4
 	{
 		try
 		{
-			//Declara el fichero de acceso aleatorio con lectura.
-			RAF = new RandomAccessFile(fichero, "r");
-			
 			int id, anio, posicion;
 			boolean disp;
 			String tituloS, autorS;
+			
+			//Declara el fichero de acceso aleatorio con lectura.
+			RAF = new RandomAccessFile(fichero, "r");
 			
 			//Desde el principio.
 			posicion = 0;

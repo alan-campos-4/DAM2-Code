@@ -25,25 +25,22 @@ if __name__ == "__main__":
 
     for i, arg in enumerate(sys.argv):
         if i>0:
-            option = '1'
-            os.system('cls')
             if os.path.isdir(arg):
                 os.chdir(arg)
                 if os.path.isdir('./.git'):
+                    option = '1'
                     while option!='0':
+                        
+                        os.system('cls')
                         print(f"\n------ Repo {i}/{len(sys.argv)-1} in {arg} ------\n")
-                        os.chdir(arg)
                         os.system('cmd /c git status')
-
                         print("\n\tWhat do you want to do?: ")
                         print("\t\t1. Stage changes.")
                         print("\t\t2. Save changes and commit.")
                         print("\t\t3. Save changes, commit and push.")
                         print("\t\t4. Pull last commit.")
-                        if i+1 == len(sys.argv):
-                            print("\t\t0. End script.")
-                        else:
-                            print("\t\t0. Go to next repo.")
+                        if (i+1 < len(sys.argv)):   print("\t\t5. Go to next repo.")
+                        print("\t\t0. End script.")
                         option = input("\tChoose an option: ")
                         
                         if (option=='1'):
@@ -54,8 +51,8 @@ if __name__ == "__main__":
                             gitPush()
                         elif (option=='4'):
                             pull()
-                        elif (option=='0'):
-                            print("")
+                        elif (option=='5' or option=='0'):
+                            break
                         else:
                             print("Not valid input.")
                             input("Press Enter to continue...")
@@ -65,4 +62,7 @@ if __name__ == "__main__":
             else:
                 print(f"This directory {arg} doesn't exist.")
                 input("Press Enter to continue...")
+            
+            if (option=='0'):
+                break
 

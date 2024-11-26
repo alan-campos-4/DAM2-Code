@@ -25,7 +25,7 @@ namespace WinForms_Practica_GestionClinica
 
         private void dataGridPets_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            //
         }
 
         private void PMascotas_Load(object sender, EventArgs e)

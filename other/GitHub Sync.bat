@@ -1,1 +1,1 @@
-python .\githubAuto.py C:\Users\DAM-A\Sync\Work C:\Users\DAM-A\Sync\Code C:\Users\DAM-A\Sync\Code\Kotlin\Practice-HouseOfTheDragon C:\Users\DAM-A\Sync\Code\Kotlin\Practice-SocialMedia
+python .\githubAuto.py "C:\Users\DAM-A\Sync\Work" "C:\Users\DAM-A\Sync\Code" "C:\Users\DAM-A\Sync\Code\Kotlin\Practice-HouseOfTheDragon" "C:\Users\DAM-A\Sync\Code\Kotlin\Practice-SocialMedia"

@@ -104,6 +104,7 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Global.cs" />
     <Compile Include="PCitas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -115,6 +116,12 @@
     </Compile>
     <Compile Include="PClientes.Designer.cs">
       <DependentUpon>PClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PClientesAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PClientesAdd.Designer.cs">
+      <DependentUpon>PClientesAdd.cs</DependentUpon>
     </Compile>
     <Compile Include="PMascotas.cs">
       <SubType>Form</SubType>
@@ -132,6 +139,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PClientes.resx">
       <DependentUpon>PClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PClientesAdd.resx">
+      <DependentUpon>PClientesAdd.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PMascotas.resx">
       <DependentUpon>PMascotas.cs</DependentUpon>

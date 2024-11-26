@@ -41,7 +41,7 @@ public class Ejercicio6
 		public Cotizacion()
 		{
 			//Crea el fichero si no existe.
-			fichero = new File("cotizaciones.dat");
+			fichero = new File("src/ej6/cotizaciones.dat");
 		}
 		
 		//Guarda las nuevas cotizaciones al fichero.
