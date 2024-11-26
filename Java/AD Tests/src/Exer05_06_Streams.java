@@ -23,6 +23,7 @@ public class Exer05_06_Streams
 		do {
 			Base.createMenu(5, "Mostrar contenido de un fichero", "Mostrar números en un fichero", 
 					"Mostrar números primos en un fichero", "Copia de ficheros");
+			
 			try
 			{
 				op = input.nextInt();
