@@ -44,17 +44,17 @@ if __name__ == "__main__":
                         print("\t\t3. Update changes.")
                         print("\t\t4. Save changes and commit.")
                         print("\t\t5. Save changes, commit and push.")
-                        print("\t\t6. Pull last commit.")
                         if (i+1 < len(sys.argv)):
-                            print("\t\t5. Go to next repo.")
+                            print("\t\t6. Go to next repo.")
                         print("\t\t0. End script.")
                         option = input("\tChoose an option: ")
                         
-                        if (option=='1'):   gitAdd()
-                        elif (option=='2'): gitComm()
-                        elif (option=='3'): gitPush()
-                        elif (option=='4'): pull()
-                        elif (option=='5' or option=='0'):
+                        if (option=='1'):   pull()
+                        elif (option=='2'): gitStash()
+                        elif (option=='3'): gitAdd()
+                        elif (option=='4'): gitComm()
+                        elif (option=='5'): gitPush()
+                        elif (option=='6' or option=='0'):
                             break
                         else:
                             print("Not valid input.")
