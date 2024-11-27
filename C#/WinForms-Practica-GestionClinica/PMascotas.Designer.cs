@@ -47,22 +47,24 @@
             this.dataGridPets.AllowUserToResizeRows = false;
             this.dataGridPets.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dataGridPets.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridPets.Location = new System.Drawing.Point(134, 127);
+            this.dataGridPets.Location = new System.Drawing.Point(173, 155);
+            this.dataGridPets.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dataGridPets.MultiSelect = false;
             this.dataGridPets.Name = "dataGridPets";
             this.dataGridPets.ReadOnly = true;
             this.dataGridPets.RowHeadersVisible = false;
             this.dataGridPets.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridPets.Size = new System.Drawing.Size(550, 250);
+            this.dataGridPets.Size = new System.Drawing.Size(733, 308);
             this.dataGridPets.TabIndex = 2;
             this.dataGridPets.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridPets_CellContentClick);
             // 
             // comboBoxOwners
             // 
             this.comboBoxOwners.FormattingEnabled = true;
-            this.comboBoxOwners.Location = new System.Drawing.Point(307, 100);
+            this.comboBoxOwners.Location = new System.Drawing.Point(453, 123);
+            this.comboBoxOwners.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.comboBoxOwners.Name = "comboBoxOwners";
-            this.comboBoxOwners.Size = new System.Drawing.Size(189, 21);
+            this.comboBoxOwners.Size = new System.Drawing.Size(251, 24);
             this.comboBoxOwners.TabIndex = 3;
             this.comboBoxOwners.SelectedIndexChanged += new System.EventHandler(this.comboBoxOwners_SelectedIndexChanged);
             // 
@@ -70,7 +72,8 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(248, 101);
+            this.label1.Location = new System.Drawing.Point(392, 126);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(53, 16);
             this.label1.TabIndex = 4;
@@ -78,45 +81,51 @@
             // 
             // menuStripPets
             // 
+            this.menuStripPets.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.menuStripPets.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuStripPets.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.añadirToolStripMenuItem,
             this.modificiarToolStripMenuItem,
             this.borrarToolStripMenuItem});
             this.menuStripPets.Location = new System.Drawing.Point(0, 0);
             this.menuStripPets.Name = "menuStripPets";
-            this.menuStripPets.Size = new System.Drawing.Size(834, 24);
+            this.menuStripPets.Padding = new System.Windows.Forms.Padding(15, 5, 0, 5);
+            this.menuStripPets.Size = new System.Drawing.Size(1084, 34);
             this.menuStripPets.TabIndex = 5;
             // 
             // añadirToolStripMenuItem
             // 
             this.añadirToolStripMenuItem.Name = "añadirToolStripMenuItem";
-            this.añadirToolStripMenuItem.Size = new System.Drawing.Size(54, 20);
+            this.añadirToolStripMenuItem.Size = new System.Drawing.Size(65, 24);
             this.añadirToolStripMenuItem.Text = "Añadir";
+            this.añadirToolStripMenuItem.Click += new System.EventHandler(this.añadirToolStripMenuItem_Click);
             // 
             // modificiarToolStripMenuItem
             // 
             this.modificiarToolStripMenuItem.Name = "modificiarToolStripMenuItem";
-            this.modificiarToolStripMenuItem.Size = new System.Drawing.Size(70, 20);
+            this.modificiarToolStripMenuItem.Size = new System.Drawing.Size(85, 24);
             this.modificiarToolStripMenuItem.Text = "Modificar";
             // 
             // borrarToolStripMenuItem
             // 
             this.borrarToolStripMenuItem.Name = "borrarToolStripMenuItem";
-            this.borrarToolStripMenuItem.Size = new System.Drawing.Size(51, 20);
+            this.borrarToolStripMenuItem.Size = new System.Drawing.Size(62, 24);
             this.borrarToolStripMenuItem.Text = "Borrar";
             // 
             // PMascotas
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(834, 461);
+            this.ClientSize = new System.Drawing.Size(1084, 561);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.comboBoxOwners);
             this.Controls.Add(this.dataGridPets);
             this.Controls.Add(this.menuStripPets);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MainMenuStrip = this.menuStripPets;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "PMascotas";
-            this.Text = "Mascotas";
+            this.Text = "Gestión de Mascotas";
             this.Load += new System.EventHandler(this.PMascotas_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridPets)).EndInit();
             this.menuStripPets.ResumeLayout(false);

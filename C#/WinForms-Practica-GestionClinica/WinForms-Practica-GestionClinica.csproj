@@ -123,11 +123,23 @@
     <Compile Include="PClientesAdd.Designer.cs">
       <DependentUpon>PClientesAdd.cs</DependentUpon>
     </Compile>
+    <Compile Include="PClientesShow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PClientesShow.Designer.cs">
+      <DependentUpon>PClientesShow.cs</DependentUpon>
+    </Compile>
     <Compile Include="PMascotas.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="PMascotas.Designer.cs">
       <DependentUpon>PMascotas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PMascotasAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PMascotasAdd.Designer.cs">
+      <DependentUpon>PMascotasAdd.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -143,8 +155,14 @@
     <EmbeddedResource Include="PClientesAdd.resx">
       <DependentUpon>PClientesAdd.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PClientesShow.resx">
+      <DependentUpon>PClientesShow.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PMascotas.resx">
       <DependentUpon>PMascotas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PMascotasAdd.resx">
+      <DependentUpon>PMascotasAdd.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

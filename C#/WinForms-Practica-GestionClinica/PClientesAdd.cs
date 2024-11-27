@@ -71,6 +71,10 @@ namespace WinForms_Practica_GestionClinica
             {
                 this.DialogResult = DialogResult.None;
             }
+            else
+            {
+                this.DialogResult = DialogResult.OK;
+            }
         }
 
         private void buttonCancel_Click(object sender, EventArgs e)
@@ -81,24 +85,29 @@ namespace WinForms_Practica_GestionClinica
         private bool FindEmpty()
         {
             bool empty = false;
-            foreach (TextBox tb in groupBox1.Controls)
-            {
-                if (string.IsNullOrEmpty(tb.Text))
-                {
-                    empty = true;
-                    break;
-                }
-            }
-            foreach (TextBox tb in groupBox2.Controls)
-            {
-                if (string.IsNullOrEmpty(tb.Text))
-                {
-                    empty = true;
-                    break;
-                }
-            }
+            if (checkGroupBox(groupBox1))
+                { empty = true; }
+            if (checkGroupBox(groupBox2))
+                { empty = true; }
             if (string.IsNullOrEmpty(richTextBox1.Text))
                 { empty = true; }
+            return empty;
+        }
+
+        private bool checkGroupBox(GroupBox grp)
+        {
+            bool empty = false;
+            foreach (Control ctr in grp.Controls)
+            {
+                //if (ctr is TextBox || ctr is ComboBox)
+                {
+                    if (string.IsNullOrEmpty(ctr.Text))
+                    {
+                        empty = true;
+                        break;
+                    }
+                }
+            }
             return empty;
         }
         

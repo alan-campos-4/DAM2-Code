@@ -28,6 +28,11 @@ namespace WinForms_Practica_GestionClinica
             //
         }
 
+        private void añadirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void PMascotas_Load(object sender, EventArgs e)
         {
             MySqlConnection connection = new MySqlConnection(connectionString);

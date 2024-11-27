@@ -59,8 +59,22 @@ namespace WinForms_Practica_GestionClinica
         private void altaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             PClientesAdd pAdd = new PClientesAdd{ Text = "Añadir Cliente" };
-            pAdd.labelCode.Text = GenerateNewID();
-            pAdd.ShowDialog();
+            if (pAdd.ShowDialog()==DialogResult.OK)
+            {
+                tableClients.Rows.Add(
+                    GenerateNewID(),
+                    pAdd.textBoxDNI.Text,
+                    pAdd.textBoxName1.Text,
+                    pAdd.textBoxName2.Text,
+                    pAdd.textBoxPhone.Text,
+                    pAdd.textBoxEmail.Text,
+                    pAdd.comboBoxProv.Text,
+                    pAdd.comboBoxCity.Text,
+                    pAdd.textBoxAddress.Text,
+                    pAdd.textBoxPostal.Text,
+                    pAdd.richTextBox1.Text
+                    );
+            }
         }
 
         private void modificaciónToolStripMenuItem_Click(object sender, EventArgs e)
@@ -68,7 +82,6 @@ namespace WinForms_Practica_GestionClinica
             if (dataGridView1.SelectedRows.Count > 0)
             {
                 PClientesAdd pMod = new PClientesAdd{ Text = "Modificar Cliente" };
-                pMod.labelCode.Text = dataGridView1.SelectedRows[0].Cells[0].Value.ToString();
                 pMod.textBoxDNI.Text = dataGridView1.SelectedRows[0].Cells[1].Value.ToString();
                 pMod.textBoxName1.Text = dataGridView1.SelectedRows[0].Cells[2].Value.ToString();
                 pMod.textBoxName2.Text = dataGridView1.SelectedRows[0].Cells[3].Value.ToString();
@@ -106,6 +119,15 @@ namespace WinForms_Practica_GestionClinica
                 }
             }
             else { g.showError("Fila seleccionada.", "No se puede realizar esta acción\nsin seleccionar una fila."); }
+        }
+
+        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                PClientesShow pShow = new PClientesShow();
+                pShow.ShowDialog();
+            }
         }
     }
 }

@@ -32,49 +32,78 @@
             this.nuevaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.alterarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.eliminarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.listBoxClients = new System.Windows.Forms.ListBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.menuStripAppoint.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStripAppoint
             // 
+            this.menuStripAppoint.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.menuStripAppoint.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuStripAppoint.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.nuevaToolStripMenuItem,
             this.alterarToolStripMenuItem,
             this.eliminarToolStripMenuItem});
             this.menuStripAppoint.Location = new System.Drawing.Point(0, 0);
             this.menuStripAppoint.Name = "menuStripAppoint";
-            this.menuStripAppoint.Size = new System.Drawing.Size(834, 24);
+            this.menuStripAppoint.Padding = new System.Windows.Forms.Padding(15, 5, 0, 5);
+            this.menuStripAppoint.Size = new System.Drawing.Size(1084, 34);
             this.menuStripAppoint.TabIndex = 0;
             // 
             // nuevaToolStripMenuItem
             // 
             this.nuevaToolStripMenuItem.Name = "nuevaToolStripMenuItem";
-            this.nuevaToolStripMenuItem.Size = new System.Drawing.Size(53, 20);
+            this.nuevaToolStripMenuItem.Size = new System.Drawing.Size(63, 24);
             this.nuevaToolStripMenuItem.Text = "Nueva";
             // 
             // alterarToolStripMenuItem
             // 
             this.alterarToolStripMenuItem.Name = "alterarToolStripMenuItem";
-            this.alterarToolStripMenuItem.Size = new System.Drawing.Size(54, 20);
+            this.alterarToolStripMenuItem.Size = new System.Drawing.Size(66, 24);
             this.alterarToolStripMenuItem.Text = "Alterar";
             // 
             // eliminarToolStripMenuItem
             // 
             this.eliminarToolStripMenuItem.Name = "eliminarToolStripMenuItem";
-            this.eliminarToolStripMenuItem.Size = new System.Drawing.Size(62, 20);
+            this.eliminarToolStripMenuItem.Size = new System.Drawing.Size(75, 24);
             this.eliminarToolStripMenuItem.Text = "Eliminar";
+            // 
+            // listBoxClients
+            // 
+            this.listBoxClients.FormattingEnabled = true;
+            this.listBoxClients.ItemHeight = 16;
+            this.listBoxClients.Location = new System.Drawing.Point(83, 129);
+            this.listBoxClients.Name = "listBoxClients";
+            this.listBoxClients.Size = new System.Drawing.Size(450, 372);
+            this.listBoxClients.TabIndex = 1;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(563, 211);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(426, 198);
+            this.dataGridView1.TabIndex = 2;
             // 
             // PCitas
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(834, 461);
+            this.ClientSize = new System.Drawing.Size(1084, 561);
+            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.listBoxClients);
             this.Controls.Add(this.menuStripAppoint);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MainMenuStrip = this.menuStripAppoint;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "PCitas";
-            this.Text = "Citas";
+            this.Text = "Gestión de Citas";
+            this.Load += new System.EventHandler(this.PCitas_Load);
             this.menuStripAppoint.ResumeLayout(false);
             this.menuStripAppoint.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -86,5 +115,7 @@
         private System.Windows.Forms.ToolStripMenuItem nuevaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem alterarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem eliminarToolStripMenuItem;
+        private System.Windows.Forms.ListBox listBoxClients;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
