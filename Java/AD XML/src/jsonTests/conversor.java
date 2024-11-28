@@ -17,7 +17,9 @@ public class conversor
 	public static void main(String[] args) throws Exception
 	{
 		String xmlEntrada = "<?xml version=\"1.0\" ?>" +
-				"<serviceRequest><id>123</id><desc>Hola</desc></serviceRequest>";
+				"<serviceRequest><id>123</id><desc>Hola</desc></serviceRequest>" + 
+				"<serviceRequest><id>124</id><desc>Hola</desc></serviceRequest>" +
+				"<sourceRequest><id>125</id><desc>Hola</desc></sourceRequest>";
 		try
 		{
 			System.out.println(xmlStringToJSONString(xmlEntrada, 4));

@@ -1,5 +1,5 @@
 import os
 from git import Repo
 
-
-COMMITS_TO_PRINT = 5
+bare_repo = Repo.init(os.path.join(rw_dir, "bare-repo"), bare=True)
+assert bare_repo.bare
