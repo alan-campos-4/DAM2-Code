@@ -26,14 +26,27 @@ namespace WinForms_Practica_GestionClinica
             MySqlConnection connection = new MySqlConnection(connectionString);
             connection.Open();
 
-            string query = "SELECT ID_CL, CONCAT(Apellidos, ', ', Nombre) AS Name FROM clientes";
+            string query = 
+                "SELECT Fecha_Hora, M.Especie, M.Nombre, Motivo " +
+                "FROM citas CT JOIN clientes CL ON CT.Cliente=CL.ID_CL " +
+                "JOIN mascotas M ON CT.Mascota=M.ID_M";
             DataTable tableClients = new DataTable();
             MySqlDataAdapter adapter = new MySqlDataAdapter(query, connection);
             MySqlCommandBuilder commandBuilder = new MySqlCommandBuilder(adapter);
             adapter.Fill(tableClients);
-            listBoxClients.DataSource = tableClients;
-            listBoxClients.DisplayMember = "Name";
-            listBoxClients.ValueMember = "ID_CL";
+            dataGridView1.DataSource = tableClients;
+
+            string query1 = "SELECT Fecha_Hora FROM citas";
+            DataTable tableCalendar = new DataTable();
+            MySqlDataAdapter adapter1 = new MySqlDataAdapter(query1, connection);
+            MySqlCommandBuilder commandBuilder1 = new MySqlCommandBuilder(adapter1);
+            adapter1.Fill(tableCalendar);
+            
+            for (int i= 0; i < tableCalendar.Rows.Count; i++)
+            {
+                monthCalendar1.AddBoldedDate(DateTime.Parse(tableCalendar.Rows[i][0].ToString()));
+            }
+
             connection.Close();
         }
     }

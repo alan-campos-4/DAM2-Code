@@ -13,6 +13,8 @@ INSERT INTO mascotas VALUES (10002, 1001, 'Perro', 'Labrador', 'Juanjo', '2019-1
 INSERT INTO mascotas VALUES (10003, 1002, 'Gato', 'Cartujo', 'Nina', '2016-05-01', 'F', '...');
 INSERT INTO mascotas VALUES (10004, 1003, 'Loro', 'Guacamayo escarlata', 'Mango', '2007-02-13', 'M', '...');
 
-INSERT INTO citas VALUES (849554, 1001, 10002, '2024-11-07 17:30', 'Vacuna', '...');
-INSERT INTO citas VALUES (135274, 1003, 10004, '2024-11-07 19:00', 'Chequeo', '...');
+INSERT INTO citas VALUES (849554, 1001, 10002, '2024-12-07 17:30', 'Chequeo', '...');
+INSERT INTO citas VALUES (135274, 1002, 10003, '2024-12-08 19:00', 'Vacuna', '...');
+INSERT INTO citas VALUES (748951, 1002, 10003, '2024-12-11 18:00', 'Peluquería', '...');
+INSERT INTO citas VALUES (765213, 1003, 10004, '2024-12-15 16:30', 'Chequeo', '...');
 

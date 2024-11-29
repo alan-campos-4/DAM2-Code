@@ -1,1 +1,1 @@
-py .\githubAuto.py "D:\Code\FP2" "D:\Studies\FP DAM\2º Año (2024-25)"
+python .\githubAuto.py "D:\Code\FP2" "D:\Studies\FP DAM\2º Año (2024-25)"

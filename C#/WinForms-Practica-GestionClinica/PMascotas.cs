@@ -23,16 +23,6 @@ namespace WinForms_Practica_GestionClinica
         public DataTable Tclients, Tpets;
         public MySqlDataAdapter adapter1, adapter2;
 
-        private void dataGridPets_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            //
-        }
-
-        private void añadirToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void PMascotas_Load(object sender, EventArgs e)
         {
             MySqlConnection connection = new MySqlConnection(connectionString);
@@ -50,7 +40,7 @@ namespace WinForms_Practica_GestionClinica
             Tpets = new DataTable();
             string query2 = "SELECT * FROM mascotas ORDER BY 3, 4";
             adapter2 = new MySqlDataAdapter(query2, connection);
-            MySqlCommandBuilder commandBuilder2 = new MySqlCommandBuilder(adapter2); 
+            MySqlCommandBuilder commandBuilder2 = new MySqlCommandBuilder(adapter2);
             adapter2.Fill(Tpets);
             dataGridPets.DataSource = Tpets;
             dataGridPets.Columns["ID_M"].Visible = false;
@@ -81,5 +71,16 @@ namespace WinForms_Practica_GestionClinica
                 }
             }
         }
+
+        private void dataGridPets_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            //
+        }
+
+        private void añadirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }
