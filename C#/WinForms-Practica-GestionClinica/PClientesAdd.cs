@@ -19,7 +19,7 @@ namespace WinForms_Practica_GestionClinica
         }
 
         static Global g = new Global();
-        public string connectionString = g.connectionString();
+        public string connectionString = g.ConnectionString();
 
         private void PClientesAdd_Load(object sender, EventArgs e)
         {
@@ -64,10 +64,10 @@ namespace WinForms_Practica_GestionClinica
         {
             if (FindEmpty())
             {
-                g.showError("Datos", "Debes rellenar todos los datos.");
+                g.ShowError("Datos", "Debes rellenar todos los datos.");
                 this.DialogResult = DialogResult.None;
             }
-            else if (g.showWarning(this.Text, "¿Son los datos correctos?") == DialogResult.Cancel)
+            else if (g.ShowWarning(this.Text, "¿Son los datos correctos?") == DialogResult.Cancel)
             {
                 this.DialogResult = DialogResult.None;
             }

@@ -19,7 +19,7 @@ namespace WinForms_Practica_GestionClinica
         }
 
         static Global g = new Global();
-        public string connectionString = g.connectionString();
+        public string connectionString = g.ConnectionString();
 
         private void PCitas_Load(object sender, EventArgs e)
         {
@@ -27,7 +27,7 @@ namespace WinForms_Practica_GestionClinica
             connection.Open();
 
             string query = 
-                "SELECT Fecha_Hora, M.Especie, M.Nombre, Motivo " +
+                "SELECT ID_CT, Fecha_Hora, M.Especie, M.Nombre, Motivo " +
                 "FROM citas CT JOIN clientes CL ON CT.Cliente=CL.ID_CL " +
                 "JOIN mascotas M ON CT.Mascota=M.ID_M";
             DataTable tableClients = new DataTable();
@@ -35,6 +35,7 @@ namespace WinForms_Practica_GestionClinica
             MySqlCommandBuilder commandBuilder = new MySqlCommandBuilder(adapter);
             adapter.Fill(tableClients);
             dataGridView1.DataSource = tableClients;
+            dataGridView1.Columns["ID_CT"].Visible = false;
 
             string query1 = "SELECT Fecha_Hora FROM citas";
             DataTable tableCalendar = new DataTable();
@@ -44,8 +45,9 @@ namespace WinForms_Practica_GestionClinica
             
             for (int i= 0; i < tableCalendar.Rows.Count; i++)
             {
-                monthCalendar1.AddBoldedDate(DateTime.Parse(tableCalendar.Rows[i][0].ToString()));
+                monthCalendar1.AddBoldedDate(DateTime.Parse(tableCalendar.Rows[i][1].ToString()));
             }
+            monthCalendar1.Refresh();
 
             connection.Close();
         }

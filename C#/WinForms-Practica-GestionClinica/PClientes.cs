@@ -21,7 +21,7 @@ namespace WinForms_Practica_GestionClinica
         }
 
         static Global g = new Global();
-        public string connectionString = g.connectionString();
+        public string connectionString = g.ConnectionString();
         public DataTable tableClients;
         public MySqlDataAdapter adapter;
 
@@ -40,29 +40,13 @@ namespace WinForms_Practica_GestionClinica
             connection.Close();
         }
 
-        public string GenerateNewID()
-        {
-            MySqlConnection connection = new MySqlConnection(connectionString);
-            connection.Open();
-
-            string query = "SELECT ID_CL FROM clientes";
-            MySqlDataAdapter adapter = new MySqlDataAdapter(query, connectionString);
-            DataTable tableClients = new DataTable();
-            adapter.Fill(tableClients);
-            int rowCount = tableClients.Rows.Count;
-
-            connection.Close();
-
-            return (1000 + rowCount + 1).ToString();
-        }
-
         private void altaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             PClientesAdd pAdd = new PClientesAdd{ Text = "Añadir Cliente" };
             if (pAdd.ShowDialog()==DialogResult.OK)
             {
                 tableClients.Rows.Add(
-                    GenerateNewID(),
+                    g.GenerateNewID("clientes", 1000),
                     pAdd.textBoxDNI.Text,
                     pAdd.textBoxName1.Text,
                     pAdd.textBoxName2.Text,
@@ -73,7 +57,7 @@ namespace WinForms_Practica_GestionClinica
                     pAdd.textBoxAddress.Text,
                     pAdd.textBoxPostal.Text,
                     pAdd.richTextBox1.Text
-                    );
+                );
             }
         }
 
@@ -106,19 +90,19 @@ namespace WinForms_Practica_GestionClinica
                     dataGridView1.SelectedRows[0].Cells[10].Value = pMod.richTextBox1.Text;
                 }
             }
-            else { g.showError("Fila seleccionada.", "No se puede realizar esta acción\nsin seleccionar una fila."); }
+            else { g.ShowError("Fila seleccionada.", "No se puede realizar esta acción\nsin seleccionar una fila."); }
         }
 
         private void borrarToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (dataGridView1.SelectedRows.Count > 0)
             {
-                if (g.showWarning("Borrar cliente", "¿Seguro que quieres borrar este cliente?") == DialogResult.OK)
+                if (g.ShowWarning("Borrar cliente", "¿Seguro que quieres borrar este cliente?") == DialogResult.OK)
                 {
                     dataGridView1.Rows.RemoveAt(dataGridView1.SelectedRows[0].Index);
                 }
             }
-            else { g.showError("Fila seleccionada.", "No se puede realizar esta acción\nsin seleccionar una fila."); }
+            else { g.ShowError("Fila seleccionada.", "No se puede realizar esta acción\nsin seleccionar una fila."); }
         }
 
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)

@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.dataGridPets = new System.Windows.Forms.DataGridView();
-            this.comboBoxOwners = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.menuStripPets = new System.Windows.Forms.MenuStrip();
             this.añadirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.modificiarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.borrarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.textBoxSearch = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridPets)).BeginInit();
             this.menuStripPets.SuspendLayout();
             this.SuspendLayout();
@@ -47,37 +47,27 @@
             this.dataGridPets.AllowUserToResizeRows = false;
             this.dataGridPets.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dataGridPets.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridPets.Location = new System.Drawing.Point(173, 155);
-            this.dataGridPets.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridPets.Location = new System.Drawing.Point(102, 148);
+            this.dataGridPets.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridPets.MultiSelect = false;
             this.dataGridPets.Name = "dataGridPets";
             this.dataGridPets.ReadOnly = true;
             this.dataGridPets.RowHeadersVisible = false;
             this.dataGridPets.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridPets.Size = new System.Drawing.Size(733, 308);
+            this.dataGridPets.Size = new System.Drawing.Size(900, 400);
             this.dataGridPets.TabIndex = 2;
             this.dataGridPets.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridPets_CellContentClick);
-            // 
-            // comboBoxOwners
-            // 
-            this.comboBoxOwners.FormattingEnabled = true;
-            this.comboBoxOwners.Location = new System.Drawing.Point(453, 123);
-            this.comboBoxOwners.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.comboBoxOwners.Name = "comboBoxOwners";
-            this.comboBoxOwners.Size = new System.Drawing.Size(251, 24);
-            this.comboBoxOwners.TabIndex = 3;
-            this.comboBoxOwners.SelectedIndexChanged += new System.EventHandler(this.comboBoxOwners_SelectedIndexChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(392, 126);
+            this.label1.Location = new System.Drawing.Point(99, 112);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(53, 16);
+            this.label1.Size = new System.Drawing.Size(177, 16);
             this.label1.TabIndex = 4;
-            this.label1.Text = "Dueñ@";
+            this.label1.Text = "Busca el nombre del dueñ@";
             // 
             // menuStripPets
             // 
@@ -105,25 +95,35 @@
             this.modificiarToolStripMenuItem.Name = "modificiarToolStripMenuItem";
             this.modificiarToolStripMenuItem.Size = new System.Drawing.Size(85, 24);
             this.modificiarToolStripMenuItem.Text = "Modificar";
+            this.modificiarToolStripMenuItem.Click += new System.EventHandler(this.modificiarToolStripMenuItem_Click);
             // 
             // borrarToolStripMenuItem
             // 
             this.borrarToolStripMenuItem.Name = "borrarToolStripMenuItem";
             this.borrarToolStripMenuItem.Size = new System.Drawing.Size(62, 24);
             this.borrarToolStripMenuItem.Text = "Borrar";
+            this.borrarToolStripMenuItem.Click += new System.EventHandler(this.borrarToolStripMenuItem_Click);
+            // 
+            // textBoxSearch
+            // 
+            this.textBoxSearch.Location = new System.Drawing.Point(292, 109);
+            this.textBoxSearch.Name = "textBoxSearch";
+            this.textBoxSearch.Size = new System.Drawing.Size(182, 22);
+            this.textBoxSearch.TabIndex = 6;
+            this.textBoxSearch.TextChanged += new System.EventHandler(this.textBoxSearch_TextChanged);
             // 
             // PMascotas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1084, 561);
+            this.Controls.Add(this.textBoxSearch);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.comboBoxOwners);
             this.Controls.Add(this.dataGridPets);
             this.Controls.Add(this.menuStripPets);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MainMenuStrip = this.menuStripPets;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "PMascotas";
             this.Text = "Gestión de Mascotas";
             this.Load += new System.EventHandler(this.PMascotas_Load);
@@ -136,12 +136,13 @@
         }
 
         #endregion
+
         private System.Windows.Forms.DataGridView dataGridPets;
-        private System.Windows.Forms.ComboBox comboBoxOwners;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.MenuStrip menuStripPets;
         private System.Windows.Forms.ToolStripMenuItem añadirToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem modificiarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem borrarToolStripMenuItem;
+        private System.Windows.Forms.TextBox textBoxSearch;
     }
 }
