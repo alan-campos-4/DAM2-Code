@@ -1,18 +1,22 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\DAM-A\\Sync\\Code\\C#\\WinForms-Practica-GestionClinica\\",
+  "WorkspaceRootPath": "D:\\Code\\FP2\\C#\\WinForms-Practica-GestionClinica\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7824828E-8636-4DDA-B380-6A21C58FF55A}|WinForms-Practica-GestionClinica.csproj|c:\\users\\dam-a\\sync\\code\\c#\\winforms-practica-gestionclinica\\global.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7824828E-8636-4DDA-B380-6A21C58FF55A}|WinForms-Practica-GestionClinica.csproj|solutionrelative:global.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7824828E-8636-4DDA-B380-6A21C58FF55A}|WinForms-Practica-GestionClinica.csproj|d:\\code\\fp2\\c#\\winforms-practica-gestionclinica\\pclientesadd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7824828E-8636-4DDA-B380-6A21C58FF55A}|WinForms-Practica-GestionClinica.csproj|solutionrelative:pclientesadd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7824828E-8636-4DDA-B380-6A21C58FF55A}|WinForms-Practica-GestionClinica.csproj|c:\\users\\dam-a\\sync\\code\\c#\\winforms-practica-gestionclinica\\pcitas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{7824828E-8636-4DDA-B380-6A21C58FF55A}|WinForms-Practica-GestionClinica.csproj|d:\\code\\fp2\\c#\\winforms-practica-gestionclinica\\pcitasadd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7824828E-8636-4DDA-B380-6A21C58FF55A}|WinForms-Practica-GestionClinica.csproj|solutionrelative:pcitasadd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7824828E-8636-4DDA-B380-6A21C58FF55A}|WinForms-Practica-GestionClinica.csproj|D:\\Code\\FP2\\C#\\WinForms-Practica-GestionClinica\\pcitas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7824828E-8636-4DDA-B380-6A21C58FF55A}|WinForms-Practica-GestionClinica.csproj|solutionrelative:pcitas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7824828E-8636-4DDA-B380-6A21C58FF55A}|WinForms-Practica-GestionClinica.csproj|c:\\users\\dam-a\\sync\\code\\c#\\winforms-practica-gestionclinica\\pclientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7824828E-8636-4DDA-B380-6A21C58FF55A}|WinForms-Practica-GestionClinica.csproj|solutionrelative:pclientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7824828E-8636-4DDA-B380-6A21C58FF55A}|WinForms-Practica-GestionClinica.csproj|d:\\code\\fp2\\c#\\winforms-practica-gestionclinica\\global.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7824828E-8636-4DDA-B380-6A21C58FF55A}|WinForms-Practica-GestionClinica.csproj|solutionrelative:global.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,17 +26,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 79,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "Global.cs",
-              "DocumentMoniker": "C:\\Users\\DAM-A\\Sync\\Code\\C#\\WinForms-Practica-GestionClinica\\Global.cs",
+              "DocumentMoniker": "D:\\Code\\FP2\\C#\\WinForms-Practica-GestionClinica\\Global.cs",
               "RelativeDocumentMoniker": "Global.cs",
-              "ToolTip": "C:\\Users\\DAM-A\\Sync\\Code\\C#\\WinForms-Practica-GestionClinica\\Global.cs",
+              "ToolTip": "D:\\Code\\FP2\\C#\\WinForms-Practica-GestionClinica\\Global.cs",
               "RelativeToolTip": "Global.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAIwCgAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABUAAAAAAAAAAAAYwCcAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-03T08:44:52.093Z",
               "IsPinned": true,
@@ -40,13 +44,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "PCitas.cs",
-              "DocumentMoniker": "C:\\Users\\DAM-A\\Sync\\Code\\C#\\WinForms-Practica-GestionClinica\\PCitas.cs",
+              "DocumentMoniker": "D:\\Code\\FP2\\C#\\WinForms-Practica-GestionClinica\\PCitas.cs",
               "RelativeDocumentMoniker": "PCitas.cs",
-              "ToolTip": "C:\\Users\\DAM-A\\Sync\\Code\\C#\\WinForms-Practica-GestionClinica\\PCitas.cs",
+              "ToolTip": "D:\\Code\\FP2\\C#\\WinForms-Practica-GestionClinica\\PCitas.cs",
               "RelativeToolTip": "PCitas.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADAAAAANAAAAAAAAAA==",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAAwBsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-03T08:47:16.1Z",
               "IsPinned": true,
@@ -54,16 +58,27 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "PClientes.cs",
-              "DocumentMoniker": "C:\\Users\\DAM-A\\Sync\\Code\\C#\\WinForms-Practica-GestionClinica\\PClientes.cs",
-              "RelativeDocumentMoniker": "PClientes.cs",
-              "ToolTip": "C:\\Users\\DAM-A\\Sync\\Code\\C#\\WinForms-Practica-GestionClinica\\PClientes.cs",
-              "RelativeToolTip": "PClientes.cs",
-              "ViewState": "AgIAABsAAAAAAAAAAADwvygAAAAJAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "PClientesAdd.cs [Dise\u00F1o]",
+              "DocumentMoniker": "D:\\Code\\FP2\\C#\\WinForms-Practica-GestionClinica\\PClientesAdd.cs",
+              "RelativeDocumentMoniker": "PClientesAdd.cs",
+              "ToolTip": "D:\\Code\\FP2\\C#\\WinForms-Practica-GestionClinica\\PClientesAdd.cs [Dise\u00F1o]",
+              "RelativeToolTip": "PClientesAdd.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-03T08:47:58.573Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-03T18:38:54.198Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PCitasAdd.cs [Dise\u00F1o]",
+              "DocumentMoniker": "D:\\Code\\FP2\\C#\\WinForms-Practica-GestionClinica\\PCitasAdd.cs",
+              "RelativeDocumentMoniker": "PCitasAdd.cs",
+              "ToolTip": "D:\\Code\\FP2\\C#\\WinForms-Practica-GestionClinica\\PCitasAdd.cs [Dise\u00F1o]",
+              "RelativeToolTip": "PCitasAdd.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-03T18:38:45.988Z",
+              "EditorCaption": " [Dise\u00F1o]"
             },
             {
               "$type": "Bookmark",

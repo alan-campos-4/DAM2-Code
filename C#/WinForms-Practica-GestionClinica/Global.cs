@@ -11,7 +11,7 @@ namespace WinForms_Practica_GestionClinica
 {
     internal class Global
     {
-        public Global() { }
+        //public Global() { }
 
         public string ConnectionString()
         {

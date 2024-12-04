@@ -58,6 +58,7 @@ namespace WinForms_Practica_GestionClinica
                     pAdd.textBoxPostal.Text,
                     pAdd.richTextBox1.Text
                 );
+                adapter.Update(tableClients);
             }
         }
 

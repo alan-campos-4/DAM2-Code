@@ -111,6 +111,12 @@
     <Compile Include="PCitas.Designer.cs">
       <DependentUpon>PCitas.cs</DependentUpon>
     </Compile>
+    <Compile Include="PCitasAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PCitasAdd.Designer.cs">
+      <DependentUpon>PCitasAdd.cs</DependentUpon>
+    </Compile>
     <Compile Include="PClientes.cs">
       <SubType>Form</SubType>
     </Compile>
