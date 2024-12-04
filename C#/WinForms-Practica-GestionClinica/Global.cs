@@ -11,7 +11,7 @@ namespace WinForms_Practica_GestionClinica
 {
     internal class Global
     {
-        //public Global() { }
+        public Global() { }
 
         public string ConnectionString()
         {
@@ -28,20 +28,31 @@ namespace WinForms_Practica_GestionClinica
             return MessageBox.Show(message, title, MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
-        public string GenerateNewID(string Table, int IDbase)
+        public string GenerateNewID(string Table)
         {
-            MySqlConnection connection = new MySqlConnection(ConnectionString());
-            connection.Open();
+            if (Table=="clientes" || Table=="mascotas")
+            {
+                MySqlConnection connection = new MySqlConnection(ConnectionString());
+                connection.Open();
 
-            string query = "SELECT ID_CL FROM "+Table;
-            MySqlDataAdapter adapter = new MySqlDataAdapter(query, ConnectionString());
-            DataTable DT = new DataTable();
-            adapter.Fill(DT);
-            int rowCount = DT.Rows.Count;
+                string query = "SELECT Nombre FROM " + Table;
+                MySqlDataAdapter adapter = new MySqlDataAdapter(query, ConnectionString());
+                DataTable DT = new DataTable();
+                adapter.Fill(DT);
+                int rowCount = DT.Rows.Count;
 
-            connection.Close();
+                connection.Close();
 
-            return (IDbase + rowCount + 1).ToString();
+                if (Table=="clientes")
+                    return (1000 + rowCount + 1).ToString();
+                else
+                    return (10000 + rowCount).ToString();
+            }
+            else
+            {
+                Random rnd = new Random();
+                return (rnd.Next(100000, 999999)).ToString();
+            }
         }
     }
 }

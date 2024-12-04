@@ -46,7 +46,7 @@ namespace WinForms_Practica_GestionClinica
             if (pAdd.ShowDialog()==DialogResult.OK)
             {
                 tableClients.Rows.Add(
-                    g.GenerateNewID("clientes", 1000),
+                    g.GenerateNewID("clientes"),
                     pAdd.textBoxDNI.Text,
                     pAdd.textBoxName1.Text,
                     pAdd.textBoxName2.Text,
@@ -89,6 +89,7 @@ namespace WinForms_Practica_GestionClinica
                     dataGridView1.SelectedRows[0].Cells[8].Value = pMod.textBoxAddress.Text;
                     dataGridView1.SelectedRows[0].Cells[9].Value = pMod.textBoxPostal.Text;
                     dataGridView1.SelectedRows[0].Cells[10].Value = pMod.richTextBox1.Text;
+                    adapter.Update(tableClients);
                 }
             }
             else { g.ShowError("Fila seleccionada.", "No se puede realizar esta acción\nsin seleccionar una fila."); }
@@ -101,6 +102,7 @@ namespace WinForms_Practica_GestionClinica
                 if (g.ShowWarning("Borrar cliente", "¿Seguro que quieres borrar este cliente?") == DialogResult.OK)
                 {
                     dataGridView1.Rows.RemoveAt(dataGridView1.SelectedRows[0].Index);
+                    adapter.Update(tableClients);
                 }
             }
             else { g.ShowError("Fila seleccionada.", "No se puede realizar esta acción\nsin seleccionar una fila."); }
@@ -110,8 +112,8 @@ namespace WinForms_Practica_GestionClinica
         {
             if (dataGridView1.SelectedRows.Count > 0)
             {
-                PClientesShow pShow = new PClientesShow();
-                pShow.ShowDialog();
+                //PClientesShow pShow = new PClientesShow();
+                //pShow.ShowDialog();
             }
         }
     }

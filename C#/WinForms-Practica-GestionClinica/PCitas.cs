@@ -51,5 +51,22 @@ namespace WinForms_Practica_GestionClinica
 
             connection.Close();
         }
+
+        private void nuevaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            PCitasAdd pAdd = new PCitasAdd{ Text = "Crear Cita" };
+            pAdd.ShowDialog();
+        }
+
+        private void alterarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            PCitasAdd pMod = new PCitasAdd{ Text = "Alterar Cita" };
+            pMod.ShowDialog();
+        }
+
+        private void eliminarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

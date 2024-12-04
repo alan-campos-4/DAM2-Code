@@ -36,12 +36,12 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.textBoxName = new System.Windows.Forms.TextBox();
-            this.textBoxSpecies = new System.Windows.Forms.TextBox();
-            this.textBoxBreed = new System.Windows.Forms.TextBox();
-            this.comboBoxSex = new System.Windows.Forms.ComboBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.comboBoxSex = new System.Windows.Forms.ComboBox();
+            this.textBoxBreed = new System.Windows.Forms.TextBox();
+            this.textBoxSpecies = new System.Windows.Forms.TextBox();
+            this.textBoxName = new System.Windows.Forms.TextBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.comboBoxOwner = new System.Windows.Forms.ComboBox();
             this.buttonCancel = new System.Windows.Forms.Button();
             this.buttonOK = new System.Windows.Forms.Button();
@@ -143,39 +143,12 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos de la mascota";
             // 
-            // groupBox2
+            // dateTimePicker1
             // 
-            this.groupBox2.Controls.Add(this.comboBoxOwner);
-            this.groupBox2.Location = new System.Drawing.Point(14, 196);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(686, 98);
-            this.groupBox2.TabIndex = 25;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Dueñ@";
-            // 
-            // textBoxName
-            // 
-            this.textBoxName.Location = new System.Drawing.Point(102, 32);
-            this.textBoxName.MaxLength = 30;
-            this.textBoxName.Name = "textBoxName";
-            this.textBoxName.Size = new System.Drawing.Size(124, 22);
-            this.textBoxName.TabIndex = 5;
-            // 
-            // textBoxSpecies
-            // 
-            this.textBoxSpecies.Location = new System.Drawing.Point(102, 60);
-            this.textBoxSpecies.MaxLength = 30;
-            this.textBoxSpecies.Name = "textBoxSpecies";
-            this.textBoxSpecies.Size = new System.Drawing.Size(155, 22);
-            this.textBoxSpecies.TabIndex = 6;
-            // 
-            // textBoxBreed
-            // 
-            this.textBoxBreed.Location = new System.Drawing.Point(102, 88);
-            this.textBoxBreed.MaxLength = 30;
-            this.textBoxBreed.Name = "textBoxBreed";
-            this.textBoxBreed.Size = new System.Drawing.Size(155, 22);
-            this.textBoxBreed.TabIndex = 7;
+            this.dateTimePicker1.Location = new System.Drawing.Point(448, 32);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 22);
+            this.dateTimePicker1.TabIndex = 8;
             // 
             // comboBoxSex
             // 
@@ -185,17 +158,44 @@
             this.comboBoxSex.Size = new System.Drawing.Size(76, 24);
             this.comboBoxSex.TabIndex = 9;
             // 
-            // dateTimePicker1
+            // textBoxBreed
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(448, 32);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 22);
-            this.dateTimePicker1.TabIndex = 8;
+            this.textBoxBreed.Location = new System.Drawing.Point(102, 88);
+            this.textBoxBreed.MaxLength = 30;
+            this.textBoxBreed.Name = "textBoxBreed";
+            this.textBoxBreed.Size = new System.Drawing.Size(155, 22);
+            this.textBoxBreed.TabIndex = 7;
+            // 
+            // textBoxSpecies
+            // 
+            this.textBoxSpecies.Location = new System.Drawing.Point(102, 60);
+            this.textBoxSpecies.MaxLength = 30;
+            this.textBoxSpecies.Name = "textBoxSpecies";
+            this.textBoxSpecies.Size = new System.Drawing.Size(155, 22);
+            this.textBoxSpecies.TabIndex = 6;
+            // 
+            // textBoxName
+            // 
+            this.textBoxName.Location = new System.Drawing.Point(102, 32);
+            this.textBoxName.MaxLength = 30;
+            this.textBoxName.Name = "textBoxName";
+            this.textBoxName.Size = new System.Drawing.Size(124, 22);
+            this.textBoxName.TabIndex = 5;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.comboBoxOwner);
+            this.groupBox2.Location = new System.Drawing.Point(14, 196);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(686, 98);
+            this.groupBox2.TabIndex = 25;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Dueñ@ de la mascota";
             // 
             // comboBoxOwner
             // 
             this.comboBoxOwner.FormattingEnabled = true;
-            this.comboBoxOwner.Location = new System.Drawing.Point(102, 41);
+            this.comboBoxOwner.Location = new System.Drawing.Point(44, 40);
             this.comboBoxOwner.Name = "comboBoxOwner";
             this.comboBoxOwner.Size = new System.Drawing.Size(230, 24);
             this.comboBoxOwner.TabIndex = 10;

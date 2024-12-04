@@ -47,3 +47,4 @@ C:\Users\DAM-A\Sync\Code\C#\WinForms-Practica-GestionClinica\obj\Debug\WinForms.
 C:\Users\DAM-A\Sync\Code\C#\WinForms-Practica-GestionClinica\obj\Debug\WinForms_Practica_GestionClinica.PClientesAdd.resources
 C:\Users\DAM-A\Sync\Code\C#\WinForms-Practica-GestionClinica\obj\Debug\WinForms_Practica_GestionClinica.PClientesShow.resources
 C:\Users\DAM-A\Sync\Code\C#\WinForms-Practica-GestionClinica\obj\Debug\WinForms_Practica_GestionClinica.PMascotasAdd.resources
+C:\Users\DAM-A\Sync\Code\C#\WinForms-Practica-GestionClinica\obj\Debug\WinForms_Practica_GestionClinica.PCitasAdd.resources
