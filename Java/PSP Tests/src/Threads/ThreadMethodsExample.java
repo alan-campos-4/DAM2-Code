@@ -32,7 +32,7 @@ public class ThreadMethodsExample extends Thread
 		ThreadGroup even = new ThreadGroup("Even threads");
 		ThreadGroup odd = new ThreadGroup("Odd threads");
 		Thread localThread = null;
-		for (int i = 0; i < 10; i++)
+		for (int i = 0; i < 5; i++)
 		{
 			localThread = new ThreadMethodsExample((i % 2 == 0) ? even : odd, "T" + i);
 			localThread.setPriority(i + 1);
