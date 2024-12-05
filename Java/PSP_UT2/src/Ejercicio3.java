@@ -16,7 +16,8 @@
 
 // Clases Definidas:
 
-/* 1. Clase Árbitro:
+/* 
+ * 1. Clase Árbitro:
  * 	Esta clase es responsable de mantener el estado del juego y coordinar las acciones de los jugadores.
  * 		o Atributos:
  * 			 numJugadores: Número total de jugadores en el juego.
@@ -33,17 +34,18 @@
  * 			 boolean isJuegoTerminado(): Indica si el juego ha terminado.
  * 			 synchronized void realizarJugada(int idJugador, int numeroJugado):
  * 			Método sincronizado que:
- * 			 Verifica si es el turno del jugador que hace la jugada.
- * 			 Comprueba si el numeroJugado coincide con el numeroSecreto.
- * 			 Si coincide, establece juegoTerminado a true y anuncia al ganador.
- * 			 Si no, informa al jugador que no ha acertado.
- * 			 Actualiza el turno al siguiente jugador en orden secuencial.
+ * 				 Verifica si es el turno del jugador que hace la jugada.
+ * 				 Comprueba si el numeroJugado coincide con el numeroSecreto.
+ * 				 Si coincide, establece juegoTerminado a true y anuncia al ganador.
+ * 				 Si no, informa al jugador que no ha acertado.
+ * 				 Actualiza el turno al siguiente jugador en orden secuencial.
  * 		o Importancia de synchronized:
  * 			 Al ser un método sincronizado, garantiza que solo un jugador pueda ejecutar realizarJugada a la vez, 
  * 			evitando condiciones de carrera y asegurando la integridad del juego.
  */
 
-/* 2. Clase Jugador (extends Thread):
+/* 
+ * 2. Clase Jugador (extends Thread):
  * 	Representa a cada jugador en el juego y define su comportamiento durante la partida.
  * 		o Atributos:
  * 			 idJugador: Identificador único del jugador.
@@ -66,7 +68,8 @@
  * 			 Al compartir el mismo objeto Árbitro, los jugadores coordinan sus turnos y acciones.
  */
 
-/* 3. Clase Main:
+/* 
+ * 3. Clase Main:
  * 	Es el punto de entrada del programa y se encarga de inicializar el juego y los jugadores.
  * 		o Método main():
  * 			 Define el número de jugadores que participarán en el juego (por ejemplo, 3 jugadores).
@@ -140,6 +143,16 @@ Supongamos que tenemos 3 jugadores y el número secreto generado es 7.
 
 public class Ejercicio3
 {
+	public static class Arbitro
+	{
+		
+	}
+	
+	public static class Jugador extends Thread
+	{
+		
+	}
+	
 	public static void main(String[] args)
 	{
 		//

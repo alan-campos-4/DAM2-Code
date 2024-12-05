@@ -19,7 +19,7 @@ public class ThreadMethodsExample extends Thread
 		System.out.println("[" + threadName + "] " + "Id: " + Thread.currentThread().getId());
 		System.out.println("[" + threadName + "] " + "ThreadGroup: " + Thread.currentThread().getThreadGroup().getName());
 		System.out.println("[" + threadName + "] " + "ThreadGroup count: "
-				+ Thread.currentThread().getThreadGroup().activeCount());
+		+ Thread.currentThread().getThreadGroup().activeCount());
 	}
 
 	public static void main(String[] args)

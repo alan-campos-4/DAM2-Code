@@ -30,92 +30,150 @@ import java.util.Random;
 
 public class Ejercicio1
 {
-	public static class TurtleThread extends Thread
+	public static Random rand;
+	public static int posicionT, posicionL;
+	public static final int TRACKLENGTH = 20;
+	
+	/* Clase abstracta que define el comportamiento de ambos animales. */
+	public static abstract class AnimalThread implements Runnable
 	{
-		Random rand;
-		//@SuppressWarnings("deprecation")
+		int posicion, randInt, avance;
+		
+		public abstract void calculoAvance();
+		
 		@Override
 		public void run()
 		{
 			String threadName = Thread.currentThread().getName();
 			System.out.println("[" + threadName + "] " + "Thread Started");
 			rand = new Random();
-			int n = rand.nextInt(99)+1;
-			System.out.println("Result = "+n);
-			Thread.yield();
-			if (n>=50)
-			{
-				System.out.println("3 casillas a la derecha");
-			}
-			else if (n>=30)
-			{
-				System.out.println("6 casillas a la derecha");
-			}
-			else
-			{
-				System.out.println("1 casillas a la derecha");
-			}
 			
-//			System.out.println("[" + threadName + "] " + "Priority: " + Thread.currentThread().getPriority());
-//			Thread.yield();
-//			System.out.println("[" + threadName + "] " + "Id: " + Thread.currentThread().getId());
-//			System.out.println("[" + threadName + "] " + "ThreadGroup: " + Thread.currentThread().getThreadGroup().getName());
-//			System.out.println("[" + threadName + "] " + "ThreadGroup count: "
-//					+ Thread.currentThread().getThreadGroup().activeCount());
+			posicion = 1;
+			
+			while (posicion<TRACKLENGTH)
+			{
+				try
+				{
+					Thread.sleep(1000);
+				}
+				catch (InterruptedException e)
+				{
+					System.out.println(threadName+": ");
+					e.printStackTrace();
+				}
+				
+				randInt = rand.nextInt(99)+1;
+				calculoAvance();
+				posicion += avance;
+				
+				if (posicion>TRACKLENGTH)	{posicion=TRACKLENGTH;}
+				if (posicion<0)		{posicion=1;}
+				
+				if (threadName=="Tortuga")	{posicionT = posicion;}
+				else						{posicionL = posicion;}
+				printRaceTrack(threadName, posicion);
+				Thread.interrupted();
+			}
+		}
+		
+		public static synchronized void printRaceTrack(String threadName, int posicion)
+		{
+			System.out.println("\nPosicion de "+threadName+" = "+posicion);
+			
+			for (int i=0; i<TRACKLENGTH+3; i++)	{System.out.print("-");}
+			System.out.println("");
+			
+			System.out.print("|");
+			for (int i=0; i<posicion; i++)
+			{
+				System.out.print(" ");
+			}
+			System.out.print(threadName.charAt(0));
+			for (int i=posicion; i<TRACKLENGTH; i++)
+			{
+				System.out.print(" ");
+			}
+			System.out.println("|");
+			
+			for (int i=0; i<TRACKLENGTH+3; i++)	{System.out.print("-");}
+			System.out.println("");
+			
+			if (posicion>=20)
+				{System.out.println(threadName+" ha llegado al final");}
+		}
+		
+	}
+	
+	/* Clase que representa el movimiento de la tortuga. */
+	public static class TurtleThread extends AnimalThread
+	{
+		@Override
+		public synchronized void calculoAvance()
+		{
+			if (randInt>=1 && randInt<=50)			{avance = 3;}
+			else if (randInt>=51 && randInt<=80)	{avance = 6;}
+			else									{avance = 1;}
 		}
 	}
 	
-	public static class HareThread extends Thread
+	/* Clase que representa el movimiento de la liebre. */
+	public static class HareThread extends AnimalThread
 	{
-		Random rand;
-		//@SuppressWarnings("deprecation")
 		@Override
-		public void run()
+		public synchronized void calculoAvance()
 		{
-			String threadName = Thread.currentThread().getName();
-			System.out.println("[" + threadName + "] " + "Thread Started");
-			rand = new Random();
-			int n = rand.nextInt(99)+1;
-			System.out.println("Result = "+n);
-			Thread.yield();
-			if (n>=50)
-			{
-				System.out.println("7 casillas a la derecha");
-			}
-			else if (n>=30)
-			{
-				System.out.println("8 casillas a la derecha");
-			}
-			else
-			{
-				System.out.println("1 casillas a la derecha");
-			}
+			if (randInt>=1 && randInt<=20)			{avance = 0;}
+			else if (randInt>=21 && randInt<=40)	{avance = 9;}
+			else if (randInt>=41 && randInt<=50)	{avance = -12;}
+			else if (randInt>=51 && randInt<=80)	{avance = 1;}
+			else									{avance = -2;}
 		}
 	}
+	
+	/*  */
+	
+	
+	
 	
 	public static void main(String[] args)
 	{
 		Thread.currentThread().setName("Main");
 		System.out.println(Thread.currentThread().getName());
 		
-		Thread turtle = null;
-		Thread hare = null;
-		turtle = new TurtleThread();
-		hare = new HareThread();
+		Runnable TurtleRun = new TurtleThread();
+		Runnable HareRun = new HareThread();
+		Thread turtle = new Thread(TurtleRun);
+		Thread hare = new Thread(HareRun);
+		turtle.setName("Tortuga");
+		hare.setName("Liebre");
 		turtle.start();
 		hare.start();
 		
 		try
 		{
-			turtle.join();
-			hare.join();
+			if (posicionT>TRACKLENGTH && posicionL>TRACKLENGTH)
+			{
+				System.out.println("--Posiciones--");
+				
+				
+				if (posicionT==posicionL)
+					{System.out.println("Ha habido un empate.");turtle.join();
+					hare.join();}
+				else if (posicionT>posicionL)
+					{System.out.println("Ha ganado la tortuga.");hare.join();}
+				else
+					{System.out.println("Ha ganado la liebre.");turtle.interrupt();}
+				
+				turtle.join();
+				hare.join();
+			}
 		}
 		catch (InterruptedException ex)
 		{
 			ex.printStackTrace();
-			System.err.println(
-					"The main thread was interrupted while waiting for " + turtle.toString() + "to finish");
+			System.err.println("The main thread was interrupted while waiting for " + turtle.toString() + "to finish");
 		}
 		System.out.println("Main thread ending");
 	}
+	
 }
