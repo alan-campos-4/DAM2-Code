@@ -1436,3 +1436,3006 @@ user global configuration and to define the default location to store repositori
 not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
 EGit might behave differently since they see different configuration options.
 This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2024-12-05 16:58:51.465 -----------------------------------------------
+eclipse.buildId=4.33.0.20240905-0613
+java.version=21.0.3
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=es_ES
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY ch.qos.logback.classic 1 0 2024-12-05 16:58:55.041
+!MESSAGE Activated before the state location was initialized. Retry after the state location is initialized.
+
+!ENTRY ch.qos.logback.classic 1 0 2024-12-05 16:58:56.702
+!MESSAGE Logback config file: D:\Code\FP2\Java\.metadata\.plugins\org.eclipse.m2e.logback\logback.2.6.1.20240411-1122.xml
+
+!ENTRY org.eclipse.egit.ui 2 0 2024-12-05 16:59:04.087
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\alvar'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2024-12-06 19:48:39.014 -----------------------------------------------
+eclipse.buildId=4.33.0.20240905-0613
+java.version=21.0.3
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=es_ES
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY ch.qos.logback.classic 1 0 2024-12-06 19:48:42.033
+!MESSAGE Activated before the state location was initialized. Retry after the state location is initialized.
+
+!ENTRY ch.qos.logback.classic 1 0 2024-12-06 19:48:43.679
+!MESSAGE Logback config file: D:\Code\FP2\Java\.metadata\.plugins\org.eclipse.m2e.logback\logback.2.6.1.20240411-1122.xml
+
+!ENTRY org.eclipse.egit.ui 2 0 2024-12-06 19:48:51.179
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\alvar'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.jdt.core 4 4 2024-12-06 21:10:14.570
+!MESSAGE Exception occurred during compilation unit conversion:
+----------------------------------- SOURCE BEGIN -------------------------------------
+
+/*
+ * Implementa una barrera. Una barrera es un punto de sincronización entre varios threads. 
+ * Se caracteriza porque los threads que van llegando a ella esperan hasta que llega el último. 
+ * Por ejemplo, se pueden sincronizar N threads y hasta que el último no llegue los demás no deben poder continuar. 
+ * Prueba a lanzar unos pocos threads, por ejemplo 4, cada uno que espere un tiempo proporcional a su identificador, 
+ * y que luego imprima un mensaje que lo identifique y que luego espere en la barrera a los otros threads.
+ * Para simular una situación más real en el código de entrega del ejercicio 
+ * debe haber las siguientes modificaciones de la prueba anterior:
+ */
+
+/*
+Se deben lanzar 30 hilos con:
+1. Subtareas Dinámicas:
+	 Cada hilo realiza un número aleatorio de subtareas (entre 5 y 20) antes de llegar a la barrera.
+	 Esto simula un escenario más realista donde los hilos tienen diferentes cantidades de trabajo.
+2. Tiempos de Trabajo Aleatorios:
+	 El tiempo de cada subtarea se genera aleatoriamente entre 500 y 2500 ms.
+	 Esto asegura que los hilos no lleguen a la barrera en un orden predecible.
+3. Información Detallada:
+	 Los hilos informan sobre qué tarea están realizando y cuánto tiempo les tomará.
+Como ayuda, puedes usar CyclicBarrier que es una clase en Java que pertenece al paquete java.util.concurrent. 
+Es una herramienta de sincronización que permite que un conjunto de hilos 
+esperen entre sí en un punto común de ejecución antes de continuar. 
+Es especialmente útil cuando se desea realizar tareas en paralelo y sincronizar los hilos 
+en un momento determinado antes de avanzar a la siguiente etapa del programa.
+ */
+
+/*
+Características principales de CyclicBarrier:
+1. Número fijo de hilos: 
+	Se especifica un número fijo de hilos en el momento de crear la barrera.
+	Este número indica cuántos hilos deben alcanzar la barrera antes de que todos puedan continuar.
+2. Uso cíclico: 
+	A diferencia de otras herramientas como CountDownLatch, que no puede reutilizarse,
+	CyclicBarrier es reutilizable. Después de que todos los hilos alcanzan la barrera y continúan, 
+	la barrera puede ser reutilizada.
+3. Tarea opcional al final: 
+	Puede ejecutar una tarea adicional (llamada "barrier action") 
+	una vez que todos los hilos llegan a la barrera, antes de permitirles continuar.
+	
+Constructor de CyclicBarrier:
+ CyclicBarrier(int parties)
+	o Crea una barrera que se activará cuando el número especificado de hilos (parties) llame a await().
+ CyclicBarrier(int parties, Runnable barrierAction)
+	o Igual que el anterior, pero además ejecuta la acción (barrierAction) en un hilo 
+	  una vez que todos los hilos han llegado a la barrera.
+ */
+
+/*
+Métodos clave:
+1. await()
+	o Se llama desde un hilo cuando este llega a la barrera.
+	o El hilo queda bloqueado hasta que todos los hilos especificados en la barrera lleguen a este punto.
+2. getParties()
+	o Devuelve el número de hilos registrados en la barrera.
+3. getNumberWaiting()
+	o Devuelve el número de hilos que actualmente están esperando en la barrera.
+4. reset()
+	o Reinicia la barrera, liberando a los hilos que esperan y permitiendo que la barrera sea reutilizada.
+ */
+
+/*
+Ventajas:
+	1. Fácil sincronización de hilos en un punto común.
+	2. Reutilización en múltiples fases de un programa paralelo.
+	3. Permite agregar una tarea adicional (opcional) al final de cada ciclo.
+	
+Casos de uso:
+	 Simulaciones paralelas.
+	 Procesamiento por etapas donde los hilos deben sincronizarse entre fases.
+	 Cualquier situación en la que un conjunto de hilos necesite un punto de encuentro antes de continuar.	 
+ */
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import java.util.Random;
+import java.util.concurrent.BrokenBarrierException;
+import java.util.concurrent.CyclicBarrier;
+
+
+public class Ejercicio2
+{
+	static CyclicBarrier barrier;
+	
+	static List<List<Integer>> partialResults = Collections.synchronizedList(new ArrayList<>());
+	static Random random = new Random();
+	static int NUM_PARTIAL_RESULTS;
+	static int NUM_WORKERS;
+	
+	static int NUM_THREADS;
+	static int NUM_THREAD_TASKS;
+	
+	public static int randomInt(int min, int max)
+		{return random.nextInt(min-1, max)+1;}
+	
+	public static void sleep()
+	
+	
+	
+	public static void main(String[] args)
+	{
+		//int NUM_TASKS;
+    	//int NUM_THREADS = 30;
+    	NUM_PARTIAL_RESULTS = 3;
+    	NUM_WORKERS = 5;
+        
+    	barrier = new CyclicBarrier(NUM_WORKERS, new TaskManagerThread());
+        
+        System.out.println("Creating " + NUM_WORKERS + " worker threads ");
+        System.out.println( "to compute " + NUM_PARTIAL_RESULTS + " partial results each.");
+        System.out.println("-----");
+        
+        for (int i = 0; i < NUM_WORKERS; i++)
+        {
+        	Thread worker = new Thread(new NumberCruncherThread());
+        	worker.setName("Thread " + i);
+        	worker.start();
+        }
+	}
+	
+	
+	/*
+	Se deben lanzar 30 hilos con:
+	1. Subtareas Dinámicas:
+		 Cada hilo realiza un número aleatorio de subtareas (entre 5 y 20) antes de llegar a la barrera.
+		 Esto simula un escenario más realista donde los hilos tienen diferentes cantidades de trabajo.
+	2. Tiempos de Trabajo Aleatorios:
+		 El tiempo de cada subtarea se genera aleatoriamente entre 500 y 2500 ms.
+		 Esto asegura que los hilos no lleguen a la barrera en un orden predecible.
+	3. Información Detallada:
+		 Los hilos informan sobre qué tarea están realizando y cuánto tiempo les tomará.
+	Como ayuda, puedes usar CyclicBarrier que es una clase en Java que pertenece al paquete java.util.concurrent. 
+	Es una herramienta de sincronización que permite que un conjunto de hilos 
+	esperen entre sí en un punto común de ejecución antes de continuar. 
+	Es especialmente útil cuando se desea realizar tareas en paralelo y sincronizar los hilos 
+	en un momento determinado antes de avanzar a la siguiente etapa del programa.
+	 */
+	
+	/* Thread that randomly  numbers. */
+	static class NumberCruncherThread implements Runnable
+    {
+        @Override
+        public void run()
+        {
+            String thisThreadName = Thread.currentThread().getName();
+            List<Integer> partialResult = new ArrayList<>();
+            
+            for (int i = 0; i < NUM_PARTIAL_RESULTS; i++)
+            {
+                int numTareas = random.nextInt(4, 20)+1;
+                System.out.println(thisThreadName + ": Number generated = " + numTareas);
+                partialResult.add(numTareas);
+            }
+            
+            partialResults.add(partialResult);
+            
+            try
+            {
+                System.out.println(thisThreadName + " waiting for others to reach barrier.");
+                barrier.await();
+            }
+            catch (InterruptedException e)		{System.out.println("");} 
+            catch (BrokenBarrierException e)	{System.out.println("");}
+        }
+    }
+    /* Thread that add the previously generated numbers. */
+	static class TaskManagerThread implements Runnable
+    {
+        @Override
+        public void run()
+        {
+//        	String thisThreadName = Thread.currentThread().getName();
+//        	System.out.println(thisThreadName + ": Computing sum of " + NUM_WORKERS + " workers, "
+//        			+ "having " + NUM_PARTIAL_RESULTS + " results each.");
+//        	int sum = 0;
+//        	for (List<Integer> threadResult : partialResults)
+//        	{
+//        		System.out.print("Adding ");
+//        		for (Integer partialResult : threadResult)
+//        		{
+//        			System.out.print(partialResult+" ");
+//        			sum += partialResult;
+//        		}
+//        		System.out.println();
+//        	}
+//        	System.out.println(thisThreadName + ": Final result = " + sum);
+        	
+        	//Establece el número de hilos lanazados.
+        	NUM_THREADS = 30;
+        	
+        	//Genera el número de subtareas, entre 5 y 20.
+        	NUM_THREAD_TASKS = randomInt(5, 20);
+        	
+        	String thisThreadName = Thread.currentThread().getName();
+            
+            for (int i = 0; i < NUM_THREAD_TASKS; i++)
+            {
+                int tiempo = randomInt(500, 2500);
+                System.out.println(thisThreadName + ": Tiempo esperado = " + tiempo);
+            }
+            
+            try
+            {
+                System.out.println(thisThreadName + " waiting for others to reach barrier.");
+                barrier.await();
+            }
+            catch (InterruptedException e)		{System.out.println("");} 
+            catch (BrokenBarrierException e)	{System.out.println("");}
+        }
+    }
+	
+	
+	
+	
+}
+
+----------------------------------- SOURCE END -------------------------------------
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.ASTNode.setSourceRange(ASTNode.java:3477)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:800)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3567)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1595)
+	at org.eclipse.jdt.core.dom.AST.convertCompilationUnit(AST.java:646)
+	at org.eclipse.jdt.internal.core.CompilationUnit.buildStructure(CompilationUnit.java:194)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:245)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:585)
+	at org.eclipse.jdt.internal.core.CompilationUnit.makeConsistent(CompilationUnit.java:1129)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:166)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:92)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:739)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:804)
+	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1303)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:132)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:94)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:91)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:158)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:94)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:107)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:78)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:207)
+
+!ENTRY org.eclipse.jdt.ui 4 2 2024-12-06 21:10:14.571
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.jdt.ui".
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.ASTNode.setSourceRange(ASTNode.java:3477)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:800)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3567)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1595)
+	at org.eclipse.jdt.core.dom.AST.convertCompilationUnit(AST.java:646)
+	at org.eclipse.jdt.internal.core.CompilationUnit.buildStructure(CompilationUnit.java:194)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:245)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:585)
+	at org.eclipse.jdt.internal.core.CompilationUnit.makeConsistent(CompilationUnit.java:1129)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:166)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:92)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:739)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:804)
+	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1303)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:132)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:94)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:91)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:158)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:94)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:107)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:78)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:207)
+
+!ENTRY org.eclipse.jdt.ui 4 0 2024-12-06 21:10:14.573
+!MESSAGE Error in JDT Core during reconcile
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.ASTNode.setSourceRange(ASTNode.java:3477)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:800)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3567)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1595)
+	at org.eclipse.jdt.core.dom.AST.convertCompilationUnit(AST.java:646)
+	at org.eclipse.jdt.internal.core.CompilationUnit.buildStructure(CompilationUnit.java:194)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:245)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:585)
+	at org.eclipse.jdt.internal.core.CompilationUnit.makeConsistent(CompilationUnit.java:1129)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:166)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:92)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:739)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:804)
+	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1303)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:132)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:94)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:91)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:158)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:94)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:107)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:78)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:207)
+
+!ENTRY org.eclipse.jdt.core 4 4 2024-12-06 21:10:15.721
+!MESSAGE Exception occurred during compilation unit conversion:
+----------------------------------- SOURCE BEGIN -------------------------------------
+
+/*
+ * Implementa una barrera. Una barrera es un punto de sincronización entre varios threads. 
+ * Se caracteriza porque los threads que van llegando a ella esperan hasta que llega el último. 
+ * Por ejemplo, se pueden sincronizar N threads y hasta que el último no llegue los demás no deben poder continuar. 
+ * Prueba a lanzar unos pocos threads, por ejemplo 4, cada uno que espere un tiempo proporcional a su identificador, 
+ * y que luego imprima un mensaje que lo identifique y que luego espere en la barrera a los otros threads.
+ * Para simular una situación más real en el código de entrega del ejercicio 
+ * debe haber las siguientes modificaciones de la prueba anterior:
+ */
+
+/*
+Se deben lanzar 30 hilos con:
+1. Subtareas Dinámicas:
+	 Cada hilo realiza un número aleatorio de subtareas (entre 5 y 20) antes de llegar a la barrera.
+	 Esto simula un escenario más realista donde los hilos tienen diferentes cantidades de trabajo.
+2. Tiempos de Trabajo Aleatorios:
+	 El tiempo de cada subtarea se genera aleatoriamente entre 500 y 2500 ms.
+	 Esto asegura que los hilos no lleguen a la barrera en un orden predecible.
+3. Información Detallada:
+	 Los hilos informan sobre qué tarea están realizando y cuánto tiempo les tomará.
+Como ayuda, puedes usar CyclicBarrier que es una clase en Java que pertenece al paquete java.util.concurrent. 
+Es una herramienta de sincronización que permite que un conjunto de hilos 
+esperen entre sí en un punto común de ejecución antes de continuar. 
+Es especialmente útil cuando se desea realizar tareas en paralelo y sincronizar los hilos 
+en un momento determinado antes de avanzar a la siguiente etapa del programa.
+ */
+
+/*
+Características principales de CyclicBarrier:
+1. Número fijo de hilos: 
+	Se especifica un número fijo de hilos en el momento de crear la barrera.
+	Este número indica cuántos hilos deben alcanzar la barrera antes de que todos puedan continuar.
+2. Uso cíclico: 
+	A diferencia de otras herramientas como CountDownLatch, que no puede reutilizarse,
+	CyclicBarrier es reutilizable. Después de que todos los hilos alcanzan la barrera y continúan, 
+	la barrera puede ser reutilizada.
+3. Tarea opcional al final: 
+	Puede ejecutar una tarea adicional (llamada "barrier action") 
+	una vez que todos los hilos llegan a la barrera, antes de permitirles continuar.
+	
+Constructor de CyclicBarrier:
+ CyclicBarrier(int parties)
+	o Crea una barrera que se activará cuando el número especificado de hilos (parties) llame a await().
+ CyclicBarrier(int parties, Runnable barrierAction)
+	o Igual que el anterior, pero además ejecuta la acción (barrierAction) en un hilo 
+	  una vez que todos los hilos han llegado a la barrera.
+ */
+
+/*
+Métodos clave:
+1. await()
+	o Se llama desde un hilo cuando este llega a la barrera.
+	o El hilo queda bloqueado hasta que todos los hilos especificados en la barrera lleguen a este punto.
+2. getParties()
+	o Devuelve el número de hilos registrados en la barrera.
+3. getNumberWaiting()
+	o Devuelve el número de hilos que actualmente están esperando en la barrera.
+4. reset()
+	o Reinicia la barrera, liberando a los hilos que esperan y permitiendo que la barrera sea reutilizada.
+ */
+
+/*
+Ventajas:
+	1. Fácil sincronización de hilos en un punto común.
+	2. Reutilización en múltiples fases de un programa paralelo.
+	3. Permite agregar una tarea adicional (opcional) al final de cada ciclo.
+	
+Casos de uso:
+	 Simulaciones paralelas.
+	 Procesamiento por etapas donde los hilos deben sincronizarse entre fases.
+	 Cualquier situación en la que un conjunto de hilos necesite un punto de encuentro antes de continuar.	 
+ */
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import java.util.Random;
+import java.util.concurrent.BrokenBarrierException;
+import java.util.concurrent.CyclicBarrier;
+
+
+public class Ejercicio2
+{
+	static CyclicBarrier barrier;
+	
+	static List<List<Integer>> partialResults = Collections.synchronizedList(new ArrayList<>());
+	static Random random = new Random();
+	static int NUM_PARTIAL_RESULTS;
+	static int NUM_WORKERS;
+	
+	static int NUM_THREADS;
+	static int NUM_THREAD_TASKS;
+	
+	public static int randomInt(int min, int max)
+		{return random.nextInt(min-1, max)+1;}
+	
+	public static void sleep(i)
+	
+	
+	
+	public static void main(String[] args)
+	{
+		//int NUM_TASKS;
+    	//int NUM_THREADS = 30;
+    	NUM_PARTIAL_RESULTS = 3;
+    	NUM_WORKERS = 5;
+        
+    	barrier = new CyclicBarrier(NUM_WORKERS, new TaskManagerThread());
+        
+        System.out.println("Creating " + NUM_WORKERS + " worker threads ");
+        System.out.println( "to compute " + NUM_PARTIAL_RESULTS + " partial results each.");
+        System.out.println("-----");
+        
+        for (int i = 0; i < NUM_WORKERS; i++)
+        {
+        	Thread worker = new Thread(new NumberCruncherThread());
+        	worker.setName("Thread " + i);
+        	worker.start();
+        }
+	}
+	
+	
+	/*
+	Se deben lanzar 30 hilos con:
+	1. Subtareas Dinámicas:
+		 Cada hilo realiza un número aleatorio de subtareas (entre 5 y 20) antes de llegar a la barrera.
+		 Esto simula un escenario más realista donde los hilos tienen diferentes cantidades de trabajo.
+	2. Tiempos de Trabajo Aleatorios:
+		 El tiempo de cada subtarea se genera aleatoriamente entre 500 y 2500 ms.
+		 Esto asegura que los hilos no lleguen a la barrera en un orden predecible.
+	3. Información Detallada:
+		 Los hilos informan sobre qué tarea están realizando y cuánto tiempo les tomará.
+	Como ayuda, puedes usar CyclicBarrier que es una clase en Java que pertenece al paquete java.util.concurrent. 
+	Es una herramienta de sincronización que permite que un conjunto de hilos 
+	esperen entre sí en un punto común de ejecución antes de continuar. 
+	Es especialmente útil cuando se desea realizar tareas en paralelo y sincronizar los hilos 
+	en un momento determinado antes de avanzar a la siguiente etapa del programa.
+	 */
+	
+	/* Thread that randomly  numbers. */
+	static class NumberCruncherThread implements Runnable
+    {
+        @Override
+        public void run()
+        {
+            String thisThreadName = Thread.currentThread().getName();
+            List<Integer> partialResult = new ArrayList<>();
+            
+            for (int i = 0; i < NUM_PARTIAL_RESULTS; i++)
+            {
+                int numTareas = random.nextInt(4, 20)+1;
+                System.out.println(thisThreadName + ": Number generated = " + numTareas);
+                partialResult.add(numTareas);
+            }
+            
+            partialResults.add(partialResult);
+            
+            try
+            {
+                System.out.println(thisThreadName + " waiting for others to reach barrier.");
+                barrier.await();
+            }
+            catch (InterruptedException e)		{System.out.println("");} 
+            catch (BrokenBarrierException e)	{System.out.println("");}
+        }
+    }
+    /* Thread that add the previously generated numbers. */
+	static class TaskManagerThread implements Runnable
+    {
+        @Override
+        public void run()
+        {
+//        	String thisThreadName = Thread.currentThread().getName();
+//        	System.out.println(thisThreadName + ": Computing sum of " + NUM_WORKERS + " workers, "
+//        			+ "having " + NUM_PARTIAL_RESULTS + " results each.");
+//        	int sum = 0;
+//        	for (List<Integer> threadResult : partialResults)
+//        	{
+//        		System.out.print("Adding ");
+//        		for (Integer partialResult : threadResult)
+//        		{
+//        			System.out.print(partialResult+" ");
+//        			sum += partialResult;
+//        		}
+//        		System.out.println();
+//        	}
+//        	System.out.println(thisThreadName + ": Final result = " + sum);
+        	
+        	//Establece el número de hilos lanazados.
+        	NUM_THREADS = 30;
+        	
+        	//Genera el número de subtareas, entre 5 y 20.
+        	NUM_THREAD_TASKS = randomInt(5, 20);
+        	
+        	String thisThreadName = Thread.currentThread().getName();
+            
+            for (int i = 0; i < NUM_THREAD_TASKS; i++)
+            {
+                int tiempo = randomInt(500, 2500);
+                System.out.println(thisThreadName + ": Tiempo esperado = " + tiempo);
+            }
+            
+            try
+            {
+                System.out.println(thisThreadName + " waiting for others to reach barrier.");
+                barrier.await();
+            }
+            catch (InterruptedException e)		{System.out.println("");} 
+            catch (BrokenBarrierException e)	{System.out.println("");}
+        }
+    }
+	
+	
+	
+	
+}
+
+----------------------------------- SOURCE END -------------------------------------
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.ASTNode.setSourceRange(ASTNode.java:3477)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:800)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3567)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1595)
+	at org.eclipse.jdt.core.dom.AST.convertCompilationUnit(AST.java:646)
+	at org.eclipse.jdt.internal.core.CompilationUnit.buildStructure(CompilationUnit.java:194)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:245)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:585)
+	at org.eclipse.jdt.internal.core.CompilationUnit.makeConsistent(CompilationUnit.java:1129)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:166)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:92)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:739)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:804)
+	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1303)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:132)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:94)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:91)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:158)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:94)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:107)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:78)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:207)
+
+!ENTRY org.eclipse.jdt.ui 4 2 2024-12-06 21:10:15.724
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.jdt.ui".
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.ASTNode.setSourceRange(ASTNode.java:3477)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:800)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3567)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1595)
+	at org.eclipse.jdt.core.dom.AST.convertCompilationUnit(AST.java:646)
+	at org.eclipse.jdt.internal.core.CompilationUnit.buildStructure(CompilationUnit.java:194)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:245)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:585)
+	at org.eclipse.jdt.internal.core.CompilationUnit.makeConsistent(CompilationUnit.java:1129)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:166)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:92)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:739)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:804)
+	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1303)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:132)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:94)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:91)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:158)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:94)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:107)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:78)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:207)
+
+!ENTRY org.eclipse.jdt.ui 4 0 2024-12-06 21:10:15.725
+!MESSAGE Error in JDT Core during reconcile
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.ASTNode.setSourceRange(ASTNode.java:3477)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:800)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3567)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1595)
+	at org.eclipse.jdt.core.dom.AST.convertCompilationUnit(AST.java:646)
+	at org.eclipse.jdt.internal.core.CompilationUnit.buildStructure(CompilationUnit.java:194)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:245)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:585)
+	at org.eclipse.jdt.internal.core.CompilationUnit.makeConsistent(CompilationUnit.java:1129)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:166)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:92)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:739)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:804)
+	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1303)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:132)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:94)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:91)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:158)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:94)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:107)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:78)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:207)
+
+!ENTRY org.eclipse.jdt.core 4 4 2024-12-06 21:10:16.239
+!MESSAGE Exception occurred during compilation unit conversion:
+----------------------------------- SOURCE BEGIN -------------------------------------
+
+/*
+ * Implementa una barrera. Una barrera es un punto de sincronización entre varios threads. 
+ * Se caracteriza porque los threads que van llegando a ella esperan hasta que llega el último. 
+ * Por ejemplo, se pueden sincronizar N threads y hasta que el último no llegue los demás no deben poder continuar. 
+ * Prueba a lanzar unos pocos threads, por ejemplo 4, cada uno que espere un tiempo proporcional a su identificador, 
+ * y que luego imprima un mensaje que lo identifique y que luego espere en la barrera a los otros threads.
+ * Para simular una situación más real en el código de entrega del ejercicio 
+ * debe haber las siguientes modificaciones de la prueba anterior:
+ */
+
+/*
+Se deben lanzar 30 hilos con:
+1. Subtareas Dinámicas:
+	 Cada hilo realiza un número aleatorio de subtareas (entre 5 y 20) antes de llegar a la barrera.
+	 Esto simula un escenario más realista donde los hilos tienen diferentes cantidades de trabajo.
+2. Tiempos de Trabajo Aleatorios:
+	 El tiempo de cada subtarea se genera aleatoriamente entre 500 y 2500 ms.
+	 Esto asegura que los hilos no lleguen a la barrera en un orden predecible.
+3. Información Detallada:
+	 Los hilos informan sobre qué tarea están realizando y cuánto tiempo les tomará.
+Como ayuda, puedes usar CyclicBarrier que es una clase en Java que pertenece al paquete java.util.concurrent. 
+Es una herramienta de sincronización que permite que un conjunto de hilos 
+esperen entre sí en un punto común de ejecución antes de continuar. 
+Es especialmente útil cuando se desea realizar tareas en paralelo y sincronizar los hilos 
+en un momento determinado antes de avanzar a la siguiente etapa del programa.
+ */
+
+/*
+Características principales de CyclicBarrier:
+1. Número fijo de hilos: 
+	Se especifica un número fijo de hilos en el momento de crear la barrera.
+	Este número indica cuántos hilos deben alcanzar la barrera antes de que todos puedan continuar.
+2. Uso cíclico: 
+	A diferencia de otras herramientas como CountDownLatch, que no puede reutilizarse,
+	CyclicBarrier es reutilizable. Después de que todos los hilos alcanzan la barrera y continúan, 
+	la barrera puede ser reutilizada.
+3. Tarea opcional al final: 
+	Puede ejecutar una tarea adicional (llamada "barrier action") 
+	una vez que todos los hilos llegan a la barrera, antes de permitirles continuar.
+	
+Constructor de CyclicBarrier:
+ CyclicBarrier(int parties)
+	o Crea una barrera que se activará cuando el número especificado de hilos (parties) llame a await().
+ CyclicBarrier(int parties, Runnable barrierAction)
+	o Igual que el anterior, pero además ejecuta la acción (barrierAction) en un hilo 
+	  una vez que todos los hilos han llegado a la barrera.
+ */
+
+/*
+Métodos clave:
+1. await()
+	o Se llama desde un hilo cuando este llega a la barrera.
+	o El hilo queda bloqueado hasta que todos los hilos especificados en la barrera lleguen a este punto.
+2. getParties()
+	o Devuelve el número de hilos registrados en la barrera.
+3. getNumberWaiting()
+	o Devuelve el número de hilos que actualmente están esperando en la barrera.
+4. reset()
+	o Reinicia la barrera, liberando a los hilos que esperan y permitiendo que la barrera sea reutilizada.
+ */
+
+/*
+Ventajas:
+	1. Fácil sincronización de hilos en un punto común.
+	2. Reutilización en múltiples fases de un programa paralelo.
+	3. Permite agregar una tarea adicional (opcional) al final de cada ciclo.
+	
+Casos de uso:
+	 Simulaciones paralelas.
+	 Procesamiento por etapas donde los hilos deben sincronizarse entre fases.
+	 Cualquier situación en la que un conjunto de hilos necesite un punto de encuentro antes de continuar.	 
+ */
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import java.util.Random;
+import java.util.concurrent.BrokenBarrierException;
+import java.util.concurrent.CyclicBarrier;
+
+
+public class Ejercicio2
+{
+	static CyclicBarrier barrier;
+	
+	static List<List<Integer>> partialResults = Collections.synchronizedList(new ArrayList<>());
+	static Random random = new Random();
+	static int NUM_PARTIAL_RESULTS;
+	static int NUM_WORKERS;
+	
+	static int NUM_THREADS;
+	static int NUM_THREAD_TASKS;
+	
+	public static int randomInt(int min, int max)
+		{return random.nextInt(min-1, max)+1;}
+	
+	public static void sleep(int)
+	
+	
+	
+	public static void main(String[] args)
+	{
+		//int NUM_TASKS;
+    	//int NUM_THREADS = 30;
+    	NUM_PARTIAL_RESULTS = 3;
+    	NUM_WORKERS = 5;
+        
+    	barrier = new CyclicBarrier(NUM_WORKERS, new TaskManagerThread());
+        
+        System.out.println("Creating " + NUM_WORKERS + " worker threads ");
+        System.out.println( "to compute " + NUM_PARTIAL_RESULTS + " partial results each.");
+        System.out.println("-----");
+        
+        for (int i = 0; i < NUM_WORKERS; i++)
+        {
+        	Thread worker = new Thread(new NumberCruncherThread());
+        	worker.setName("Thread " + i);
+        	worker.start();
+        }
+	}
+	
+	
+	/*
+	Se deben lanzar 30 hilos con:
+	1. Subtareas Dinámicas:
+		 Cada hilo realiza un número aleatorio de subtareas (entre 5 y 20) antes de llegar a la barrera.
+		 Esto simula un escenario más realista donde los hilos tienen diferentes cantidades de trabajo.
+	2. Tiempos de Trabajo Aleatorios:
+		 El tiempo de cada subtarea se genera aleatoriamente entre 500 y 2500 ms.
+		 Esto asegura que los hilos no lleguen a la barrera en un orden predecible.
+	3. Información Detallada:
+		 Los hilos informan sobre qué tarea están realizando y cuánto tiempo les tomará.
+	Como ayuda, puedes usar CyclicBarrier que es una clase en Java que pertenece al paquete java.util.concurrent. 
+	Es una herramienta de sincronización que permite que un conjunto de hilos 
+	esperen entre sí en un punto común de ejecución antes de continuar. 
+	Es especialmente útil cuando se desea realizar tareas en paralelo y sincronizar los hilos 
+	en un momento determinado antes de avanzar a la siguiente etapa del programa.
+	 */
+	
+	/* Thread that randomly  numbers. */
+	static class NumberCruncherThread implements Runnable
+    {
+        @Override
+        public void run()
+        {
+            String thisThreadName = Thread.currentThread().getName();
+            List<Integer> partialResult = new ArrayList<>();
+            
+            for (int i = 0; i < NUM_PARTIAL_RESULTS; i++)
+            {
+                int numTareas = random.nextInt(4, 20)+1;
+                System.out.println(thisThreadName + ": Number generated = " + numTareas);
+                partialResult.add(numTareas);
+            }
+            
+            partialResults.add(partialResult);
+            
+            try
+            {
+                System.out.println(thisThreadName + " waiting for others to reach barrier.");
+                barrier.await();
+            }
+            catch (InterruptedException e)		{System.out.println("");} 
+            catch (BrokenBarrierException e)	{System.out.println("");}
+        }
+    }
+    /* Thread that add the previously generated numbers. */
+	static class TaskManagerThread implements Runnable
+    {
+        @Override
+        public void run()
+        {
+//        	String thisThreadName = Thread.currentThread().getName();
+//        	System.out.println(thisThreadName + ": Computing sum of " + NUM_WORKERS + " workers, "
+//        			+ "having " + NUM_PARTIAL_RESULTS + " results each.");
+//        	int sum = 0;
+//        	for (List<Integer> threadResult : partialResults)
+//        	{
+//        		System.out.print("Adding ");
+//        		for (Integer partialResult : threadResult)
+//        		{
+//        			System.out.print(partialResult+" ");
+//        			sum += partialResult;
+//        		}
+//        		System.out.println();
+//        	}
+//        	System.out.println(thisThreadName + ": Final result = " + sum);
+        	
+        	//Establece el número de hilos lanazados.
+        	NUM_THREADS = 30;
+        	
+        	//Genera el número de subtareas, entre 5 y 20.
+        	NUM_THREAD_TASKS = randomInt(5, 20);
+        	
+        	String thisThreadName = Thread.currentThread().getName();
+            
+            for (int i = 0; i < NUM_THREAD_TASKS; i++)
+            {
+                int tiempo = randomInt(500, 2500);
+                System.out.println(thisThreadName + ": Tiempo esperado = " + tiempo);
+            }
+            
+            try
+            {
+                System.out.println(thisThreadName + " waiting for others to reach barrier.");
+                barrier.await();
+            }
+            catch (InterruptedException e)		{System.out.println("");} 
+            catch (BrokenBarrierException e)	{System.out.println("");}
+        }
+    }
+	
+	
+	
+	
+}
+
+----------------------------------- SOURCE END -------------------------------------
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.ASTNode.setSourceRange(ASTNode.java:3477)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:800)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3567)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1595)
+	at org.eclipse.jdt.core.dom.AST.convertCompilationUnit(AST.java:646)
+	at org.eclipse.jdt.internal.core.CompilationUnit.buildStructure(CompilationUnit.java:194)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:245)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:585)
+	at org.eclipse.jdt.internal.core.CompilationUnit.makeConsistent(CompilationUnit.java:1129)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:166)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:92)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:739)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:804)
+	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1303)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:132)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:94)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:91)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:158)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:94)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:107)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:78)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:207)
+
+!ENTRY org.eclipse.jdt.ui 4 2 2024-12-06 21:10:16.240
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.jdt.ui".
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.ASTNode.setSourceRange(ASTNode.java:3477)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:800)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3567)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1595)
+	at org.eclipse.jdt.core.dom.AST.convertCompilationUnit(AST.java:646)
+	at org.eclipse.jdt.internal.core.CompilationUnit.buildStructure(CompilationUnit.java:194)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:245)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:585)
+	at org.eclipse.jdt.internal.core.CompilationUnit.makeConsistent(CompilationUnit.java:1129)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:166)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:92)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:739)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:804)
+	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1303)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:132)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:94)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:91)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:158)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:94)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:107)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:78)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:207)
+
+!ENTRY org.eclipse.jdt.ui 4 0 2024-12-06 21:10:16.241
+!MESSAGE Error in JDT Core during reconcile
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.ASTNode.setSourceRange(ASTNode.java:3477)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:800)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3567)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1595)
+	at org.eclipse.jdt.core.dom.AST.convertCompilationUnit(AST.java:646)
+	at org.eclipse.jdt.internal.core.CompilationUnit.buildStructure(CompilationUnit.java:194)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:245)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:585)
+	at org.eclipse.jdt.internal.core.CompilationUnit.makeConsistent(CompilationUnit.java:1129)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:166)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:92)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:739)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:804)
+	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1303)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:132)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:94)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:91)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:158)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:94)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:107)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:78)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:207)
+
+!ENTRY org.eclipse.jdt.core 4 4 2024-12-06 21:10:16.774
+!MESSAGE Exception occurred during compilation unit conversion:
+----------------------------------- SOURCE BEGIN -------------------------------------
+
+/*
+ * Implementa una barrera. Una barrera es un punto de sincronización entre varios threads. 
+ * Se caracteriza porque los threads que van llegando a ella esperan hasta que llega el último. 
+ * Por ejemplo, se pueden sincronizar N threads y hasta que el último no llegue los demás no deben poder continuar. 
+ * Prueba a lanzar unos pocos threads, por ejemplo 4, cada uno que espere un tiempo proporcional a su identificador, 
+ * y que luego imprima un mensaje que lo identifique y que luego espere en la barrera a los otros threads.
+ * Para simular una situación más real en el código de entrega del ejercicio 
+ * debe haber las siguientes modificaciones de la prueba anterior:
+ */
+
+/*
+Se deben lanzar 30 hilos con:
+1. Subtareas Dinámicas:
+	 Cada hilo realiza un número aleatorio de subtareas (entre 5 y 20) antes de llegar a la barrera.
+	 Esto simula un escenario más realista donde los hilos tienen diferentes cantidades de trabajo.
+2. Tiempos de Trabajo Aleatorios:
+	 El tiempo de cada subtarea se genera aleatoriamente entre 500 y 2500 ms.
+	 Esto asegura que los hilos no lleguen a la barrera en un orden predecible.
+3. Información Detallada:
+	 Los hilos informan sobre qué tarea están realizando y cuánto tiempo les tomará.
+Como ayuda, puedes usar CyclicBarrier que es una clase en Java que pertenece al paquete java.util.concurrent. 
+Es una herramienta de sincronización que permite que un conjunto de hilos 
+esperen entre sí en un punto común de ejecución antes de continuar. 
+Es especialmente útil cuando se desea realizar tareas en paralelo y sincronizar los hilos 
+en un momento determinado antes de avanzar a la siguiente etapa del programa.
+ */
+
+/*
+Características principales de CyclicBarrier:
+1. Número fijo de hilos: 
+	Se especifica un número fijo de hilos en el momento de crear la barrera.
+	Este número indica cuántos hilos deben alcanzar la barrera antes de que todos puedan continuar.
+2. Uso cíclico: 
+	A diferencia de otras herramientas como CountDownLatch, que no puede reutilizarse,
+	CyclicBarrier es reutilizable. Después de que todos los hilos alcanzan la barrera y continúan, 
+	la barrera puede ser reutilizada.
+3. Tarea opcional al final: 
+	Puede ejecutar una tarea adicional (llamada "barrier action") 
+	una vez que todos los hilos llegan a la barrera, antes de permitirles continuar.
+	
+Constructor de CyclicBarrier:
+ CyclicBarrier(int parties)
+	o Crea una barrera que se activará cuando el número especificado de hilos (parties) llame a await().
+ CyclicBarrier(int parties, Runnable barrierAction)
+	o Igual que el anterior, pero además ejecuta la acción (barrierAction) en un hilo 
+	  una vez que todos los hilos han llegado a la barrera.
+ */
+
+/*
+Métodos clave:
+1. await()
+	o Se llama desde un hilo cuando este llega a la barrera.
+	o El hilo queda bloqueado hasta que todos los hilos especificados en la barrera lleguen a este punto.
+2. getParties()
+	o Devuelve el número de hilos registrados en la barrera.
+3. getNumberWaiting()
+	o Devuelve el número de hilos que actualmente están esperando en la barrera.
+4. reset()
+	o Reinicia la barrera, liberando a los hilos que esperan y permitiendo que la barrera sea reutilizada.
+ */
+
+/*
+Ventajas:
+	1. Fácil sincronización de hilos en un punto común.
+	2. Reutilización en múltiples fases de un programa paralelo.
+	3. Permite agregar una tarea adicional (opcional) al final de cada ciclo.
+	
+Casos de uso:
+	 Simulaciones paralelas.
+	 Procesamiento por etapas donde los hilos deben sincronizarse entre fases.
+	 Cualquier situación en la que un conjunto de hilos necesite un punto de encuentro antes de continuar.	 
+ */
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import java.util.Random;
+import java.util.concurrent.BrokenBarrierException;
+import java.util.concurrent.CyclicBarrier;
+
+
+public class Ejercicio2
+{
+	static CyclicBarrier barrier;
+	
+	static List<List<Integer>> partialResults = Collections.synchronizedList(new ArrayList<>());
+	static Random random = new Random();
+	static int NUM_PARTIAL_RESULTS;
+	static int NUM_WORKERS;
+	
+	static int NUM_THREADS;
+	static int NUM_THREAD_TASKS;
+	
+	public static int randomInt(int min, int max)
+		{return random.nextInt(min-1, max)+1;}
+	
+	public static void sleep(int )
+	
+	
+	
+	public static void main(String[] args)
+	{
+		//int NUM_TASKS;
+    	//int NUM_THREADS = 30;
+    	NUM_PARTIAL_RESULTS = 3;
+    	NUM_WORKERS = 5;
+        
+    	barrier = new CyclicBarrier(NUM_WORKERS, new TaskManagerThread());
+        
+        System.out.println("Creating " + NUM_WORKERS + " worker threads ");
+        System.out.println( "to compute " + NUM_PARTIAL_RESULTS + " partial results each.");
+        System.out.println("-----");
+        
+        for (int i = 0; i < NUM_WORKERS; i++)
+        {
+        	Thread worker = new Thread(new NumberCruncherThread());
+        	worker.setName("Thread " + i);
+        	worker.start();
+        }
+	}
+	
+	
+	/*
+	Se deben lanzar 30 hilos con:
+	1. Subtareas Dinámicas:
+		 Cada hilo realiza un número aleatorio de subtareas (entre 5 y 20) antes de llegar a la barrera.
+		 Esto simula un escenario más realista donde los hilos tienen diferentes cantidades de trabajo.
+	2. Tiempos de Trabajo Aleatorios:
+		 El tiempo de cada subtarea se genera aleatoriamente entre 500 y 2500 ms.
+		 Esto asegura que los hilos no lleguen a la barrera en un orden predecible.
+	3. Información Detallada:
+		 Los hilos informan sobre qué tarea están realizando y cuánto tiempo les tomará.
+	Como ayuda, puedes usar CyclicBarrier que es una clase en Java que pertenece al paquete java.util.concurrent. 
+	Es una herramienta de sincronización que permite que un conjunto de hilos 
+	esperen entre sí en un punto común de ejecución antes de continuar. 
+	Es especialmente útil cuando se desea realizar tareas en paralelo y sincronizar los hilos 
+	en un momento determinado antes de avanzar a la siguiente etapa del programa.
+	 */
+	
+	/* Thread that randomly  numbers. */
+	static class NumberCruncherThread implements Runnable
+    {
+        @Override
+        public void run()
+        {
+            String thisThreadName = Thread.currentThread().getName();
+            List<Integer> partialResult = new ArrayList<>();
+            
+            for (int i = 0; i < NUM_PARTIAL_RESULTS; i++)
+            {
+                int numTareas = random.nextInt(4, 20)+1;
+                System.out.println(thisThreadName + ": Number generated = " + numTareas);
+                partialResult.add(numTareas);
+            }
+            
+            partialResults.add(partialResult);
+            
+            try
+            {
+                System.out.println(thisThreadName + " waiting for others to reach barrier.");
+                barrier.await();
+            }
+            catch (InterruptedException e)		{System.out.println("");} 
+            catch (BrokenBarrierException e)	{System.out.println("");}
+        }
+    }
+    /* Thread that add the previously generated numbers. */
+	static class TaskManagerThread implements Runnable
+    {
+        @Override
+        public void run()
+        {
+//        	String thisThreadName = Thread.currentThread().getName();
+//        	System.out.println(thisThreadName + ": Computing sum of " + NUM_WORKERS + " workers, "
+//        			+ "having " + NUM_PARTIAL_RESULTS + " results each.");
+//        	int sum = 0;
+//        	for (List<Integer> threadResult : partialResults)
+//        	{
+//        		System.out.print("Adding ");
+//        		for (Integer partialResult : threadResult)
+//        		{
+//        			System.out.print(partialResult+" ");
+//        			sum += partialResult;
+//        		}
+//        		System.out.println();
+//        	}
+//        	System.out.println(thisThreadName + ": Final result = " + sum);
+        	
+        	//Establece el número de hilos lanazados.
+        	NUM_THREADS = 30;
+        	
+        	//Genera el número de subtareas, entre 5 y 20.
+        	NUM_THREAD_TASKS = randomInt(5, 20);
+        	
+        	String thisThreadName = Thread.currentThread().getName();
+            
+            for (int i = 0; i < NUM_THREAD_TASKS; i++)
+            {
+                int tiempo = randomInt(500, 2500);
+                System.out.println(thisThreadName + ": Tiempo esperado = " + tiempo);
+            }
+            
+            try
+            {
+                System.out.println(thisThreadName + " waiting for others to reach barrier.");
+                barrier.await();
+            }
+            catch (InterruptedException e)		{System.out.println("");} 
+            catch (BrokenBarrierException e)	{System.out.println("");}
+        }
+    }
+	
+	
+	
+	
+}
+
+----------------------------------- SOURCE END -------------------------------------
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.ASTNode.setSourceRange(ASTNode.java:3477)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:800)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3567)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1595)
+	at org.eclipse.jdt.core.dom.AST.convertCompilationUnit(AST.java:646)
+	at org.eclipse.jdt.internal.core.CompilationUnit.buildStructure(CompilationUnit.java:194)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:245)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:585)
+	at org.eclipse.jdt.internal.core.CompilationUnit.makeConsistent(CompilationUnit.java:1129)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:166)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:92)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:739)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:804)
+	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1303)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:132)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:94)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:91)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:158)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:94)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:107)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:78)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:207)
+
+!ENTRY org.eclipse.jdt.ui 4 2 2024-12-06 21:10:16.777
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.jdt.ui".
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.ASTNode.setSourceRange(ASTNode.java:3477)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:800)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3567)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1595)
+	at org.eclipse.jdt.core.dom.AST.convertCompilationUnit(AST.java:646)
+	at org.eclipse.jdt.internal.core.CompilationUnit.buildStructure(CompilationUnit.java:194)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:245)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:585)
+	at org.eclipse.jdt.internal.core.CompilationUnit.makeConsistent(CompilationUnit.java:1129)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:166)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:92)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:739)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:804)
+	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1303)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:132)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:94)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:91)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:158)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:94)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:107)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:78)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:207)
+
+!ENTRY org.eclipse.jdt.ui 4 0 2024-12-06 21:10:16.778
+!MESSAGE Error in JDT Core during reconcile
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.ASTNode.setSourceRange(ASTNode.java:3477)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:800)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3567)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1595)
+	at org.eclipse.jdt.core.dom.AST.convertCompilationUnit(AST.java:646)
+	at org.eclipse.jdt.internal.core.CompilationUnit.buildStructure(CompilationUnit.java:194)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:245)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:585)
+	at org.eclipse.jdt.internal.core.CompilationUnit.makeConsistent(CompilationUnit.java:1129)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:166)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:92)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:739)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:804)
+	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1303)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:132)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:94)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:91)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:158)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:94)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:107)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:78)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:207)
+
+!ENTRY org.eclipse.jdt.core 4 4 2024-12-06 21:10:17.246
+!MESSAGE Exception occurred during compilation unit conversion:
+----------------------------------- SOURCE BEGIN -------------------------------------
+
+/*
+ * Implementa una barrera. Una barrera es un punto de sincronización entre varios threads. 
+ * Se caracteriza porque los threads que van llegando a ella esperan hasta que llega el último. 
+ * Por ejemplo, se pueden sincronizar N threads y hasta que el último no llegue los demás no deben poder continuar. 
+ * Prueba a lanzar unos pocos threads, por ejemplo 4, cada uno que espere un tiempo proporcional a su identificador, 
+ * y que luego imprima un mensaje que lo identifique y que luego espere en la barrera a los otros threads.
+ * Para simular una situación más real en el código de entrega del ejercicio 
+ * debe haber las siguientes modificaciones de la prueba anterior:
+ */
+
+/*
+Se deben lanzar 30 hilos con:
+1. Subtareas Dinámicas:
+	 Cada hilo realiza un número aleatorio de subtareas (entre 5 y 20) antes de llegar a la barrera.
+	 Esto simula un escenario más realista donde los hilos tienen diferentes cantidades de trabajo.
+2. Tiempos de Trabajo Aleatorios:
+	 El tiempo de cada subtarea se genera aleatoriamente entre 500 y 2500 ms.
+	 Esto asegura que los hilos no lleguen a la barrera en un orden predecible.
+3. Información Detallada:
+	 Los hilos informan sobre qué tarea están realizando y cuánto tiempo les tomará.
+Como ayuda, puedes usar CyclicBarrier que es una clase en Java que pertenece al paquete java.util.concurrent. 
+Es una herramienta de sincronización que permite que un conjunto de hilos 
+esperen entre sí en un punto común de ejecución antes de continuar. 
+Es especialmente útil cuando se desea realizar tareas en paralelo y sincronizar los hilos 
+en un momento determinado antes de avanzar a la siguiente etapa del programa.
+ */
+
+/*
+Características principales de CyclicBarrier:
+1. Número fijo de hilos: 
+	Se especifica un número fijo de hilos en el momento de crear la barrera.
+	Este número indica cuántos hilos deben alcanzar la barrera antes de que todos puedan continuar.
+2. Uso cíclico: 
+	A diferencia de otras herramientas como CountDownLatch, que no puede reutilizarse,
+	CyclicBarrier es reutilizable. Después de que todos los hilos alcanzan la barrera y continúan, 
+	la barrera puede ser reutilizada.
+3. Tarea opcional al final: 
+	Puede ejecutar una tarea adicional (llamada "barrier action") 
+	una vez que todos los hilos llegan a la barrera, antes de permitirles continuar.
+	
+Constructor de CyclicBarrier:
+ CyclicBarrier(int parties)
+	o Crea una barrera que se activará cuando el número especificado de hilos (parties) llame a await().
+ CyclicBarrier(int parties, Runnable barrierAction)
+	o Igual que el anterior, pero además ejecuta la acción (barrierAction) en un hilo 
+	  una vez que todos los hilos han llegado a la barrera.
+ */
+
+/*
+Métodos clave:
+1. await()
+	o Se llama desde un hilo cuando este llega a la barrera.
+	o El hilo queda bloqueado hasta que todos los hilos especificados en la barrera lleguen a este punto.
+2. getParties()
+	o Devuelve el número de hilos registrados en la barrera.
+3. getNumberWaiting()
+	o Devuelve el número de hilos que actualmente están esperando en la barrera.
+4. reset()
+	o Reinicia la barrera, liberando a los hilos que esperan y permitiendo que la barrera sea reutilizada.
+ */
+
+/*
+Ventajas:
+	1. Fácil sincronización de hilos en un punto común.
+	2. Reutilización en múltiples fases de un programa paralelo.
+	3. Permite agregar una tarea adicional (opcional) al final de cada ciclo.
+	
+Casos de uso:
+	 Simulaciones paralelas.
+	 Procesamiento por etapas donde los hilos deben sincronizarse entre fases.
+	 Cualquier situación en la que un conjunto de hilos necesite un punto de encuentro antes de continuar.	 
+ */
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import java.util.Random;
+import java.util.concurrent.BrokenBarrierException;
+import java.util.concurrent.CyclicBarrier;
+
+
+public class Ejercicio2
+{
+	static CyclicBarrier barrier;
+	
+	static List<List<Integer>> partialResults = Collections.synchronizedList(new ArrayList<>());
+	static Random random = new Random();
+	static int NUM_PARTIAL_RESULTS;
+	static int NUM_WORKERS;
+	
+	static int NUM_THREADS;
+	static int NUM_THREAD_TASKS;
+	
+	public static int randomInt(int min, int max)
+		{return random.nextInt(min-1, max)+1;}
+	
+	public static void sleep(int m)
+	
+	
+	
+	public static void main(String[] args)
+	{
+		//int NUM_TASKS;
+    	//int NUM_THREADS = 30;
+    	NUM_PARTIAL_RESULTS = 3;
+    	NUM_WORKERS = 5;
+        
+    	barrier = new CyclicBarrier(NUM_WORKERS, new TaskManagerThread());
+        
+        System.out.println("Creating " + NUM_WORKERS + " worker threads ");
+        System.out.println( "to compute " + NUM_PARTIAL_RESULTS + " partial results each.");
+        System.out.println("-----");
+        
+        for (int i = 0; i < NUM_WORKERS; i++)
+        {
+        	Thread worker = new Thread(new NumberCruncherThread());
+        	worker.setName("Thread " + i);
+        	worker.start();
+        }
+	}
+	
+	
+	/*
+	Se deben lanzar 30 hilos con:
+	1. Subtareas Dinámicas:
+		 Cada hilo realiza un número aleatorio de subtareas (entre 5 y 20) antes de llegar a la barrera.
+		 Esto simula un escenario más realista donde los hilos tienen diferentes cantidades de trabajo.
+	2. Tiempos de Trabajo Aleatorios:
+		 El tiempo de cada subtarea se genera aleatoriamente entre 500 y 2500 ms.
+		 Esto asegura que los hilos no lleguen a la barrera en un orden predecible.
+	3. Información Detallada:
+		 Los hilos informan sobre qué tarea están realizando y cuánto tiempo les tomará.
+	Como ayuda, puedes usar CyclicBarrier que es una clase en Java que pertenece al paquete java.util.concurrent. 
+	Es una herramienta de sincronización que permite que un conjunto de hilos 
+	esperen entre sí en un punto común de ejecución antes de continuar. 
+	Es especialmente útil cuando se desea realizar tareas en paralelo y sincronizar los hilos 
+	en un momento determinado antes de avanzar a la siguiente etapa del programa.
+	 */
+	
+	/* Thread that randomly  numbers. */
+	static class NumberCruncherThread implements Runnable
+    {
+        @Override
+        public void run()
+        {
+            String thisThreadName = Thread.currentThread().getName();
+            List<Integer> partialResult = new ArrayList<>();
+            
+            for (int i = 0; i < NUM_PARTIAL_RESULTS; i++)
+            {
+                int numTareas = random.nextInt(4, 20)+1;
+                System.out.println(thisThreadName + ": Number generated = " + numTareas);
+                partialResult.add(numTareas);
+            }
+            
+            partialResults.add(partialResult);
+            
+            try
+            {
+                System.out.println(thisThreadName + " waiting for others to reach barrier.");
+                barrier.await();
+            }
+            catch (InterruptedException e)		{System.out.println("");} 
+            catch (BrokenBarrierException e)	{System.out.println("");}
+        }
+    }
+    /* Thread that add the previously generated numbers. */
+	static class TaskManagerThread implements Runnable
+    {
+        @Override
+        public void run()
+        {
+//        	String thisThreadName = Thread.currentThread().getName();
+//        	System.out.println(thisThreadName + ": Computing sum of " + NUM_WORKERS + " workers, "
+//        			+ "having " + NUM_PARTIAL_RESULTS + " results each.");
+//        	int sum = 0;
+//        	for (List<Integer> threadResult : partialResults)
+//        	{
+//        		System.out.print("Adding ");
+//        		for (Integer partialResult : threadResult)
+//        		{
+//        			System.out.print(partialResult+" ");
+//        			sum += partialResult;
+//        		}
+//        		System.out.println();
+//        	}
+//        	System.out.println(thisThreadName + ": Final result = " + sum);
+        	
+        	//Establece el número de hilos lanazados.
+        	NUM_THREADS = 30;
+        	
+        	//Genera el número de subtareas, entre 5 y 20.
+        	NUM_THREAD_TASKS = randomInt(5, 20);
+        	
+        	String thisThreadName = Thread.currentThread().getName();
+            
+            for (int i = 0; i < NUM_THREAD_TASKS; i++)
+            {
+                int tiempo = randomInt(500, 2500);
+                System.out.println(thisThreadName + ": Tiempo esperado = " + tiempo);
+            }
+            
+            try
+            {
+                System.out.println(thisThreadName + " waiting for others to reach barrier.");
+                barrier.await();
+            }
+            catch (InterruptedException e)		{System.out.println("");} 
+            catch (BrokenBarrierException e)	{System.out.println("");}
+        }
+    }
+	
+	
+	
+	
+}
+
+----------------------------------- SOURCE END -------------------------------------
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.ASTNode.setSourceRange(ASTNode.java:3477)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:800)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3567)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1595)
+	at org.eclipse.jdt.core.dom.AST.convertCompilationUnit(AST.java:646)
+	at org.eclipse.jdt.internal.core.CompilationUnit.buildStructure(CompilationUnit.java:194)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:245)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:585)
+	at org.eclipse.jdt.internal.core.CompilationUnit.makeConsistent(CompilationUnit.java:1129)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:166)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:92)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:739)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:804)
+	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1303)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:132)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:94)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:91)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:158)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:94)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:107)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:78)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:207)
+
+!ENTRY org.eclipse.jdt.ui 4 2 2024-12-06 21:10:17.249
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.jdt.ui".
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.ASTNode.setSourceRange(ASTNode.java:3477)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:800)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3567)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1595)
+	at org.eclipse.jdt.core.dom.AST.convertCompilationUnit(AST.java:646)
+	at org.eclipse.jdt.internal.core.CompilationUnit.buildStructure(CompilationUnit.java:194)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:245)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:585)
+	at org.eclipse.jdt.internal.core.CompilationUnit.makeConsistent(CompilationUnit.java:1129)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:166)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:92)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:739)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:804)
+	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1303)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:132)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:94)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:91)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:158)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:94)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:107)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:78)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:207)
+
+!ENTRY org.eclipse.jdt.ui 4 0 2024-12-06 21:10:17.249
+!MESSAGE Error in JDT Core during reconcile
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.ASTNode.setSourceRange(ASTNode.java:3477)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:800)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3567)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1595)
+	at org.eclipse.jdt.core.dom.AST.convertCompilationUnit(AST.java:646)
+	at org.eclipse.jdt.internal.core.CompilationUnit.buildStructure(CompilationUnit.java:194)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:245)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:585)
+	at org.eclipse.jdt.internal.core.CompilationUnit.makeConsistent(CompilationUnit.java:1129)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:166)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:92)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:739)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:804)
+	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1303)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:132)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:94)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:91)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:158)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:94)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:107)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:78)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:207)
+
+!ENTRY org.eclipse.jdt.core 4 4 2024-12-06 21:10:17.749
+!MESSAGE Exception occurred during compilation unit conversion:
+----------------------------------- SOURCE BEGIN -------------------------------------
+
+/*
+ * Implementa una barrera. Una barrera es un punto de sincronización entre varios threads. 
+ * Se caracteriza porque los threads que van llegando a ella esperan hasta que llega el último. 
+ * Por ejemplo, se pueden sincronizar N threads y hasta que el último no llegue los demás no deben poder continuar. 
+ * Prueba a lanzar unos pocos threads, por ejemplo 4, cada uno que espere un tiempo proporcional a su identificador, 
+ * y que luego imprima un mensaje que lo identifique y que luego espere en la barrera a los otros threads.
+ * Para simular una situación más real en el código de entrega del ejercicio 
+ * debe haber las siguientes modificaciones de la prueba anterior:
+ */
+
+/*
+Se deben lanzar 30 hilos con:
+1. Subtareas Dinámicas:
+	 Cada hilo realiza un número aleatorio de subtareas (entre 5 y 20) antes de llegar a la barrera.
+	 Esto simula un escenario más realista donde los hilos tienen diferentes cantidades de trabajo.
+2. Tiempos de Trabajo Aleatorios:
+	 El tiempo de cada subtarea se genera aleatoriamente entre 500 y 2500 ms.
+	 Esto asegura que los hilos no lleguen a la barrera en un orden predecible.
+3. Información Detallada:
+	 Los hilos informan sobre qué tarea están realizando y cuánto tiempo les tomará.
+Como ayuda, puedes usar CyclicBarrier que es una clase en Java que pertenece al paquete java.util.concurrent. 
+Es una herramienta de sincronización que permite que un conjunto de hilos 
+esperen entre sí en un punto común de ejecución antes de continuar. 
+Es especialmente útil cuando se desea realizar tareas en paralelo y sincronizar los hilos 
+en un momento determinado antes de avanzar a la siguiente etapa del programa.
+ */
+
+/*
+Características principales de CyclicBarrier:
+1. Número fijo de hilos: 
+	Se especifica un número fijo de hilos en el momento de crear la barrera.
+	Este número indica cuántos hilos deben alcanzar la barrera antes de que todos puedan continuar.
+2. Uso cíclico: 
+	A diferencia de otras herramientas como CountDownLatch, que no puede reutilizarse,
+	CyclicBarrier es reutilizable. Después de que todos los hilos alcanzan la barrera y continúan, 
+	la barrera puede ser reutilizada.
+3. Tarea opcional al final: 
+	Puede ejecutar una tarea adicional (llamada "barrier action") 
+	una vez que todos los hilos llegan a la barrera, antes de permitirles continuar.
+	
+Constructor de CyclicBarrier:
+ CyclicBarrier(int parties)
+	o Crea una barrera que se activará cuando el número especificado de hilos (parties) llame a await().
+ CyclicBarrier(int parties, Runnable barrierAction)
+	o Igual que el anterior, pero además ejecuta la acción (barrierAction) en un hilo 
+	  una vez que todos los hilos han llegado a la barrera.
+ */
+
+/*
+Métodos clave:
+1. await()
+	o Se llama desde un hilo cuando este llega a la barrera.
+	o El hilo queda bloqueado hasta que todos los hilos especificados en la barrera lleguen a este punto.
+2. getParties()
+	o Devuelve el número de hilos registrados en la barrera.
+3. getNumberWaiting()
+	o Devuelve el número de hilos que actualmente están esperando en la barrera.
+4. reset()
+	o Reinicia la barrera, liberando a los hilos que esperan y permitiendo que la barrera sea reutilizada.
+ */
+
+/*
+Ventajas:
+	1. Fácil sincronización de hilos en un punto común.
+	2. Reutilización en múltiples fases de un programa paralelo.
+	3. Permite agregar una tarea adicional (opcional) al final de cada ciclo.
+	
+Casos de uso:
+	 Simulaciones paralelas.
+	 Procesamiento por etapas donde los hilos deben sincronizarse entre fases.
+	 Cualquier situación en la que un conjunto de hilos necesite un punto de encuentro antes de continuar.	 
+ */
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import java.util.Random;
+import java.util.concurrent.BrokenBarrierException;
+import java.util.concurrent.CyclicBarrier;
+
+
+public class Ejercicio2
+{
+	static CyclicBarrier barrier;
+	
+	static List<List<Integer>> partialResults = Collections.synchronizedList(new ArrayList<>());
+	static Random random = new Random();
+	static int NUM_PARTIAL_RESULTS;
+	static int NUM_WORKERS;
+	
+	static int NUM_THREADS;
+	static int NUM_THREAD_TASKS;
+	
+	public static int randomInt(int min, int max)
+		{return random.nextInt(min-1, max)+1;}
+	
+	public static void sleep(int mi)
+	
+	
+	
+	public static void main(String[] args)
+	{
+		//int NUM_TASKS;
+    	//int NUM_THREADS = 30;
+    	NUM_PARTIAL_RESULTS = 3;
+    	NUM_WORKERS = 5;
+        
+    	barrier = new CyclicBarrier(NUM_WORKERS, new TaskManagerThread());
+        
+        System.out.println("Creating " + NUM_WORKERS + " worker threads ");
+        System.out.println( "to compute " + NUM_PARTIAL_RESULTS + " partial results each.");
+        System.out.println("-----");
+        
+        for (int i = 0; i < NUM_WORKERS; i++)
+        {
+        	Thread worker = new Thread(new NumberCruncherThread());
+        	worker.setName("Thread " + i);
+        	worker.start();
+        }
+	}
+	
+	
+	/*
+	Se deben lanzar 30 hilos con:
+	1. Subtareas Dinámicas:
+		 Cada hilo realiza un número aleatorio de subtareas (entre 5 y 20) antes de llegar a la barrera.
+		 Esto simula un escenario más realista donde los hilos tienen diferentes cantidades de trabajo.
+	2. Tiempos de Trabajo Aleatorios:
+		 El tiempo de cada subtarea se genera aleatoriamente entre 500 y 2500 ms.
+		 Esto asegura que los hilos no lleguen a la barrera en un orden predecible.
+	3. Información Detallada:
+		 Los hilos informan sobre qué tarea están realizando y cuánto tiempo les tomará.
+	Como ayuda, puedes usar CyclicBarrier que es una clase en Java que pertenece al paquete java.util.concurrent. 
+	Es una herramienta de sincronización que permite que un conjunto de hilos 
+	esperen entre sí en un punto común de ejecución antes de continuar. 
+	Es especialmente útil cuando se desea realizar tareas en paralelo y sincronizar los hilos 
+	en un momento determinado antes de avanzar a la siguiente etapa del programa.
+	 */
+	
+	/* Thread that randomly  numbers. */
+	static class NumberCruncherThread implements Runnable
+    {
+        @Override
+        public void run()
+        {
+            String thisThreadName = Thread.currentThread().getName();
+            List<Integer> partialResult = new ArrayList<>();
+            
+            for (int i = 0; i < NUM_PARTIAL_RESULTS; i++)
+            {
+                int numTareas = random.nextInt(4, 20)+1;
+                System.out.println(thisThreadName + ": Number generated = " + numTareas);
+                partialResult.add(numTareas);
+            }
+            
+            partialResults.add(partialResult);
+            
+            try
+            {
+                System.out.println(thisThreadName + " waiting for others to reach barrier.");
+                barrier.await();
+            }
+            catch (InterruptedException e)		{System.out.println("");} 
+            catch (BrokenBarrierException e)	{System.out.println("");}
+        }
+    }
+    /* Thread that add the previously generated numbers. */
+	static class TaskManagerThread implements Runnable
+    {
+        @Override
+        public void run()
+        {
+//        	String thisThreadName = Thread.currentThread().getName();
+//        	System.out.println(thisThreadName + ": Computing sum of " + NUM_WORKERS + " workers, "
+//        			+ "having " + NUM_PARTIAL_RESULTS + " results each.");
+//        	int sum = 0;
+//        	for (List<Integer> threadResult : partialResults)
+//        	{
+//        		System.out.print("Adding ");
+//        		for (Integer partialResult : threadResult)
+//        		{
+//        			System.out.print(partialResult+" ");
+//        			sum += partialResult;
+//        		}
+//        		System.out.println();
+//        	}
+//        	System.out.println(thisThreadName + ": Final result = " + sum);
+        	
+        	//Establece el número de hilos lanazados.
+        	NUM_THREADS = 30;
+        	
+        	//Genera el número de subtareas, entre 5 y 20.
+        	NUM_THREAD_TASKS = randomInt(5, 20);
+        	
+        	String thisThreadName = Thread.currentThread().getName();
+            
+            for (int i = 0; i < NUM_THREAD_TASKS; i++)
+            {
+                int tiempo = randomInt(500, 2500);
+                System.out.println(thisThreadName + ": Tiempo esperado = " + tiempo);
+            }
+            
+            try
+            {
+                System.out.println(thisThreadName + " waiting for others to reach barrier.");
+                barrier.await();
+            }
+            catch (InterruptedException e)		{System.out.println("");} 
+            catch (BrokenBarrierException e)	{System.out.println("");}
+        }
+    }
+	
+	
+	
+	
+}
+
+----------------------------------- SOURCE END -------------------------------------
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.ASTNode.setSourceRange(ASTNode.java:3477)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:800)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3567)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1595)
+	at org.eclipse.jdt.core.dom.AST.convertCompilationUnit(AST.java:646)
+	at org.eclipse.jdt.internal.core.CompilationUnit.buildStructure(CompilationUnit.java:194)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:245)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:585)
+	at org.eclipse.jdt.internal.core.CompilationUnit.makeConsistent(CompilationUnit.java:1129)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:166)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:92)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:739)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:804)
+	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1303)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:132)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:94)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:91)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:158)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:94)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:107)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:78)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:207)
+
+!ENTRY org.eclipse.jdt.ui 4 2 2024-12-06 21:10:17.750
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.jdt.ui".
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.ASTNode.setSourceRange(ASTNode.java:3477)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:800)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3567)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1595)
+	at org.eclipse.jdt.core.dom.AST.convertCompilationUnit(AST.java:646)
+	at org.eclipse.jdt.internal.core.CompilationUnit.buildStructure(CompilationUnit.java:194)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:245)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:585)
+	at org.eclipse.jdt.internal.core.CompilationUnit.makeConsistent(CompilationUnit.java:1129)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:166)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:92)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:739)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:804)
+	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1303)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:132)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:94)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:91)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:158)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:94)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:107)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:78)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:207)
+
+!ENTRY org.eclipse.jdt.ui 4 0 2024-12-06 21:10:17.751
+!MESSAGE Error in JDT Core during reconcile
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.ASTNode.setSourceRange(ASTNode.java:3477)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:800)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3567)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1595)
+	at org.eclipse.jdt.core.dom.AST.convertCompilationUnit(AST.java:646)
+	at org.eclipse.jdt.internal.core.CompilationUnit.buildStructure(CompilationUnit.java:194)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:245)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:585)
+	at org.eclipse.jdt.internal.core.CompilationUnit.makeConsistent(CompilationUnit.java:1129)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:166)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:92)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:739)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:804)
+	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1303)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:132)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:94)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:91)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:158)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:94)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:107)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:78)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:207)
+
+!ENTRY org.eclipse.jdt.core 4 4 2024-12-06 21:10:18.263
+!MESSAGE Exception occurred during compilation unit conversion:
+----------------------------------- SOURCE BEGIN -------------------------------------
+
+/*
+ * Implementa una barrera. Una barrera es un punto de sincronización entre varios threads. 
+ * Se caracteriza porque los threads que van llegando a ella esperan hasta que llega el último. 
+ * Por ejemplo, se pueden sincronizar N threads y hasta que el último no llegue los demás no deben poder continuar. 
+ * Prueba a lanzar unos pocos threads, por ejemplo 4, cada uno que espere un tiempo proporcional a su identificador, 
+ * y que luego imprima un mensaje que lo identifique y que luego espere en la barrera a los otros threads.
+ * Para simular una situación más real en el código de entrega del ejercicio 
+ * debe haber las siguientes modificaciones de la prueba anterior:
+ */
+
+/*
+Se deben lanzar 30 hilos con:
+1. Subtareas Dinámicas:
+	 Cada hilo realiza un número aleatorio de subtareas (entre 5 y 20) antes de llegar a la barrera.
+	 Esto simula un escenario más realista donde los hilos tienen diferentes cantidades de trabajo.
+2. Tiempos de Trabajo Aleatorios:
+	 El tiempo de cada subtarea se genera aleatoriamente entre 500 y 2500 ms.
+	 Esto asegura que los hilos no lleguen a la barrera en un orden predecible.
+3. Información Detallada:
+	 Los hilos informan sobre qué tarea están realizando y cuánto tiempo les tomará.
+Como ayuda, puedes usar CyclicBarrier que es una clase en Java que pertenece al paquete java.util.concurrent. 
+Es una herramienta de sincronización que permite que un conjunto de hilos 
+esperen entre sí en un punto común de ejecución antes de continuar. 
+Es especialmente útil cuando se desea realizar tareas en paralelo y sincronizar los hilos 
+en un momento determinado antes de avanzar a la siguiente etapa del programa.
+ */
+
+/*
+Características principales de CyclicBarrier:
+1. Número fijo de hilos: 
+	Se especifica un número fijo de hilos en el momento de crear la barrera.
+	Este número indica cuántos hilos deben alcanzar la barrera antes de que todos puedan continuar.
+2. Uso cíclico: 
+	A diferencia de otras herramientas como CountDownLatch, que no puede reutilizarse,
+	CyclicBarrier es reutilizable. Después de que todos los hilos alcanzan la barrera y continúan, 
+	la barrera puede ser reutilizada.
+3. Tarea opcional al final: 
+	Puede ejecutar una tarea adicional (llamada "barrier action") 
+	una vez que todos los hilos llegan a la barrera, antes de permitirles continuar.
+	
+Constructor de CyclicBarrier:
+ CyclicBarrier(int parties)
+	o Crea una barrera que se activará cuando el número especificado de hilos (parties) llame a await().
+ CyclicBarrier(int parties, Runnable barrierAction)
+	o Igual que el anterior, pero además ejecuta la acción (barrierAction) en un hilo 
+	  una vez que todos los hilos han llegado a la barrera.
+ */
+
+/*
+Métodos clave:
+1. await()
+	o Se llama desde un hilo cuando este llega a la barrera.
+	o El hilo queda bloqueado hasta que todos los hilos especificados en la barrera lleguen a este punto.
+2. getParties()
+	o Devuelve el número de hilos registrados en la barrera.
+3. getNumberWaiting()
+	o Devuelve el número de hilos que actualmente están esperando en la barrera.
+4. reset()
+	o Reinicia la barrera, liberando a los hilos que esperan y permitiendo que la barrera sea reutilizada.
+ */
+
+/*
+Ventajas:
+	1. Fácil sincronización de hilos en un punto común.
+	2. Reutilización en múltiples fases de un programa paralelo.
+	3. Permite agregar una tarea adicional (opcional) al final de cada ciclo.
+	
+Casos de uso:
+	 Simulaciones paralelas.
+	 Procesamiento por etapas donde los hilos deben sincronizarse entre fases.
+	 Cualquier situación en la que un conjunto de hilos necesite un punto de encuentro antes de continuar.	 
+ */
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import java.util.Random;
+import java.util.concurrent.BrokenBarrierException;
+import java.util.concurrent.CyclicBarrier;
+
+
+public class Ejercicio2
+{
+	static CyclicBarrier barrier;
+	
+	static List<List<Integer>> partialResults = Collections.synchronizedList(new ArrayList<>());
+	static Random random = new Random();
+	static int NUM_PARTIAL_RESULTS;
+	static int NUM_WORKERS;
+	
+	static int NUM_THREADS;
+	static int NUM_THREAD_TASKS;
+	
+	public static int randomInt(int min, int max)
+		{return random.nextInt(min-1, max)+1;}
+	
+	public static void sleep(int mili)
+	
+	
+	
+	public static void main(String[] args)
+	{
+		//int NUM_TASKS;
+    	//int NUM_THREADS = 30;
+    	NUM_PARTIAL_RESULTS = 3;
+    	NUM_WORKERS = 5;
+        
+    	barrier = new CyclicBarrier(NUM_WORKERS, new TaskManagerThread());
+        
+        System.out.println("Creating " + NUM_WORKERS + " worker threads ");
+        System.out.println( "to compute " + NUM_PARTIAL_RESULTS + " partial results each.");
+        System.out.println("-----");
+        
+        for (int i = 0; i < NUM_WORKERS; i++)
+        {
+        	Thread worker = new Thread(new NumberCruncherThread());
+        	worker.setName("Thread " + i);
+        	worker.start();
+        }
+	}
+	
+	
+	/*
+	Se deben lanzar 30 hilos con:
+	1. Subtareas Dinámicas:
+		 Cada hilo realiza un número aleatorio de subtareas (entre 5 y 20) antes de llegar a la barrera.
+		 Esto simula un escenario más realista donde los hilos tienen diferentes cantidades de trabajo.
+	2. Tiempos de Trabajo Aleatorios:
+		 El tiempo de cada subtarea se genera aleatoriamente entre 500 y 2500 ms.
+		 Esto asegura que los hilos no lleguen a la barrera en un orden predecible.
+	3. Información Detallada:
+		 Los hilos informan sobre qué tarea están realizando y cuánto tiempo les tomará.
+	Como ayuda, puedes usar CyclicBarrier que es una clase en Java que pertenece al paquete java.util.concurrent. 
+	Es una herramienta de sincronización que permite que un conjunto de hilos 
+	esperen entre sí en un punto común de ejecución antes de continuar. 
+	Es especialmente útil cuando se desea realizar tareas en paralelo y sincronizar los hilos 
+	en un momento determinado antes de avanzar a la siguiente etapa del programa.
+	 */
+	
+	/* Thread that randomly  numbers. */
+	static class NumberCruncherThread implements Runnable
+    {
+        @Override
+        public void run()
+        {
+            String thisThreadName = Thread.currentThread().getName();
+            List<Integer> partialResult = new ArrayList<>();
+            
+            for (int i = 0; i < NUM_PARTIAL_RESULTS; i++)
+            {
+                int numTareas = random.nextInt(4, 20)+1;
+                System.out.println(thisThreadName + ": Number generated = " + numTareas);
+                partialResult.add(numTareas);
+            }
+            
+            partialResults.add(partialResult);
+            
+            try
+            {
+                System.out.println(thisThreadName + " waiting for others to reach barrier.");
+                barrier.await();
+            }
+            catch (InterruptedException e)		{System.out.println("");} 
+            catch (BrokenBarrierException e)	{System.out.println("");}
+        }
+    }
+    /* Thread that add the previously generated numbers. */
+	static class TaskManagerThread implements Runnable
+    {
+        @Override
+        public void run()
+        {
+//        	String thisThreadName = Thread.currentThread().getName();
+//        	System.out.println(thisThreadName + ": Computing sum of " + NUM_WORKERS + " workers, "
+//        			+ "having " + NUM_PARTIAL_RESULTS + " results each.");
+//        	int sum = 0;
+//        	for (List<Integer> threadResult : partialResults)
+//        	{
+//        		System.out.print("Adding ");
+//        		for (Integer partialResult : threadResult)
+//        		{
+//        			System.out.print(partialResult+" ");
+//        			sum += partialResult;
+//        		}
+//        		System.out.println();
+//        	}
+//        	System.out.println(thisThreadName + ": Final result = " + sum);
+        	
+        	//Establece el número de hilos lanazados.
+        	NUM_THREADS = 30;
+        	
+        	//Genera el número de subtareas, entre 5 y 20.
+        	NUM_THREAD_TASKS = randomInt(5, 20);
+        	
+        	String thisThreadName = Thread.currentThread().getName();
+            
+            for (int i = 0; i < NUM_THREAD_TASKS; i++)
+            {
+                int tiempo = randomInt(500, 2500);
+                System.out.println(thisThreadName + ": Tiempo esperado = " + tiempo);
+            }
+            
+            try
+            {
+                System.out.println(thisThreadName + " waiting for others to reach barrier.");
+                barrier.await();
+            }
+            catch (InterruptedException e)		{System.out.println("");} 
+            catch (BrokenBarrierException e)	{System.out.println("");}
+        }
+    }
+	
+	
+	
+	
+}
+
+----------------------------------- SOURCE END -------------------------------------
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.ASTNode.setSourceRange(ASTNode.java:3477)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:800)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3567)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1595)
+	at org.eclipse.jdt.core.dom.AST.convertCompilationUnit(AST.java:646)
+	at org.eclipse.jdt.internal.core.CompilationUnit.buildStructure(CompilationUnit.java:194)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:245)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:585)
+	at org.eclipse.jdt.internal.core.CompilationUnit.makeConsistent(CompilationUnit.java:1129)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:166)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:92)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:739)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:804)
+	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1303)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:132)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:94)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:91)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:158)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:94)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:107)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:78)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:207)
+
+!ENTRY org.eclipse.jdt.ui 4 2 2024-12-06 21:10:18.265
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.jdt.ui".
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.ASTNode.setSourceRange(ASTNode.java:3477)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:800)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3567)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1595)
+	at org.eclipse.jdt.core.dom.AST.convertCompilationUnit(AST.java:646)
+	at org.eclipse.jdt.internal.core.CompilationUnit.buildStructure(CompilationUnit.java:194)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:245)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:585)
+	at org.eclipse.jdt.internal.core.CompilationUnit.makeConsistent(CompilationUnit.java:1129)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:166)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:92)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:739)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:804)
+	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1303)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:132)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:94)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:91)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:158)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:94)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:107)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:78)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:207)
+
+!ENTRY org.eclipse.jdt.ui 4 0 2024-12-06 21:10:18.267
+!MESSAGE Error in JDT Core during reconcile
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.ASTNode.setSourceRange(ASTNode.java:3477)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:800)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3567)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1595)
+	at org.eclipse.jdt.core.dom.AST.convertCompilationUnit(AST.java:646)
+	at org.eclipse.jdt.internal.core.CompilationUnit.buildStructure(CompilationUnit.java:194)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:245)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:585)
+	at org.eclipse.jdt.internal.core.CompilationUnit.makeConsistent(CompilationUnit.java:1129)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:166)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:92)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:739)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:804)
+	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1303)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:132)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:94)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:91)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:158)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:94)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:107)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:78)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:207)
+
+!ENTRY org.eclipse.jdt.core 4 4 2024-12-06 21:10:19.371
+!MESSAGE Exception occurred during compilation unit conversion:
+----------------------------------- SOURCE BEGIN -------------------------------------
+
+/*
+ * Implementa una barrera. Una barrera es un punto de sincronización entre varios threads. 
+ * Se caracteriza porque los threads que van llegando a ella esperan hasta que llega el último. 
+ * Por ejemplo, se pueden sincronizar N threads y hasta que el último no llegue los demás no deben poder continuar. 
+ * Prueba a lanzar unos pocos threads, por ejemplo 4, cada uno que espere un tiempo proporcional a su identificador, 
+ * y que luego imprima un mensaje que lo identifique y que luego espere en la barrera a los otros threads.
+ * Para simular una situación más real en el código de entrega del ejercicio 
+ * debe haber las siguientes modificaciones de la prueba anterior:
+ */
+
+/*
+Se deben lanzar 30 hilos con:
+1. Subtareas Dinámicas:
+	 Cada hilo realiza un número aleatorio de subtareas (entre 5 y 20) antes de llegar a la barrera.
+	 Esto simula un escenario más realista donde los hilos tienen diferentes cantidades de trabajo.
+2. Tiempos de Trabajo Aleatorios:
+	 El tiempo de cada subtarea se genera aleatoriamente entre 500 y 2500 ms.
+	 Esto asegura que los hilos no lleguen a la barrera en un orden predecible.
+3. Información Detallada:
+	 Los hilos informan sobre qué tarea están realizando y cuánto tiempo les tomará.
+Como ayuda, puedes usar CyclicBarrier que es una clase en Java que pertenece al paquete java.util.concurrent. 
+Es una herramienta de sincronización que permite que un conjunto de hilos 
+esperen entre sí en un punto común de ejecución antes de continuar. 
+Es especialmente útil cuando se desea realizar tareas en paralelo y sincronizar los hilos 
+en un momento determinado antes de avanzar a la siguiente etapa del programa.
+ */
+
+/*
+Características principales de CyclicBarrier:
+1. Número fijo de hilos: 
+	Se especifica un número fijo de hilos en el momento de crear la barrera.
+	Este número indica cuántos hilos deben alcanzar la barrera antes de que todos puedan continuar.
+2. Uso cíclico: 
+	A diferencia de otras herramientas como CountDownLatch, que no puede reutilizarse,
+	CyclicBarrier es reutilizable. Después de que todos los hilos alcanzan la barrera y continúan, 
+	la barrera puede ser reutilizada.
+3. Tarea opcional al final: 
+	Puede ejecutar una tarea adicional (llamada "barrier action") 
+	una vez que todos los hilos llegan a la barrera, antes de permitirles continuar.
+	
+Constructor de CyclicBarrier:
+ CyclicBarrier(int parties)
+	o Crea una barrera que se activará cuando el número especificado de hilos (parties) llame a await().
+ CyclicBarrier(int parties, Runnable barrierAction)
+	o Igual que el anterior, pero además ejecuta la acción (barrierAction) en un hilo 
+	  una vez que todos los hilos han llegado a la barrera.
+ */
+
+/*
+Métodos clave:
+1. await()
+	o Se llama desde un hilo cuando este llega a la barrera.
+	o El hilo queda bloqueado hasta que todos los hilos especificados en la barrera lleguen a este punto.
+2. getParties()
+	o Devuelve el número de hilos registrados en la barrera.
+3. getNumberWaiting()
+	o Devuelve el número de hilos que actualmente están esperando en la barrera.
+4. reset()
+	o Reinicia la barrera, liberando a los hilos que esperan y permitiendo que la barrera sea reutilizada.
+ */
+
+/*
+Ventajas:
+	1. Fácil sincronización de hilos en un punto común.
+	2. Reutilización en múltiples fases de un programa paralelo.
+	3. Permite agregar una tarea adicional (opcional) al final de cada ciclo.
+	
+Casos de uso:
+	 Simulaciones paralelas.
+	 Procesamiento por etapas donde los hilos deben sincronizarse entre fases.
+	 Cualquier situación en la que un conjunto de hilos necesite un punto de encuentro antes de continuar.	 
+ */
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import java.util.Random;
+import java.util.concurrent.BrokenBarrierException;
+import java.util.concurrent.CyclicBarrier;
+
+
+public class Ejercicio2
+{
+	static CyclicBarrier barrier;
+	
+	static List<List<Integer>> partialResults = Collections.synchronizedList(new ArrayList<>());
+	static Random random = new Random();
+	static int NUM_PARTIAL_RESULTS;
+	static int NUM_WORKERS;
+	
+	static int NUM_THREADS;
+	static int NUM_THREAD_TASKS;
+	
+	public static int randomInt(int min, int max)
+		{return random.nextInt(min-1, max)+1;}
+	
+	public static void sleep(int mili)ç
+	
+	
+	
+	public static void main(String[] args)
+	{
+		//int NUM_TASKS;
+    	//int NUM_THREADS = 30;
+    	NUM_PARTIAL_RESULTS = 3;
+    	NUM_WORKERS = 5;
+        
+    	barrier = new CyclicBarrier(NUM_WORKERS, new TaskManagerThread());
+        
+        System.out.println("Creating " + NUM_WORKERS + " worker threads ");
+        System.out.println( "to compute " + NUM_PARTIAL_RESULTS + " partial results each.");
+        System.out.println("-----");
+        
+        for (int i = 0; i < NUM_WORKERS; i++)
+        {
+        	Thread worker = new Thread(new NumberCruncherThread());
+        	worker.setName("Thread " + i);
+        	worker.start();
+        }
+	}
+	
+	
+	/*
+	Se deben lanzar 30 hilos con:
+	1. Subtareas Dinámicas:
+		 Cada hilo realiza un número aleatorio de subtareas (entre 5 y 20) antes de llegar a la barrera.
+		 Esto simula un escenario más realista donde los hilos tienen diferentes cantidades de trabajo.
+	2. Tiempos de Trabajo Aleatorios:
+		 El tiempo de cada subtarea se genera aleatoriamente entre 500 y 2500 ms.
+		 Esto asegura que los hilos no lleguen a la barrera en un orden predecible.
+	3. Información Detallada:
+		 Los hilos informan sobre qué tarea están realizando y cuánto tiempo les tomará.
+	Como ayuda, puedes usar CyclicBarrier que es una clase en Java que pertenece al paquete java.util.concurrent. 
+	Es una herramienta de sincronización que permite que un conjunto de hilos 
+	esperen entre sí en un punto común de ejecución antes de continuar. 
+	Es especialmente útil cuando se desea realizar tareas en paralelo y sincronizar los hilos 
+	en un momento determinado antes de avanzar a la siguiente etapa del programa.
+	 */
+	
+	/* Thread that randomly  numbers. */
+	static class NumberCruncherThread implements Runnable
+    {
+        @Override
+        public void run()
+        {
+            String thisThreadName = Thread.currentThread().getName();
+            List<Integer> partialResult = new ArrayList<>();
+            
+            for (int i = 0; i < NUM_PARTIAL_RESULTS; i++)
+            {
+                int numTareas = random.nextInt(4, 20)+1;
+                System.out.println(thisThreadName + ": Number generated = " + numTareas);
+                partialResult.add(numTareas);
+            }
+            
+            partialResults.add(partialResult);
+            
+            try
+            {
+                System.out.println(thisThreadName + " waiting for others to reach barrier.");
+                barrier.await();
+            }
+            catch (InterruptedException e)		{System.out.println("");} 
+            catch (BrokenBarrierException e)	{System.out.println("");}
+        }
+    }
+    /* Thread that add the previously generated numbers. */
+	static class TaskManagerThread implements Runnable
+    {
+        @Override
+        public void run()
+        {
+//        	String thisThreadName = Thread.currentThread().getName();
+//        	System.out.println(thisThreadName + ": Computing sum of " + NUM_WORKERS + " workers, "
+//        			+ "having " + NUM_PARTIAL_RESULTS + " results each.");
+//        	int sum = 0;
+//        	for (List<Integer> threadResult : partialResults)
+//        	{
+//        		System.out.print("Adding ");
+//        		for (Integer partialResult : threadResult)
+//        		{
+//        			System.out.print(partialResult+" ");
+//        			sum += partialResult;
+//        		}
+//        		System.out.println();
+//        	}
+//        	System.out.println(thisThreadName + ": Final result = " + sum);
+        	
+        	//Establece el número de hilos lanazados.
+        	NUM_THREADS = 30;
+        	
+        	//Genera el número de subtareas, entre 5 y 20.
+        	NUM_THREAD_TASKS = randomInt(5, 20);
+        	
+        	String thisThreadName = Thread.currentThread().getName();
+            
+            for (int i = 0; i < NUM_THREAD_TASKS; i++)
+            {
+                int tiempo = randomInt(500, 2500);
+                System.out.println(thisThreadName + ": Tiempo esperado = " + tiempo);
+            }
+            
+            try
+            {
+                System.out.println(thisThreadName + " waiting for others to reach barrier.");
+                barrier.await();
+            }
+            catch (InterruptedException e)		{System.out.println("");} 
+            catch (BrokenBarrierException e)	{System.out.println("");}
+        }
+    }
+	
+	
+	
+	
+}
+
+----------------------------------- SOURCE END -------------------------------------
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.ASTNode.setSourceRange(ASTNode.java:3477)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:800)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3567)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1595)
+	at org.eclipse.jdt.core.dom.AST.convertCompilationUnit(AST.java:646)
+	at org.eclipse.jdt.internal.core.CompilationUnit.buildStructure(CompilationUnit.java:194)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:245)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:585)
+	at org.eclipse.jdt.internal.core.CompilationUnit.makeConsistent(CompilationUnit.java:1129)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:166)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:92)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:739)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:804)
+	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1303)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:132)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:94)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:91)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:158)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:94)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:107)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:78)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:207)
+
+!ENTRY org.eclipse.jdt.ui 4 2 2024-12-06 21:10:19.373
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.jdt.ui".
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.ASTNode.setSourceRange(ASTNode.java:3477)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:800)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3567)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1595)
+	at org.eclipse.jdt.core.dom.AST.convertCompilationUnit(AST.java:646)
+	at org.eclipse.jdt.internal.core.CompilationUnit.buildStructure(CompilationUnit.java:194)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:245)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:585)
+	at org.eclipse.jdt.internal.core.CompilationUnit.makeConsistent(CompilationUnit.java:1129)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:166)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:92)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:739)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:804)
+	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1303)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:132)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:94)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:91)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:158)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:94)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:107)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:78)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:207)
+
+!ENTRY org.eclipse.jdt.ui 4 0 2024-12-06 21:10:19.373
+!MESSAGE Error in JDT Core during reconcile
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.ASTNode.setSourceRange(ASTNode.java:3477)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:800)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3567)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1595)
+	at org.eclipse.jdt.core.dom.AST.convertCompilationUnit(AST.java:646)
+	at org.eclipse.jdt.internal.core.CompilationUnit.buildStructure(CompilationUnit.java:194)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:245)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:585)
+	at org.eclipse.jdt.internal.core.CompilationUnit.makeConsistent(CompilationUnit.java:1129)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:166)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:92)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:739)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:804)
+	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1303)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:132)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:94)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:91)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:158)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:94)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:107)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:78)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:207)
+
+!ENTRY org.eclipse.jdt.core 4 4 2024-12-06 21:10:19.877
+!MESSAGE Exception occurred during compilation unit conversion:
+----------------------------------- SOURCE BEGIN -------------------------------------
+
+/*
+ * Implementa una barrera. Una barrera es un punto de sincronización entre varios threads. 
+ * Se caracteriza porque los threads que van llegando a ella esperan hasta que llega el último. 
+ * Por ejemplo, se pueden sincronizar N threads y hasta que el último no llegue los demás no deben poder continuar. 
+ * Prueba a lanzar unos pocos threads, por ejemplo 4, cada uno que espere un tiempo proporcional a su identificador, 
+ * y que luego imprima un mensaje que lo identifique y que luego espere en la barrera a los otros threads.
+ * Para simular una situación más real en el código de entrega del ejercicio 
+ * debe haber las siguientes modificaciones de la prueba anterior:
+ */
+
+/*
+Se deben lanzar 30 hilos con:
+1. Subtareas Dinámicas:
+	 Cada hilo realiza un número aleatorio de subtareas (entre 5 y 20) antes de llegar a la barrera.
+	 Esto simula un escenario más realista donde los hilos tienen diferentes cantidades de trabajo.
+2. Tiempos de Trabajo Aleatorios:
+	 El tiempo de cada subtarea se genera aleatoriamente entre 500 y 2500 ms.
+	 Esto asegura que los hilos no lleguen a la barrera en un orden predecible.
+3. Información Detallada:
+	 Los hilos informan sobre qué tarea están realizando y cuánto tiempo les tomará.
+Como ayuda, puedes usar CyclicBarrier que es una clase en Java que pertenece al paquete java.util.concurrent. 
+Es una herramienta de sincronización que permite que un conjunto de hilos 
+esperen entre sí en un punto común de ejecución antes de continuar. 
+Es especialmente útil cuando se desea realizar tareas en paralelo y sincronizar los hilos 
+en un momento determinado antes de avanzar a la siguiente etapa del programa.
+ */
+
+/*
+Características principales de CyclicBarrier:
+1. Número fijo de hilos: 
+	Se especifica un número fijo de hilos en el momento de crear la barrera.
+	Este número indica cuántos hilos deben alcanzar la barrera antes de que todos puedan continuar.
+2. Uso cíclico: 
+	A diferencia de otras herramientas como CountDownLatch, que no puede reutilizarse,
+	CyclicBarrier es reutilizable. Después de que todos los hilos alcanzan la barrera y continúan, 
+	la barrera puede ser reutilizada.
+3. Tarea opcional al final: 
+	Puede ejecutar una tarea adicional (llamada "barrier action") 
+	una vez que todos los hilos llegan a la barrera, antes de permitirles continuar.
+	
+Constructor de CyclicBarrier:
+ CyclicBarrier(int parties)
+	o Crea una barrera que se activará cuando el número especificado de hilos (parties) llame a await().
+ CyclicBarrier(int parties, Runnable barrierAction)
+	o Igual que el anterior, pero además ejecuta la acción (barrierAction) en un hilo 
+	  una vez que todos los hilos han llegado a la barrera.
+ */
+
+/*
+Métodos clave:
+1. await()
+	o Se llama desde un hilo cuando este llega a la barrera.
+	o El hilo queda bloqueado hasta que todos los hilos especificados en la barrera lleguen a este punto.
+2. getParties()
+	o Devuelve el número de hilos registrados en la barrera.
+3. getNumberWaiting()
+	o Devuelve el número de hilos que actualmente están esperando en la barrera.
+4. reset()
+	o Reinicia la barrera, liberando a los hilos que esperan y permitiendo que la barrera sea reutilizada.
+ */
+
+/*
+Ventajas:
+	1. Fácil sincronización de hilos en un punto común.
+	2. Reutilización en múltiples fases de un programa paralelo.
+	3. Permite agregar una tarea adicional (opcional) al final de cada ciclo.
+	
+Casos de uso:
+	 Simulaciones paralelas.
+	 Procesamiento por etapas donde los hilos deben sincronizarse entre fases.
+	 Cualquier situación en la que un conjunto de hilos necesite un punto de encuentro antes de continuar.	 
+ */
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import java.util.Random;
+import java.util.concurrent.BrokenBarrierException;
+import java.util.concurrent.CyclicBarrier;
+
+
+public class Ejercicio2
+{
+	static CyclicBarrier barrier;
+	
+	static List<List<Integer>> partialResults = Collections.synchronizedList(new ArrayList<>());
+	static Random random = new Random();
+	static int NUM_PARTIAL_RESULTS;
+	static int NUM_WORKERS;
+	
+	static int NUM_THREADS;
+	static int NUM_THREAD_TASKS;
+	
+	public static int randomInt(int min, int max)
+		{return random.nextInt(min-1, max)+1;}
+	
+	public static void sleep(int mili)
+	
+	
+	
+	
+	public static void main(String[] args)
+	{
+		//int NUM_TASKS;
+    	//int NUM_THREADS = 30;
+    	NUM_PARTIAL_RESULTS = 3;
+    	NUM_WORKERS = 5;
+        
+    	barrier = new CyclicBarrier(NUM_WORKERS, new TaskManagerThread());
+        
+        System.out.println("Creating " + NUM_WORKERS + " worker threads ");
+        System.out.println( "to compute " + NUM_PARTIAL_RESULTS + " partial results each.");
+        System.out.println("-----");
+        
+        for (int i = 0; i < NUM_WORKERS; i++)
+        {
+        	Thread worker = new Thread(new NumberCruncherThread());
+        	worker.setName("Thread " + i);
+        	worker.start();
+        }
+	}
+	
+	
+	/*
+	Se deben lanzar 30 hilos con:
+	1. Subtareas Dinámicas:
+		 Cada hilo realiza un número aleatorio de subtareas (entre 5 y 20) antes de llegar a la barrera.
+		 Esto simula un escenario más realista donde los hilos tienen diferentes cantidades de trabajo.
+	2. Tiempos de Trabajo Aleatorios:
+		 El tiempo de cada subtarea se genera aleatoriamente entre 500 y 2500 ms.
+		 Esto asegura que los hilos no lleguen a la barrera en un orden predecible.
+	3. Información Detallada:
+		 Los hilos informan sobre qué tarea están realizando y cuánto tiempo les tomará.
+	Como ayuda, puedes usar CyclicBarrier que es una clase en Java que pertenece al paquete java.util.concurrent. 
+	Es una herramienta de sincronización que permite que un conjunto de hilos 
+	esperen entre sí en un punto común de ejecución antes de continuar. 
+	Es especialmente útil cuando se desea realizar tareas en paralelo y sincronizar los hilos 
+	en un momento determinado antes de avanzar a la siguiente etapa del programa.
+	 */
+	
+	/* Thread that randomly  numbers. */
+	static class NumberCruncherThread implements Runnable
+    {
+        @Override
+        public void run()
+        {
+            String thisThreadName = Thread.currentThread().getName();
+            List<Integer> partialResult = new ArrayList<>();
+            
+            for (int i = 0; i < NUM_PARTIAL_RESULTS; i++)
+            {
+                int numTareas = random.nextInt(4, 20)+1;
+                System.out.println(thisThreadName + ": Number generated = " + numTareas);
+                partialResult.add(numTareas);
+            }
+            
+            partialResults.add(partialResult);
+            
+            try
+            {
+                System.out.println(thisThreadName + " waiting for others to reach barrier.");
+                barrier.await();
+            }
+            catch (InterruptedException e)		{System.out.println("");} 
+            catch (BrokenBarrierException e)	{System.out.println("");}
+        }
+    }
+    /* Thread that add the previously generated numbers. */
+	static class TaskManagerThread implements Runnable
+    {
+        @Override
+        public void run()
+        {
+//        	String thisThreadName = Thread.currentThread().getName();
+//        	System.out.println(thisThreadName + ": Computing sum of " + NUM_WORKERS + " workers, "
+//        			+ "having " + NUM_PARTIAL_RESULTS + " results each.");
+//        	int sum = 0;
+//        	for (List<Integer> threadResult : partialResults)
+//        	{
+//        		System.out.print("Adding ");
+//        		for (Integer partialResult : threadResult)
+//        		{
+//        			System.out.print(partialResult+" ");
+//        			sum += partialResult;
+//        		}
+//        		System.out.println();
+//        	}
+//        	System.out.println(thisThreadName + ": Final result = " + sum);
+        	
+        	//Establece el número de hilos lanazados.
+        	NUM_THREADS = 30;
+        	
+        	//Genera el número de subtareas, entre 5 y 20.
+        	NUM_THREAD_TASKS = randomInt(5, 20);
+        	
+        	String thisThreadName = Thread.currentThread().getName();
+            
+            for (int i = 0; i < NUM_THREAD_TASKS; i++)
+            {
+                int tiempo = randomInt(500, 2500);
+                System.out.println(thisThreadName + ": Tiempo esperado = " + tiempo);
+            }
+            
+            try
+            {
+                System.out.println(thisThreadName + " waiting for others to reach barrier.");
+                barrier.await();
+            }
+            catch (InterruptedException e)		{System.out.println("");} 
+            catch (BrokenBarrierException e)	{System.out.println("");}
+        }
+    }
+	
+	
+	
+	
+}
+
+----------------------------------- SOURCE END -------------------------------------
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.ASTNode.setSourceRange(ASTNode.java:3477)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:800)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3567)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1595)
+	at org.eclipse.jdt.core.dom.AST.convertCompilationUnit(AST.java:646)
+	at org.eclipse.jdt.internal.core.CompilationUnit.buildStructure(CompilationUnit.java:194)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:245)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:585)
+	at org.eclipse.jdt.internal.core.CompilationUnit.makeConsistent(CompilationUnit.java:1129)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:166)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:92)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:739)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:804)
+	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1303)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:132)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:94)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:91)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:158)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:94)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:107)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:78)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:207)
+
+!ENTRY org.eclipse.jdt.ui 4 2 2024-12-06 21:10:19.878
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.jdt.ui".
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.ASTNode.setSourceRange(ASTNode.java:3477)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:800)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3567)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1595)
+	at org.eclipse.jdt.core.dom.AST.convertCompilationUnit(AST.java:646)
+	at org.eclipse.jdt.internal.core.CompilationUnit.buildStructure(CompilationUnit.java:194)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:245)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:585)
+	at org.eclipse.jdt.internal.core.CompilationUnit.makeConsistent(CompilationUnit.java:1129)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:166)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:92)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:739)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:804)
+	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1303)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:132)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:94)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:91)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:158)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:94)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:107)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:78)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:207)
+
+!ENTRY org.eclipse.jdt.ui 4 0 2024-12-06 21:10:19.879
+!MESSAGE Error in JDT Core during reconcile
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.ASTNode.setSourceRange(ASTNode.java:3477)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:800)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:208)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:3567)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1595)
+	at org.eclipse.jdt.core.dom.AST.convertCompilationUnit(AST.java:646)
+	at org.eclipse.jdt.internal.core.CompilationUnit.buildStructure(CompilationUnit.java:194)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:245)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:585)
+	at org.eclipse.jdt.internal.core.CompilationUnit.makeConsistent(CompilationUnit.java:1129)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:166)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:92)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:739)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:804)
+	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1303)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:132)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:94)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:91)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:158)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:94)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:107)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:78)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:207)
+!SESSION 2024-12-07 11:51:15.146 -----------------------------------------------
+eclipse.buildId=4.33.0.20240905-0613
+java.version=21.0.3
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=es_ES
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY ch.qos.logback.classic 1 0 2024-12-07 11:51:18.545
+!MESSAGE Activated before the state location was initialized. Retry after the state location is initialized.
+
+!ENTRY org.eclipse.core.resources 2 10035 2024-12-07 11:51:19.543
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY ch.qos.logback.classic 1 0 2024-12-07 11:51:20.306
+!MESSAGE Logback config file: D:\Code\FP2\Java\.metadata\.plugins\org.eclipse.m2e.logback\logback.2.6.1.20240411-1122.xml
+
+!ENTRY org.eclipse.egit.ui 2 0 2024-12-07 11:51:27.412
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\alvar'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2024-12-08 21:28:11.157 -----------------------------------------------
+eclipse.buildId=4.33.0.20240905-0613
+java.version=21.0.3
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=es_ES
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY ch.qos.logback.classic 1 0 2024-12-08 21:28:14.055
+!MESSAGE Activated before the state location was initialized. Retry after the state location is initialized.
+
+!ENTRY org.eclipse.core.resources 2 10035 2024-12-08 21:28:14.838
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY ch.qos.logback.classic 1 0 2024-12-08 21:28:15.553
+!MESSAGE Logback config file: D:\Code\FP2\Java\.metadata\.plugins\org.eclipse.m2e.logback\logback.2.6.1.20240411-1122.xml
+
+!ENTRY org.eclipse.egit.ui 2 0 2024-12-08 21:28:21.388
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\alvar'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2024-12-09 17:10:23.500 -----------------------------------------------
+eclipse.buildId=4.33.0.20240905-0613
+java.version=21.0.3
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=es_ES
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY ch.qos.logback.classic 1 0 2024-12-09 17:10:26.383
+!MESSAGE Activated before the state location was initialized. Retry after the state location is initialized.
+
+!ENTRY ch.qos.logback.classic 1 0 2024-12-09 17:10:28.089
+!MESSAGE Logback config file: D:\Code\FP2\Java\.metadata\.plugins\org.eclipse.m2e.logback\logback.2.6.1.20240411-1122.xml
+
+!ENTRY org.eclipse.egit.ui 2 0 2024-12-09 17:10:35.515
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\alvar'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.ui.ide 4 4 2024-12-09 21:06:32.477
+!MESSAGE Not properly disposed SWT resource
+!STACK 0
+java.lang.Error: SWT Resource was not properly disposed
+	at org.eclipse.swt.graphics.Resource.initNonDisposeTracking(Resource.java:172)
+	at org.eclipse.swt.graphics.Resource.<init>(Resource.java:120)
+	at org.eclipse.swt.graphics.Image.<init>(Image.java:573)
+	at org.eclipse.jface.resource.URLImageDescriptor.createImage(URLImageDescriptor.java:306)
+	at org.eclipse.jface.resource.DeferredImageDescriptor.createImage(DeferredImageDescriptor.java:85)
+	at org.eclipse.jface.resource.ImageDescriptor.createResource(ImageDescriptor.java:229)
+	at org.eclipse.jface.resource.DeviceResourceManager.allocate(DeviceResourceManager.java:56)
+	at org.eclipse.jface.resource.AbstractResourceManager.create(AbstractResourceManager.java:92)
+	at org.eclipse.jface.resource.LazyResourceManager.create(LazyResourceManager.java:88)
+	at org.eclipse.jface.resource.LocalResourceManager.allocate(LocalResourceManager.java:71)
+	at org.eclipse.jface.resource.AbstractResourceManager.create(AbstractResourceManager.java:92)
+	at org.eclipse.ui.actions.OpenWithMenu.getImage(OpenWithMenu.java:137)
+	at org.eclipse.ui.actions.OpenWithMenu.createMenuItem(OpenWithMenu.java:174)
+	at org.eclipse.ui.actions.OpenWithMenu.fill(OpenWithMenu.java:271)
+	at org.eclipse.jface.action.MenuManager.doItemFill(MenuManager.java:728)
+	at org.eclipse.jface.action.MenuManager.update(MenuManager.java:805)
+	at org.eclipse.jface.action.MenuManager.update(MenuManager.java:672)
+	at org.eclipse.e4.ui.workbench.renderers.swt.MenuManagerRenderer.scheduleManagerUpdate(MenuManagerRenderer.java:1161)
+	at org.eclipse.e4.ui.workbench.renderers.swt.MenuManagerRenderer.processContents(MenuManagerRenderer.java:633)
+	at org.eclipse.e4.ui.workbench.renderers.swt.MenuManagerRenderer.subscribeTopicChildAdded(MenuManagerRenderer.java:320)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:56)
+	at org.eclipse.swt.widgets.Synchronizer.syncExec(Synchronizer.java:183)
+	at org.eclipse.ui.internal.UISynchronizer.syncExec(UISynchronizer.java:133)
+	at org.eclipse.swt.widgets.Display.syncExec(Display.java:4855)
+	at org.eclipse.e4.ui.workbench.swt.DisplayUISynchronize.syncExec(DisplayUISynchronize.java:34)
+	at org.eclipse.e4.ui.internal.di.UIEventObjectSupplier$UIEventHandler.handleEvent(UIEventObjectSupplier.java:64)
+	at org.eclipse.equinox.internal.event.EventHandlerWrapper.handleEvent(EventHandlerWrapper.java:206)
+	at org.eclipse.equinox.internal.event.EventHandlerTracker.dispatchEvent(EventHandlerTracker.java:201)
+	at org.eclipse.equinox.internal.event.EventHandlerTracker.dispatchEvent(EventHandlerTracker.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.ListenerQueue.dispatchEventSynchronous(ListenerQueue.java:151)
+	at org.eclipse.equinox.internal.event.EventAdminImpl.dispatchEvent(EventAdminImpl.java:131)
+	at org.eclipse.equinox.internal.event.EventAdminImpl.sendEvent(EventAdminImpl.java:73)
+	at org.eclipse.equinox.internal.event.EventComponent.sendEvent(EventComponent.java:44)
+	at org.eclipse.e4.ui.services.internal.events.EventBroker.send(EventBroker.java:55)
+	at org.eclipse.e4.ui.internal.workbench.UIEventPublisher.notifyChanged(UIEventPublisher.java:60)
+	at org.eclipse.emf.common.notify.impl.BasicNotifierImpl.eNotify(BasicNotifierImpl.java:424)
+	at org.eclipse.emf.ecore.util.EcoreEList.dispatchNotification(EcoreEList.java:248)
+	at org.eclipse.emf.common.notify.impl.NotifyingListImpl.addUnique(NotifyingListImpl.java:294)
+	at org.eclipse.emf.common.util.AbstractEList.add(AbstractEList.java:304)
+	at org.eclipse.e4.ui.workbench.renderers.swt.MenuManagerRenderer.reconcileManagerToModel(MenuManagerRenderer.java:1022)
+	at org.eclipse.e4.ui.workbench.renderers.swt.MenuManagerRenderer.reconcileManagerToModel(MenuManagerRenderer.java:960)
+	at org.eclipse.ui.internal.PopupMenuExtender.addMenuContributions(PopupMenuExtender.java:379)
+	at org.eclipse.ui.internal.PopupMenuExtender.menuAboutToShow(PopupMenuExtender.java:355)
+	at org.eclipse.jface.action.MenuManager.fireAboutToShow(MenuManager.java:338)
+	at org.eclipse.jface.action.MenuManager.handleAboutToShow(MenuManager.java:467)
+	at org.eclipse.jface.action.MenuManager$2.menuShown(MenuManager.java:494)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:272)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:91)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4326)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1174)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1198)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1179)
+	at org.eclipse.swt.widgets.Control.WM_INITMENUPOPUP(Control.java:5138)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4756)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:342)
+	at org.eclipse.swt.widgets.Decorations.windowProc(Decorations.java:1482)
+	at org.eclipse.swt.widgets.Shell.windowProc(Shell.java:2311)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5091)
+	at org.eclipse.swt.internal.win32.OS.TrackPopupMenu(Native Method)
+	at org.eclipse.swt.widgets.Menu._setVisible(Menu.java:241)
+	at org.eclipse.swt.widgets.Display.runPopups(Display.java:4165)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3706)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1151)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1042)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:153)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:639)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:546)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:173)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:208)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:143)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:109)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:439)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:271)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:668)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:605)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1481)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1454)
+!SESSION 2024-12-09 21:53:52.641 -----------------------------------------------
+eclipse.buildId=4.33.0.20240905-0613
+java.version=21.0.3
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=es_ES
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY ch.qos.logback.classic 1 0 2024-12-09 21:53:56.270
+!MESSAGE Activated before the state location was initialized. Retry after the state location is initialized.
+
+!ENTRY ch.qos.logback.classic 1 0 2024-12-09 21:53:58.082
+!MESSAGE Logback config file: D:\Code\FP2\Java\.metadata\.plugins\org.eclipse.m2e.logback\logback.2.6.1.20240411-1122.xml
+
+!ENTRY org.eclipse.egit.ui 2 0 2024-12-09 21:54:05.197
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\alvar'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2024-12-09 23:15:17.976 -----------------------------------------------
+eclipse.buildId=4.33.0.20240905-0613
+java.version=21.0.3
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=es_ES
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY ch.qos.logback.classic 1 0 2024-12-09 23:15:20.969
+!MESSAGE Activated before the state location was initialized. Retry after the state location is initialized.
+
+!ENTRY org.eclipse.core.resources 2 10035 2024-12-09 23:15:21.846
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY ch.qos.logback.classic 1 0 2024-12-09 23:15:22.518
+!MESSAGE Logback config file: D:\Code\FP2\Java\.metadata\.plugins\org.eclipse.m2e.logback\logback.2.6.1.20240411-1122.xml
+
+!ENTRY org.eclipse.egit.ui 2 0 2024-12-09 23:15:28.217
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\alvar'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.

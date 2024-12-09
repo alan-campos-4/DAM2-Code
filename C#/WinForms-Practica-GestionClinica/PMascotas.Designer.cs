@@ -56,7 +56,6 @@
             this.dataGridPets.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridPets.Size = new System.Drawing.Size(900, 400);
             this.dataGridPets.TabIndex = 2;
-            this.dataGridPets.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridPets_CellContentClick);
             // 
             // label1
             // 

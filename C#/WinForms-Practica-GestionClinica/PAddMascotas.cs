@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace WinForms_Practica_GestionClinica
 {
-    public partial class PMascotasAdd : Form
+    public partial class PAddMascotas : Form
     {
-        public PMascotasAdd()
+        public PAddMascotas()
         {
             InitializeComponent();
         }
@@ -47,7 +47,7 @@ namespace WinForms_Practica_GestionClinica
         {
             if (FindEmpty())
             {
-                g.ShowError("Datos", "Debes rellenar todos los datos.");
+                g.ShowError("Debes rellenar todos los datos.");
                 this.DialogResult = DialogResult.None;
             }
             else if (g.ShowWarning(this.Text, "¿Son los datos correctos?") == DialogResult.Cancel)

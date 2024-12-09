@@ -34,7 +34,7 @@ namespace WinForms_Practica_GestionClinica
             MySqlCommandBuilder commandBuilder = new MySqlCommandBuilder(adapter);
             adapter.Fill(tableClients);
             dataGridView1.DataSource = tableClients;
-            dataGridView1.Columns["ID_CL"].Visible = false;
+            dataGridView1.Columns["ID"].Visible = false;
             dataGridView1.Columns["DNI"].Visible = false;
             dataGridView1.Columns["Observaciones"].Visible = false;
             connection.Close();
@@ -42,23 +42,27 @@ namespace WinForms_Practica_GestionClinica
 
         private void altaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            PClientesAdd pAdd = new PClientesAdd{ Text = "Añadir Cliente" };
+            PAddClientes pAdd = new PAddClientes{ Text = "Añadir Cliente" };
             if (pAdd.ShowDialog()==DialogResult.OK)
             {
-                tableClients.Rows.Add(
-                    g.GenerateNewID("clientes"),
-                    pAdd.textBoxDNI.Text,
-                    pAdd.textBoxName1.Text,
-                    pAdd.textBoxName2.Text,
-                    pAdd.textBoxPhone.Text,
-                    pAdd.textBoxEmail.Text,
-                    pAdd.comboBoxProv.Text,
-                    pAdd.comboBoxCity.Text,
-                    pAdd.textBoxAddress.Text,
-                    pAdd.textBoxPostal.Text,
-                    pAdd.richTextBox1.Text
-                );
-                adapter.Update(tableClients);
+                try
+                { 
+                    tableClients.Rows.Add(
+                        g.GenerateNewID("clientes"),
+                        pAdd.textBoxDNI.Text,
+                        pAdd.textBoxName1.Text,
+                        pAdd.textBoxName2.Text,
+                        pAdd.textBoxPhone.Text,
+                        pAdd.textBoxEmail.Text,
+                        pAdd.comboBoxProv.Text,
+                        pAdd.comboBoxCity.Text,
+                        pAdd.textBoxAddress.Text,
+                        pAdd.textBoxPostal.Text,
+                        pAdd.richTextBox1.Text
+                    );
+                    adapter.Update(tableClients);
+                }
+                catch (MySql.Data.MySqlClient.MySqlException ex) { g.ShowError(ex.Message); }
             }
         }
 
@@ -66,7 +70,7 @@ namespace WinForms_Practica_GestionClinica
         {
             if (dataGridView1.SelectedRows.Count > 0)
             {
-                PClientesAdd pMod = new PClientesAdd{ Text = "Modificar Cliente" };
+                PAddClientes pMod = new PAddClientes{ Text = "Modificar Cliente" };
                 pMod.textBoxDNI.Text = dataGridView1.SelectedRows[0].Cells[1].Value.ToString();
                 pMod.textBoxName1.Text = dataGridView1.SelectedRows[0].Cells[2].Value.ToString();
                 pMod.textBoxName2.Text = dataGridView1.SelectedRows[0].Cells[3].Value.ToString();
@@ -79,20 +83,23 @@ namespace WinForms_Practica_GestionClinica
                 pMod.richTextBox1.Text = dataGridView1.SelectedRows[0].Cells[10].Value.ToString();
                 if (pMod.ShowDialog()==DialogResult.OK)
                 {
-                    dataGridView1.SelectedRows[0].Cells[1].Value = pMod.textBoxDNI.Text;
-                    dataGridView1.SelectedRows[0].Cells[2].Value = pMod.textBoxName1.Text;
-                    dataGridView1.SelectedRows[0].Cells[3].Value = pMod.textBoxName2.Text;
-                    dataGridView1.SelectedRows[0].Cells[4].Value = pMod.textBoxPhone.Text;
-                    dataGridView1.SelectedRows[0].Cells[5].Value = pMod.textBoxEmail.Text;
-                    dataGridView1.SelectedRows[0].Cells[6].Value = pMod.comboBoxProv.Text;
-                    dataGridView1.SelectedRows[0].Cells[7].Value = pMod.comboBoxCity.Text;
-                    dataGridView1.SelectedRows[0].Cells[8].Value = pMod.textBoxAddress.Text;
-                    dataGridView1.SelectedRows[0].Cells[9].Value = pMod.textBoxPostal.Text;
-                    dataGridView1.SelectedRows[0].Cells[10].Value = pMod.richTextBox1.Text;
-                    adapter.Update(tableClients);
+                    try {
+                        dataGridView1.SelectedRows[0].Cells[1].Value = pMod.textBoxDNI.Text;
+                        dataGridView1.SelectedRows[0].Cells[2].Value = pMod.textBoxName1.Text;
+                        dataGridView1.SelectedRows[0].Cells[3].Value = pMod.textBoxName2.Text;
+                        dataGridView1.SelectedRows[0].Cells[4].Value = pMod.textBoxPhone.Text;
+                        dataGridView1.SelectedRows[0].Cells[5].Value = pMod.textBoxEmail.Text;
+                        dataGridView1.SelectedRows[0].Cells[6].Value = pMod.comboBoxProv.Text;
+                        dataGridView1.SelectedRows[0].Cells[7].Value = pMod.comboBoxCity.Text;
+                        dataGridView1.SelectedRows[0].Cells[8].Value = pMod.textBoxAddress.Text;
+                        dataGridView1.SelectedRows[0].Cells[9].Value = pMod.textBoxPostal.Text;
+                        dataGridView1.SelectedRows[0].Cells[10].Value = pMod.richTextBox1.Text;
+                        adapter.Update(tableClients);
+                    }
+                    catch (MySql.Data.MySqlClient.MySqlException ex) { g.ShowError(ex.Message); }
                 }
             }
-            else { g.ShowError("Fila seleccionada.", "No se puede realizar esta acción\nsin seleccionar una fila."); }
+            else { g.ShowError("No se puede realizar esta acción\nsin seleccionar una fila."); }
         }
 
         private void borrarToolStripMenuItem_Click(object sender, EventArgs e)
@@ -101,20 +108,15 @@ namespace WinForms_Practica_GestionClinica
             {
                 if (g.ShowWarning("Borrar cliente", "¿Seguro que quieres borrar este cliente?") == DialogResult.OK)
                 {
-                    dataGridView1.Rows.RemoveAt(dataGridView1.SelectedRows[0].Index);
-                    adapter.Update(tableClients);
+                    try
+                    {
+                        dataGridView1.Rows.RemoveAt(dataGridView1.SelectedRows[0].Index);
+                        adapter.Update(tableClients);
+                    }
+                    catch (MySql.Data.MySqlClient.MySqlException ex) {g.ShowError(ex.Message);}
                 }
             }
-            else { g.ShowError("Fila seleccionada.", "No se puede realizar esta acción\nsin seleccionar una fila."); }
-        }
-
-        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (dataGridView1.SelectedRows.Count > 0)
-            {
-                //PClientesShow pShow = new PClientesShow();
-                //pShow.ShowDialog();
-            }
+            else { g.ShowError("No se puede realizar esta acción\nsin seleccionar una fila."); }
         }
     }
 }

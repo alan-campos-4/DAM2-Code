@@ -1,6 +1,6 @@
 ﻿namespace WinForms_Practica_GestionClinica
 {
-    partial class PClientesAdd
+    partial class PAddClientes
     {
         /// <summary>
         /// Required designer variable.

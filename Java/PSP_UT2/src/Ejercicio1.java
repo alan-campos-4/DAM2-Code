@@ -30,57 +30,53 @@ import java.util.Random;
 
 public class Ejercicio1
 {
-	public static Random rand;
-	public static int posicionT, posicionL;
-	public static final int TRACKLENGTH = 20;
+	public static Random rand = new Random();
+	public static final int TRACK_LENGTH = 20;	//Longitud de la carrera.
+	
 	
 	/* Clase abstracta que define el comportamiento de ambos animales. */
 	public static abstract class AnimalThread implements Runnable
 	{
-		int posicion, randInt, avance;
+		private volatile boolean running = true; //Determina si el animal está corriendo o no.
+		private int posicion;					 //La posición del animal en la carrera.
 		
-		public abstract void calculoAvance();
+		public int getPos()			{return posicion;}	//Devuelve la posicion del animal.
+		public boolean isRunning()	{return running;}	//Devuelve si el animal está corriendo.
+		public void stop()			{running = false;}	//Detiene al animal.
 		
+		public abstract int calculoAvance();	 // Devuelve cuánto avanza la posicion del animal.
+		
+		/* Ejecuta el movimiento del animal */
 		@Override
 		public void run()
 		{
 			String threadName = Thread.currentThread().getName();
 			System.out.println("[" + threadName + "] " + "Thread Started");
-			rand = new Random();
 			
 			posicion = 1;
+			printRaceTrack(threadName, posicion);
 			
-			while (posicion<TRACKLENGTH)
+			while (running)
 			{
-				try
-				{
-					Thread.sleep(1000);
-				}
-				catch (InterruptedException e)
-				{
-					System.out.println(threadName+": ");
-					e.printStackTrace();
-				}
+				posicion += calculoAvance();
 				
-				randInt = rand.nextInt(99)+1;
-				calculoAvance();
-				posicion += avance;
-				
-				if (posicion>TRACKLENGTH)	{posicion=TRACKLENGTH;}
+				if (posicion>TRACK_LENGTH)	{posicion=TRACK_LENGTH;}
 				if (posicion<0)		{posicion=1;}
 				
-				if (threadName=="Tortuga")	{posicionT = posicion;}
-				else						{posicionL = posicion;}
+				try {Thread.sleep(1000);}
+				catch (InterruptedException e) {e.printStackTrace();}
+				
 				printRaceTrack(threadName, posicion);
-				Thread.interrupted();
 			}
+			
 		}
 		
+		/* Imprime el recorrido de la carrera y la posicion del animal en él. */
 		public static synchronized void printRaceTrack(String threadName, int posicion)
 		{
 			System.out.println("\nPosicion de "+threadName+" = "+posicion);
 			
-			for (int i=0; i<TRACKLENGTH+3; i++)	{System.out.print("-");}
+			for (int i=0; i<TRACK_LENGTH+3; i++)	{System.out.print("-");}
 			System.out.println("");
 			
 			System.out.print("|");
@@ -89,17 +85,14 @@ public class Ejercicio1
 				System.out.print(" ");
 			}
 			System.out.print(threadName.charAt(0));
-			for (int i=posicion; i<TRACKLENGTH; i++)
+			for (int i=posicion; i<TRACK_LENGTH; i++)
 			{
 				System.out.print(" ");
 			}
 			System.out.println("|");
 			
-			for (int i=0; i<TRACKLENGTH+3; i++)	{System.out.print("-");}
+			for (int i=0; i<TRACK_LENGTH+3; i++)	{System.out.print("-");}
 			System.out.println("");
-			
-			if (posicion>=20)
-				{System.out.println(threadName+" ha llegado al final");}
 		}
 		
 	}
@@ -108,11 +101,12 @@ public class Ejercicio1
 	public static class TurtleThread extends AnimalThread
 	{
 		@Override
-		public synchronized void calculoAvance()
+		public synchronized int calculoAvance()
 		{
-			if (randInt>=1 && randInt<=50)			{avance = 3;}
-			else if (randInt>=51 && randInt<=80)	{avance = 6;}
-			else									{avance = 1;}
+			int randInt = rand.nextInt(99)+1;
+			if (randInt>=1 && randInt<=50)			{return 3;}
+			else if (randInt>=51 && randInt<=80)	{return 6;}
+			else									{return 1;}
 		}
 	}
 	
@@ -120,60 +114,61 @@ public class Ejercicio1
 	public static class HareThread extends AnimalThread
 	{
 		@Override
-		public synchronized void calculoAvance()
+		public synchronized int calculoAvance()
 		{
-			if (randInt>=1 && randInt<=20)			{avance = 0;}
-			else if (randInt>=21 && randInt<=40)	{avance = 9;}
-			else if (randInt>=41 && randInt<=50)	{avance = -12;}
-			else if (randInt>=51 && randInt<=80)	{avance = 1;}
-			else									{avance = -2;}
+			int randInt = rand.nextInt(99)+1;
+			if (randInt>=1 && randInt<=20)			{return 0;}
+			else if (randInt>=21 && randInt<=40)	{return 9;}
+			else if (randInt>=41 && randInt<=50)	{return -12;}
+			else if (randInt>=51 && randInt<=80)	{return 1;}
+			else									{return -2;}
 		}
 	}
 	
-	/*  */
 	
 	
 	
-	
+	/* Función Main*/
 	public static void main(String[] args)
 	{
-		Thread.currentThread().setName("Main");
-		System.out.println(Thread.currentThread().getName());
-		
-		Runnable TurtleRun = new TurtleThread();
-		Runnable HareRun = new HareThread();
-		Thread turtle = new Thread(TurtleRun);
-		Thread hare = new Thread(HareRun);
+		TurtleThread TurtleRunnable = new TurtleThread();
+		HareThread HareRunnable = new HareThread();
+		Thread turtle = new Thread(TurtleRunnable);
+		Thread hare = new Thread(HareRunnable);
 		turtle.setName("Tortuga");
 		hare.setName("Liebre");
 		turtle.start();
 		hare.start();
 		
+		System.out.println("Empieza la carrera!");
+		
 		try
 		{
-			if (posicionT>TRACKLENGTH && posicionL>TRACKLENGTH)
+			//Mientras los hilos estén ejecutándose,
+			while (TurtleRunnable.isRunning() && HareRunnable.isRunning())
 			{
-				System.out.println("--Posiciones--");
-				
-				
-				if (posicionT==posicionL)
-					{System.out.println("Ha habido un empate.");turtle.join();
-					hare.join();}
-				else if (posicionT>posicionL)
-					{System.out.println("Ha ganado la tortuga.");hare.join();}
-				else
-					{System.out.println("Ha ganado la liebre.");turtle.interrupt();}
-				
-				turtle.join();
-				hare.join();
+				// si alguno de los animales ha llegado al final,
+				if (TurtleRunnable.getPos()>=TRACK_LENGTH || HareRunnable.getPos()>=TRACK_LENGTH)
+				{
+					// termina la ejecución de ambos hilos
+					TurtleRunnable.stop();
+					HareRunnable.stop();
+					turtle.join();
+					hare.join();
+					System.out.println("\n\nLa carrera ha terminado.");
+					
+					// y muestra el ganador.
+					if (TurtleRunnable.getPos()>=TRACK_LENGTH && HareRunnable.getPos()>=TRACK_LENGTH)
+						System.out.println("Ha habido un empate!!");
+					else if (TurtleRunnable.getPos()>=TRACK_LENGTH)
+						System.out.println("Ha ganado la tortuga!");
+					else
+						System.out.println("Ha ganado la liebre!");
+				}
 			}
 		}
-		catch (InterruptedException ex)
-		{
-			ex.printStackTrace();
-			System.err.println("The main thread was interrupted while waiting for " + turtle.toString() + "to finish");
-		}
-		System.out.println("Main thread ending");
+		catch (InterruptedException e) {e.printStackTrace();}
 	}
+	
 	
 }

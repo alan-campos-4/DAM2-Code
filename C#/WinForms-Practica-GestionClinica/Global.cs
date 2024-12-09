@@ -15,7 +15,7 @@ namespace WinForms_Practica_GestionClinica
 
         public string ConnectionString()
         {
-            return "Server=localhost;Database=clínica veterinaria;User ID=root;Password=root;SslMode=none";
+            return "Server=localhost;Database=clínica veterinaria;User ID=root;Password=SyncDeezNuts99...;SslMode=none";
         }
 
         public DialogResult ShowWarning(string title, string message)
@@ -23,9 +23,9 @@ namespace WinForms_Practica_GestionClinica
             return MessageBox.Show(message, title, MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
         }
 
-        public DialogResult ShowError(string title, string message)
+        public DialogResult ShowError(string message)
         {
-            return MessageBox.Show(message, title, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            return MessageBox.Show(message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         public string GenerateNewID(string Table)
@@ -54,5 +54,20 @@ namespace WinForms_Practica_GestionClinica
                 return (rnd.Next(100000, 999999)).ToString();
             }
         }
+
+
+
+        /*
+         La aplicación debe ser capaz de manejar errores comunes, 
+        como intentos de agregar un cliente con un correo electrónico duplicado 
+        o de eliminar registros relacionados (por ejemplo, eliminar un cliente con mascotas o citas asociadas).
+
+        El sistema debe mostrar mensajes de confirmación o advertencia cuando se realicen acciones críticas 
+        (como eliminar registros).
+
+        El sistema debe controlar intentos de introducir información errónea como CP inexistentes, 
+        número en un nombre, letra incorrecta en un DNI, etc… 
+        y deberá mostraros estos errores con claridad al lado de cada componente fallido.
+         */
     }
 }

@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace WinForms_Practica_GestionClinica
 {
-    public partial class PClientesAdd : Form
+    public partial class PAddClientes : Form
     {
-        public PClientesAdd()
+        public PAddClientes()
         {
             InitializeComponent();
         }
@@ -64,7 +64,7 @@ namespace WinForms_Practica_GestionClinica
         {
             if (FindEmpty())
             {
-                g.ShowError("Datos", "Debes rellenar todos los datos.");
+                g.ShowError("Debes rellenar todos los datos.");
                 this.DialogResult = DialogResult.None;
             }
             else if (g.ShowWarning(this.Text, "¿Son los datos correctos?") == DialogResult.Cancel)
@@ -85,16 +85,16 @@ namespace WinForms_Practica_GestionClinica
         private bool FindEmpty()
         {
             bool empty = false;
-            if (checkGroupBox(groupBox1))
+            if (CheckGroupBox(groupBox1))
                 { empty = true; }
-            if (checkGroupBox(groupBox2))
+            if (CheckGroupBox(groupBox2))
                 { empty = true; }
             if (string.IsNullOrEmpty(richTextBox1.Text))
                 { empty = true; }
             return empty;
         }
 
-        private bool checkGroupBox(GroupBox grp)
+        private bool CheckGroupBox(GroupBox grp)
         {
             bool empty = false;
             foreach (Control ctr in grp.Controls)

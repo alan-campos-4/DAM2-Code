@@ -19,9 +19,10 @@ namespace WinForms_Practica_GestionClinica
             InitializeComponent();
         }
 
-        public string connectionString = "Server=localhost;Database=clínica veterinaria;User ID=root;Password=root;SslMode=none";
+        static Global g = new Global();
+        public string connectionString = g.ConnectionString();
         public DataTable Tclients, Tpets;
-        public MySqlDataAdapter adapter1, adapter2;
+        public MySqlDataAdapter adapter;
 
         private void PMascotas_Load(object sender, EventArgs e)
         {
@@ -32,9 +33,9 @@ namespace WinForms_Practica_GestionClinica
             string query2 = "SELECT M.*, CONCAT(C.Apellidos,', ',C.Nombre) AS Cliente FROM mascotas M " +
                 "JOIN clientes C ON M.Cliente=C.ID_CL " +
                 "ORDER BY 3, 4";
-            adapter2 = new MySqlDataAdapter(query2, connection);
-            MySqlCommandBuilder commandBuilder2 = new MySqlCommandBuilder(adapter2);
-            adapter2.Fill(Tpets);
+            adapter = new MySqlDataAdapter(query2, connection);
+            MySqlCommandBuilder commandBuilder2 = new MySqlCommandBuilder(adapter);
+            adapter.Fill(Tpets);
             dataGridPets.DataSource = Tpets;
             dataGridPets.Columns["ID_M"].Visible = false;
             dataGridPets.Columns["Cliente"].Visible = false;
@@ -69,17 +70,22 @@ namespace WinForms_Practica_GestionClinica
 
         private void añadirToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            PMascotasAdd pAdd = new PMascotasAdd { Text = "Añadir mascota" };
+            PAddMascotas pAdd = new PAddMascotas { Text = "Añadir mascota" };
             if (pAdd.ShowDialog() == DialogResult.OK)
             {
-                Tclients.Rows.Add(
-                    pAdd.comboBoxOwner.Text,
-                    pAdd.textBoxSpecies.Text,
-                    pAdd.textBoxBreed,
-                    pAdd.textBoxName.Text,
-                    pAdd.comboBoxSex.Text,
-                    pAdd.richTextBox1.Text
-                );
+                try { 
+                    Tpets.Rows.Add(
+                        g.GenerateNewID("mascotas"),
+                        pAdd.comboBoxOwner.Text,
+                        pAdd.textBoxSpecies.Text,
+                        pAdd.textBoxBreed,
+                        pAdd.textBoxName.Text,
+                        pAdd.comboBoxSex.Text,
+                        pAdd.richTextBox1.Text
+                    );
+                    adapter.Update(Tpets);
+                }
+                catch (MySql.Data.MySqlClient.MySqlException ex) { g.ShowError(ex.Message); }
             }
         }
 
@@ -87,36 +93,46 @@ namespace WinForms_Practica_GestionClinica
         {
             if (dataGridPets.SelectedRows.Count > 0)
             {
-                PMascotasAdd pMod = new PMascotasAdd { Text = "Modificar mascota" };
-                DataGridViewRow row = dataGridPets.SelectedRows[0];
-                //pMod.comboBoxOwner
-                pMod.textBoxSpecies.Text = row.Cells[2].Value.ToString();
-                pMod.textBoxBreed.Text = row.Cells[3].Value.ToString();
-                pMod.textBoxName.Text = row.Cells[4].Value.ToString();
-                pMod.dateTimePicker1.Text = row.Cells[5].Value.ToString();
-                pMod.comboBoxSex.Text = row.Cells[6].Value.ToString();
-                pMod.richTextBox1.Text = row.Cells[7].Value.ToString();
+                PAddMascotas pMod = new PAddMascotas { Text = "Modificar mascota" };
+                pMod.comboBoxOwner.Text = dataGridPets.SelectedRows[0].Cells[1].Value.ToString();
+                pMod.textBoxSpecies.Text = dataGridPets.SelectedRows[0].Cells[2].Value.ToString();
+                pMod.textBoxBreed.Text = dataGridPets.SelectedRows[0].Cells[3].Value.ToString();
+                pMod.textBoxName.Text = dataGridPets.SelectedRows[0].Cells[4].Value.ToString();
+                pMod.dateTimePicker1.Text = dataGridPets.SelectedRows[0].Cells[5].Value.ToString();
+                pMod.comboBoxSex.Text = dataGridPets.SelectedRows[0].Cells[6].Value.ToString();
+                pMod.richTextBox1.Text = dataGridPets.SelectedRows[0].Cells[7].Value.ToString();
                 if (pMod.ShowDialog() == DialogResult.OK)
                 {
-                    dataGridPets.SelectedRows[0].Cells[1].Value = pMod.comboBoxOwner.Text;
-                    dataGridPets.SelectedRows[0].Cells[2].Value = pMod.textBoxSpecies.Text;
-                    dataGridPets.SelectedRows[0].Cells[3].Value = pMod.textBoxBreed.Text;
-                    dataGridPets.SelectedRows[0].Cells[4].Value = pMod.textBoxName.Text;
-                    dataGridPets.SelectedRows[0].Cells[5].Value = pMod.dateTimePicker1.Value;
-                    dataGridPets.SelectedRows[0].Cells[6].Value = pMod.comboBoxSex.Text;
-                    dataGridPets.SelectedRows[0].Cells[7].Value = pMod.richTextBox1.Text;
+                    try {
+                        dataGridPets.SelectedRows[0].Cells[1].Value = pMod.comboBoxOwner.Text;
+                        dataGridPets.SelectedRows[0].Cells[2].Value = pMod.textBoxSpecies.Text;
+                        dataGridPets.SelectedRows[0].Cells[3].Value = pMod.textBoxBreed.Text;
+                        dataGridPets.SelectedRows[0].Cells[4].Value = pMod.textBoxName.Text;
+                        dataGridPets.SelectedRows[0].Cells[5].Value = pMod.dateTimePicker1.Value;
+                        dataGridPets.SelectedRows[0].Cells[6].Value = pMod.comboBoxSex.Text;
+                        dataGridPets.SelectedRows[0].Cells[7].Value = pMod.richTextBox1.Text;
+                        adapter.Update(Tpets);
+                    }
+                    catch (MySql.Data.MySqlClient.MySqlException ex) { g.ShowError(ex.Message); }
                 }
             }
         }
 
         private void borrarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //
-        }
-
-        private void dataGridPets_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            //
+            if (dataGridPets.SelectedRows.Count > 0)
+            {
+                if (g.ShowWarning("Borrar cliente", "¿Seguro que quieres borrar este cliente?") == DialogResult.OK)
+                {
+                    try
+                    {
+                        dataGridPets.Rows.RemoveAt(dataGridPets.SelectedRows[0].Index);
+                        adapter.Update(Tpets);
+                    }
+                    catch (MySql.Data.MySqlClient.MySqlException ex) { g.ShowError(ex.Message); }
+                }
+            }
+            else { g.ShowError("No se puede realizar esta acción\nsin seleccionar una fila."); }
         }
 
     }
