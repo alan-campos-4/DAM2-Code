@@ -1,41 +1,26 @@
-import itertools
 import os
 import sys
-import threading
 import git
-import time
 
 
 
 def clear():
     os.system('cls' if os.name == 'nt' else 'clear')
 
-def animated_loading():
-    chars = "/—\|"
-    while True:
-        for char in chars:
-            sys.stdout.write('\r'+char)
-            time.sleep(.1)
-            sys.stdout.flush()
-
-
 def delete_line():
-    sys.stdout.write("\033[1A\x1b[2K")
-    sys.stdout.flush()
-
-
+    print("\033[1A\x1b[2K", end="")
 
 entries = []
 names = []
 states = []
 paths = []
 
-def list_repos():
-    print("\n--- Repository List ---\n")
-    
-    process = threading.Thread(target=animated_loading)
-    process.start()
 
+def reload_repos():
+    entries.clear()
+    names.clear()
+    states.clear()
+    paths.clear()
     for i, arg in enumerate(sys.argv):
         if i>0:
             if os.path.exists(arg):
@@ -44,7 +29,6 @@ def list_repos():
                     repo_name = repo.remotes.origin.url.split('.git')[0].split('/')[-1]
                     repo.git.execute("git remote update")
                     result = repo.git.execute("git status -uno")
-
                     if result.find("nothing to commit")!=-1:
                         if result.find("git pull")!=-1:
                             state = "Pull available"
@@ -54,34 +38,32 @@ def list_repos():
                             state = "Up to date"
                     else:
                         state = "Changed"
-                    
                     entries.append(i)
                     names.append(repo_name)
-                    states.append("["+state+"]")
+                    states.append(state)
                     paths.append(arg)
-
                 except git.exc.InvalidGitRepositoryError:
-                    print(f" {i}.) Repository not found")
+                    print(f" {i}.) Repository {arg} not found")
                 except git.exc.GitCommandError:
                     print(f" {i}.) Error in command")
             else:
-                print(f" {i}.) Path not found")
-    
-    process.join()
-    print_menu()
+                print(f" {i}.) Path {arg} not found")
 
 
 def print_menu():
-    print("\n")
-    max_b = max(states, key=len)
-    max_c = max(names, key=len)
-    for (a, b, c, d) in zip(entries, states, names, paths):
-        while len(b) < len(max_b):
+    states1 = []
+    for st in states:
+            states1.append(str("["+st+"]"))
+    max_st = max(states1, key=len)
+    max_nm = max(names, key=len)
+    for (a, b, c, d) in zip(entries, states1, names, paths):
+        while len(b) < len(max_st):
             b += str(" ")
-        while len(c) < len(max_c):
+        while len(c) < len(max_nm):
             c += str(" ")
-        print(f" {a}.) {b} {c} | {d}")
-    print(" 0.) Exit.")   
+        print(f" {a}.) {b} | {c} | {d}")
+    print(" U.) Update.")
+    print(" 0.) Exit.")
 
 
 def access_repo(opt:str):
@@ -92,8 +74,52 @@ def access_repo(opt:str):
                 folder_name = os.path.basename(os.path.normpath(arg))
                 repo_name = repo.remotes.origin.url.split('.git')[0].split('/')[-1]
                 print(f"\n\nRepository {repo_name} in {folder_name} accessed.")
+                print("\n\tWhat do you want to do?: ")
+                opt_nums = ["1", "2", "3", "4"]
+                repo_options = ["Pull last commit", "Discard changes", "Save changes and commit", "Save changes, commit and push"]
+                option = 1
+                while option!="0":
+                    for num, name in zip(opt_nums, repo_options):
+                        print(f"\t\t {num}. {name}.")
+                    print("\t\t 0. Return.")
+                    option = input("\tChoose an option: ")
+                    if option=='0':
+                        print("Exiting...")
+                        input("Press Enter to continue...")
+                    elif option in str(opt_nums):
+                        if option == '1':
+                            git_command(arg, "Changes have been retreived from origin.", "git pull")
+                        elif option == '2':
+                            git_command(arg, "Recent changes have been discarded.", "git stash")
+                        elif option == '3':
+                            commit_name = input("\nWhat is the name of the commit?: ")
+                            commit = "git commit -m \""+commit_name+"\""
+                            git_command(arg, "Changes have been saved.", "git add --all", commit)
+                        elif option == '4':
+                            commit_name = input("\nWhat is the name of the commit?: ")
+                            commit = "git commit -m \""+commit_name+"\""
+                            git_command(arg, "Changes have been saved and pushed to origin.", "git add --all", commit, "git pull")
+                        reload_repos()
+                        clear()
+                        option = "0"
+                    else:
+                        print("Not valid input.")
+                        input("Press Enter to continue...")
+                        i=1
+                        while i<len(opt_nums)+5:
+                            delete_line()
+                            i += 1
             except git.exc.InvalidGitRepositoryError:
-                print("Repository not found")
+                print(f"Repository {arg} not found")
+
+
+def git_command(arg, message, *commands):
+    repo = git.Repo(arg)
+    for i, comm in enumerate(commands):
+        repo.git.execute(comm)
+    print(message)
+    input("Press Enter to continue...")
+
 
 
 
@@ -103,19 +129,20 @@ if __name__ == "__main__":
     while opt!="0":
 
         clear()
-        list_repos()
+        if (entries == []):
+            reload_repos()
+
+        print("\n--- Repository List ---\n")
+        print_menu()
         opt = input("\nChoose a repo: ")
 
-        if opt=="0":
+        if opt=="U" or opt=="u":
+            reload_repos()
+        elif opt=="0":
             print("\nExiting...")
-        elif opt in entries:
+        elif opt in str(entries):
             access_repo(opt)
-            input("Press Enter to continue...")
         else:
             print("Option not valid")
             input("Press Enter to continue...")
 
-
-
-#git status -uno
-#git show-branch

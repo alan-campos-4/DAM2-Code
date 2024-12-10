@@ -19,26 +19,26 @@ namespace WinForms_Practica_GestionClinica
         }
 
         static Global g = new Global();
-        public string connectionString = g.ConnectionString();
+        public string connectionString = g.ConnString();
 
         private void PMascotasAdd_Load(object sender, EventArgs e)
         {
             MySqlConnection connection = new MySqlConnection(connectionString);
             connection.Open();
 
-            string query = "SELECT ID_CL, CONCAT(Apellidos, ', ', Nombre) AS Name FROM clientes";
+            string query = "SELECT ID, CONCAT(Apellidos, ', ', Nombre) AS Name FROM clientes";
             MySqlDataAdapter adapter = new MySqlDataAdapter(query, connectionString);
             DataTable Tduenos = new DataTable();
             adapter.Fill(Tduenos);
             comboBoxOwner.DataSource = Tduenos;
             comboBoxOwner.DisplayMember = "Name";
-            comboBoxOwner.ValueMember = "ID_CL";
+            comboBoxOwner.ValueMember = "ID";
             comboBoxOwner.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
             comboBoxOwner.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
             comboBoxOwner.AutoCompleteSource = AutoCompleteSource.ListItems;
 
-            comboBoxSex.Items.Add("M");
-            comboBoxSex.Items.Add("F");
+            checkBoxMale.Checked = true;
+            
 
             connection.Close();
         }
@@ -72,7 +72,7 @@ namespace WinForms_Practica_GestionClinica
                 String.IsNullOrEmpty(textBoxSpecies.Text) ||
                 String.IsNullOrEmpty(textBoxBreed.Text) ||
                 String.IsNullOrEmpty(textBoxName.Text) ||
-                String.IsNullOrEmpty(comboBoxSex.Text) ||
+                //String.IsNullOrEmpty(comboBoxSex.Text) ||
                 String.IsNullOrEmpty(comboBoxOwner.Text) ||
                 String.IsNullOrEmpty(richTextBox1.Text))
             { empty = true; }

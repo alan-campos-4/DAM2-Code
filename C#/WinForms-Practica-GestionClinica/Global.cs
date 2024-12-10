@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -13,9 +14,9 @@ namespace WinForms_Practica_GestionClinica
     {
         public Global() { }
 
-        public string ConnectionString()
+        public string ConnString()
         {
-            return "Server=localhost;Database=clínica veterinaria;User ID=root;Password=SyncDeezNuts99...;SslMode=none";
+            return "Server=localhost;Database=clínica veterinaria;User ID=root;Password=root;SslMode=none";
         }
 
         public DialogResult ShowWarning(string title, string message)
@@ -32,11 +33,11 @@ namespace WinForms_Practica_GestionClinica
         {
             if (Table=="clientes" || Table=="mascotas")
             {
-                MySqlConnection connection = new MySqlConnection(ConnectionString());
+                MySqlConnection connection = new MySqlConnection(ConnString());
                 connection.Open();
 
                 string query = "SELECT Nombre FROM " + Table;
-                MySqlDataAdapter adapter = new MySqlDataAdapter(query, ConnectionString());
+                MySqlDataAdapter adapter = new MySqlDataAdapter(query, ConnString());
                 DataTable DT = new DataTable();
                 adapter.Fill(DT);
                 int rowCount = DT.Rows.Count;
@@ -46,7 +47,7 @@ namespace WinForms_Practica_GestionClinica
                 if (Table=="clientes")
                     return (1000 + rowCount + 1).ToString();
                 else
-                    return (10000 + rowCount).ToString();
+                    return (10000 + rowCount +1).ToString();
             }
             else
             {
@@ -54,6 +55,56 @@ namespace WinForms_Practica_GestionClinica
                 return (rnd.Next(100000, 999999)).ToString();
             }
         }
+
+        public bool ContainsCharacterOnce(char needed, string examined)
+        {
+            if (examined.IndexOf(needed) > -1)
+                return true;
+            else
+                return false;
+        }
+
+        public void CheckOnlyLetters_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !(char.IsLetter(e.KeyChar) || e.KeyChar == (char)Keys.Back);
+        }
+
+        public void CheckOnlyNumbers_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
+        }
+
+        public void CheckValidEmail_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            /*if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }*/
+        }
+
+        public void CheckValidDNI_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            /*if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }*/
+        }
+
 
 
 

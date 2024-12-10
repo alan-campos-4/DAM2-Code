@@ -15,24 +15,51 @@ namespace WinForms_Practica_GestionClinica
         public Form1()
         {
             InitializeComponent();
+            this.clientesToolStripMenuItem.Margin = new System.Windows.Forms.Padding(15, this.Height*3/5, 30, 5);
+            this.mascotasToolStripMenuItem.Margin = new System.Windows.Forms.Padding(15, 10, 30, 5);
+            this.citasToolStripMenuItem.Margin = new System.Windows.Forms.Padding(15, 10, 30, 5);
         }
 
         private void ClientesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            PClientes clientes = new PClientes();
-            clientes.ShowDialog();
+            //PClientes clientes = new PClientes();
+            //clientes.ShowDialog();
+            var frm = new PClientes
+            {
+                Location = this.Location,
+                StartPosition = FormStartPosition.Manual
+            };
+            frm.FormClosing += delegate { this.Show(); };
+            frm.Show();
+            this.Hide();
         }
 
         private void MascotasToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            PMascotas mascotas = new PMascotas();
-            mascotas.ShowDialog();
+            //PMascotas mascotas = new PMascotas();
+            //mascotas.ShowDialog();
+            var frm = new PMascotas
+            {
+                Location = this.Location,
+                StartPosition = FormStartPosition.Manual
+            };
+            frm.FormClosing += delegate { this.Show(); };
+            frm.Show();
+            this.Hide();
         }
 
         private void CitasToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            PCitas citas = new PCitas();
-            citas.ShowDialog();
+            //PCitas citas = new PCitas();
+            //citas.ShowDialog();
+            var frm = new PCitas()
+            {
+                Location = this.Location,
+                StartPosition = FormStartPosition.Manual
+            };
+            frm.FormClosing += delegate { this.Show(); };
+            frm.Show();
+            this.Hide();
         }
     }
 }

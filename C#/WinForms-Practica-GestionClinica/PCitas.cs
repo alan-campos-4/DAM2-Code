@@ -20,7 +20,7 @@ namespace WinForms_Practica_GestionClinica
         }
 
         static Global g = new Global();
-        public string connectionString = g.ConnectionString();
+        public string connectionString = g.ConnString();
         DataTable tableCitas, tableCitasView, tableDates;
         MySqlDataAdapter adapterC, adapterCV, adapterD;
 
@@ -44,9 +44,9 @@ namespace WinForms_Practica_GestionClinica
 
             string query2 = "SELECT * FROM citas";
             tableCitas = new DataTable();
-            MySqlDataAdapter adapter2 = new MySqlDataAdapter(query2, connection);
-            MySqlCommandBuilder commandBuilder2 = new MySqlCommandBuilder(adapter2);
-            adapter2.Fill(tableCitas);
+            adapterC = new MySqlDataAdapter(query2, connection);
+            MySqlCommandBuilder commandBuilder2 = new MySqlCommandBuilder(adapterC);
+            adapterC.Fill(tableCitas);
 
 
             string query3 = "SELECT Fecha_Hora FROM citas";
@@ -64,7 +64,7 @@ namespace WinForms_Practica_GestionClinica
             connection.Close();
         }
 
-        private void nuevaToolStripMenuItem_Click(object sender, EventArgs e)
+        private void NuevaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             PAddCitas pAdd = new PAddCitas{ Text = "Crear Cita" };
             pAdd.dateTimePicker1.Value = DateTime.Now;
@@ -75,7 +75,7 @@ namespace WinForms_Practica_GestionClinica
             }
         }
 
-        private void alterarToolStripMenuItem_Click(object sender, EventArgs e)
+        private void AlterarToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (dataGridView1.SelectedRows.Count > 0)
             {
@@ -90,7 +90,7 @@ namespace WinForms_Practica_GestionClinica
             }
         }
 
-        private void eliminarToolStripMenuItem_Click(object sender, EventArgs e)
+        private void EliminarToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (dataGridView1.SelectedRows.Count > 0)
             {

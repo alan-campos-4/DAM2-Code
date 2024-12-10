@@ -76,7 +76,7 @@ public class Ejercicio1
 	
 	public static void main(String[] args)
 	{
-		LeerFichero("src/productos.dat");
+		LeerFichero("src/xmlTests/productos.dat");
 
 		try
 		{

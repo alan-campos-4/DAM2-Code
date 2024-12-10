@@ -13,7 +13,6 @@
     <Fecha>1999</Fecha> 
     <Director>Wachowski Brothers</Director> 
   </Pelicula> 
-
   <Pelicula id="2"> 
     <Titulo>The Matrix</Titulo> 
     <Duracion>136</Duracion> 
@@ -27,7 +26,6 @@
     <Fecha>1999</Fecha> 
     <Director>Wachowski Brothers</Director> 
   </Pelicula> 
-
   <Pelicula id="3"> 
     <Titulo>Titanic</Titulo> 
     <Duracion>194</Duracion> 
@@ -40,7 +38,6 @@
     <Fecha>1999</Fecha> 
     <Director>James Cameron</Director> 
   </Pelicula> 
-
   <Pelicula id="4"> 
     <Titulo>The Sixth Sense</Titulo> 
     <Duracion>106</Duracion> 

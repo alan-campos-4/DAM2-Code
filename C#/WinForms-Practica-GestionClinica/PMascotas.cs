@@ -20,7 +20,7 @@ namespace WinForms_Practica_GestionClinica
         }
 
         static Global g = new Global();
-        public string connectionString = g.ConnectionString();
+        public string connectionString = g.ConnString();
         public DataTable Tclients, Tpets;
         public MySqlDataAdapter adapter;
 
@@ -31,13 +31,13 @@ namespace WinForms_Practica_GestionClinica
 
             Tpets = new DataTable();
             string query2 = "SELECT M.*, CONCAT(C.Apellidos,', ',C.Nombre) AS Cliente FROM mascotas M " +
-                "JOIN clientes C ON M.Cliente=C.ID_CL " +
+                "JOIN clientes C ON M.Cliente=C.ID " +
                 "ORDER BY 3, 4";
             adapter = new MySqlDataAdapter(query2, connection);
             MySqlCommandBuilder commandBuilder2 = new MySqlCommandBuilder(adapter);
             adapter.Fill(Tpets);
             dataGridPets.DataSource = Tpets;
-            dataGridPets.Columns["ID_M"].Visible = false;
+            dataGridPets.Columns["ID"].Visible = false;
             dataGridPets.Columns["Cliente"].Visible = false;
             dataGridPets.Columns["Notas"].Visible = false;
             dataGridPets.Columns["Cliente"].GetPreferredWidth(DataGridViewAutoSizeColumnMode.AllCells, true);
@@ -45,7 +45,7 @@ namespace WinForms_Practica_GestionClinica
             connection.Close();
         }
 
-        private void textBoxSearch_TextChanged(object sender, EventArgs e)
+        private void TextBoxSearch_TextChanged(object sender, EventArgs e)
         {
             dataGridPets.ClearSelection();
             foreach (DataGridViewRow row in dataGridPets.Rows)
@@ -68,19 +68,24 @@ namespace WinForms_Practica_GestionClinica
         }
 
 
-        private void añadirToolStripMenuItem_Click(object sender, EventArgs e)
+        private void AñadirToolStripMenuItem_Click(object sender, EventArgs e)
         {
             PAddMascotas pAdd = new PAddMascotas { Text = "Añadir mascota" };
             if (pAdd.ShowDialog() == DialogResult.OK)
             {
-                try { 
+                try {
+                    char sex;
+                    if (pAdd.checkBoxMale.Checked==true)
+                        sex = 'M';
+                    else
+                        sex = 'F';
                     Tpets.Rows.Add(
                         g.GenerateNewID("mascotas"),
                         pAdd.comboBoxOwner.Text,
                         pAdd.textBoxSpecies.Text,
                         pAdd.textBoxBreed,
                         pAdd.textBoxName.Text,
-                        pAdd.comboBoxSex.Text,
+                        sex,
                         pAdd.richTextBox1.Text
                     );
                     adapter.Update(Tpets);
@@ -89,7 +94,7 @@ namespace WinForms_Practica_GestionClinica
             }
         }
 
-        private void modificiarToolStripMenuItem_Click(object sender, EventArgs e)
+        private void ModificiarToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (dataGridPets.SelectedRows.Count > 0)
             {
@@ -99,7 +104,10 @@ namespace WinForms_Practica_GestionClinica
                 pMod.textBoxBreed.Text = dataGridPets.SelectedRows[0].Cells[3].Value.ToString();
                 pMod.textBoxName.Text = dataGridPets.SelectedRows[0].Cells[4].Value.ToString();
                 pMod.dateTimePicker1.Text = dataGridPets.SelectedRows[0].Cells[5].Value.ToString();
-                pMod.comboBoxSex.Text = dataGridPets.SelectedRows[0].Cells[6].Value.ToString();
+                if (dataGridPets.SelectedRows[0].Cells[6].Value.ToString() == 'M'.ToString())
+                    pMod.checkBoxMale.Checked = true;
+                else
+                    pMod.checkBoxFemale.Checked = false;
                 pMod.richTextBox1.Text = dataGridPets.SelectedRows[0].Cells[7].Value.ToString();
                 if (pMod.ShowDialog() == DialogResult.OK)
                 {
@@ -109,7 +117,7 @@ namespace WinForms_Practica_GestionClinica
                         dataGridPets.SelectedRows[0].Cells[3].Value = pMod.textBoxBreed.Text;
                         dataGridPets.SelectedRows[0].Cells[4].Value = pMod.textBoxName.Text;
                         dataGridPets.SelectedRows[0].Cells[5].Value = pMod.dateTimePicker1.Value;
-                        dataGridPets.SelectedRows[0].Cells[6].Value = pMod.comboBoxSex.Text;
+                        //dataGridPets.SelectedRows[0].Cells[6].Value = pMod.comboBoxSex.Text;
                         dataGridPets.SelectedRows[0].Cells[7].Value = pMod.richTextBox1.Text;
                         adapter.Update(Tpets);
                     }
@@ -118,7 +126,7 @@ namespace WinForms_Practica_GestionClinica
             }
         }
 
-        private void borrarToolStripMenuItem_Click(object sender, EventArgs e)
+        private void BorrarToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (dataGridPets.SelectedRows.Count > 0)
             {

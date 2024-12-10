@@ -16,10 +16,18 @@ namespace WinForms_Practica_GestionClinica
         public PAddClientes()
         {
             InitializeComponent();
+            this.textBoxDNI.KeyPress += new KeyPressEventHandler(g.CheckValidDNI_KeyPress);
+            this.textBoxEmail.KeyPress += new KeyPressEventHandler(g.CheckValidEmail_KeyPress);
+            this.textBoxName1.KeyPress += new KeyPressEventHandler(g.CheckOnlyLetters_KeyPress);
+            this.textBoxName2.KeyPress += new KeyPressEventHandler(g.CheckOnlyLetters_KeyPress);
+            this.comboBoxCity.KeyPress += new KeyPressEventHandler(g.CheckOnlyLetters_KeyPress);
+            this.comboBoxProv.KeyPress += new KeyPressEventHandler(g.CheckOnlyLetters_KeyPress);
+            this.textBoxPhone.KeyPress += new KeyPressEventHandler(g.CheckOnlyNumbers_KeyPress);
+            this.textBoxPostal.KeyPress += new KeyPressEventHandler(g.CheckOnlyNumbers_KeyPress);
         }
 
         static Global g = new Global();
-        public string connectionString = g.ConnectionString();
+        public string connectionString = g.ConnString();
 
         private void PClientesAdd_Load(object sender, EventArgs e)
         {
@@ -65,6 +73,11 @@ namespace WinForms_Practica_GestionClinica
             if (FindEmpty())
             {
                 g.ShowError("Debes rellenar todos los datos.");
+                this.DialogResult = DialogResult.None;
+            }
+            else if (!g.ContainsCharacterOnce('@', textBoxEmail.Text))
+            {
+                g.ShowError("La dirección email no es válida.");
                 this.DialogResult = DialogResult.None;
             }
             else if (g.ShowWarning(this.Text, "¿Son los datos correctos?") == DialogResult.Cancel)

@@ -45,14 +45,14 @@
             this.dataGridView1.AllowUserToResizeRows = false;
             this.dataGridView1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(13, 119);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView1.Location = new System.Drawing.Point(15, 156);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(1058, 429);
+            this.dataGridView1.Size = new System.Drawing.Size(1190, 563);
             this.dataGridView1.TabIndex = 0;
             // 
             // menuStripClients
@@ -64,10 +64,9 @@
             this.modificaciónToolStripMenuItem,
             this.borrarToolStripMenuItem});
             this.menuStripClients.Location = new System.Drawing.Point(0, 0);
-            this.menuStripClients.MinimumSize = new System.Drawing.Size(0, 0);
             this.menuStripClients.Name = "menuStripClients";
-            this.menuStripClients.Padding = new System.Windows.Forms.Padding(15, 5, 0, 5);
-            this.menuStripClients.Size = new System.Drawing.Size(1084, 34);
+            this.menuStripClients.Padding = new System.Windows.Forms.Padding(17, 7, 0, 7);
+            this.menuStripClients.Size = new System.Drawing.Size(1220, 38);
             this.menuStripClients.TabIndex = 1;
             // 
             // altaToolStripMenuItem
@@ -93,16 +92,17 @@
             // 
             // PClientes
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1084, 561);
+            this.ClientSize = new System.Drawing.Size(1220, 736);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.menuStripClients);
-            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Yu Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MainMenuStrip = this.menuStripClients;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "PClientes";
             this.Text = "Gestión de Clientes";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.PClientes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.menuStripClients.ResumeLayout(false);

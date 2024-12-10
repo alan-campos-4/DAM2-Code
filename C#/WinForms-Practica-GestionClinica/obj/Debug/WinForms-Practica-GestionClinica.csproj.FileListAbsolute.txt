@@ -44,10 +44,6 @@ C:\Users\DAM-A\Sync\Code\C#\WinForms-Practica-GestionClinica\bin\Debug\System.Ru
 C:\Users\DAM-A\Sync\Code\C#\WinForms-Practica-GestionClinica\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\Users\DAM-A\Sync\Code\C#\WinForms-Practica-GestionClinica\obj\Debug\WinForms_Practica_GestionClinica.PCitas.resources
 C:\Users\DAM-A\Sync\Code\C#\WinForms-Practica-GestionClinica\obj\Debug\WinForms.22156129.Up2Date
-C:\Users\DAM-A\Sync\Code\C#\WinForms-Practica-GestionClinica\obj\Debug\WinForms_Practica_GestionClinica.PClientesAdd.resources
-C:\Users\DAM-A\Sync\Code\C#\WinForms-Practica-GestionClinica\obj\Debug\WinForms_Practica_GestionClinica.PClientesShow.resources
-C:\Users\DAM-A\Sync\Code\C#\WinForms-Practica-GestionClinica\obj\Debug\WinForms_Practica_GestionClinica.PMascotasAdd.resources
-C:\Users\DAM-A\Sync\Code\C#\WinForms-Practica-GestionClinica\obj\Debug\WinForms_Practica_GestionClinica.PCitasAdd.resources
 D:\Code\FP2\C#\WinForms-Practica-GestionClinica\bin\Debug\WinForms-Practica-GestionClinica.exe.config
 D:\Code\FP2\C#\WinForms-Practica-GestionClinica\bin\Debug\WinForms-Practica-GestionClinica.exe
 D:\Code\FP2\C#\WinForms-Practica-GestionClinica\bin\Debug\WinForms-Practica-GestionClinica.pdb
@@ -97,3 +93,6 @@ D:\Code\FP2\C#\WinForms-Practica-GestionClinica\obj\Debug\WinForms-Practica-Gest
 D:\Code\FP2\C#\WinForms-Practica-GestionClinica\obj\Debug\WinForms_Practica_GestionClinica.PAddCitas.resources
 D:\Code\FP2\C#\WinForms-Practica-GestionClinica\obj\Debug\WinForms_Practica_GestionClinica.PAddClientes.resources
 D:\Code\FP2\C#\WinForms-Practica-GestionClinica\obj\Debug\WinForms_Practica_GestionClinica.PAddMascotas.resources
+C:\Users\DAM-A\Sync\Code\C#\WinForms-Practica-GestionClinica\obj\Debug\WinForms_Practica_GestionClinica.PAddCitas.resources
+C:\Users\DAM-A\Sync\Code\C#\WinForms-Practica-GestionClinica\obj\Debug\WinForms_Practica_GestionClinica.PAddClientes.resources
+C:\Users\DAM-A\Sync\Code\C#\WinForms-Practica-GestionClinica\obj\Debug\WinForms_Practica_GestionClinica.PAddMascotas.resources

@@ -47,21 +47,21 @@
             this.dataGridPets.AllowUserToResizeRows = false;
             this.dataGridPets.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dataGridPets.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridPets.Location = new System.Drawing.Point(102, 148);
-            this.dataGridPets.Margin = new System.Windows.Forms.Padding(4);
+            this.dataGridPets.Location = new System.Drawing.Point(115, 194);
+            this.dataGridPets.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dataGridPets.MultiSelect = false;
             this.dataGridPets.Name = "dataGridPets";
             this.dataGridPets.ReadOnly = true;
             this.dataGridPets.RowHeadersVisible = false;
             this.dataGridPets.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridPets.Size = new System.Drawing.Size(900, 400);
+            this.dataGridPets.Size = new System.Drawing.Size(1012, 525);
             this.dataGridPets.TabIndex = 2;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(99, 112);
+            this.label1.Location = new System.Drawing.Point(111, 147);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(177, 16);
@@ -78,8 +78,8 @@
             this.borrarToolStripMenuItem});
             this.menuStripPets.Location = new System.Drawing.Point(0, 0);
             this.menuStripPets.Name = "menuStripPets";
-            this.menuStripPets.Padding = new System.Windows.Forms.Padding(15, 5, 0, 5);
-            this.menuStripPets.Size = new System.Drawing.Size(1084, 34);
+            this.menuStripPets.Padding = new System.Windows.Forms.Padding(17, 7, 0, 7);
+            this.menuStripPets.Size = new System.Drawing.Size(1220, 38);
             this.menuStripPets.TabIndex = 5;
             // 
             // añadirToolStripMenuItem
@@ -87,44 +87,46 @@
             this.añadirToolStripMenuItem.Name = "añadirToolStripMenuItem";
             this.añadirToolStripMenuItem.Size = new System.Drawing.Size(65, 24);
             this.añadirToolStripMenuItem.Text = "Añadir";
-            this.añadirToolStripMenuItem.Click += new System.EventHandler(this.añadirToolStripMenuItem_Click);
+            this.añadirToolStripMenuItem.Click += new System.EventHandler(this.AñadirToolStripMenuItem_Click);
             // 
             // modificiarToolStripMenuItem
             // 
             this.modificiarToolStripMenuItem.Name = "modificiarToolStripMenuItem";
             this.modificiarToolStripMenuItem.Size = new System.Drawing.Size(85, 24);
             this.modificiarToolStripMenuItem.Text = "Modificar";
-            this.modificiarToolStripMenuItem.Click += new System.EventHandler(this.modificiarToolStripMenuItem_Click);
+            this.modificiarToolStripMenuItem.Click += new System.EventHandler(this.ModificiarToolStripMenuItem_Click);
             // 
             // borrarToolStripMenuItem
             // 
             this.borrarToolStripMenuItem.Name = "borrarToolStripMenuItem";
             this.borrarToolStripMenuItem.Size = new System.Drawing.Size(62, 24);
             this.borrarToolStripMenuItem.Text = "Borrar";
-            this.borrarToolStripMenuItem.Click += new System.EventHandler(this.borrarToolStripMenuItem_Click);
+            this.borrarToolStripMenuItem.Click += new System.EventHandler(this.BorrarToolStripMenuItem_Click);
             // 
             // textBoxSearch
             // 
-            this.textBoxSearch.Location = new System.Drawing.Point(292, 109);
+            this.textBoxSearch.Location = new System.Drawing.Point(328, 143);
+            this.textBoxSearch.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBoxSearch.Name = "textBoxSearch";
-            this.textBoxSearch.Size = new System.Drawing.Size(182, 22);
+            this.textBoxSearch.Size = new System.Drawing.Size(204, 33);
             this.textBoxSearch.TabIndex = 6;
-            this.textBoxSearch.TextChanged += new System.EventHandler(this.textBoxSearch_TextChanged);
+            this.textBoxSearch.TextChanged += new System.EventHandler(this.TextBoxSearch_TextChanged);
             // 
             // PMascotas
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1084, 561);
+            this.ClientSize = new System.Drawing.Size(1220, 736);
             this.Controls.Add(this.textBoxSearch);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridPets);
             this.Controls.Add(this.menuStripPets);
-            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Yu Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MainMenuStrip = this.menuStripPets;
-            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "PMascotas";
             this.Text = "Gestión de Mascotas";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.PMascotas_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridPets)).EndInit();
             this.menuStripPets.ResumeLayout(false);

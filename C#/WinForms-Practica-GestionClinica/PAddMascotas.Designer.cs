@@ -36,8 +36,9 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.checkBoxFemale = new System.Windows.Forms.CheckBox();
+            this.checkBoxMale = new System.Windows.Forms.CheckBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.comboBoxSex = new System.Windows.Forms.ComboBox();
             this.textBoxBreed = new System.Windows.Forms.TextBox();
             this.textBoxSpecies = new System.Windows.Forms.TextBox();
             this.textBoxName = new System.Windows.Forms.TextBox();
@@ -45,6 +46,7 @@
             this.comboBoxOwner = new System.Windows.Forms.ComboBox();
             this.buttonCancel = new System.Windows.Forms.Button();
             this.buttonOK = new System.Windows.Forms.Button();
+            this.checkedListBoxSex = new System.Windows.Forms.CheckedListBox();
             this.groupBox3.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -126,8 +128,10 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.checkedListBoxSex);
+            this.groupBox1.Controls.Add(this.checkBoxFemale);
+            this.groupBox1.Controls.Add(this.checkBoxMale);
             this.groupBox1.Controls.Add(this.dateTimePicker1);
-            this.groupBox1.Controls.Add(this.comboBoxSex);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.textBoxBreed);
             this.groupBox1.Controls.Add(this.label2);
@@ -143,20 +147,32 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos de la mascota";
             // 
+            // checkBoxFemale
+            // 
+            this.checkBoxFemale.AutoSize = true;
+            this.checkBoxFemale.Location = new System.Drawing.Point(448, 96);
+            this.checkBoxFemale.Name = "checkBoxFemale";
+            this.checkBoxFemale.Size = new System.Drawing.Size(75, 20);
+            this.checkBoxFemale.TabIndex = 10;
+            this.checkBoxFemale.Text = "Hembra";
+            this.checkBoxFemale.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxMale
+            // 
+            this.checkBoxMale.AutoSize = true;
+            this.checkBoxMale.Location = new System.Drawing.Point(375, 96);
+            this.checkBoxMale.Name = "checkBoxMale";
+            this.checkBoxMale.Size = new System.Drawing.Size(67, 20);
+            this.checkBoxMale.TabIndex = 9;
+            this.checkBoxMale.Text = "Macho";
+            this.checkBoxMale.UseVisualStyleBackColor = true;
+            // 
             // dateTimePicker1
             // 
             this.dateTimePicker1.Location = new System.Drawing.Point(448, 38);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 22);
             this.dateTimePicker1.TabIndex = 8;
-            // 
-            // comboBoxSex
-            // 
-            this.comboBoxSex.FormattingEnabled = true;
-            this.comboBoxSex.Location = new System.Drawing.Point(354, 94);
-            this.comboBoxSex.Name = "comboBoxSex";
-            this.comboBoxSex.Size = new System.Drawing.Size(76, 24);
-            this.comboBoxSex.TabIndex = 9;
             // 
             // textBoxBreed
             // 
@@ -198,7 +214,7 @@
             this.comboBoxOwner.Location = new System.Drawing.Point(60, 40);
             this.comboBoxOwner.Name = "comboBoxOwner";
             this.comboBoxOwner.Size = new System.Drawing.Size(214, 24);
-            this.comboBoxOwner.TabIndex = 10;
+            this.comboBoxOwner.TabIndex = 11;
             // 
             // buttonCancel
             // 
@@ -224,7 +240,18 @@
             this.buttonOK.UseVisualStyleBackColor = true;
             this.buttonOK.Click += new System.EventHandler(this.buttonOK_Click);
             // 
-            // PMascotasAdd
+            // checkedListBoxSex
+            // 
+            this.checkedListBoxSex.FormattingEnabled = true;
+            this.checkedListBoxSex.Items.AddRange(new object[] {
+            "Macho",
+            "Hembra"});
+            this.checkedListBoxSex.Location = new System.Drawing.Point(364, 112);
+            this.checkedListBoxSex.Name = "checkedListBoxSex";
+            this.checkedListBoxSex.Size = new System.Drawing.Size(302, 21);
+            this.checkedListBoxSex.TabIndex = 27;
+            // 
+            // PAddMascotas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -236,7 +263,7 @@
             this.Controls.Add(this.groupBox3);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "PMascotasAdd";
+            this.Name = "PAddMascotas";
             this.Load += new System.EventHandler(this.PMascotasAdd_Load);
             this.groupBox3.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
@@ -260,10 +287,12 @@
         public System.Windows.Forms.TextBox textBoxBreed;
         public System.Windows.Forms.TextBox textBoxSpecies;
         public System.Windows.Forms.RichTextBox richTextBox1;
-        public System.Windows.Forms.ComboBox comboBoxSex;
         public System.Windows.Forms.ComboBox comboBoxOwner;
         public System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Button buttonCancel;
         private System.Windows.Forms.Button buttonOK;
+        public System.Windows.Forms.CheckBox checkBoxFemale;
+        public System.Windows.Forms.CheckBox checkBoxMale;
+        private System.Windows.Forms.CheckedListBox checkedListBoxSex;
     }
 }

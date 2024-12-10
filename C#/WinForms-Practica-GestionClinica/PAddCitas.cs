@@ -22,7 +22,7 @@ namespace WinForms_Practica_GestionClinica
         }
 
         static Global g = new Global();
-        public string connectionString = g.ConnectionString();
+        public string connectionString = g.ConnString();
 
         private void PCitasAdd_Load(object sender, EventArgs e)
         {
