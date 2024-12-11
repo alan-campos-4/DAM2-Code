@@ -53,7 +53,7 @@ def reload_repos():
 def print_menu():
     states1 = []
     for st in states:
-            states1.append(str("["+st+"]"))
+        states1.append("["+st+"]")
     max_st = max(states1, key=len)
     max_nm = max(names, key=len)
     for (a, b, c, d) in zip(entries, states1, names, paths):
@@ -75,8 +75,9 @@ def access_repo(opt:str):
                 repo_name = repo.remotes.origin.url.split('.git')[0].split('/')[-1]
                 print(f"\n\nRepository {repo_name} in {folder_name} accessed.")
                 print("\n\tWhat do you want to do?: ")
-                opt_nums = ["1", "2", "3", "4"]
-                repo_options = ["Pull last commit", "Discard changes", "Save changes and commit", "Save changes, commit and push"]
+                opt_nums = ["1", "2", "3", "4", "5"]
+                repo_options = ["Check status", "Pull last commit", 
+                                "Discard changes", "Save changes and commit", "Save changes, commit and push"]
                 option = 1
                 while option!="0":
                     for num, name in zip(opt_nums, repo_options):
@@ -88,14 +89,16 @@ def access_repo(opt:str):
                         input("Press Enter to continue...")
                     elif option in str(opt_nums):
                         if option == '1':
-                            git_command(arg, "Changes have been retreived from origin.", "git pull")
+                            git_command(arg, "Print", "git status")
                         elif option == '2':
-                            git_command(arg, "Recent changes have been discarded.", "git stash")
+                            git_command(arg, "Changes have been retreived from origin.", "git pull")
                         elif option == '3':
+                            git_command(arg, "Recent changes have been discarded.", "git stash")
+                        elif option == '4':
                             commit_name = input("\nWhat is the name of the commit?: ")
                             commit = "git commit -m \""+commit_name+"\""
                             git_command(arg, "Changes have been saved.", "git add --all", commit)
-                        elif option == '4':
+                        elif option == '5':
                             commit_name = input("\nWhat is the name of the commit?: ")
                             commit = "git commit -m \""+commit_name+"\""
                             git_command(arg, "Changes have been saved and pushed to origin.", "git add --all", commit, "git pull")
@@ -115,9 +118,14 @@ def access_repo(opt:str):
 
 def git_command(arg, message, *commands):
     repo = git.Repo(arg)
-    for i, comm in enumerate(commands):
-        repo.git.execute(comm)
-    print(message)
+    if (message=="Print"):
+        for comm in (commands):
+            result = repo.git.execute(comm)
+            print(result)
+    else:
+        for comm in (commands):
+            repo.git.execute(comm)
+        print(message)
     input("Press Enter to continue...")
 
 

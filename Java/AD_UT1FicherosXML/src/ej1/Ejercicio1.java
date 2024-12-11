@@ -18,8 +18,10 @@ import org.xml.sax.SAXException;
  * Ejercicio 1 – Ficheros XML (DOM) – 2 ptos
  * 
  * Escribe un programa con la ayuda de DOM para que a partir del fichero peliculas.xml, 
- * se muestre correctamente: el id de la película, el título, año, director y los nombres de los actores principales.
+ * se muestre correctamente: el id de la película, el título, año, director 
+ * y los nombres de los actores principales.
  */
+
 
 public class Ejercicio1
 {
@@ -60,13 +62,15 @@ public class Ejercicio1
 								+ eElement.getElementsByTagName("Fecha").item(0).getTextContent());
 			            System.out.println("Director: " 
 								+ eElement.getElementsByTagName("Director").item(0).getTextContent());
+			            System.out.println("Actores: " 
+								+ eElement.getElementsByTagName("Actores").item(0).getTextContent());
 			            
-			            NodeList actorList = element.getElementsByTagName("Actores").item(0).getChildNodes();
-			            for (int act = 0; act < actorList.getLength(); act++)
-			            {
-			            	Node actorNode = actorList.item(act);
-			            	System.out.println("  Actor: " + actorNode.getNodeName());
-			            }
+//			            NodeList actorList = element.getElementsByTagName("Actores").item(0).getChildNodes();
+//			            for (int act = 0; act < actorList.getLength(); act++)
+//			            {
+//			            	Node actorNode = actorList.item(act);
+//			            	//System.out.println("  Actor: " + actorNode.getNodeName());
+//			            }
 			            
 					}
 				}
