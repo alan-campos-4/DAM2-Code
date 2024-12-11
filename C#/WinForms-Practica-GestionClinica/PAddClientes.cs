@@ -53,14 +53,15 @@ namespace WinForms_Practica_GestionClinica
             MySqlConnection connection = new MySqlConnection(connectionString);
             connection.Open();
 
-            string idProv = comboBoxProv.SelectedIndex.ToString();
-            string query = "SELECT id, municipio FROM municipios WHERE provincia=" + idProv;
+            string idProv = comboBoxProv.SelectedValue.ToString();
+            string query = "SELECT id, municipio FROM municipios WHERE provincia = " + idProv;
             MySqlDataAdapter adapter = new MySqlDataAdapter(query, connectionString);
             DataTable Tmunicipios = new DataTable();
             adapter.Fill(Tmunicipios);
             comboBoxCity.DataSource = Tmunicipios;
-            comboBoxCity.DisplayMember = "municipio";
             comboBoxCity.ValueMember = "id";
+            comboBoxCity.DisplayMember = "municipio";
+            
             comboBoxCity.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
             comboBoxCity.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
             comboBoxCity.AutoCompleteSource = AutoCompleteSource.ListItems;

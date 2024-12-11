@@ -21,48 +21,63 @@ namespace WinForms_Practica_GestionClinica
 
         static Global g = new Global();
         public string connectionString = g.ConnString();
-        DataTable tableCitas, tableCitasView, tableDates;
-        MySqlDataAdapter adapterC, adapterCV, adapterD;
+        DataTable tableCitas;
+        MySqlDataAdapter adapterC;
 
         private void PCitas_Load(object sender, EventArgs e)
         {
             MySqlConnection connection = new MySqlConnection(connectionString);
             connection.Open();
 
-            string query1 = 
-                "SELECT CT.ID, Fecha_Hora, M.Especie, M.Nombre, Motivo " +
-                "FROM citas CT JOIN clientes CL ON CT.Cliente=CL.ID " +
-                "JOIN mascotas M ON CT.Mascota=M.ID";
-            tableCitasView = new DataTable();
-            adapterCV = new MySqlDataAdapter(query1, connection);
-            MySqlCommandBuilder commandBuilder = new MySqlCommandBuilder(adapterCV);
-            adapterCV.Fill(tableCitasView);
-            dataGridView1.DataSource = tableCitasView;
-            dataGridView1.Columns["ID"].Visible = false;
-
-            
-
-            string query2 = "SELECT * FROM citas";
+            string query1 = "SELECT * FROM citas";
             tableCitas = new DataTable();
-            adapterC = new MySqlDataAdapter(query2, connection);
-            MySqlCommandBuilder commandBuilder2 = new MySqlCommandBuilder(adapterC);
+            adapterC = new MySqlDataAdapter(query1, connection);
+            MySqlCommandBuilder commandBuilder = new MySqlCommandBuilder(adapterC);
             adapterC.Fill(tableCitas);
+            dataGridView1.DataSource = tableCitas;
+            dataGridView1.Columns["ID"].Visible = false;
+            dataGridView1.Columns["Cliente"].Visible = false;
+            dataGridView1.Columns["Mascota"].Visible = false;
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
 
-
-            string query3 = "SELECT Fecha_Hora FROM citas";
-            tableDates = new DataTable();
-            adapterD = new MySqlDataAdapter(query3, connection);
-            MySqlCommandBuilder commandBuilder1 = new MySqlCommandBuilder(adapterD);
-            adapterD.Fill(tableDates);
-            for (int i= 0; i < tableDates.Rows.Count; i++)
+            for (int i= 0; i < tableCitas.Rows.Count; i++)
             {
-                monthCalendar1.AddBoldedDate(DateTime.Parse(tableDates.Rows[i][0].ToString()));
+                DateTime dt = DateTime.Parse(tableCitas.Rows[i][3].ToString());
+                monthCalendar1.AddBoldedDate(dt);
             }
-            monthCalendar1.Refresh();
             monthCalendar1.UpdateBoldedDates();
+
 
             connection.Close();
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                MySqlConnection connection = new MySqlConnection(connectionString);
+                connection.Open();
+
+                string idClient = dataGridView1.SelectedRows[0].Cells[1].Value.ToString();
+                string idPet = dataGridView1.SelectedRows[0].Cells[2].Value.ToString();
+                string query1 = "SELECT CONCAT(Apellidos,', ',Nombre) AS Name FROM clientes WHERE ID=" + idClient;
+                string query2 = "SELECT CONCAT(Especie,' - ',Nombre) AS Name FROM mascotas WHERE ID=" + idPet;
+                DataTable table1 = new DataTable();
+                DataTable table2 = new DataTable();
+                MySqlDataAdapter adapter1 = new MySqlDataAdapter(query1, connection);
+                MySqlDataAdapter adapter2 = new MySqlDataAdapter(query2, connection);
+                adapter1.Fill(table1);
+                adapter2.Fill(table2);
+
+                labelClient.Text = table1.Rows[0][0].ToString();
+                labelPet.Text = table2.Rows[0][0].ToString();
+
+                connection.Close();
+            }
+        }
+
+
+
 
         private void NuevaToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -71,7 +86,19 @@ namespace WinForms_Practica_GestionClinica
             pAdd.dateTimePicker2.Value = DateTime.Now;
             if (pAdd.ShowDialog() == DialogResult.OK)
             {
-                //
+                try
+                {
+                    tableCitas.Rows.Add(
+                        g.GenerateNewID("citas"),
+                        pAdd.comboBoxClients.SelectedValue,
+                        pAdd.comboBoxPets.SelectedValue,
+                        pAdd.textBoxReason.Text,
+                        pAdd.richTextBox1.Text,
+                        pAdd.dateTimePicker1.Value
+                    );
+                    adapterC.Update(tableCitas);
+                }
+                catch (MySql.Data.MySqlClient.MySqlException ex) { g.ShowError(ex.Message); }
             }
         }
 
@@ -80,12 +107,25 @@ namespace WinForms_Practica_GestionClinica
             if (dataGridView1.SelectedRows.Count > 0)
             {
                 PAddCitas pMod = new PAddCitas{ Text = "Alterar Cita" };
-                //pMod.comboBoxClients.Text =  
-                //pMod.comboBoxPets.Text =  
-                pMod.dateTimePicker1.Value = DateTime.Now;
+                pMod.comboBoxClients.Text = dataGridView1.SelectedRows[0].Cells[1].Value.ToString();
+                pMod.comboBoxPets.Text = dataGridView1.SelectedRows[0].Cells[2].Value.ToString();
+                pMod.dateTimePicker1.Text = dataGridView1.SelectedRows[0].Cells[3].Value.ToString();
+                pMod.dateTimePicker2.Text = dataGridView1.SelectedRows[0].Cells[4].Value.ToString();
+                pMod.textBoxReason.Text = dataGridView1.SelectedRows[0].Cells[5].Value.ToString();
+                pMod.richTextBox1.Text = dataGridView1.SelectedRows[0].Cells[6].Value.ToString();
                 if (pMod.ShowDialog() == DialogResult.OK)
                 {
-                    //
+                    try
+                    {
+                        dataGridView1.SelectedRows[0].Cells[1].Value = pMod.comboBoxClients.Text;
+                        dataGridView1.SelectedRows[0].Cells[2].Value = pMod.comboBoxPets.Text;
+                        dataGridView1.SelectedRows[0].Cells[3].Value = pMod.dateTimePicker1.Text;
+                        dataGridView1.SelectedRows[0].Cells[4].Value = pMod.dateTimePicker2.Text;
+                        dataGridView1.SelectedRows[0].Cells[5].Value = pMod.textBoxReason.Text;
+                        dataGridView1.SelectedRows[0].Cells[6].Value = pMod.richTextBox1.Text;
+                        adapterC.Update(tableCitas);
+                    }
+                    catch (MySql.Data.MySqlClient.MySqlException ex) { g.ShowError(ex.Message); }
                 }
             }
         }
@@ -94,16 +134,16 @@ namespace WinForms_Practica_GestionClinica
         {
             if (dataGridView1.SelectedRows.Count > 0)
             {
-                if (g.ShowWarning("Borrar cliente", "¿Seguro que quieres borrar este cliente?") == DialogResult.OK)
+                if (g.ShowWarning("Borrar cita", "¿Seguro que quieres borrar esta cita?") == DialogResult.OK)
                 {
                     try
                     {
                         dataGridView1.Rows.RemoveAt(dataGridView1.SelectedRows[0].Index);
-                        adapterCV.Update(tableCitasView);
-                        tableCitas.Rows.RemoveAt(dataGridView1.SelectedRows[0].Index);
                         adapterC.Update(tableCitas);
-                        tableDates.Rows.RemoveAt(dataGridView1.SelectedRows[0].Index);
-                        adapterD.Update(tableDates);
+                        //tableCitas.Rows.RemoveAt(dataGridView1.SelectedRows[0].Index);
+                        //adapterC.Update(tableCitas);
+                        //tableDates.Rows.RemoveAt(dataGridView1.SelectedRows[0].Index);
+                        //adapterD.Update(tableDates);
                     }
                     catch (MySql.Data.MySqlClient.MySqlException ex) { g.ShowError(ex.Message); }
                 }

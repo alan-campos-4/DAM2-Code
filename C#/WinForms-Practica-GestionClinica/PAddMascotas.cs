@@ -39,7 +39,6 @@ namespace WinForms_Practica_GestionClinica
 
             checkBoxMale.Checked = true;
             
-
             connection.Close();
         }
 

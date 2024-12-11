@@ -23,6 +23,7 @@ namespace WinForms_Practica_GestionClinica
 
         static Global g = new Global();
         public string connectionString = g.ConnString();
+        
 
         private void PCitasAdd_Load(object sender, EventArgs e)
         {
@@ -34,29 +35,34 @@ namespace WinForms_Practica_GestionClinica
             MySqlDataAdapter adapter = new MySqlDataAdapter(query, connection);
             MySqlCommandBuilder commandBuilder = new MySqlCommandBuilder(adapter);
             adapter.Fill(tableClients);
-            comboBoxClients.DataSource = tableClients;
+            comboBoxPets.DataSource = tableClients;
             comboBoxClients.ValueMember = "ID";
             comboBoxClients.DisplayMember = "Name";
+            
 
             connection.Close();
         }
 
         private void comboBoxClients_SelectedIndexChanged(object sender, EventArgs e)
         {
-            MySqlConnection connection = new MySqlConnection(connectionString);
-            connection.Open();
+            if (comboBoxClients.SelectedItem != null)
+            {
+                MySqlConnection connection = new MySqlConnection(connectionString);
+                connection.Open();
 
-            int index = comboBoxClients.SelectedIndex;
-            string query = "SELECT ID, CONCAT(Especie, ', ', Nombre) AS Name FROM mascotas WHERE Cliente=" + index;
-            DataTable tableClients = new DataTable();
-            MySqlDataAdapter adapter = new MySqlDataAdapter(query, connection);
-            MySqlCommandBuilder commandBuilder = new MySqlCommandBuilder(adapter);
-            adapter.Fill(tableClients);
-            comboBoxClients.DataSource = tableClients;
-            comboBoxClients.ValueMember = "ID";
-            comboBoxClients.DisplayMember = "Name";
+                string indexSelect = comboBoxClients.SelectedValue.ToString();
+                string query = "SELECT ID, CONCAT(Especie, ', ', Nombre) AS Name FROM mascotas WHERE cliente=" + indexSelect;
+                DataTable tablePets = new DataTable();
+                MySqlDataAdapter adapter = new MySqlDataAdapter(query, connection);
+                MySqlCommandBuilder commandBuilder = new MySqlCommandBuilder(adapter);
+                adapter.Fill(tablePets);
+                comboBoxPets.DataSource = tablePets;
+                comboBoxPets.ValueMember = "ID";
+                comboBoxPets.DisplayMember = "Name";
+                
 
-            connection.Close();
+                connection.Close();
+            }
         }
 
         private void buttonOK_Click(object sender, EventArgs e)

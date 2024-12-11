@@ -30,22 +30,23 @@ namespace WinForms_Practica_GestionClinica
             MySqlConnection connection = new MySqlConnection(connectionString);
             connection.Open();
             tableClients = new DataTable();
-            adapter = new MySqlDataAdapter("SELECT * FROM clientes", connection);
+            adapter = new MySqlDataAdapter("SELECT * FROM clientes ORDER BY 2, 3", connection);
             MySqlCommandBuilder commandBuilder = new MySqlCommandBuilder(adapter);
             adapter.Fill(tableClients);
             dataGridView1.DataSource = tableClients;
             dataGridView1.Columns["ID"].Visible = false;
             dataGridView1.Columns["DNI"].Visible = false;
             dataGridView1.Columns["Provincia"].Visible = false;
-            dataGridView1.Columns["Localidad"].Visible = false;
+            dataGridView1.Columns["Direccion"].Visible = false;
+            dataGridView1.Columns["CodPostal"].Visible = false;
             dataGridView1.Columns["Observaciones"].Visible = false;
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
             connection.Close();
         }
 
-        private void altaToolStripMenuItem_Click(object sender, EventArgs e)
+        private void AltaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            /*PAddClientes pAdd = new PAddClientes{ Text = "Añadir Cliente" };
+            PAddClientes pAdd = new PAddClientes{ Text = "Añadir Cliente" };
             if (pAdd.ShowDialog()==DialogResult.OK)
             {
                 try
@@ -66,11 +67,11 @@ namespace WinForms_Practica_GestionClinica
                     adapter.Update(tableClients);
                 }
                 catch (MySql.Data.MySqlClient.MySqlException ex) { g.ShowError(ex.Message); }
-            }*/
+            }
             
         }
 
-        private void modificaciónToolStripMenuItem_Click(object sender, EventArgs e)
+        private void ModificaciónToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (dataGridView1.SelectedRows.Count > 0)
             {
@@ -106,7 +107,7 @@ namespace WinForms_Practica_GestionClinica
             else { g.ShowError("No se puede realizar esta acción\nsin seleccionar una fila."); }
         }
 
-        private void borrarToolStripMenuItem_Click(object sender, EventArgs e)
+        private void BorrarToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (dataGridView1.SelectedRows.Count > 0)
             {
@@ -121,6 +122,29 @@ namespace WinForms_Practica_GestionClinica
                 }
             }
             else { g.ShowError("No se puede realizar esta acción\nsin seleccionar una fila."); }
+        }
+
+        private void TextBox1_TextChanged(object sender, EventArgs e)
+        {
+            dataGridView1.ClearSelection();
+            foreach (DataGridViewRow row in dataGridView1.Rows)
+            {
+                row.Visible = true;
+            }
+            if (!String.IsNullOrEmpty(textBoxSearch.Text))
+            {
+                foreach (DataGridViewRow row in dataGridView1.Rows)
+                {
+                    if (!row.Cells[2].Value.ToString().Contains(textBoxSearch.Text) &&
+                        !row.Cells[3].Value.ToString().Contains(textBoxSearch.Text) )
+                    {
+                        CurrencyManager manager1 = (CurrencyManager)BindingContext[dataGridView1.DataSource];
+                        manager1.SuspendBinding();
+                        row.Visible = false;
+                        manager1.ResumeBinding();
+                    }
+                }
+            }
         }
     }
 }

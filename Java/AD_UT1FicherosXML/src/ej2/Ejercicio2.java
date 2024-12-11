@@ -8,7 +8,6 @@ import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 
-import org.w3c.dom.DOMException;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
@@ -36,7 +35,7 @@ public class Ejercicio2
 		String director;
 		
 		public Pelicula
-		(int id, String ti, String dir, String gen, String sinop, int dur, int year, String... actors)
+		(int id, String ti, String dir, String gen, String sinop, int dur, int year, ArrayList<String> actors)
 		{
 			this.id = id;
 			this.titulo = ti;
@@ -47,16 +46,23 @@ public class Ejercicio2
 			this.fecha = year;
 			
 			actores = new ArrayList<>();
-			for (String act : actors)	{actores.add(act);}
+			actores = actors;
+			//for (String act : actors)	{actores.add(act);}
 		}
 		
 		public void ToString()
 		{
-			System.out.println("ID: "+this.id+
-					"\nTítulo: "+this.titulo+
-					"\nActores: "+actores);
-//			return "ID: "+this.id+
-//					"Título: "+this.titulo;
+			System.out.println("\n");
+			System.out.println("ID: "+this.id);
+			System.out.println(""+this.titulo+" ("+this.fecha+")");
+			System.out.println("  Director: "+this.director);
+			System.out.println("  Duracion: "+this.duracion+" min");
+			//System.out.println("Actores: "+this.actores+"\n");
+			System.out.println("  Actores: ");
+			for (String actor : actores)
+			{
+				System.out.println("   - "+actor);
+			}
 		}
 	}
 	
@@ -95,23 +101,36 @@ public class Ejercicio2
 						String durS = eElement.getElementsByTagName("Duracion").item(0).getTextContent();
 						String sinopsis = eElement.getElementsByTagName("sinopsis").item(0).getTextContent();
 						String yearS = eElement.getElementsByTagName("Fecha").item(0).getTextContent();
+						String actoresStr = eElement.getElementsByTagName("Actores").item(0).getTextContent();
 						
-						String actores = eElement.getElementsByTagName("Actores").item(0).getTextContent();
-			            
+						ArrayList<String> actoresList = new ArrayList<>();
+						String[] actoresArr = actoresStr.replaceAll("   ","").split("\n");
+						for (String s : actoresArr)
+						{
+							if (!s.equals(" "))
+								actoresList.add(s);
+						}
+						
 						int id = Integer.parseInt(idS);
 						int duracion = Integer.parseInt(durS);
 						int year = Integer.parseInt(yearS);
 						
 			            Pelicula p = new Pelicula
-			            		(id, title, director, genre, sinopsis, duracion, year, actores);
+			            		(id, title, director, genre, sinopsis, duracion, year, actoresList);
 						p.ToString();
 					}
 				}
 			}
 		}
-		catch (DOMException e)					{e.printStackTrace();}
+		//Lanzada por DocumentBuilder.parse() si ocurre un error en el análisis.
 		catch (SAXException e)					{e.printStackTrace();} 
+		//Lanzada por DocumentBuilder.parse() si ocurre un errore en entrada o salida.
 		catch (IOException e)					{e.printStackTrace();} 
+		//Lanzada por DocumentBuilderFactory.newDocumentBuilder() si no se crea correctamente.
 		catch (ParserConfigurationException e)	{e.printStackTrace();}
 	}
+	
+	
+	
+	
 }

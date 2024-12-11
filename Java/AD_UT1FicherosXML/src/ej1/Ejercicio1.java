@@ -63,15 +63,7 @@ public class Ejercicio1
 			            System.out.println("Director: " 
 								+ eElement.getElementsByTagName("Director").item(0).getTextContent());
 			            System.out.println("Actores: " 
-								+ eElement.getElementsByTagName("Actores").item(0).getTextContent());
-			            
-//			            NodeList actorList = element.getElementsByTagName("Actores").item(0).getChildNodes();
-//			            for (int act = 0; act < actorList.getLength(); act++)
-//			            {
-//			            	Node actorNode = actorList.item(act);
-//			            	//System.out.println("  Actor: " + actorNode.getNodeName());
-//			            }
-			            
+								+ eElement.getElementsByTagName("Actores").item(0).getTextContent());  
 					}
 				}
 			}
