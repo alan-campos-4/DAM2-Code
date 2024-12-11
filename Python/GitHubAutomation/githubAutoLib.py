@@ -101,7 +101,7 @@ def access_repo(opt:str):
                         elif option == '5':
                             commit_name = input("\nWhat is the name of the commit?: ")
                             commit = "git commit -m \""+commit_name+"\""
-                            git_command(arg, "Changes have been saved and pushed to origin.", "git add --all", commit, "git pull")
+                            git_command(arg, "Changes have been saved and pushed to origin.", "git add --all", commit, "git push")
                         reload_repos()
                         clear()
                         option = "0"
