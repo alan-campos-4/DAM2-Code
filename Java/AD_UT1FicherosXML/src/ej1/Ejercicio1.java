@@ -29,31 +29,35 @@ public class Ejercicio1
 	{
 		try
 		{
-			// Input the XML file
+			//Fichero XML
 			File inputXmlFile = new File("src/peliculas.xml");
 			
-			// creating DocumentBuilder
+			//Creamos el Documento para leer el fichero.
 			DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
 			DocumentBuilder docBuilder = dbFactory.newDocumentBuilder();
 			Document xmldoc = docBuilder.parse(inputXmlFile);
 			
-			// Retrieving the Root Element
+			//Leemos e imprimimos el elemento raíz.
 			Element element = xmldoc.getDocumentElement();
 			System.out.println("Root element name is " + element.getTagName());
 			
-			// Getting the child elements List
+			//Obtenemos los elementos del fichero.
 			NodeList nList = element.getChildNodes();
 			
-			// Iterating through all the child elements of the root
-			for (int temp = 0; temp < nList.getLength(); temp++)
+			//Por cada uno de los elementos el fichero, 
+			for (int i = 0; i < nList.getLength(); i++)
 			{
-				Node nNode = nList.item(temp);
+				// identificamos el nodo.
+				Node nNode = nList.item(i);
+				//Si el nodo obtenido es válido,
 				if (nNode.getNodeName()!="#text")
 				{
+					// mostramos el elemento.
 					System.out.println("\nCurrent Element: " + nNode.getNodeName());
-					
+					//Si el nodo es un elemento
 					if (nNode.getNodeType() == Node.ELEMENT_NODE)
 					{
+						//Imprimimos su atributo y todos sus subelementos.
 						Element eElement = (Element) nNode;
 						System.out.println("ID: " + eElement.getAttribute("id"));
 						System.out.println("Título: " 

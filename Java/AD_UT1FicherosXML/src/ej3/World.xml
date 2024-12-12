@@ -1,0 +1,1314 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:media="http://search.yahoo.com/mrss/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:nyt="http://www.nytimes.com/namespaces/rss/2.0" version="2.0">
+  <channel>
+    <title>NYT &gt; World News</title>
+    <link>https://www.nytimes.com/section/world</link>
+    <atom:link href="https://rss.nytimes.com/services/xml/rss/nyt/World.xml" rel="self" type="application/rss+xml"/>
+    <description/>
+    <language>en-us</language>
+    <copyright>Copyright 2024 The New York Times Company</copyright>
+    <lastBuildDate>Thu, 12 Dec 2024 19:17:36 +0000</lastBuildDate>
+    <pubDate>Thu, 12 Dec 2024 19:09:43 +0000</pubDate>
+    <image>
+      <title>NYT &gt; World News</title>
+      <url>https://static01.nyt.com/images/misc/NYT_logo_rss_250x40.png</url>
+      <link>https://www.nytimes.com/section/world</link>
+    </image>
+    <item>
+      <title>Syria Live Updates: Israel Says Its Troops Will Stay in Seized Territory for Now</title>
+      <link>https://www.nytimes.com/live/2024/12/12/world/syria-news-assad-rebels</link>
+      <guid isPermaLink="true">https://www.nytimes.com/live/2024/12/12/world/syria-news-assad-rebels</guid>
+      <atom:link href="https://www.nytimes.com/live/2024/12/12/world/syria-news-assad-rebels" rel="standout"/>
+      <description>The Israeli prime minister said its forces would remain in Syrian territory until “a new force” filled the vacuum. Secretary of State Antony J. Blinken was in Jordan for talks on the aftermath of the Syrian regime’s fall.</description>
+      <dc:creator>The New York Times</dc:creator>
+      <pubDate>Thu, 12 Dec 2024 19:09:43 +0000</pubDate>
+      <media:content height="1799" medium="image" url="https://static01.nyt.com/images/2024/12/12/multimedia/12syrian-promo-130pm-vmjh/12syrian-promo-130pm-vmjh-mediumSquareAt3X.jpg" width="1800"/>
+      <media:credit>Ivor Prickett for The New York Times</media:credit>
+    </item>
+    <item>
+      <title>How America Turned Allies into Enemies in Afghanistan</title>
+      <link>https://www.nytimes.com/2024/12/12/world/europe/afghanistan-allies-enemies-nuristan-taliban.html</link>
+      <guid isPermaLink="true">https://www.nytimes.com/2024/12/12/world/europe/afghanistan-allies-enemies-nuristan-taliban.html</guid>
+      <atom:link href="https://www.nytimes.com/2024/12/12/world/europe/afghanistan-allies-enemies-nuristan-taliban.html" rel="standout"/>
+      <description>The United States killed its own allies, sabotaging itself in a part of Afghanistan where it never needed to be.</description>
+      <dc:creator>Azam Ahmed and Bryan Denton</dc:creator>
+      <pubDate>Thu, 12 Dec 2024 14:33:39 +0000</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Terrorism</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Civilian Casualties</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Defense and Military Forces</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">United States Defense and Military Forces</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Afghanistan War (2001- )</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org">Taliban</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Afghanistan</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Nuristan Province (Afghanistan)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Wanat (Afghanistan)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Military Bases and Installations</category>
+      <media:content height="1799" medium="image" url="https://static01.nyt.com/images/2024/12/01/multimedia/00afghan-commander-promo/00afghan-commander-1-cgmp-mediumSquareAt3X.jpg" width="1800"/>
+      <media:credit>Bryan Denton for The New York Times</media:credit>
+      <media:description>Mullah Osman Jawhari at his home in Waygal, in Nuristan Province in Afghanistan.</media:description>
+    </item>
+    <item>
+      <title>Humbled in Syria, Putin Seeks Vindication in Ukraine</title>
+      <link>https://www.nytimes.com/2024/12/12/world/europe/putin-syria-ukraine.html</link>
+      <guid isPermaLink="true">https://www.nytimes.com/2024/12/12/world/europe/putin-syria-ukraine.html</guid>
+      <atom:link href="https://www.nytimes.com/2024/12/12/world/europe/putin-syria-ukraine.html" rel="standout"/>
+      <description>An ally’s downfall has prompted calls in Russia for a definitive victory closer to home.</description>
+      <dc:creator>Anatoly Kurmanaev</dc:creator>
+      <pubDate>Thu, 12 Dec 2024 10:02:51 +0000</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Politics and Government</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Defense and Military Forces</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Russian Invasion of Ukraine (2022)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">United States International Relations</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">International Relations</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">War and Armed Conflicts</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Peace Process</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Putin, Vladimir V</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Syria</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Russia</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Ukraine</category>
+      <media:content height="1800" medium="image" url="https://static01.nyt.com/images/2024/12/11/multimedia/11russia-syria-02-tqgh/11russia-syria-02-tqgh-mediumSquareAt3X.jpg" width="1800"/>
+      <media:credit>Mauricio Lima for The New York Times</media:credit>
+      <media:description>Soldiers from Ukraine’s Herkules mobile air defense unit at a shooting range in Kyiv last month. The war is now “all or nothing” for Vladimir V. Putin, one analyst said.</media:description>
+    </item>
+    <item>
+      <title>Trump’s Pick as Mideast Adviser, Massad Boulos, Is a Truck Salesman</title>
+      <link>https://www.nytimes.com/2024/12/12/world/africa/trump-massad-boulos-middle-east.html</link>
+      <guid isPermaLink="true">https://www.nytimes.com/2024/12/12/world/africa/trump-massad-boulos-middle-east.html</guid>
+      <atom:link href="https://www.nytimes.com/2024/12/12/world/africa/trump-massad-boulos-middle-east.html" rel="standout"/>
+      <description>The lore around Massad Boulos, Tiffany Trump’s father-in-law, is that he is a billionaire dealmaker. Records show otherwise.</description>
+      <dc:creator>Ruth Maclean, Justin Scheck, Charles Homans and Oladeinde Olawoyin</dc:creator>
+      <pubDate>Thu, 12 Dec 2024 18:15:45 +0000</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">United States Politics and Government</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Presidential Transition (US)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">United States International Relations</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Appointments and Executive Changes</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Boulos, Massad (1971- )</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Trump, Donald J</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Lagos (Nigeria)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Trump, Tiffany (1993- )</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Boulos, Michael</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Arab-Americans</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Presidential Election of 2024</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Trucks and Trucking</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Burkina Faso</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Kano (Nigeria)</category>
+      <media:content height="1799" medium="image" url="https://static01.nyt.com/images/2024/12/12/multimedia/12boulos-1-tvhl/12boulos-1-tvhl-mediumSquareAt3X.jpg" width="1800"/>
+      <media:credit>Nick Hagen for The New York Times</media:credit>
+      <media:description>Massad Boulos in Detroit in October.</media:description>
+    </item>
+    <item>
+      <title>Young Koreans, Seeing Democracy at Stake, Take to the Streets</title>
+      <link>https://www.nytimes.com/2024/12/12/world/asia/south-korea-young-protesters.html</link>
+      <guid isPermaLink="true">https://www.nytimes.com/2024/12/12/world/asia/south-korea-young-protesters.html</guid>
+      <atom:link href="https://www.nytimes.com/2024/12/12/world/asia/south-korea-young-protesters.html" rel="standout"/>
+      <description>South Korea’s night of martial law was a jolt for some members of a generation accused of political apathy. They say they aren’t going away.</description>
+      <dc:creator>John Yoon and Chang W. Lee</dc:creator>
+      <pubDate>Thu, 12 Dec 2024 10:11:20 +0000</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Demonstrations, Protests and Riots</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Youth</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Politics and Government</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Martial Law</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Yoon Suk-yeol</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Seoul (South Korea)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">South Korea</category>
+      <media:content height="1800" medium="image" url="https://static01.nyt.com/images/2024/12/10/multimedia/00skorea-youth-05-bmpv-promo/00skorea-youth-05-bmpv-mediumSquareAt3X.jpg" width="1800"/>
+      <media:credit>Chang W. Lee/The New York Times</media:credit>
+    </item>
+    <item>
+      <title>Milei Tames Inflation in Argentina With Painful Policies, Sparking Applause and Anger</title>
+      <link>https://www.nytimes.com/2024/12/12/world/americas/argentina-president-milei-inflation-economy.html</link>
+      <guid isPermaLink="true">https://www.nytimes.com/2024/12/12/world/americas/argentina-president-milei-inflation-economy.html</guid>
+      <atom:link href="https://www.nytimes.com/2024/12/12/world/americas/argentina-president-milei-inflation-economy.html" rel="standout"/>
+      <description>A year after becoming president, Javier Milei has been praised inside and outside Argentina for reining in galloping inflation. But his economic policies have inflicted widespread hardship.</description>
+      <dc:creator>Daniel Politi, Lucía Cholakian Herrera and Ana Ionova</dc:creator>
+      <pubDate>Thu, 12 Dec 2024 10:00:55 +0000</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Argentina</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Politics and Government</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Milei, Javier</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Inflation (Economics)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Economic Conditions and Trends</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Prices (Fares, Fees and Rates)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Poverty</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org">Bank of America Corporation</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org">International Monetary Fund</category>
+      <media:content height="1800" medium="image" url="https://static01.nyt.com/images/2024/12/11/world/00argentina-milei/00argentina-milei-mediumSquareAt3X.jpg" width="1800"/>
+      <media:credit>Haiyun Jiang for The New York Times</media:credit>
+      <media:description>President Javier Milei of Argentina speaking at an America First Policy Institute gala at Mar-a-Lago in Florida last month. President-elect Donald J. Trump has lauded Mr. Milei’s tenure in office.</media:description>
+    </item>
+    <item>
+      <title>Man Found in Syria Says He Is Missing American Travis Timmerman</title>
+      <link>https://www.nytimes.com/2024/12/12/world/middleeast/syria-timmerman-american-man-found.html</link>
+      <guid isPermaLink="true">https://www.nytimes.com/2024/12/12/world/middleeast/syria-timmerman-american-man-found.html</guid>
+      <atom:link href="https://www.nytimes.com/2024/12/12/world/middleeast/syria-timmerman-american-man-found.html" rel="standout"/>
+      <description>The man told reporters that his name was Travis Timmerman and that he had entered Syria on a religious pilgrimage. He said he had been detained for months.</description>
+      <dc:creator>Ben Hubbard and Amelia Nierenberg</dc:creator>
+      <pubDate>Thu, 12 Dec 2024 17:21:28 +0000</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Missing Persons</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Political Prisoners</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">War and Armed Conflicts</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Pilgrimages</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Syria</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Budapest (Hungary)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Missouri</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Timmerman, Travis Pete</category>
+      <media:content height="1800" medium="image" url="https://static01.nyt.com/images/2024/12/12/multimedia/12syria-timmerman-sub2-tqzl/12syria-timmerman-sub2-tqzl-mediumSquareAt3X.jpg" width="1800"/>
+      <media:credit>Abdulaziz Ketaz/Agence France-Presse — Getty Images</media:credit>
+      <media:description>A man who appeared to identify himself as Travis Timmerman, a U.S. citizen who was missing for several months, speaking to reporters in Syria on Thursday.</media:description>
+    </item>
+    <item>
+      <title>British Pubs Are Running Out of Guinness</title>
+      <link>https://www.nytimes.com/2024/12/12/world/europe/britain-guinness-shortages-limits.html</link>
+      <guid isPermaLink="true">https://www.nytimes.com/2024/12/12/world/europe/britain-guinness-shortages-limits.html</guid>
+      <atom:link href="https://www.nytimes.com/2024/12/12/world/europe/britain-guinness-shortages-limits.html" rel="standout"/>
+      <description>Guinness’s parent company has limited the amount of the beer that U.K. wholesalers and distributors can buy each week, after surging demand led to fears of shortages.</description>
+      <dc:creator>Amelia Nierenberg</dc:creator>
+      <pubDate>Thu, 12 Dec 2024 18:29:33 +0000</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Bars and Nightclubs</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Beer</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Alcoholic Beverages</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Irish-Americans</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org">Guinness PLC</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org">Diageo PLC</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">England</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Great Britain</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">London (England)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Ireland</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Consumer Behavior</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Supply Chain</category>
+      <media:content height="1801" medium="image" url="https://static01.nyt.com/images/2024/12/12/multimedia/12uk-guinness-1-vzgw/12uk-guinness-1-vzgw-mediumSquareAt3X.jpg" width="1800"/>
+      <media:credit>Hollie Adams/Reuters</media:credit>
+      <media:description>Enjoying Guinness in London in October.</media:description>
+    </item>
+    <item>
+      <title>Russian Troops Advance to Within 3 Miles of Key Ukrainian Transit Hub</title>
+      <link>https://www.nytimes.com/2024/12/12/world/europe/russia-ukraine-war-pokrovsk.html</link>
+      <guid isPermaLink="true">https://www.nytimes.com/2024/12/12/world/europe/russia-ukraine-war-pokrovsk.html</guid>
+      <atom:link href="https://www.nytimes.com/2024/12/12/world/europe/russia-ukraine-war-pokrovsk.html" rel="standout"/>
+      <description>Russia is pushing toward Pokrovsk, a strategic city for Ukraine’s army with important rail and road connections, in a rapid capturing of ground in the Donetsk region.</description>
+      <dc:creator>Constant Méheut</dc:creator>
+      <pubDate>Thu, 12 Dec 2024 12:38:43 +0000</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Defense and Military Forces</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Russian Invasion of Ukraine (2022)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Donetsk (Ukraine)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Ukraine</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">International Relations</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Russia</category>
+      <media:content height="1800" medium="image" url="https://static01.nyt.com/images/2024/12/12/multimedia/12ukraine-battlefield-01-gwpb/12ukraine-battlefield-01-gwpb-mediumSquareAt3X.jpg" width="1800"/>
+      <media:credit>Tyler Hicks/The New York Times</media:credit>
+      <media:description>An artillery unit of Ukraine’s 68th Jaeger Brigade firing at Russian positions in the Pokrovsk district of Ukraine last month.</media:description>
+    </item>
+    <item>
+      <title>As Europe Looks for a Leader, Italy Thrives While France and Germany Teeter</title>
+      <link>https://www.nytimes.com/2024/12/12/world/europe/europe-italy-meloni-stability.html</link>
+      <guid isPermaLink="true">https://www.nytimes.com/2024/12/12/world/europe/europe-italy-meloni-stability.html</guid>
+      <atom:link href="https://www.nytimes.com/2024/12/12/world/europe/europe-italy-meloni-stability.html" rel="standout"/>
+      <description>With Germany and France mired in crisis, the government of Prime Minister Giorgia Meloni looks like a haven of stability, turning the continent’s usual pattern on its head.</description>
+      <dc:creator>Emma Bubola</dc:creator>
+      <pubDate>Thu, 12 Dec 2024 10:02:14 +0000</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Politics and Government</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Presidential Election of 2024</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">International Relations</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">United States International Relations</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Immigration and Emigration</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Economic Conditions and Trends</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Right-Wing Extremism and Alt-Right</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Budgets and Budgeting</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Elections</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">International Trade and World Market</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Russian Invasion of Ukraine (2022)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org">Brothers of Italy (Italian Political Party)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org">Democratic Party (Italy)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org">European Commission</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org">European Council</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org">European Union</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org">Forza Italia</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org">League (Italian Political Party)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org">North Atlantic Treaty Organization</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Le Pen, Marine</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Macron, Emmanuel (1977- )</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Meloni, Giorgia (1977- )</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Renzi, Matteo</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Trump, Donald J</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Europe</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">France</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Germany</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Italy</category>
+      <media:content height="1668" medium="image" url="https://static01.nyt.com/images/2024/12/11/multimedia/00italy-meloni-01-wtpb/00italy-meloni-01-wtpb-mediumSquareAt3X.jpg" width="1668"/>
+      <media:credit>Alessandro Di Meo/EPA, via Shutterstock</media:credit>
+      <media:description>Prime Minister Giorgia Meloni of Italy has worked to dispel fears about her party’s post-fascist roots by aligning with her European partners on key issues like support for Ukraine. </media:description>
+    </item>
+    <item>
+      <title>South Korea President Yoon Defends Martial Law Decree in Defiant Speech</title>
+      <link>https://www.nytimes.com/2024/12/11/world/asia/yoon-south-korea-martial-law.html</link>
+      <guid isPermaLink="true">https://www.nytimes.com/2024/12/11/world/asia/yoon-south-korea-martial-law.html</guid>
+      <atom:link href="https://www.nytimes.com/2024/12/11/world/asia/yoon-south-korea-martial-law.html" rel="standout"/>
+      <description>President Yoon Suk Yeol vowed to “fight to the end,” despite the opposition’s push to impeach him and his own party’s demand that he resign.</description>
+      <dc:creator>Choe Sang-Hun</dc:creator>
+      <pubDate>Thu, 12 Dec 2024 11:42:31 +0000</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">South Korea</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Yoon Suk-yeol</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Politics and Government</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Demonstrations, Protests and Riots</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Martial Law</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Impeachment</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Polls and Public Opinion</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Legislatures and Parliaments</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org">People Power Party</category>
+      <media:content height="1800" medium="image" url="https://static01.nyt.com/images/2024/12/12/multimedia/12skorea-yoon-plqm/12skorea-yoon-plqm-mediumSquareAt3X.jpg" width="1800"/>
+      <media:credit>Kim Hong-Ji/Reuters</media:credit>
+      <media:description>Watching President Yoon Suk Yeol’s address at a railway station in Seoul on Thursday.</media:description>
+    </item>
+    <item>
+      <title>Syria After al-Assad’s Overthrow: What’s Happening and What Comes Next</title>
+      <link>https://www.nytimes.com/2024/12/11/world/middleeast/syria-assad-israel-turkey.html</link>
+      <guid isPermaLink="true">https://www.nytimes.com/2024/12/11/world/middleeast/syria-assad-israel-turkey.html</guid>
+      <atom:link href="https://www.nytimes.com/2024/12/11/world/middleeast/syria-assad-israel-turkey.html" rel="standout"/>
+      <description>Rebels are asserting control in Damascus as Israel and other countries carry out military operations.</description>
+      <dc:creator>The New York Times</dc:creator>
+      <pubDate>Thu, 12 Dec 2024 15:34:58 +0000</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">International Relations</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">United States International Relations</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org">Al Nusra Front</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org">Hayat Tahrir al-Sham</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Jolani, Abu Mohammed al-</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Assad, Bashar al-</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Syria</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Israel</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Turkey</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">United States</category>
+      <media:content height="1802" medium="image" url="https://static01.nyt.com/images/2024/12/11/multimedia/11syria-mega-explainer-01-ckfz/11syria-mega-explainer-01-ckfz-mediumSquareAt3X.jpg" width="1800"/>
+      <media:credit>Nicole Tung for The New York Times</media:credit>
+      <media:description>A fighter from Hayat Tahrir al-Sham on Tuesday near an entrance to Bashar al-Assad’s abandoned presidential palace in Damascus.</media:description>
+    </item>
+    <item>
+      <title>The Gold Rush at the Heart of a Civil War</title>
+      <link>https://www.nytimes.com/2024/12/11/world/africa/sudan-gold-rush-heart-civil-war.html</link>
+      <guid isPermaLink="true">https://www.nytimes.com/2024/12/11/world/africa/sudan-gold-rush-heart-civil-war.html</guid>
+      <atom:link href="https://www.nytimes.com/2024/12/11/world/africa/sudan-gold-rush-heart-civil-war.html" rel="standout"/>
+      <description>Famine and ethnic cleansing stalk Sudan. Yet the gold trade is booming, enriching generals and propelling the fight.</description>
+      <dc:creator>Declan Walsh</dc:creator>
+      <pubDate>Thu, 12 Dec 2024 04:37:59 +0000</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Sudan</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Gold</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">War and Armed Conflicts</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">War Crimes, Genocide and Crimes Against Humanity</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">International Relations</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Smuggling</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Mines and Mining</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Conflict Minerals and Resources</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org">Rapid Support Forces (Sudan)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org">Wagner Group</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Hamdan, Mohamed (Hemeti)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Darfur (Sudan)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Juba (South Sudan)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Khartoum (Sudan)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Russia</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">United Arab Emirates</category>
+      <media:content height="1799" medium="image" url="https://static01.nyt.com/images/2024/12/10/multimedia/00gold-new4-bhlm/00gold-new4-bhlm-mediumSquareAt3X.jpg" width="1800"/>
+      <media:credit>Ivor Prickett for The New York Times</media:credit>
+      <media:description>Sudanese soldiers drove through a destroyed market in Sudan’s capital, Khartoum, in April. </media:description>
+    </item>
+    <item>
+      <title>Canada’s Plan To Avoid Trump’s Tariffs Takes Shape</title>
+      <link>https://www.nytimes.com/2024/12/11/world/canada/canada-trump-tariffs-border.html</link>
+      <guid isPermaLink="true">https://www.nytimes.com/2024/12/11/world/canada/canada-trump-tariffs-border.html</guid>
+      <atom:link href="https://www.nytimes.com/2024/12/11/world/canada/canada-trump-tariffs-border.html" rel="standout"/>
+      <description>Two weeks after a Mar-a-Lago dinner with Donald J. Trump, details of Prime Minister Justin Trudeau’s plan to stave off a showdown with the United States are emerging.</description>
+      <dc:creator>Matina Stevis-Gridneff, Ian Austen and Vjosa Isai</dc:creator>
+      <pubDate>Thu, 12 Dec 2024 18:36:56 +0000</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Protectionism (Trade)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">International Trade and World Market</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">United States International Relations</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Customs (Tariff)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Illegal Immigration</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Ford, Doug Jr (1964- )</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Musk, Elon</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Smith, Danielle (1971- )</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Trudeau, Justin</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Trump, Donald J</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Canada</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">United States</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Ontario (Canada)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Alberta (Canada)</category>
+      <media:content height="1800" medium="image" url="https://static01.nyt.com/images/2024/01/11/multimedia/11canada-border-tqpz/11canada-border-tqpz-mediumSquareAt3X.jpg" width="1800"/>
+      <media:credit>Jennifer Gauthier/Reuters</media:credit>
+      <media:description>Commercial trucks heading toward the U.S. border last month from South Surrey, British Columbia.</media:description>
+    </item>
+    <item>
+      <title>Ocean Heat Killed Half the Common Murres Around Alaska</title>
+      <link>https://www.nytimes.com/2024/12/12/climate/alaska-common-murre-birds-ocean-heat.html</link>
+      <guid isPermaLink="true">https://www.nytimes.com/2024/12/12/climate/alaska-common-murre-birds-ocean-heat.html</guid>
+      <atom:link href="https://www.nytimes.com/2024/12/12/climate/alaska-common-murre-birds-ocean-heat.html" rel="standout"/>
+      <description>About four million common murres were killed by a domino effect of ecosystem changes, and the population is showing no signs of recovery, according to new research.</description>
+      <dc:creator>Catrin Einhorn</dc:creator>
+      <pubDate>Thu, 12 Dec 2024 19:07:24 +0000</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Birds</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Wildlife Die-Offs</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Global Warming</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Alaska</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Bering Sea</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Pacific Ocean</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Heat and Heat Waves</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Oceans and Seas</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Fish and Other Marine Life</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Research</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org">Science (Journal)</category>
+      <media:content height="1800" medium="image" url="https://static01.nyt.com/images/2024/12/12/multimedia/12cli-dead-birds-03-kzjp/12cli-dead-birds-03-kzjp-mediumSquareAt3X.jpg" width="1800"/>
+      <media:credit>Randall Benton/The Sacramento Bee, via Associated Press</media:credit>
+      <media:description>Rescued common murres were placed into a special enclosure to dry after examination at a bird rescue center in Cordelia, Calif., in 2015.</media:description>
+    </item>
+    <item>
+      <title>Rebel Group’s Terrorist Label Could Hinder Efforts to Aid Syria</title>
+      <link>https://www.nytimes.com/2024/12/12/world/middleeast/syria-rebel-terrorist-designation.html</link>
+      <guid isPermaLink="true">https://www.nytimes.com/2024/12/12/world/middleeast/syria-rebel-terrorist-designation.html</guid>
+      <atom:link href="https://www.nytimes.com/2024/12/12/world/middleeast/syria-rebel-terrorist-designation.html" rel="standout"/>
+      <description>The United States and others call Hayat Tahrir al-Sham, now taking power in Syria, a terrorist group, blocking funding and even contact with the group. Experts say that should change.</description>
+      <dc:creator>Ephrat Livni</dc:creator>
+      <pubDate>Thu, 12 Dec 2024 19:09:41 +0000</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Terrorism</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Foreign Aid</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">International Relations</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">War and Armed Conflicts</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org">Hayat Tahrir al-Sham</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org">Al Nusra Front</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org">Al Qaeda</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org">Security Council (UN)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Jolani, Abu Mohammed al-</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Assad, Bashar al-</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Syria</category>
+      <media:content height="1801" medium="image" url="https://static01.nyt.com/images/2024/12/12/multimedia/12syria-terror-funding-ljbg/12syria-terror-funding-ljbg-mediumSquareAt3X.jpg" width="1800"/>
+      <media:credit>Ivor Prickett for The New York Times</media:credit>
+      <media:description>A Hayat Tahrir al-Sham fighter at a frontline position near the Syrian town of Maaret al-Naasan in 2021.</media:description>
+    </item>
+    <item>
+      <title>Why Do Some Rebel Governments Last When Others Fall?</title>
+      <link>https://www.nytimes.com/2024/12/12/world/middleeast/syria-rebel-government.html</link>
+      <guid isPermaLink="true">https://www.nytimes.com/2024/12/12/world/middleeast/syria-rebel-government.html</guid>
+      <atom:link href="https://www.nytimes.com/2024/12/12/world/middleeast/syria-rebel-government.html" rel="standout"/>
+      <description>One factor matters most, and it could be a problem in Syria.</description>
+      <dc:creator>Amanda Taub</dc:creator>
+      <pubDate>Thu, 12 Dec 2024 18:00:47 +0000</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Politics and Government</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">War and Armed Conflicts</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org">Hayat Tahrir al-Sham</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Assad, Bashar al-</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Qaddafi, Muammar el-</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Syria</category>
+      <media:content height="1798" medium="image" url="https://static01.nyt.com/images/2024/12/12/multimedia/12interpreter-rebellions-photo-kgvj/12interpreter-rebellions-photo-kgvj-mediumSquareAt3X.jpg" width="1800"/>
+      <media:credit>Ivor Prickett for The New York Times</media:credit>
+      <media:description>People celebrating the fall of the regime of former president Bashar al-Assad in Aleppo, Syria, on Wednesday.</media:description>
+    </item>
+    <item>
+      <title>Trump’s Energy Pick, Chris Wright, Argues Fossil Fuels Are Virtuous</title>
+      <link>https://www.nytimes.com/2024/12/12/climate/wright-trump-oil-gas-energy.html</link>
+      <guid isPermaLink="true">https://www.nytimes.com/2024/12/12/climate/wright-trump-oil-gas-energy.html</guid>
+      <atom:link href="https://www.nytimes.com/2024/12/12/climate/wright-trump-oil-gas-energy.html" rel="standout"/>
+      <description>Chris Wright, Donald Trump’s pick for energy secretary, says oil, gas and coal are key to solving global poverty. Some call that misleading.</description>
+      <dc:creator>Lisa Friedman</dc:creator>
+      <pubDate>Thu, 12 Dec 2024 17:53:03 +0000</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Global Warming</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Greenhouse Gas Emissions</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Developing Countries</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Poverty</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Alternative and Renewable Energy</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Electric Light and Power</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Oil (Petroleum) and Gasoline</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org">Energy Department</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Wright, Chris (1965- )</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Trump, Donald J</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org">Liberty Energy Inc</category>
+      <media:content height="1799" medium="image" url="https://static01.nyt.com/images/2024/12/12/multimedia/12CLI-moralgas-01-ckhb/12CLI-moralgas-01-ckhb-mediumSquareAt3X.jpg" width="1800"/>
+      <media:credit>Andy Cross/The Denver Post, via Associated Press</media:credit>
+      <media:description>Chris Wright, the founder and chief executive of Liberty Energy, in 2018.</media:description>
+    </item>
+    <item>
+      <title>How U.S. Firms Battled a Government Crackdown to Keep Tech Sales to China</title>
+      <link>https://www.nytimes.com/2024/12/12/us/politics/tech-sales-china-huawei.html</link>
+      <guid isPermaLink="true">https://www.nytimes.com/2024/12/12/us/politics/tech-sales-china-huawei.html</guid>
+      <atom:link href="https://www.nytimes.com/2024/12/12/us/politics/tech-sales-china-huawei.html" rel="standout"/>
+      <description>An intense struggle has unfolded in Washington between companies and officials over where to draw the line on selling technology to China.</description>
+      <dc:creator>Ana Swanson</dc:creator>
+      <pubDate>Thu, 12 Dec 2024 18:01:08 +0000</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Regulation and Deregulation of Industry</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Embargoes and Sanctions</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Factories and Manufacturing</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Computer Chips</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">United States International Relations</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">International Trade and World Market</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org">Applied Materials Inc</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org">Huawei Technologies Co Ltd</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org">Lam Research Corporation</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org">KLA Corp</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">China</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">United States</category>
+      <media:content height="1800" medium="image" url="https://static01.nyt.com/images/2024/12/05/multimedia/DC-EXPORTCONTROLS-01-jlqt/DC-EXPORTCONTROLS-01-jlqt-mediumSquareAt3X.jpg" width="1800"/>
+      <media:credit>Jim Wilson/The New York Times</media:credit>
+      <media:description>A silicon wafer at Applied Materials in May 2023.</media:description>
+    </item>
+    <item>
+      <title>U.S. Appeals for Unity Behind New Syrian Government After Fall of Assad Regime</title>
+      <link>https://www.nytimes.com/2024/12/12/world/middleeast/syria-us-jordan-turkey-assad.html</link>
+      <guid isPermaLink="true">https://www.nytimes.com/2024/12/12/world/middleeast/syria-us-jordan-turkey-assad.html</guid>
+      <atom:link href="https://www.nytimes.com/2024/12/12/world/middleeast/syria-us-jordan-turkey-assad.html" rel="standout"/>
+      <description>The secretary of state said the goal of visits to Jordan and Turkey was to unite countries behind a peaceful transition.</description>
+      <dc:creator>Michael Crowley</dc:creator>
+      <pubDate>Thu, 12 Dec 2024 17:09:52 +0000</pubDate>
+      <media:content height="1800" medium="image" url="https://static01.nyt.com/images/2024/12/12/multimedia/12syria-blinken-1-kvtf/12syria-blinken-1-kvtf-mediumSquareAt3X.jpg" width="1800"/>
+      <media:credit>Pool photo by Andrew Caballero-Reynolds</media:credit>
+      <media:description>U.S. Secretary of State Antony J. Blinken met with Jordanian leaders in the coastal city of Aqaba on Thursday.</media:description>
+    </item>
+    <item>
+      <title>Mazen al-Hamada, Syrian Pro-Democracy Activist, Is Mourned at Funeral</title>
+      <link>https://www.nytimes.com/2024/12/12/world/middleeast/mazen-al-hamada-syria-activist-dead.html</link>
+      <guid isPermaLink="true">https://www.nytimes.com/2024/12/12/world/middleeast/mazen-al-hamada-syria-activist-dead.html</guid>
+      <atom:link href="https://www.nytimes.com/2024/12/12/world/middleeast/mazen-al-hamada-syria-activist-dead.html" rel="standout"/>
+      <description>Mazen al-Hamada spread the word about the plight of Syrians and his own abuse in the Assad regime’s prisons. He was found dead in Syria this week.</description>
+      <dc:creator>Ephrat Livni</dc:creator>
+      <pubDate>Thu, 12 Dec 2024 16:05:51 +0000</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Syria</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Assad, Bashar al-</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org">Sednaya Prison (Syria)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Netherlands</category>
+      <media:content height="1800" medium="image" url="https://static01.nyt.com/images/2024/12/11/multimedia/11syria-mazen-2/11syria-mazen-2-mediumSquareAt3X.jpg" width="1800"/>
+      <media:credit>Joel Mason-Gaines for US Holocaust Memorial Museum</media:credit>
+      <media:description>While working for the French company Schlumberger in eastern Syria, Mazen al-Hamada became a protester and citizen journalist during the 2011 uprising that led to the civil war.</media:description>
+    </item>
+    <item>
+      <title>What I Learned From a Reclusive Taliban Commander</title>
+      <link>https://www.nytimes.com/2024/12/12/world/asia/lessons-learned-from-taliban-commander.html</link>
+      <guid isPermaLink="true">https://www.nytimes.com/2024/12/12/world/asia/lessons-learned-from-taliban-commander.html</guid>
+      <atom:link href="https://www.nytimes.com/2024/12/12/world/asia/lessons-learned-from-taliban-commander.html" rel="standout"/>
+      <description>Mullah Osman Jawhari led one of the deadliest assaults on American forces in Afghanistan, a battle that came to symbolize the war itself.</description>
+      <dc:creator>Azam Ahmed</dc:creator>
+      <pubDate>Thu, 12 Dec 2024 10:10:40 +0000</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Afghanistan War (2001- )</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org">Taliban</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Afghanistan</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Military Bases and Installations</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org">Al Qaeda</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Nuristan Province (Afghanistan)</category>
+      <media:content height="1800" medium="image" url="https://static01.nyt.com/images/2024/12/11/multimedia/00afghan-commander-takeaways-jchb/00afghan-commander-takeaways-jchb-mediumSquareAt3X.jpg" width="1800"/>
+      <media:credit>Bryan Denton for The New York Times</media:credit>
+      <media:description>Mullah Osman Jawhari in the hills above his home. “There was no Taliban here when the war started,” he said.</media:description>
+    </item>
+    <item>
+      <title>A Father’s Search for His Missing Daughter in South Korea</title>
+      <link>https://www.nytimes.com/2024/12/12/world/asia/south-korea-missing-person-fliers.html</link>
+      <guid isPermaLink="true">https://www.nytimes.com/2024/12/12/world/asia/south-korea-missing-person-fliers.html</guid>
+      <atom:link href="https://www.nytimes.com/2024/12/12/world/asia/south-korea-missing-person-fliers.html" rel="standout"/>
+      <description>A father’s 25-year search for his missing daughter in South Korea made him a tragic national symbol of unwavering parental devotion.</description>
+      <dc:creator>John Yoon</dc:creator>
+      <pubDate>Thu, 12 Dec 2024 10:00:31 +0000</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Missing Persons</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">South Korea</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Deaths (Fatalities)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Parenting</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Families and Family Life</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Signs and Signage</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Pyeongtaek (South Korea)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Seoul (South Korea)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Suicides and Suicide Attempts</category>
+      <media:content height="1782" medium="image" url="https://static01.nyt.com/images/2024/11/27/multimedia/00xp-father-promo-copy/00xp-father-promo-copy-mediumSquareAt3X.jpg" width="1782"/>
+      <media:credit>Woohae Cho for The New York Times</media:credit>
+    </item>
+    <item>
+      <title>Assad’s Fall in Syria Renews Push for Justice on Crimes Committed by His Regime</title>
+      <link>https://www.nytimes.com/2024/12/12/world/middleeast/syria-assad-regime-crimes.html</link>
+      <guid isPermaLink="true">https://www.nytimes.com/2024/12/12/world/middleeast/syria-assad-regime-crimes.html</guid>
+      <atom:link href="https://www.nytimes.com/2024/12/12/world/middleeast/syria-assad-regime-crimes.html" rel="standout"/>
+      <description>It seems unlikely that deposed President Bashar al-Assad, who fled to Russia, will be forced to stand trial. That is not deterring activists who have worked for years to document his government’s crimes.</description>
+      <dc:creator>Matthew Mpoke Bigg</dc:creator>
+      <pubDate>Thu, 12 Dec 2024 09:32:14 +0000</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Human Rights and Human Rights Violations</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Torture</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">War Crimes, Genocide and Crimes Against Humanity</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org">International Court of Justice (UN)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org">International Criminal Court</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org">Syrian Network for Human Rights</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org">Syrian Observatory for Human Rights</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org">General Assembly (UN)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Assad, Bashar al-</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Syria</category>
+      <media:content height="1800" medium="image" url="https://static01.nyt.com/images/2024/12/09/multimedia/11syria-assad-justice-top2/11syria-assad-justice-top2-mediumSquareAt3X-v2.jpg" width="1800"/>
+      <media:credit>Daniel Berehulak/The New York Times</media:credit>
+      <media:description>People celebrated in the center of Damascus, Syria’s capital, on Monday. The Assad family ruled the country brutally for more than 50 years.</media:description>
+    </item>
+    <item>
+      <title>Thursday Briefing</title>
+      <link>https://www.nytimes.com/2024/12/12/briefing/syria-fbi-scholz-tiger.html</link>
+      <guid isPermaLink="true">https://www.nytimes.com/2024/12/12/briefing/syria-fbi-scholz-tiger.html</guid>
+      <atom:link href="https://www.nytimes.com/2024/12/12/briefing/syria-fbi-scholz-tiger.html" rel="standout"/>
+      <description>The latest from Syria.</description>
+      <dc:creator>Natasha Frost</dc:creator>
+      <pubDate>Thu, 12 Dec 2024 05:03:04 +0000</pubDate>
+      <media:content height="1801" medium="image" url="https://static01.nyt.com/images/2024/12/12/multimedia/12ambriefing-europe-nl-fbgm/12ambriefing-europe-nl-fbgm-mediumSquareAt3X-v2.jpg" width="1800"/>
+      <media:credit>Nicole Tung for The New York Times</media:credit>
+      <media:description>In Damascus, Syria, yesterday.</media:description>
+    </item>
+    <item>
+      <title>How to Pack a ‘Go Bag’ for Extreme Weather</title>
+      <link>https://www.nytimes.com/2024/12/12/business/go-bag-extreme-weather.html</link>
+      <guid isPermaLink="true">https://www.nytimes.com/2024/12/12/business/go-bag-extreme-weather.html</guid>
+      <atom:link href="https://www.nytimes.com/2024/12/12/business/go-bag-extreme-weather.html" rel="standout"/>
+      <description>If the trend continues, extreme weather will occur more frequently. Here’s how experts suggest you prepare.</description>
+      <dc:creator>Shannon Sims</dc:creator>
+      <pubDate>Thu, 12 Dec 2024 05:00:06 +0000</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Disasters and Emergencies</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Weather</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org">American Red Cross</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org">Federal Emergency Management Agency</category>
+      <category domain="">Go Bag</category>
+      <category domain="">Extreme Weather</category>
+      <category domain="">hurricane</category>
+      <category domain="">Fires</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Content Type: Service</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">First Aid</category>
+      <media:content height="1799" medium="image" url="https://static01.nyt.com/images/2024/12/12/multimedia/12Go-Bag-Personal-Finance-Weather-1-kfhj/12Go-Bag-Personal-Finance-Weather-1-kfhj-mediumSquareAt3X.jpg" width="1800"/>
+      <media:credit>Tony Cenicola/The New York Times</media:credit>
+      <media:description>An extreme-weather go bag will eliminate the panic of wondering what to bring with you, and it may end up saving your life.</media:description>
+    </item>
+    <item>
+      <title>Syria’s New Leaders Balance Huge Struggles Amid Disorder</title>
+      <link>https://www.nytimes.com/2024/12/11/world/middleeast/syria-rebels-retribution-fears.html</link>
+      <guid isPermaLink="true">https://www.nytimes.com/2024/12/11/world/middleeast/syria-rebels-retribution-fears.html</guid>
+      <atom:link href="https://www.nytimes.com/2024/12/11/world/middleeast/syria-rebels-retribution-fears.html" rel="standout"/>
+      <description>The rebels who seized control called for foreign help in prosecuting atrocities, while trying to restore order in a fractured country.</description>
+      <dc:creator>Aryn Baker, Cassandra Vinograd, Euan Ward and Michael Levenson</dc:creator>
+      <pubDate>Thu, 12 Dec 2024 03:03:18 +0000</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Syria</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">War and Armed Conflicts</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Defense and Military Forces</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Human Rights and Human Rights Violations</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">War Crimes, Genocide and Crimes Against Humanity</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Politics and Government</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org">Hayat Tahrir al-Sham</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">al-Bashir, Mohammed (1983- )</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Assad, Bashar al-</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Kurds</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">International Relations</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">United States International Relations</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Terrorism</category>
+      <media:content height="1802" medium="image" url="https://static01.nyt.com/images/2024/12/11/multimedia/11syria-ledeall-new-tpcl/11syria-ledeall-new-tpcl-mediumSquareAt3X.jpg" width="1800"/>
+      <media:credit>Nicole Tung for The New York Times</media:credit>
+      <media:description>A former detainee of the notorious Sednaya prison being treated at a hospital after being freed by rebels.</media:description>
+    </item>
+    <item>
+      <title>In Aleppo, Jubilant Syrians Return to a Ravaged City and Toppled Monuments</title>
+      <link>https://www.nytimes.com/2024/12/11/world/middleeast/aleppo-syria-assad.html</link>
+      <guid isPermaLink="true">https://www.nytimes.com/2024/12/11/world/middleeast/aleppo-syria-assad.html</guid>
+      <atom:link href="https://www.nytimes.com/2024/12/11/world/middleeast/aleppo-syria-assad.html" rel="standout"/>
+      <description>Though excitement and frenzy were on full display in some parts of Aleppo, the city is still gripped by uncertainty after the sudden end of a 13-year civil war.</description>
+      <dc:creator>Raja Abdulrahim and Ivor Prickett</dc:creator>
+      <pubDate>Thu, 12 Dec 2024 04:28:05 +0000</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Aleppo (Syria)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Refugees and Displaced Persons</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Monuments and Memorials (Structures)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Vandalism</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org">Hayat Tahrir al-Sham</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Politics and Government</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Deaths (Fatalities)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Assad, Bashar al-</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Assad, Hafez al-</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Syria</category>
+      <media:content height="1799" medium="image" url="https://static01.nyt.com/images/2024/12/12/world/12Syria-Aleppo-promo/12Syria-Aleppo-mediumSquareAt3X.jpg" width="1800"/>
+      <media:credit>Ivor Prickett for The New York Times</media:credit>
+      <media:description>Young men, some of them rebel fighters, climbing on a giant statue that previously depicted Basil al-Assad, the former president Bashar al-Assad’s late brother, riding a horse on Wednesday in Aleppo, Syria.</media:description>
+    </item>
+    <item>
+      <title>Thursday Briefing: The Struggle to Create Order in Syria</title>
+      <link>https://www.nytimes.com/2024/12/11/briefing/syria-trump-fbi-sudan-gold.html</link>
+      <guid isPermaLink="true">https://www.nytimes.com/2024/12/11/briefing/syria-trump-fbi-sudan-gold.html</guid>
+      <atom:link href="https://www.nytimes.com/2024/12/11/briefing/syria-trump-fbi-sudan-gold.html" rel="standout"/>
+      <description>Plus, China’s surprising box office hit.</description>
+      <dc:creator>Gaya Gupta</dc:creator>
+      <pubDate>Wed, 11 Dec 2024 21:12:55 +0000</pubDate>
+      <media:content height="1802" medium="image" url="https://static01.nyt.com/images/2024/12/12/multimedia/12ambriefing-asia-nl-pzqb/12ambriefing-asia-nl-pzqb-mediumSquareAt3X.jpg" width="1800"/>
+      <media:credit>Nicole Tung for The New York Times</media:credit>
+      <media:description>A defaced portrait of President Bashar al-Assad in Damascus on Tuesday.</media:description>
+    </item>
+    <item>
+      <title>U.S. Strategy on Syria Risks ISIS Resurgence, Kurdish General Warns</title>
+      <link>https://www.nytimes.com/2024/12/11/world/middleeast/syria-isis-united-states-kurds.html</link>
+      <guid isPermaLink="true">https://www.nytimes.com/2024/12/11/world/middleeast/syria-isis-united-states-kurds.html</guid>
+      <atom:link href="https://www.nytimes.com/2024/12/11/world/middleeast/syria-isis-united-states-kurds.html" rel="standout"/>
+      <description>Gen. Mazlum Kobani, commander of Kurdish forces in Syria, said recent decisions by the U.S. in Syria potentially “leaves a vacuum” that ISIS could take advantage of.</description>
+      <dc:creator>Eve Sampson</dc:creator>
+      <pubDate>Thu, 12 Dec 2024 02:33:13 +0000</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Kurds</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">United States Defense and Military Forces</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Terrorism</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org">Syrian Democratic Forces</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org">Islamic State in Iraq and Syria (ISIS)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org">Defense Department</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Kobani, Mazlum</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Kirby, John F</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Kurilla, Michael E</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Trump, Donald J</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Kobani (Syria)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Manbij (Syria)</category>
+      <media:content height="1790" medium="image" url="https://static01.nyt.com/images/2024/12/11/multimedia/11syria-kurds1-kpqf/11syria-kurds1-kpqf-mediumSquareAt3X-v2.jpg" width="1791"/>
+      <media:credit>Ahmed Mardnli/EPA, via Shutterstock</media:credit>
+      <media:description>Destroyed trucks loaded with weapons for a Kurdish-led force after a Turkish airstrike near Qamishli, northeastern Syria, on Wednesday.</media:description>
+    </item>
+    <item>
+      <title>Biden’s Top Aides Race to Middle East as Militias Wield Power in Syria</title>
+      <link>https://www.nytimes.com/2024/12/11/us/politics/biden-officials-syria-israel.html</link>
+      <guid isPermaLink="true">https://www.nytimes.com/2024/12/11/us/politics/biden-officials-syria-israel.html</guid>
+      <atom:link href="https://www.nytimes.com/2024/12/11/us/politics/biden-officials-syria-israel.html" rel="standout"/>
+      <description>Secretary of State Antony J. Blinken plans to hold meetings in Jordan and Turkey. Jake Sullivan, the national security adviser, is visiting Israel.</description>
+      <dc:creator>Edward Wong, Michael Crowley and Eric Schmitt</dc:creator>
+      <pubDate>Thu, 12 Dec 2024 01:51:16 +0000</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">International Relations</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Terrorism</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">United States International Relations</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Israel-Gaza War (2023- )</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Kurds</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org">Islamic State in Iraq and Syria (ISIS)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org">Hayat Tahrir al-Sham</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Assad, Bashar al-</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Biden, Joseph R Jr</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Blinken, Antony J</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Sullivan, Jacob J (1976- )</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Gaza Strip</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Turkey</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Syria</category>
+      <media:content height="1800" medium="image" url="https://static01.nyt.com/images/2024/12/11/multimedia/11DC-DIPLO-MIDEAST-cpkf/11DC-DIPLO-MIDEAST-cpkf-mediumSquareAt3X.jpg" width="1800"/>
+      <media:credit>Anna Rose Layden for The New York Times</media:credit>
+      <media:description>Secretary of State Antony J. Blinken left for the Middle East on Wednesday, where the main topic of his meetings will be the future governance of Syria.</media:description>
+    </item>
+    <item>
+      <title>Russian Navy Ships Have Left Key Syrian Port</title>
+      <link>https://www.nytimes.com/2024/12/11/world/middleeast/russia-syria-assad.html</link>
+      <guid isPermaLink="true">https://www.nytimes.com/2024/12/11/world/middleeast/russia-syria-assad.html</guid>
+      <atom:link href="https://www.nytimes.com/2024/12/11/world/middleeast/russia-syria-assad.html" rel="standout"/>
+      <description>Satellite images from last week and this week show that naval vessels docked at the port city of Tartus have left. According to marine tracking data, no cargo ships have entered or left Tartus since Monday.</description>
+      <dc:creator>Christiaan Triebert and Riley Mellen</dc:creator>
+      <pubDate>Wed, 11 Dec 2024 22:37:06 +0000</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Assad, Bashar al-</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Tartus (Syria)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Satellites</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Moscow (Russia)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">vis-video</category>
+    </item>
+    <item>
+      <title>Could Cats Become a Vector for Bird Flu?</title>
+      <link>https://www.nytimes.com/2024/12/11/health/bird-flu-h5n1-cats.html</link>
+      <guid isPermaLink="true">https://www.nytimes.com/2024/12/11/health/bird-flu-h5n1-cats.html</guid>
+      <atom:link href="https://www.nytimes.com/2024/12/11/health/bird-flu-h5n1-cats.html" rel="standout"/>
+      <description>A new study highlights the need for public health officials to ramp up bird flu surveillance in our feline companions.</description>
+      <dc:creator>Emily Anthes and Apoorva Mandavilli</dc:creator>
+      <pubDate>Wed, 11 Dec 2024 19:40:19 +0000</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">your-feed-science</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">your-feed-health</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">your-feed-animals</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Avian Influenza</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Animals</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Agriculture and Farming</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Birds</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Respiratory Diseases</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Viruses</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Pets</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Cats</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Influenza</category>
+      <media:content height="1751" medium="image" url="https://static01.nyt.com/images/2024/12/12/multimedia/12SCI-BIRDFLU-CATS-lcfz/12SCI-BIRDFLU-CATS-lcfz-mediumSquareAt3X.jpg" width="1750"/>
+      <media:credit>Arin Yoon for The New York Times</media:credit>
+      <media:description>Scientists worry that if a cat were simultaneously infected with H5N1 and a seasonal flu virus, the H5N1 virus could acquire mutations to spread efficiently among people.</media:description>
+    </item>
+    <item>
+      <title>U.K. Bans Puberty Blockers for Teens Indefinitely</title>
+      <link>https://www.nytimes.com/2024/12/11/world/europe/uk-bans-puberty-blockers-under-18.html</link>
+      <guid isPermaLink="true">https://www.nytimes.com/2024/12/11/world/europe/uk-bans-puberty-blockers-under-18.html</guid>
+      <atom:link href="https://www.nytimes.com/2024/12/11/world/europe/uk-bans-puberty-blockers-under-18.html" rel="standout"/>
+      <description>A freeze placed this year on their use to treat gender dysphoria will remain in place for young people under 18, except in clinical trials, Britain’s government said.</description>
+      <dc:creator>Stephen Castle</dc:creator>
+      <pubDate>Thu, 12 Dec 2024 07:38:12 +0000</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Great Britain</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Transgender</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Teenagers and Adolescence</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Hormones</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Discrimination</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Politics and Government</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Clinical Trials</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Medicine and Health</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org">National Health Service</category>
+      <media:content height="1800" medium="image" url="https://static01.nyt.com/images/2024/12/11/multimedia/11uk-gender-wvzj/11uk-gender-wvzj-mediumSquareAt3X.jpg" width="1800"/>
+      <media:credit>Hollie Adams/Reuters</media:credit>
+      <media:description>Wes Streeting, the health secretary, said he had received advice from medical experts that there was an unacceptable risk in prescribing puberty blockers without further research into their impact.</media:description>
+    </item>
+    <item>
+      <title>Who Is Mohammed al-Bashir, Syria’s New Prime Minister?</title>
+      <link>https://www.nytimes.com/2024/12/11/world/middleeast/syria-bashir-prime-minister.html</link>
+      <guid isPermaLink="true">https://www.nytimes.com/2024/12/11/world/middleeast/syria-bashir-prime-minister.html</guid>
+      <atom:link href="https://www.nytimes.com/2024/12/11/world/middleeast/syria-bashir-prime-minister.html" rel="standout"/>
+      <description>Mr. al-Bashir previously headed a rebel-led administration in northwestern Syria. He has been tasked with running the country’s interim government until March.</description>
+      <dc:creator>Matthew Mpoke Bigg</dc:creator>
+      <pubDate>Wed, 11 Dec 2024 16:16:03 +0000</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">War and Armed Conflicts</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Politics and Government</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org">Hayat Tahrir al-Sham</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">al-Bashir, Mohammed (1983- )</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Syria</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Idlib (Syria)</category>
+      <media:content height="1800" medium="image" url="https://static01.nyt.com/images/2024/12/11/multimedia/11syria-who-is-bashir-cpmb/11syria-who-is-bashir-cpmb-mediumSquareAt3X.jpg" width="1800"/>
+      <media:credit>Omar Haj Kadour/Agence France-Presse — Getty Images</media:credit>
+      <media:description>Mohammed al-Bashir during a news conference in the northwestern Syrian city of Idlib in November.</media:description>
+    </item>
+    <item>
+      <title>Who Set the Stage for al-Assad’s Ouster? There Are Different Answers in the U.S. and Israel.</title>
+      <link>https://www.nytimes.com/2024/12/11/us/politics/al-assad-ouster-us-israel.html</link>
+      <guid isPermaLink="true">https://www.nytimes.com/2024/12/11/us/politics/al-assad-ouster-us-israel.html</guid>
+      <atom:link href="https://www.nytimes.com/2024/12/11/us/politics/al-assad-ouster-us-israel.html" rel="standout"/>
+      <description>President Biden says he weakened Russia, Iran and Hezbollah, laying the groundwork for Bashar al-Assad’s ouster. Prime Minister Benjamin Netanyahu says the Syrian leader would still be in power had he listened to American advice.</description>
+      <dc:creator>David E. Sanger</dc:creator>
+      <pubDate>Wed, 11 Dec 2024 15:16:39 +0000</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">United States International Relations</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Assad, Bashar al-</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Biden, Joseph R Jr</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Netanyahu, Benjamin</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Syria</category>
+      <media:content height="1802" medium="image" url="https://static01.nyt.com/images/2024/12/11/multimedia/11DC-PREXY1-vzfj/11DC-PREXY1-vzfj-mediumSquareAt3X.jpg" width="1800"/>
+      <media:credit>Nicole Tung for The New York Times</media:credit>
+      <media:description>A defaced portrait of Bashar al-Assad at the Presidential Palace in Damascus, Syria, on Tuesday.</media:description>
+    </item>
+    <item>
+      <title>Scholz Calls for Confidence Vote, in Step Toward German Elections</title>
+      <link>https://www.nytimes.com/2024/12/11/world/europe/germany-scholz-no-confidence-vote.html</link>
+      <guid isPermaLink="true">https://www.nytimes.com/2024/12/11/world/europe/germany-scholz-no-confidence-vote.html</guid>
+      <atom:link href="https://www.nytimes.com/2024/12/11/world/europe/germany-scholz-no-confidence-vote.html" rel="standout"/>
+      <description>Chancellor Olaf Scholz, who had few alternatives after his three-party coalition broke up, is widely expected to lose when Parliament takes up the measure on Monday.</description>
+      <dc:creator>Christopher F. Schuetze</dc:creator>
+      <pubDate>Wed, 11 Dec 2024 20:39:04 +0000</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Politics and Government</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Polls and Public Opinion</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Presidential Election of 2024</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Right-Wing Extremism and Alt-Right</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Elections</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">International Relations</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Russian Invasion of Ukraine (2022)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Legislatures and Parliaments</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Immigration and Emigration</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org">Alternative for Germany</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org">Christian Democratic Union (Germany)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org">European Union</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org">Free Democratic Party (Germany)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org">North Atlantic Treaty Organization</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org">Social Democratic Party (Germany)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Merz, Friedrich</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Scholz, Olaf (1958- )</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Trump, Donald J</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Germany</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Europe</category>
+      <media:content height="1800" medium="image" url="https://static01.nyt.com/images/2024/12/11/multimedia/11germany-government-clhv/11germany-government-clhv-mediumSquareAt3X.jpg" width="1800"/>
+      <media:credit>Clemens Bilan/EPA, via Shutterstock</media:credit>
+      <media:description>Chancellor Olaf Scholz of Germany with his cabinet on Wednesday.</media:description>
+    </item>
+    <item>
+      <title>Explosion in Afghanistan Kills Minister in Highest-Profile Blast Since Taliban’s Return</title>
+      <link>https://www.nytimes.com/2024/12/11/world/asia/afghanistan-explosion-taliban-minister.html</link>
+      <guid isPermaLink="true">https://www.nytimes.com/2024/12/11/world/asia/afghanistan-explosion-taliban-minister.html</guid>
+      <atom:link href="https://www.nytimes.com/2024/12/11/world/asia/afghanistan-explosion-taliban-minister.html" rel="standout"/>
+      <description>The government accused the Islamic State of being behind the attack, which struck at the heart of the Taliban’s power structure after years of essentially unchallenged dominance.</description>
+      <dc:creator>Lynsey Chutel, Safiullah Padshah and Yaqoob Akbary</dc:creator>
+      <pubDate>Wed, 11 Dec 2024 17:53:26 +0000</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Haqqani, Khalil Ahmed</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Afghanistan</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org">Taliban</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Kabul (Afghanistan)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Akhundzada, Haibatullah</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Haqqani, Sirajuddin</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Haqqani, Jalaluddin</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Terrorism</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Deaths (Fatalities)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Politics and Government</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Afghanistan War (2001- )</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Women's Rights</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org">Haqqani Network</category>
+      <media:content height="1800" medium="image" url="https://static01.nyt.com/images/2024/12/11/multimedia/11afghan-blast-gkmf/11afghan-blast-gkmf-mediumSquareAt3X.jpg" width="1800"/>
+      <media:credit>Victor J. Blue for The New York Times</media:credit>
+      <media:description>Khalil Haqqani delivering remarks after Friday Prayer in Kabul in 2021. He was a leading figure in the Taliban’s rise to power in 2021.</media:description>
+    </item>
+    <item>
+      <title>How Many People Have Died in Syria’s Civil War?</title>
+      <link>https://www.nytimes.com/2024/12/11/world/middleeast/syria-civil-war-death-toll.html</link>
+      <guid isPermaLink="true">https://www.nytimes.com/2024/12/11/world/middleeast/syria-civil-war-death-toll.html</guid>
+      <atom:link href="https://www.nytimes.com/2024/12/11/world/middleeast/syria-civil-war-death-toll.html" rel="standout"/>
+      <description>The United Nations and human rights organizations have faced challenges in counting all those killed and missing in the conflict that began in March 2011.</description>
+      <dc:creator>Aryn Baker</dc:creator>
+      <pubDate>Wed, 11 Dec 2024 12:01:02 +0000</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Syria</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Assad, Bashar al-</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">War and Armed Conflicts</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Civilian Casualties</category>
+      <media:content height="1800" medium="image" url="https://static01.nyt.com/images/2024/12/10/multimedia/10syria-deathtoll-explain-mfwq/10syria-deathtoll-explain-mfwq-mediumSquareAt3X.jpg" width="1800"/>
+      <media:credit>Daniel Berehulak/The New York Times</media:credit>
+      <media:description>Relatives look for bodies of loved ones who were taken or disappeared at the Sednaya Prison on Tuesday.</media:description>
+    </item>
+    <item>
+      <title>What Prince William’s Chat With Trump May Reveal About UK Diplomacy</title>
+      <link>https://www.nytimes.com/2024/12/11/world/europe/trump-uk-royals-prince-william-king-charles.html</link>
+      <guid isPermaLink="true">https://www.nytimes.com/2024/12/11/world/europe/trump-uk-royals-prince-william-king-charles.html</guid>
+      <atom:link href="https://www.nytimes.com/2024/12/11/world/europe/trump-uk-royals-prince-william-king-charles.html" rel="standout"/>
+      <description>A meeting between President-elect Donald J. Trump and Prince William showed Britain’s hope that the Windsors could help safeguard relations with Washington.</description>
+      <dc:creator>Mark Landler</dc:creator>
+      <pubDate>Thu, 12 Dec 2024 05:04:43 +0000</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Royal Families</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Catherine, Princess of Wales</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Charles III, King of the United Kingdom</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Elizabeth II, Queen of Great Britain</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Trump, Donald J</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">William, Prince of Wales</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">United States</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Great Britain</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Paris (France)</category>
+      <media:content height="1800" medium="image" url="https://static01.nyt.com/images/2024/12/11/multimedia/11uk-trump-royals-02-mglk/11uk-trump-royals-02-mglk-mediumSquareAt3X.jpg" width="1800"/>
+      <media:credit>Oleg Nikishin/Getty Images</media:credit>
+      <media:description>President-elect Donald J. Trump and Prince William met in Paris after a Notre-Dame reopening ceremony on Saturday. Mr. Trump said, “I had a great talk with the prince,” whom he described as “really, very handsome.”</media:description>
+    </item>
+    <item>
+      <title>In Aleppo, Rebels Give a Sense of What Is to Come for Syria</title>
+      <link>https://www.nytimes.com/2024/12/11/world/middleeast/aleppo-syria-rebel-government.html</link>
+      <guid isPermaLink="true">https://www.nytimes.com/2024/12/11/world/middleeast/aleppo-syria-rebel-government.html</guid>
+      <atom:link href="https://www.nytimes.com/2024/12/11/world/middleeast/aleppo-syria-rebel-government.html" rel="standout"/>
+      <description>Rebel fighters who took control of Aleppo about two weeks ago have promised security and continuity. Prices have skyrocketed, but residents express some hope for the future.</description>
+      <dc:creator>Muhammad Haj Kadour and Raja Abdulrahim</dc:creator>
+      <pubDate>Wed, 11 Dec 2024 14:06:31 +0000</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Aleppo (Syria)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Syria</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Damascus (Syria)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Middle East</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Politics and Government</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">War and Armed Conflicts</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Authoritarianism (Theory and Philosophy)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Muslims and Islam</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org">Hayat Tahrir al-Sham</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org">Baath Party</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Jolani, Abu Mohammed al-</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Assad, Bashar al-</category>
+      <media:content height="1801" medium="image" url="https://static01.nyt.com/images/2024/12/10/multimedia/10aleppo-4-kfjp/10aleppo-4-kfjp-mediumSquareAt3X.jpg" width="1800"/>
+      <media:credit>Karam Al-Masri/Reuters</media:credit>
+      <media:description>A damaged poster of former President Bashar al-Assad in Aleppo, Syria, last week.</media:description>
+    </item>
+    <item>
+      <title>Biden Administration Looks to Reinforce U.S.-China Ties Ahead of Trump’s Return</title>
+      <link>https://www.nytimes.com/2024/12/11/us/politics/us-china-ties-trump.html</link>
+      <guid isPermaLink="true">https://www.nytimes.com/2024/12/11/us/politics/us-china-ties-trump.html</guid>
+      <atom:link href="https://www.nytimes.com/2024/12/11/us/politics/us-china-ties-trump.html" rel="standout"/>
+      <description>Senior Treasury officials are holding a final round of talks with a new round of economic volatility on the horizon.</description>
+      <dc:creator>Alan Rappeport</dc:creator>
+      <pubDate>Wed, 11 Dec 2024 17:41:44 +0000</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">United States International Relations</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">China</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Biden, Joseph R Jr</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Trump, Donald J</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Xi Jinping</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org">Treasury Department</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org">Group of Twenty</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Protectionism (Trade)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Customs (Tariff)</category>
+      <media:content height="1800" medium="image" url="https://static01.nyt.com/images/2024/12/11/multimedia/11dc-uschina-01-lvwq/11dc-uschina-01-lvwq-mediumSquareAt3X.jpg" width="1800"/>
+      <media:credit>Saul Loeb/Agence France-Presse — Getty Images</media:credit>
+      <media:description>Top Treasury officials will travel to China this week to try and convince their Beijing peers to keep lines of communication open after President-elect Donald J. Trump takes office next month.</media:description>
+    </item>
+    <item>
+      <title>How ‘Her Story,’ a Feminist Comedy, Came to Rule China’s Box Office</title>
+      <link>https://www.nytimes.com/2024/12/11/world/asia/china-feminist-comedy-her-story.html</link>
+      <guid isPermaLink="true">https://www.nytimes.com/2024/12/11/world/asia/china-feminist-comedy-her-story.html</guid>
+      <atom:link href="https://www.nytimes.com/2024/12/11/world/asia/china-feminist-comedy-her-story.html" rel="standout"/>
+      <description>“Her Story” touches on sensitive topics in China, like censorship and gender inequality. But its humorous, nonconfrontational approach may have helped it pass censors.</description>
+      <dc:creator>Vivian Wang</dc:creator>
+      <pubDate>Thu, 12 Dec 2024 01:53:01 +0000</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Women's Rights</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Discrimination</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Box Office Sales</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Censorship</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Gender</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Women and Girls</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Movies</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org">Communist Party of China</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org">People's Daily</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">China</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Shanghai (China)</category>
+      <media:content height="1800" medium="image" url="https://static01.nyt.com/images/2024/12/11/multimedia/11china-movie-wkbf/11china-movie-wkbf-mediumSquareAt3X.jpg" width="1800"/>
+      <media:credit>Visual China Group, via Getty Images</media:credit>
+      <media:description>Shao Yihui, right, the director of “Her Story,” a feminist-themed comedy that has become a box office hit in China, along with members of the cast at a premiere in Beijing.</media:description>
+    </item>
+    <item>
+      <title>Wednesday Briefing</title>
+      <link>https://www.nytimes.com/2024/12/11/briefing/syria-attacks-israel-gaza.html</link>
+      <guid isPermaLink="true">https://www.nytimes.com/2024/12/11/briefing/syria-attacks-israel-gaza.html</guid>
+      <atom:link href="https://www.nytimes.com/2024/12/11/briefing/syria-attacks-israel-gaza.html" rel="standout"/>
+      <description>A wave of attacks on Syria.</description>
+      <dc:creator>Natasha Frost</dc:creator>
+      <pubDate>Wed, 11 Dec 2024 05:02:04 +0000</pubDate>
+      <media:content height="1800" medium="image" url="https://static01.nyt.com/images/2024/12/11/multimedia/11ambriefing-europe-nl-vkhz/11ambriefing-europe-nl-vkhz-mediumSquareAt3X.jpg" width="1800"/>
+      <media:credit>Aaref Watad/Agence France-Presse — Getty Images</media:credit>
+      <media:description>Syrian naval ships destroyed in an Israeli attack on the port city of Latakia.</media:description>
+    </item>
+    <item>
+      <title>A Search in Syria for the Disappeared</title>
+      <link>https://www.nytimes.com/2024/12/11/world/middleeast/syria-prisoners-dead.html</link>
+      <guid isPermaLink="true">https://www.nytimes.com/2024/12/11/world/middleeast/syria-prisoners-dead.html</guid>
+      <atom:link href="https://www.nytimes.com/2024/12/11/world/middleeast/syria-prisoners-dead.html" rel="standout"/>
+      <description>Syrians raced to newly emptied prisons to reunite with loved ones snatched away by the brutal regime of Bashar al-Assad, but their quest sometimes took them to the morgue.</description>
+      <dc:creator>Daniel Berehulak and Christina Goldbaum</dc:creator>
+      <pubDate>Wed, 11 Dec 2024 06:20:22 +0000</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">vis-photo</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Syria</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Morgues and Mortuaries</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Prisons and Prisoners</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Civilian Casualties</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Damascus (Syria)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Assad, Bashar al-</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org">Sednaya Prison (Syria)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Politics and Government</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Deaths (Fatalities)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Torture</category>
+      <media:content height="1800" medium="image" url="https://static01.nyt.com/images/2024/12/10/multimedia/10Syria-prison-photos-promo/10Syria-prison-photos-12-tplh-mediumSquareAt3X.jpg" width="1800"/>
+      <media:credit>Daniel Berehulak/The New York Times</media:credit>
+    </item>
+    <item>
+      <title>Tangled and Troubling Legacy Pushes Romanians Further to the Right</title>
+      <link>https://www.nytimes.com/2024/12/11/world/europe/romania-right-ultranationalism-calin-georgescu.html</link>
+      <guid isPermaLink="true">https://www.nytimes.com/2024/12/11/world/europe/romania-right-ultranationalism-calin-georgescu.html</guid>
+      <atom:link href="https://www.nytimes.com/2024/12/11/world/europe/romania-right-ultranationalism-calin-georgescu.html" rel="standout"/>
+      <description>An ultranationalist politician’s surge shows how many people would rather forget the country’s fascist past, experts say.</description>
+      <dc:creator>Andrew Higgins</dc:creator>
+      <pubDate>Thu, 12 Dec 2024 18:30:09 +0000</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Politics and Government</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">World War II (1939-45)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Holocaust and the Nazi Era</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Anti-Semitism</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org">Romanian Communist Party</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Georgescu, Calin</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Bucharest (Romania)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Romania</category>
+      <media:content height="1800" medium="image" url="https://static01.nyt.com/images/2024/12/07/multimedia/07romania-authoritarian-01-pqlf/07romania-authoritarian-01-pqlf-mediumSquareAt3X.jpg" width="1800"/>
+      <media:credit>Andreea Campeanu for The New York Times</media:credit>
+      <media:description>A woman holding a flag of the antisemitic Legionary Movement during a commemoration for its founder last month in a forest near Bucharest, Romania.</media:description>
+    </item>
+    <item>
+      <title>Houthi Attacks Continue to Disrupt Shipping Industry As Israel-Hamas War Rages On</title>
+      <link>https://www.nytimes.com/2024/12/11/business/houthi-red-sea-attacks-shipping-lanes-africa.html</link>
+      <guid isPermaLink="true">https://www.nytimes.com/2024/12/11/business/houthi-red-sea-attacks-shipping-lanes-africa.html</guid>
+      <atom:link href="https://www.nytimes.com/2024/12/11/business/houthi-red-sea-attacks-shipping-lanes-africa.html" rel="standout"/>
+      <description>The transport route around the southern tip of Africa was once little used — but freighters are now forced to take it and are charging higher rates.</description>
+      <dc:creator>Peter Eavis and Liz Alderman</dc:creator>
+      <pubDate>Wed, 11 Dec 2024 17:56:26 +0000</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Ships and Shipping</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Freight (Cargo)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Prices (Fares, Fees and Rates)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Fuel Emissions (Transportation)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org">Houthis</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Suez Canal</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Red Sea</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">War and Armed Conflicts</category>
+      <media:content height="1800" medium="image" url="https://static01.nyt.com/images/2024/12/02/multimedia/00shipping-diversion-01-tbfm/00shipping-diversion-01-tbfm-mediumSquareAt3X.jpg" width="1800"/>
+      <media:credit>Patrick Junker for The New York Times</media:credit>
+      <media:description>Capt. Tobias Kammann on his freighter, the Hanoi Express, docked in Hamburg, Germany. Ships’ access to the Suez Canal has been cut off for the last year by attackers in Yemen.</media:description>
+    </item>
+    <item>
+      <title>South Korean Police Raid President Yoon’s Office in Martial Law Inquiry</title>
+      <link>https://www.nytimes.com/2024/12/10/world/asia/south-korea-president-office-raid.html</link>
+      <guid isPermaLink="true">https://www.nytimes.com/2024/12/10/world/asia/south-korea-president-office-raid.html</guid>
+      <atom:link href="https://www.nytimes.com/2024/12/10/world/asia/south-korea-president-office-raid.html" rel="standout"/>
+      <description>President Yoon Suk Yeol shows no sign of stepping down, as investigators raided his office and more members of his own party turned against him.</description>
+      <dc:creator>Choe Sang-Hun and Jin Yu Young</dc:creator>
+      <pubDate>Wed, 11 Dec 2024 23:19:55 +0000</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Politics and Government</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Demonstrations, Protests and Riots</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Martial Law</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Impeachment</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Police</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Yoon Suk-yeol</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">South Korea</category>
+      <media:content height="1800" medium="image" url="https://static01.nyt.com/images/2024/12/11/multimedia/11skorea-yoon-raid-promo/11skorea-yoon-raid-promo-mediumSquareAt3X.jpg" width="1800"/>
+      <media:credit>Woohae Cho for The New York Times</media:credit>
+      <media:description>Yoon Suk Yeol, the president of South Korea, in his office in Seoul in 2022.</media:description>
+    </item>
+    <item>
+      <title>North Korea Breaks Silence on South Korea’s Martial Law Declaration</title>
+      <link>https://www.nytimes.com/2024/12/10/world/asia/north-korea-martial-law-reaction.html</link>
+      <guid isPermaLink="true">https://www.nytimes.com/2024/12/10/world/asia/north-korea-martial-law-reaction.html</guid>
+      <atom:link href="https://www.nytimes.com/2024/12/10/world/asia/north-korea-martial-law-reaction.html" rel="standout"/>
+      <description>In its first statement about the turmoil over President Yoon Suk Yeol’s martial law decree, the North said nothing about how inter-Korean relations might be affected.</description>
+      <dc:creator>Choe Sang-Hun</dc:creator>
+      <pubDate>Wed, 11 Dec 2024 07:02:19 +0000</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">International Relations</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Politics and Government</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Martial Law</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Kim Jong-un</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Yoon Suk-yeol</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">North Korea</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">South Korea</category>
+      <media:content height="1800" medium="image" url="https://static01.nyt.com/images/2024/12/11/multimedia/11nkorea-yoon-vjgc/11nkorea-yoon-vjgc-mediumSquareAt3X.jpg" width="1800"/>
+      <media:credit>Chang W. Lee/The New York Times</media:credit>
+      <media:description>Protesters outside the National Assembly in Seoul on Saturday, hours before a bid to impeach President Yoon Suk Yeol failed.</media:description>
+    </item>
+    <item>
+      <title>Trump Offers Confusing Clues on Syria</title>
+      <link>https://www.nytimes.com/2024/12/10/us/politics/trump-syria-rebels.html</link>
+      <guid isPermaLink="true">https://www.nytimes.com/2024/12/10/us/politics/trump-syria-rebels.html</guid>
+      <atom:link href="https://www.nytimes.com/2024/12/10/us/politics/trump-syria-rebels.html" rel="standout"/>
+      <description>The president-elect faces hard choices about the country’s post-Assad future. His vows not to get involved might be hard to keep.</description>
+      <dc:creator>Michael Crowley and Julian E. Barnes</dc:creator>
+      <pubDate>Wed, 11 Dec 2024 01:01:49 +0000</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Terrorism</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">United States International Relations</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">United States Politics and Government</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Presidential Election of 2024</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Secession and Independence Movements</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Kurds</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org">Hayat Tahrir al-Sham</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org">Islamic State in Iraq and Syria (ISIS)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Trump, Donald J</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Vance, J D</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Israel</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Syria</category>
+      <media:content height="1802" medium="image" url="https://static01.nyt.com/images/2024/12/10/multimedia/10dc-trump-syria-topart-cqfh/10dc-trump-syria-topart-cqfh-mediumSquareAt3X.jpg" width="1800"/>
+      <media:credit>Nicole Tung for The New York Times</media:credit>
+      <media:description>Umayyad Square in Damascus, Syria, on Tuesday, two days after President Bashar al-Assad fled the country and rebel forces took control of the capital.</media:description>
+    </item>
+    <item>
+      <title>A Northern Gaza Hospital Lacks Food and Water for Patients, Officials Say</title>
+      <link>https://www.nytimes.com/2024/12/10/world/middleeast/gaza-hospital-food-water-shortage.html</link>
+      <guid isPermaLink="true">https://www.nytimes.com/2024/12/10/world/middleeast/gaza-hospital-food-water-shortage.html</guid>
+      <atom:link href="https://www.nytimes.com/2024/12/10/world/middleeast/gaza-hospital-food-water-shortage.html" rel="standout"/>
+      <description>The health ministry in Gaza said dozens of patients are at risk of death because the Indonesian Hospital does not have enough water and food to keep them alive.</description>
+      <dc:creator>Ephrat Livni</dc:creator>
+      <pubDate>Tue, 10 Dec 2024 22:24:11 +0000</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Israel-Gaza War (2023- )</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Gaza Strip</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Civilian Casualties</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Hospitals</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Shortages</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Water</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Food</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Humanitarian Aid</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org">United Nations Relief and Works Agency</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org">Hamas</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Terrorism</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Israel</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Defense and Military Forces</category>
+      <media:content height="1800" medium="image" url="https://static01.nyt.com/images/2024/12/10/multimedia/10Gaza-Indonesian-Hospital-01-bkzm/10Gaza-Indonesian-Hospital-01-bkzm-mediumSquareAt3X.jpg" width="1800"/>
+      <media:credit>Agence France-Presse — Getty Images</media:credit>
+      <media:description>The Indonesian Hospital in the northern Gaza Strip after Israeli troops raided it in November 2023.</media:description>
+    </item>
+    <item>
+      <title>Syrian Rebels Vow Punishment for Atrocities Under Bashar al-Assad</title>
+      <link>https://www.nytimes.com/2024/12/10/world/middleeast/syria-rebels-justice.html</link>
+      <guid isPermaLink="true">https://www.nytimes.com/2024/12/10/world/middleeast/syria-rebels-justice.html</guid>
+      <atom:link href="https://www.nytimes.com/2024/12/10/world/middleeast/syria-rebels-justice.html" rel="standout"/>
+      <description>The rebels who seized Damascus are trying to get a new government up and running, even as foreign powers like Israel and Turkey, and armed Syrian groups, fight for power.</description>
+      <dc:creator>Ben Hubbard, Rawan Sheikh Ahmad, Qasim Nauman and Thomas Fuller</dc:creator>
+      <pubDate>Tue, 10 Dec 2024 21:53:14 +0000</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Syria</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Politics and Government</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">International Relations</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Damascus (Syria)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">al-Bashir, Mohammed (1983- )</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Assad, Bashar al-</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Israel</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Turkey</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org">Al Qaeda</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org">Hayat Tahrir al-Sham</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org">Islamic State in Iraq and Syria (ISIS)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">War Crimes, Genocide and Crimes Against Humanity</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Terrorism</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Defense and Military Forces</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">War and Armed Conflicts</category>
+      <media:content height="1800" medium="image" url="https://static01.nyt.com/images/2024/12/10/multimedia/10syria-leadall-vgpw/10syria-leadall-vgpw-mediumSquareAt3X.jpg" width="1800"/>
+      <media:credit>Daniel Berehulak/The New York Times</media:credit>
+      <media:description>A defaced portrait of the ousted Syrian president, Bashar al-Assad, beside a highway in Damascus, Syria, on Tuesday.</media:description>
+    </item>
+    <item>
+      <title>French Court Finds Author Charles Onana Guilty of Denying Rwandan Genocide</title>
+      <link>https://www.nytimes.com/2024/12/10/world/europe/france-author-rwanda-genocide.html</link>
+      <guid isPermaLink="true">https://www.nytimes.com/2024/12/10/world/europe/france-author-rwanda-genocide.html</guid>
+      <atom:link href="https://www.nytimes.com/2024/12/10/world/europe/france-author-rwanda-genocide.html" rel="standout"/>
+      <description>Charles Onana and his publisher were fined for passages in a book that were found to have violated a French law making it illegal to deny an officially recognized genocide.</description>
+      <dc:creator>Adam Nossiter</dc:creator>
+      <pubDate>Tue, 10 Dec 2024 21:40:50 +0000</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">War Crimes, Genocide and Crimes Against Humanity</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Books and Literature</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Decisions and Verdicts</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Writing and Writers</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Fines (Penalties)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Human Rights and Human Rights Violations</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org">Rwandan Patriotic Front (RPF)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org">International Criminal Court</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">France</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Rwanda</category>
+      <media:content height="1798" medium="image" url="https://static01.nyt.com/images/2024/12/10/multimedia/10RWANDA-GENOCIDE-WRITER-01-qpmc/10RWANDA-GENOCIDE-WRITER-01-qpmc-mediumSquareAt3X.jpg" width="1800"/>
+      <media:credit>Ben Curtis/Associated Press</media:credit>
+      <media:description>Family photographs of some of those who died in the Rwandan genocide on display in the Kigali Genocide Memorial Center in Kigali, Rwanda, in 2014.</media:description>
+    </item>
+    <item>
+      <title>Uncertainty and Hope on the Road to and from Damascus</title>
+      <link>https://www.nytimes.com/video/world/middleeast/100000009869599/uncertainty-and-hope-on-the-road-to-and-from-damascus.html</link>
+      <guid isPermaLink="true">https://www.nytimes.com/video/world/middleeast/100000009869599/uncertainty-and-hope-on-the-road-to-and-from-damascus.html</guid>
+      <atom:link href="https://www.nytimes.com/video/world/middleeast/100000009869599/uncertainty-and-hope-on-the-road-to-and-from-damascus.html" rel="standout"/>
+      <description>Thousands of Syrians have been traveling to and from the Lebanese border since the fall of Bashar al-Assad’s regime. Some families hoped to reunite with loved ones, while others are leaving amid an uncertain future.</description>
+      <dc:creator>Matthew Cassel, Alessandro Pavone and Mark Boyer</dc:creator>
+      <pubDate>Tue, 10 Dec 2024 21:07:55 +0000</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Syria</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Damascus (Syria)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Refugees and Displaced Persons</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">vis-video</category>
+      <media:content height="1080" medium="image" url="https://static01.nyt.com/images/2024/12/13/video/130841-vid10-syria-vox/130841-vid10-syria-vox-mediumSquareAt3X.jpg" width="1080"/>
+      <media:credit>Alessandro Pavone for The New York Times</media:credit>
+    </item>
+    <item>
+      <title>Wednesday Briefing: A Wave of Post-Assad Attacks</title>
+      <link>https://www.nytimes.com/2024/12/10/briefing/syria-netanyahu-ceo-killing.html</link>
+      <guid isPermaLink="true">https://www.nytimes.com/2024/12/10/briefing/syria-netanyahu-ceo-killing.html</guid>
+      <atom:link href="https://www.nytimes.com/2024/12/10/briefing/syria-netanyahu-ceo-killing.html" rel="standout"/>
+      <description>Plus, how Netflix brought a magical town to life.</description>
+      <dc:creator>Gaya Gupta</dc:creator>
+      <pubDate>Tue, 10 Dec 2024 21:02:23 +0000</pubDate>
+      <media:content height="1800" medium="image" url="https://static01.nyt.com/images/2024/12/11/multimedia/11ambriefing-asia-nl-ISRAEL-pzlt/11ambriefing-asia-nl-ISRAEL-pzlt-mediumSquareAt3X.jpg" width="1800"/>
+      <media:credit>Jalaa Marey/Agence France-Presse — Getty Images</media:credit>
+      <media:description>An Israeli military vehicle entering the buffer zone with Syria.</media:description>
+    </item>
+    <item>
+      <title>A Tour of Assad’s Monumental Palace, With a Scruffy Rebel as a Guide</title>
+      <link>https://www.nytimes.com/2024/12/10/world/middleeast/assad-presidential-palace.html</link>
+      <guid isPermaLink="true">https://www.nytimes.com/2024/12/10/world/middleeast/assad-presidential-palace.html</guid>
+      <atom:link href="https://www.nytimes.com/2024/12/10/world/middleeast/assad-presidential-palace.html" rel="standout"/>
+      <description>The televisions may be stripped away now, but a presidential residence still contains many remnants of a brutal reign.</description>
+      <dc:creator>Ben Hubbard and Nicole Tung</dc:creator>
+      <pubDate>Tue, 10 Dec 2024 22:46:24 +0000</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Palaces and Castles</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org">Hayat Tahrir al-Sham</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Assad, Asma al-</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Assad, Bashar al-</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Shaaban, Bouthaina</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Damascus (Syria)</category>
+      <media:content height="1802" medium="image" url="https://static01.nyt.com/images/2024/12/10/multimedia/10syria-palace-1-cktg/10syria-palace-1-cktg-mediumSquareAt3X.jpg" width="1800"/>
+      <media:description>Abu Oweis, a rebel fighter, in the office of a longtime senior adviser to Bashar al-Assad at the abandoned presidential palace in Damascus, Syria, on Tuesday.</media:description>
+    </item>
+    <item>
+      <title>Arrests Made in 2021 Crash That Killed Over 50 Migrants</title>
+      <link>https://www.nytimes.com/2024/12/10/world/americas/guatemalans-arrested-deadly-migrant-crash.html</link>
+      <guid isPermaLink="true">https://www.nytimes.com/2024/12/10/world/americas/guatemalans-arrested-deadly-migrant-crash.html</guid>
+      <atom:link href="https://www.nytimes.com/2024/12/10/world/americas/guatemalans-arrested-deadly-migrant-crash.html" rel="standout"/>
+      <description>U.S. and Guatemalan authorities said the arrests were linked to a human trafficking ring and a deadly 2021 traffic accident.</description>
+      <dc:creator>James Wagner</dc:creator>
+      <pubDate>Tue, 10 Dec 2024 21:56:56 +0000</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Human Trafficking</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Smuggling</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Illegal Immigration</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org">International Organization for Migration</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org">Justice Department</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Chiapas (Mexico)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Mexico</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Guatemala</category>
+      <media:content height="1800" medium="image" url="https://static01.nyt.com/images/2024/12/10/multimedia/10mexico-trafficking-wbvt/10mexico-trafficking-wbvt-mediumSquareAt3X.jpg" width="1800"/>
+      <media:credit>Cristina Chiquin/Reuters</media:credit>
+      <media:description>Josefa Quino Canil De Zavala after being detained on Monday in a joint operation between Guatemalan and U.S. authorities for alleged involvement in a deadly 2021 truck accident that killed more than 50 migrants in southern Mexico.</media:description>
+    </item>
+    <item>
+      <title>Cyclist Rohan Dennis Pleads Guilty in Death of Wife Melissa Hoskins, Fellow Olympian</title>
+      <link>https://www.nytimes.com/2024/12/10/world/australia/olympic-cyclist-death-guilty-rohan-dennis.html</link>
+      <guid isPermaLink="true">https://www.nytimes.com/2024/12/10/world/australia/olympic-cyclist-death-guilty-rohan-dennis.html</guid>
+      <atom:link href="https://www.nytimes.com/2024/12/10/world/australia/olympic-cyclist-death-guilty-rohan-dennis.html" rel="standout"/>
+      <description>Rohan Dennis pleaded guilty this week to a lesser charge in the death of Melissa Hoskins last year, after he drove with her on the hood of a vehicle, the authorities said.</description>
+      <dc:creator>Annie Correal</dc:creator>
+      <pubDate>Tue, 10 Dec 2024 22:35:13 +0000</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Cycling, Road</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Bicycles and Bicycling</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Olympic Games (2016)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Cycling, Track</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Olympic Games (2012)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Deaths (Fatalities)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Dennis, Rohan (1990- )</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Adelaide (Australia)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Australia</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Perth (Australia)</category>
+      <media:content height="1801" medium="image" url="https://static01.nyt.com/images/2024/12/10/multimedia/10xp-cyclist-cbkl/10xp-cyclist-cbkl-mediumSquareAt3X.jpg" width="1800"/>
+      <media:credit>Jason Cairnduff/Reuters</media:credit>
+      <media:description>Rohan Dennis pleaded guilty to creating a risk of harm. He faces seven years in prison. </media:description>
+    </item>
+    <item>
+      <title>Monarch Butterflies Are Recommended for Protected Status in U.S.</title>
+      <link>https://www.nytimes.com/2024/12/10/climate/monarch-butterflies-endangered-species-list.html</link>
+      <guid isPermaLink="true">https://www.nytimes.com/2024/12/10/climate/monarch-butterflies-endangered-species-list.html</guid>
+      <atom:link href="https://www.nytimes.com/2024/12/10/climate/monarch-butterflies-endangered-species-list.html" rel="standout"/>
+      <description>They would become the most commonly seen species to receive federal protection if the proposal is adopted.</description>
+      <dc:creator>Catrin Einhorn</dc:creator>
+      <pubDate>Tue, 10 Dec 2024 21:55:53 +0000</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Butterflies and Moths</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Endangered and Extinct Species</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Animal Migration</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org">Fish and Wildlife Service</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">United States</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Mexico</category>
+      <media:content height="1789" medium="image" url="https://static01.nyt.com/images/2024/12/10/multimedia/10cli-monarchs-03-lpzg/10cli-monarchs-03-lpzg-mediumSquareAt3X.jpg" width="1789"/>
+      <media:credit>Nic Coury for The New York Times</media:credit>
+    </item>
+    <item>
+      <title>FIFA Bends Own Rules to Give Saudi Arabia 2034 World Cup</title>
+      <link>https://www.nytimes.com/2024/12/10/world/middleeast/saudi-world-cup-human-rights.html</link>
+      <guid isPermaLink="true">https://www.nytimes.com/2024/12/10/world/middleeast/saudi-world-cup-human-rights.html</guid>
+      <atom:link href="https://www.nytimes.com/2024/12/10/world/middleeast/saudi-world-cup-human-rights.html" rel="standout"/>
+      <description>Critics objected to the bidding process, and human rights groups raised concerns about workplace safety for the migrants who will build the stadiums needed to host the event.</description>
+      <dc:creator>Tariq Panja</dc:creator>
+      <pubDate>Wed, 11 Dec 2024 17:20:02 +0000</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Soccer</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Human Rights and Human Rights Violations</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Saudi Arabia</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">World Cup 2034 (Soccer)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org">International Federation of Association Football (FIFA)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Migrant Labor (Non-Agriculture)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Foreign Workers</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Workplace Hazards and Violations</category>
+      <media:content height="1399" medium="image" url="https://static01.nyt.com/images/2024/12/11/multimedia/11saudi-worldcup-01-mzlg/11saudi-worldcup-01-mzlg-mediumSquareAt3X.jpg" width="1399"/>
+      <media:credit>Lee Smith/Reuters</media:credit>
+      <media:description>Argentina players celebrating with the trophy after winning the World Cup in December 2022, in Qatar.</media:description>
+    </item>
+    <item>
+      <title>Sednaya Prison in Syria: What to Know</title>
+      <link>https://www.nytimes.com/2024/12/10/world/middleeast/sednaya-prison-syria.html</link>
+      <guid isPermaLink="true">https://www.nytimes.com/2024/12/10/world/middleeast/sednaya-prison-syria.html</guid>
+      <atom:link href="https://www.nytimes.com/2024/12/10/world/middleeast/sednaya-prison-syria.html" rel="standout"/>
+      <description>Amnesty International described it as a “human slaughterhouse,” where, other rights groups say, tens of thousands of people were detained, tortured and killed during the 13-year civil war.</description>
+      <dc:creator>Vivian Yee</dc:creator>
+      <pubDate>Wed, 11 Dec 2024 00:28:48 +0000</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Syria</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Assad, Bashar al-</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org">Sednaya Prison (Syria)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Human Rights and Human Rights Violations</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Torture</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Prisons and Prisoners</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org">Amnesty International</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org">White Helmets (Syrian Civil Defense Volunteer Group)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Deaths (Fatalities)</category>
+      <media:content height="1800" medium="image" url="https://static01.nyt.com/images/2024/12/10/multimedia/10syria-sednaya-explain-top-qklv/10syria-sednaya-explain-top-qklv-mediumSquareAt3X-v2.jpg" width="1800"/>
+      <media:credit>Daniel Berehulak/The New York Times</media:credit>
+      <media:description>A man praying inside a liberated cell in Sednaya prison, in the suburbs of Damascus, Syria, on Monday.</media:description>
+    </item>
+    <item>
+      <title>Trump Mocks Trudeau and Canada in Post on Tariffs and Trade</title>
+      <link>https://www.nytimes.com/2024/12/10/world/canada/trump-trudeau-canada-tariffs.html</link>
+      <guid isPermaLink="true">https://www.nytimes.com/2024/12/10/world/canada/trump-trudeau-canada-tariffs.html</guid>
+      <atom:link href="https://www.nytimes.com/2024/12/10/world/canada/trump-trudeau-canada-tariffs.html" rel="standout"/>
+      <description>The president-elect’s mockery of Canada and its leader is the latest salvo after his promise to impose steep tariffs on Canadian exports.</description>
+      <dc:creator>Ian Austen</dc:creator>
+      <pubDate>Tue, 10 Dec 2024 21:07:19 +0000</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Protectionism (Trade)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">United States International Relations</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Customs (Tariff)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Politics and Government</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Illegal Immigration</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org">Mar-a-Lago (Palm Beach, Fla)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Sheinbaum, Claudia</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Trudeau, Justin</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Trump, Donald J</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Canada</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Mexico</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">United States</category>
+      <media:content height="1800" medium="image" url="https://static01.nyt.com/images/2024/12/10/multimedia/10canada-trump-trudeau-lbvc/10canada-trump-trudeau-lbvc-mediumSquareAt3X.jpg" width="1800"/>
+      <media:credit>Al Drago for The New York Times</media:credit>
+      <media:description>President-elect Donald Trump listening during a meeting in 2019 with Prime Minister Justin Trudeau of Canada.</media:description>
+    </item>
+  </channel>
+</rss>

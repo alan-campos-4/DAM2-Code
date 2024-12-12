@@ -139,7 +139,7 @@ if __name__ == "__main__":
         clear()
         if (entries == []):
             reload_repos()
-
+            
         print("\n--- Repository List ---\n")
         print_menu()
         opt = input("\nChoose a repo: ")
