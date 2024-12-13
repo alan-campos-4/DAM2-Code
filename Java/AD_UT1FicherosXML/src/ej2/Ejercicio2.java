@@ -3,6 +3,7 @@ package ej2;
 import java.io.EOFException;
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
@@ -31,9 +32,6 @@ import myStreams.MyObjectOutputStream;
 
 public class Ejercicio2
 {
-	public static File fichero = new File("src/peliculas.dat");
-	
-	
 	/* Definición de la clase Pelicula */
 	public static class Pelicula implements Serializable
 	{
@@ -61,7 +59,7 @@ public class Ejercicio2
 		}
 		public String toString()
 		{
-			return titulo+" ("+fecha+")";
+			return titulo+" ("+fecha+")\n  Director: "+director+"\n  Duracion: "+duracion+"min\n";
 		}
 	}
 	
@@ -69,21 +67,27 @@ public class Ejercicio2
 	/* Función Main */
 	public static void main(String[] args)
 	{
+		//Fichero de donde obtenemos los datos.
+		File ficheroXML = new File("src/peliculas.xml");
+		//Fichero donde guardaremos y leeremos los datos.
+		File ficheroDatos = new File("src/peliculas.dat");
+		
+		
 		/* Escritura en el fichero */
 		try
 		{
-			//Creamos el fichero XML.
-			File inputXmlFile = new File("src/peliculas.xml");
-			
 			//Creamos el Document para leer el fichero.
 			DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
 			DocumentBuilder docBuilder = dbFactory.newDocumentBuilder();
-			Document xmldoc = docBuilder.parse(inputXmlFile);
+			Document xmldoc = docBuilder.parse(ficheroXML);
 			//Leemos el elemento raíz.
 			Element element = xmldoc.getDocumentElement();
 			//Obtenemos los nodos del fichero.
 			NodeList nList = element.getChildNodes();
 			
+			//Establecemos una variable para detectar el índice del primer elemento Pelicula.
+            int firstElement = -1;
+            
 			//Por cada uno de los nodos el fichero, 
 			for (int temp = 0; temp < nList.getLength(); temp++)
 			{
@@ -120,25 +124,31 @@ public class Ejercicio2
 					int duracion = Integer.parseInt(durS);
 					int year = Integer.parseInt(yearS);
 					
-					//Creamos el objeto Pelicula y los mostramos.
+					//Creamos el objeto Pelicula.
 		            Pelicula p = new Pelicula
 		            		(id, title, director, genre, sinopsis, duracion, year, actoresList);
-		            System.out.println("-"+p.toString());
 		            
-		            FileOutputStream fos = new FileOutputStream(fichero, true);
-		            if (fichero.length() == 0)
+		            //Si este es el primer elemento, se guarda su índice.
+		            if (firstElement==-1)
+		            	{firstElement = temp;}
+		            
+		            //Guarda el elemento leído en el fichero de datos.
+		            //Si el elemento actual es el primero se escribirá al principio del fichero.
+		            //Si el elemento actual no es el primero se añade al fichero existente.
+		            FileOutputStream fos;
+		            if (temp == firstElement)
 		            {
-		            	fos = new FileOutputStream(fichero);
-			            ObjectOutputStream OOS = new ObjectOutputStream(fos);
+		            	fos = new FileOutputStream(ficheroDatos);
+		            	ObjectOutputStream OOS = new ObjectOutputStream(fos);
 						OOS.writeObject(p);
 						OOS.close();
 		            }
 		            else
 		            {
-		            	fos = new FileOutputStream(fichero, true);
-		            	MyObjectOutputStream oos = new MyObjectOutputStream(fos);
-		            	oos.writeObject(p);
-		            	oos.close();
+		            	fos = new FileOutputStream(ficheroDatos, true);
+		            	MyObjectOutputStream Moos = new MyObjectOutputStream(fos);
+		            	Moos.writeObject(p);
+		            	Moos.close();
 		            }
 		            fos.close();
 				}
@@ -154,24 +164,32 @@ public class Ejercicio2
 		
 		/* Lectura del fichero */
 		ObjectInputStream OIS = null;
-		try {
-			OIS = new ObjectInputStream(new FileInputStream(fichero));
+		try
+		{
+			OIS = new ObjectInputStream(new FileInputStream(ficheroDatos));
 			Pelicula p = (Pelicula)OIS.readObject();
-			
+			//Mientras no llegue al final del fichero,
 			while (true)
 			{
+				// muestra los datos de la pelicula y lee la siguiente.
 				System.out.println(p.toString());
 				p = (Pelicula)OIS.readObject();
 			}
 		}
+		//Lanzada cuando ObjectInputStream.readObject() llega al final del fichero.
 		catch (EOFException e)				{System.out.println("Final del fichero.");}
+		//Lanzada por ObjectInputStream.readObject() si no encuentra la clase.
+		catch (ClassNotFoundException e)	{System.out.println("No se ha encontrado la clase.");}
+		//Lanzada por el constructor de FileInputStream() si no encuentra o no puede acceder al fichero.
+		catch (FileNotFoundException e)		{System.out.println("El fichero no existe.");}
+		//Lanzada por el constructor y readObject() de ObjectInputStream si tiene problemas con el fichero.
 		catch (IOException e)				{e.printStackTrace();}
-		catch (ClassNotFoundException e)	{e.printStackTrace();}
 		finally
 		{
 			try {OIS.close();}
 			catch (IOException e) {e.printStackTrace();}
 		}
+		
 	}
 	
 	

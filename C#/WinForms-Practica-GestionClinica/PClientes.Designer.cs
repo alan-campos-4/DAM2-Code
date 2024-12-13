@@ -47,14 +47,14 @@
             this.dataGridView1.AllowUserToResizeRows = false;
             this.dataGridView1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(15, 156);
+            this.dataGridView1.Location = new System.Drawing.Point(34, 156);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(1190, 563);
+            this.dataGridView1.Size = new System.Drawing.Size(1157, 563);
             this.dataGridView1.TabIndex = 0;
             // 
             // menuStripClients
@@ -96,7 +96,7 @@
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(40, 112);
+            this.label1.Location = new System.Drawing.Point(115, 118);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(249, 21);
             this.label1.TabIndex = 2;
@@ -105,9 +105,9 @@
             // textBoxSearch
             // 
             this.textBoxSearch.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBoxSearch.Location = new System.Drawing.Point(295, 109);
+            this.textBoxSearch.Location = new System.Drawing.Point(380, 115);
             this.textBoxSearch.Name = "textBoxSearch";
-            this.textBoxSearch.Size = new System.Drawing.Size(229, 33);
+            this.textBoxSearch.Size = new System.Drawing.Size(220, 33);
             this.textBoxSearch.TabIndex = 3;
             this.textBoxSearch.TextChanged += new System.EventHandler(this.TextBox1_TextChanged);
             // 

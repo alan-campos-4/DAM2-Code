@@ -36,8 +36,6 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.checkBoxFemale = new System.Windows.Forms.CheckBox();
-            this.checkBoxMale = new System.Windows.Forms.CheckBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.textBoxBreed = new System.Windows.Forms.TextBox();
             this.textBoxSpecies = new System.Windows.Forms.TextBox();
@@ -46,7 +44,8 @@
             this.comboBoxOwner = new System.Windows.Forms.ComboBox();
             this.buttonCancel = new System.Windows.Forms.Button();
             this.buttonOK = new System.Windows.Forms.Button();
-            this.checkedListBoxSex = new System.Windows.Forms.CheckedListBox();
+            this.radioButtonMale = new System.Windows.Forms.RadioButton();
+            this.radioButtonFemale = new System.Windows.Forms.RadioButton();
             this.groupBox3.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -128,9 +127,8 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.checkedListBoxSex);
-            this.groupBox1.Controls.Add(this.checkBoxFemale);
-            this.groupBox1.Controls.Add(this.checkBoxMale);
+            this.groupBox1.Controls.Add(this.radioButtonFemale);
+            this.groupBox1.Controls.Add(this.radioButtonMale);
             this.groupBox1.Controls.Add(this.dateTimePicker1);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.textBoxBreed);
@@ -146,26 +144,6 @@
             this.groupBox1.TabIndex = 24;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos de la mascota";
-            // 
-            // checkBoxFemale
-            // 
-            this.checkBoxFemale.AutoSize = true;
-            this.checkBoxFemale.Location = new System.Drawing.Point(448, 96);
-            this.checkBoxFemale.Name = "checkBoxFemale";
-            this.checkBoxFemale.Size = new System.Drawing.Size(75, 20);
-            this.checkBoxFemale.TabIndex = 10;
-            this.checkBoxFemale.Text = "Hembra";
-            this.checkBoxFemale.UseVisualStyleBackColor = true;
-            // 
-            // checkBoxMale
-            // 
-            this.checkBoxMale.AutoSize = true;
-            this.checkBoxMale.Location = new System.Drawing.Point(375, 96);
-            this.checkBoxMale.Name = "checkBoxMale";
-            this.checkBoxMale.Size = new System.Drawing.Size(67, 20);
-            this.checkBoxMale.TabIndex = 9;
-            this.checkBoxMale.Text = "Macho";
-            this.checkBoxMale.UseVisualStyleBackColor = true;
             // 
             // dateTimePicker1
             // 
@@ -226,7 +204,7 @@
             this.buttonCancel.TabIndex = 26;
             this.buttonCancel.Text = "Cancelar";
             this.buttonCancel.UseVisualStyleBackColor = true;
-            this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
+            this.buttonCancel.Click += new System.EventHandler(this.ButtonCancel_Click);
             // 
             // buttonOK
             // 
@@ -238,18 +216,30 @@
             this.buttonOK.TabIndex = 25;
             this.buttonOK.Text = "Aceptar";
             this.buttonOK.UseVisualStyleBackColor = true;
-            this.buttonOK.Click += new System.EventHandler(this.buttonOK_Click);
+            this.buttonOK.Click += new System.EventHandler(this.ButtonOK_Click);
             // 
-            // checkedListBoxSex
+            // radioButtonMale
             // 
-            this.checkedListBoxSex.FormattingEnabled = true;
-            this.checkedListBoxSex.Items.AddRange(new object[] {
-            "Macho",
-            "Hembra"});
-            this.checkedListBoxSex.Location = new System.Drawing.Point(364, 112);
-            this.checkedListBoxSex.Name = "checkedListBoxSex";
-            this.checkedListBoxSex.Size = new System.Drawing.Size(302, 21);
-            this.checkedListBoxSex.TabIndex = 27;
+            this.radioButtonMale.AutoSize = true;
+            this.radioButtonMale.Location = new System.Drawing.Point(377, 95);
+            this.radioButtonMale.Name = "radioButtonMale";
+            this.radioButtonMale.Size = new System.Drawing.Size(66, 20);
+            this.radioButtonMale.TabIndex = 9;
+            this.radioButtonMale.TabStop = true;
+            this.radioButtonMale.Text = "Macho";
+            this.radioButtonMale.UseVisualStyleBackColor = true;
+            this.radioButtonMale.CheckedChanged += new System.EventHandler(this.RadioButtonMale_CheckedChanged);
+            // 
+            // radioButtonFemale
+            // 
+            this.radioButtonFemale.AutoSize = true;
+            this.radioButtonFemale.Location = new System.Drawing.Point(449, 95);
+            this.radioButtonFemale.Name = "radioButtonFemale";
+            this.radioButtonFemale.Size = new System.Drawing.Size(74, 20);
+            this.radioButtonFemale.TabIndex = 10;
+            this.radioButtonFemale.TabStop = true;
+            this.radioButtonFemale.Text = "Hembra";
+            this.radioButtonFemale.UseVisualStyleBackColor = true;
             // 
             // PAddMascotas
             // 
@@ -286,13 +276,13 @@
         public System.Windows.Forms.TextBox textBoxName;
         public System.Windows.Forms.TextBox textBoxBreed;
         public System.Windows.Forms.TextBox textBoxSpecies;
-        public System.Windows.Forms.RichTextBox richTextBox1;
         public System.Windows.Forms.ComboBox comboBoxOwner;
         public System.Windows.Forms.DateTimePicker dateTimePicker1;
+        public System.Windows.Forms.RadioButton radioButtonFemale;
+        public System.Windows.Forms.RadioButton radioButtonMale;
+        public System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.Button buttonCancel;
         private System.Windows.Forms.Button buttonOK;
-        public System.Windows.Forms.CheckBox checkBoxFemale;
-        public System.Windows.Forms.CheckBox checkBoxMale;
-        private System.Windows.Forms.CheckedListBox checkedListBoxSex;
+        
     }
 }

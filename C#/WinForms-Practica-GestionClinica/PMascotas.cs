@@ -30,7 +30,7 @@ namespace WinForms_Practica_GestionClinica
             connection.Open();
 
             Tpets = new DataTable();
-            string query2 = "SELECT M.*, CONCAT(C.Apellidos,', ',C.Nombre) AS Cliente FROM mascotas M " +
+            string query2 = "SELECT M.*, CONCAT(C.Apellidos,', ',C.Nombre) AS 'Dueño/a' FROM mascotas M " +
                 "JOIN clientes C ON M.Cliente=C.ID " +
                 "ORDER BY 3, 4";
             adapter = new MySqlDataAdapter(query2, connection);
@@ -40,8 +40,9 @@ namespace WinForms_Practica_GestionClinica
             dataGridPets.Columns["ID"].Visible = false;
             dataGridPets.Columns["Cliente"].Visible = false;
             dataGridPets.Columns["Notas"].Visible = false;
-            dataGridPets.Columns["Cliente"].GetPreferredWidth(DataGridViewAutoSizeColumnMode.AllCells, true);
-
+            dataGridPets.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridPets.Columns["Raza"].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
+            dataGridPets.Columns["Dueño/a"].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
             connection.Close();
         }
 
@@ -71,11 +72,14 @@ namespace WinForms_Practica_GestionClinica
         private void AñadirToolStripMenuItem_Click(object sender, EventArgs e)
         {
             PAddMascotas pAdd = new PAddMascotas { Text = "Añadir mascota" };
+            pAdd.radioButtonMale.Checked = true;
+            pAdd.radioButtonFemale.Checked = false;
             if (pAdd.ShowDialog() == DialogResult.OK)
             {
-                try {
+                try
+                {
                     char sex;
-                    if (pAdd.checkBoxMale.Checked==true)
+                    if (pAdd.radioButtonMale.Checked==true)
                         sex = 'M';
                     else
                         sex = 'F';
@@ -105,9 +109,15 @@ namespace WinForms_Practica_GestionClinica
                 pMod.textBoxName.Text = dataGridPets.SelectedRows[0].Cells[4].Value.ToString();
                 pMod.dateTimePicker1.Text = dataGridPets.SelectedRows[0].Cells[5].Value.ToString();
                 if (dataGridPets.SelectedRows[0].Cells[6].Value.ToString() == 'M'.ToString())
-                    pMod.checkBoxMale.Checked = true;
+                { 
+                    pMod.radioButtonMale.Checked = true;
+                    pMod.radioButtonFemale.Checked = false;
+                }
                 else
-                    pMod.checkBoxFemale.Checked = false;
+                {
+                    pMod.radioButtonMale.Checked = false;
+                    pMod.radioButtonFemale.Checked = true;
+                }
                 pMod.richTextBox1.Text = dataGridPets.SelectedRows[0].Cells[7].Value.ToString();
                 if (pMod.ShowDialog() == DialogResult.OK)
                 {

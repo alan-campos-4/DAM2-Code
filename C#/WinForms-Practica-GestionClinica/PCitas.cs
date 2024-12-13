@@ -38,7 +38,7 @@ namespace WinForms_Practica_GestionClinica
             dataGridView1.Columns["ID"].Visible = false;
             dataGridView1.Columns["Cliente"].Visible = false;
             dataGridView1.Columns["Mascota"].Visible = false;
-            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
             for (int i= 0; i < tableCitas.Rows.Count; i++)
             {

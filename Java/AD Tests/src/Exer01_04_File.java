@@ -29,7 +29,7 @@ public class Exer01_04_File
 				{
 					default: {System.out.println("\nOpción no válida.");}	break;
 					case 0:  {System.out.println("\n\nFin del programa.");}	break;
-					case 1:	{Ejer1();}	break;
+					case 1:	{Ejer1(args[0]);}	break;
 					case 2:	{Ejer2(args[0]);}	break;
 					case 3:	{Ejer3();}	break;
 					case 4:	{Ejer4();}	break;
@@ -49,9 +49,20 @@ public class Exer01_04_File
 	 * que se pasará al programa desde la línea de comandos al ejecutarlo. 
 	 * Se visualizará cuántos archivos hay en total, el nombre de cada archivo y si es fichero o directorio.
 	 */
-	public static void Ejer1()
+	public static void Ejer1(String arg)
 	{
-		//
+		File f = new File(arg); //tiene que ser un directorio
+		if (f.isDirectory())
+		{
+			String[] archivos = f.list();
+			System.out.printf("Ficheros en el directorio actual: %d %n", archivos.length);
+			for (int i = 0; i < archivos.length; i++)
+			{
+				File f2 = new File(f, archivos[i]);
+				System.out.printf("Nombre: %s, es fichero?: %b, es directorio?: %b %n", archivos[i], f2.isFile(), f2.isDirectory());
+			}
+		}
+		else {System.out.printf("no es un directorio");}
 	}
 
 	

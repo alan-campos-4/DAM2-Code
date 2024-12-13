@@ -46,27 +46,29 @@
             this.dataGridPets.AllowUserToResizeColumns = false;
             this.dataGridPets.AllowUserToResizeRows = false;
             this.dataGridPets.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dataGridPets.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dataGridPets.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridPets.Location = new System.Drawing.Point(115, 194);
+            this.dataGridPets.Location = new System.Drawing.Point(78, 156);
             this.dataGridPets.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dataGridPets.MultiSelect = false;
             this.dataGridPets.Name = "dataGridPets";
             this.dataGridPets.ReadOnly = true;
             this.dataGridPets.RowHeadersVisible = false;
             this.dataGridPets.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridPets.Size = new System.Drawing.Size(1012, 525);
+            this.dataGridPets.Size = new System.Drawing.Size(1056, 525);
             this.dataGridPets.TabIndex = 2;
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(111, 147);
+            this.label1.Font = new System.Drawing.Font("Yu Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(115, 118);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(177, 16);
+            this.label1.Size = new System.Drawing.Size(254, 21);
             this.label1.TabIndex = 4;
-            this.label1.Text = "Busca el nombre del dueñ@";
+            this.label1.Text = "Busca el nombre del/la dueño/a:";
             // 
             // menuStripPets
             // 
@@ -105,10 +107,11 @@
             // 
             // textBoxSearch
             // 
-            this.textBoxSearch.Location = new System.Drawing.Point(328, 143);
+            this.textBoxSearch.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBoxSearch.Location = new System.Drawing.Point(380, 115);
             this.textBoxSearch.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBoxSearch.Name = "textBoxSearch";
-            this.textBoxSearch.Size = new System.Drawing.Size(204, 33);
+            this.textBoxSearch.Size = new System.Drawing.Size(220, 33);
             this.textBoxSearch.TabIndex = 6;
             this.textBoxSearch.TextChanged += new System.EventHandler(this.TextBoxSearch_TextChanged);
             // 

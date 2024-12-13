@@ -40,7 +40,7 @@ namespace WinForms_Practica_GestionClinica
             dataGridView1.Columns["Direccion"].Visible = false;
             dataGridView1.Columns["CodPostal"].Visible = false;
             dataGridView1.Columns["Observaciones"].Visible = false;
-            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             connection.Close();
         }
 

@@ -81,7 +81,7 @@
             // 
             this.monthCalendar1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.monthCalendar1.CalendarDimensions = new System.Drawing.Size(2, 2);
-            this.monthCalendar1.Location = new System.Drawing.Point(69, 235);
+            this.monthCalendar1.Location = new System.Drawing.Point(77, 214);
             this.monthCalendar1.Margin = new System.Windows.Forms.Padding(10, 12, 10, 12);
             this.monthCalendar1.Name = "monthCalendar1";
             this.monthCalendar1.TabIndex = 3;
@@ -94,7 +94,7 @@
             this.dataGridView1.AllowUserToResizeRows = false;
             this.dataGridView1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(513, 188);
+            this.dataGridView1.Location = new System.Drawing.Point(517, 197);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
@@ -109,7 +109,7 @@
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(531, 469);
+            this.label1.Location = new System.Drawing.Point(535, 478);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(72, 21);
             this.label1.TabIndex = 5;
@@ -119,7 +119,7 @@
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(531, 507);
+            this.label2.Location = new System.Drawing.Point(535, 516);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(84, 21);
             this.label2.TabIndex = 6;
@@ -129,7 +129,7 @@
             // 
             this.labelPet.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelPet.AutoSize = true;
-            this.labelPet.Location = new System.Drawing.Point(621, 507);
+            this.labelPet.Location = new System.Drawing.Point(625, 516);
             this.labelPet.Name = "labelPet";
             this.labelPet.Size = new System.Drawing.Size(22, 21);
             this.labelPet.TabIndex = 8;
@@ -139,7 +139,7 @@
             // 
             this.labelClient.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelClient.AutoSize = true;
-            this.labelClient.Location = new System.Drawing.Point(621, 469);
+            this.labelClient.Location = new System.Drawing.Point(625, 478);
             this.labelClient.Name = "labelClient";
             this.labelClient.Size = new System.Drawing.Size(22, 21);
             this.labelClient.TabIndex = 7;

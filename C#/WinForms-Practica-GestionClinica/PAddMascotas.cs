@@ -20,6 +20,7 @@ namespace WinForms_Practica_GestionClinica
 
         static Global g = new Global();
         public string connectionString = g.ConnString();
+        public char sex;
 
         private void PMascotasAdd_Load(object sender, EventArgs e)
         {
@@ -37,12 +38,10 @@ namespace WinForms_Practica_GestionClinica
             comboBoxOwner.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
             comboBoxOwner.AutoCompleteSource = AutoCompleteSource.ListItems;
 
-            checkBoxMale.Checked = true;
-            
             connection.Close();
         }
 
-        private void buttonOK_Click(object sender, EventArgs e)
+        private void ButtonOK_Click(object sender, EventArgs e)
         {
             if (FindEmpty())
             {
@@ -59,7 +58,7 @@ namespace WinForms_Practica_GestionClinica
             }
         }
 
-        private void buttonCancel_Click(object sender, EventArgs e)
+        private void ButtonCancel_Click(object sender, EventArgs e)
         {
             this.Close();
         }
@@ -81,5 +80,12 @@ namespace WinForms_Practica_GestionClinica
             return empty;
         }
 
+        private void RadioButtonMale_CheckedChanged(object sender, EventArgs e)
+        {
+            if (radioButtonMale.Checked)
+                { sex = 'M'; }
+            else
+                { sex = 'F'; }
+        }
     }
 }
