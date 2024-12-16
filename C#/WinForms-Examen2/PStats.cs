@@ -18,22 +18,14 @@ namespace WinForms_Examen2
         public PStats()
         {
             InitializeComponent();
+            labelListado.Text = "Listado de todos los artículos \n y su precio ordenados por descripción.";
         }
 
-        public string connectionString = "Server=docarmo.net;Database=examen;User ID=examen;Password=examen;SslMode=none";
+        static Global g = new Global();
+        public string connectionString = g.ConnString();
 
         private void PStats_Load(object sender, EventArgs e)
         {
-            /*
-             Dispondremos de una pantalla de estadísticas donde al seleccionar una familia nos dará información acerca de ésta. Los datos a mostrar serán: (1,5 puntos).
-                Número de artículos en stock por familia.
-                Precio promedio de los artículos por familia
-                Listado de todos los artículos y su precio ordenados por descripción.
-                El artículo más caro y el más barato.
-             */
-
-            labelListado.Text = "Listado de todos los artículos \n y su precio ordenados por descripción.";
-
             MySqlConnection connection = new MySqlConnection(connectionString);
             connection.Open();
 
@@ -48,43 +40,72 @@ namespace WinForms_Examen2
             connection.Close();
         }
 
-        private void comboBoxFamily_SelectedIndexChanged(object sender, EventArgs e)
+        private void ComboBoxFamily_SelectedIndexChanged(object sender, EventArgs e)
         {
             MySqlConnection connection = new MySqlConnection(connectionString);
             connection.Open();
             string id = comboBoxFamily.SelectedValue.ToString();
-            string query1 = "SELECT COUNT(*) FROM articulos WHERE CodFamilia=" + id + ";";
-            /*
-            DataTable quantity, average, expensive, cheapest;
-            MySqlDataAdapter adapter1, adapter2, adapter3, adapter4;
+            string query1, query2, query3, query4, query5;
+            MySqlCommand command;
+            MySqlDataReader reader;
 
-            
 
-            
-            adapter1 = new MySqlDataAdapter(query1, connection);
-            quantity = new DataTable();
-            adapter1.Fill(quantity);
-
-            foreach (DataRow row in quantity.Rows)
-            {
-                foreach (DataColumn col in quantity.Columns)
-                {
-                    labelQuantity.Text = row[col].ToString();
-                }
-            }*/
-            MySqlCommand command = new MySqlCommand(query1, connection);
-            MySqlDataReader reader = command.ExecuteReader();
+            // Número de artículos en stock por familia.
+            query1 = "SELECT COUNT(*) FROM articulos WHERE CodFamilia=@cod AND Stock>0";
+            command = new MySqlCommand(query1, connection);
+            command.Parameters.AddWithValue("@cod", id);
+            reader = command.ExecuteReader();
             while (reader.Read())
             {
-                labelQuantity.Text = reader["Codigo"].ToString();
+                labelQuantity.Text = reader["COUNT(*)"].ToString();
             }
-            
+            reader.Close();
 
 
+            // Precio promedio de los artículos por familia.
+            query2 = "SELECT AVG(Precio) FROM articulos WHERE CodFamilia=@cod";
+            command = new MySqlCommand(query2, connection);
+            command.Parameters.AddWithValue("@cod", id);
+            reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+                labelAverage.Text = reader["AVG(Precio)"].ToString();
+            }
+            reader.Close();
 
-            labelAverage.Text = comboBoxFamily.SelectedValue.ToString();
+
+            // El artículo más caro y el más barato.
+            query3 = "SELECT Descripcion FROM articulos WHERE CodFamilia=@cod AND Precio=( SELECT MAX(Precio) FROM articulos WHERE CodFamilia=@cod )";
+            query4 = "SELECT Descripcion FROM articulos WHERE CodFamilia=@cod AND Precio=( SELECT MIN(Precio) FROM articulos WHERE CodFamilia=@cod )";
+            command = new MySqlCommand(query3, connection);
+            command.Parameters.AddWithValue("@cod", id);
+            reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+                labelExpensive.Text = reader["Descripcion"].ToString();
+            }
+            reader.Close();
+            command = new MySqlCommand(query4, connection);
+            command.Parameters.AddWithValue("@cod", id);
+            reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+                labelCheapest.Text = reader["Descripcion"].ToString();
+            }
+            reader.Close();
 
 
+            // Listado de todos los artículos y su precio ordenados por descripción.
+            query5 = "SELECT Descripcion, Precio FROM articulos WHERE CodFamilia=@cod ORDER BY 1";
+            command = new MySqlCommand(query5, connection);
+            command.Parameters.AddWithValue("@cod", id);
+            reader = command.ExecuteReader();
+            listBox1.Items.Clear();
+            while (reader.Read())
+            {
+                listBox1.Items.Add(reader["Descripcion"].ToString() + ": " + reader["Precio"].ToString() + "€");
+            }
+            reader.Close();
 
 
             connection.Close();

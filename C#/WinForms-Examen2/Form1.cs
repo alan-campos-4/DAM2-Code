@@ -92,8 +92,8 @@ namespace WinForms_Examen2
                 if (pMod.ShowDialog() == DialogResult.OK)
                 {
                     if (g.ShowConfirm(g.ModTitle, "¿Son los datos correctos?") == DialogResult.OK)
-                    { 
-                        int idMod = (int)dataGridView1.SelectedRows[0].Cells[0].Value;
+                    {
+                        string idMod = dataGridView1.SelectedRows[0].Cells[0].Value.ToString();
 
                         MySqlConnection connection = new MySqlConnection(connectionString);
                         connection.Open();
@@ -125,7 +125,7 @@ namespace WinForms_Examen2
         {
             if (dataGridView1.SelectedRows.Count > 0)
             {
-                if (g.ShowWarning("Borrar Artículo", "¿Seguro que quieres borrar este cliente?") == DialogResult.OK)
+                if (g.ShowWarning("Borrar Artículo", "¿Seguro que quieres borrar este artículo?") == DialogResult.OK)
                 {
                     try
                     {

@@ -31,13 +31,12 @@ namespace WinForms_Examen2
             DataTable tableFamilias = new DataTable();
             adapter.Fill(tableFamilias);
             dataGridView1.DataSource = tableFamilias;
-            dataGridView1.Columns["Codigo"].Visible = false;
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
             connection.Close();
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             if (dataGridView1.SelectedRows.Count > 0)
             {
@@ -51,11 +50,41 @@ namespace WinForms_Examen2
                 MySqlCommand command = new MySqlCommand(query, connection);
                 command.Parameters.AddWithValue("@cod", id);
                 MySqlDataReader reader = command.ExecuteReader();
+
+                double total = 0;
+                double sum = 0;
                 while (reader.Read())
                 {
-                    listBox1.Items.Add(reader["Descripcion"]);
+                    listBox1.Items.Add(reader["Descripcion"].ToString());
+                    total++;
+                    sum += double.Parse(reader["Precio"].ToString());
                 }
+                labelTotal.Text = total.ToString();
+                labelAvg.Text = (sum / total).ToString();
                 
+                connection.Close();
+            }
+        }
+
+        private void ListBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (listBox1.SelectedItems.Count > 0)
+            {
+                MySqlConnection connection = new MySqlConnection(connectionString);
+                connection.Open();
+
+                richTextBox1.Text = "";
+                string id = listBox1.SelectedItems[0].ToString().Split('-')[0];
+
+                string query = "SELECT Descripcion, Precio FROM articulos WHERE Codigo=@cod";
+                MySqlCommand command = new MySqlCommand(query, connection);
+                command.Parameters.AddWithValue("@cod", id);
+                MySqlDataReader reader = command.ExecuteReader();
+                while (reader.Read())
+                {
+                    richTextBox1.Text = reader["Descripcion"].ToString() + " -> " + reader["Precio"].ToString() + "€";
+                }
+
                 connection.Close();
             }
         }

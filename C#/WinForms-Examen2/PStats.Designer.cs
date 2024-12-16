@@ -53,18 +53,18 @@
             // 
             this.comboBoxFamily.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.comboBoxFamily.FormattingEnabled = true;
-            this.comboBoxFamily.Location = new System.Drawing.Point(281, 55);
-            this.comboBoxFamily.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBoxFamily.Location = new System.Drawing.Point(314, 57);
+            this.comboBoxFamily.Margin = new System.Windows.Forms.Padding(4);
             this.comboBoxFamily.Name = "comboBoxFamily";
             this.comboBoxFamily.Size = new System.Drawing.Size(199, 24);
             this.comboBoxFamily.TabIndex = 2;
-            this.comboBoxFamily.SelectedIndexChanged += new System.EventHandler(this.comboBoxFamily_SelectedIndexChanged);
+            this.comboBoxFamily.SelectedIndexChanged += new System.EventHandler(this.ComboBoxFamily_SelectedIndexChanged);
             // 
             // label1
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(114, 59);
+            this.label1.Location = new System.Drawing.Point(147, 61);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(148, 16);
@@ -75,7 +75,7 @@
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(55, 179);
+            this.label2.Location = new System.Drawing.Point(40, 176);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(180, 16);
             this.label2.TabIndex = 4;
@@ -85,7 +85,7 @@
             // 
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(55, 214);
+            this.label3.Location = new System.Drawing.Point(40, 206);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(107, 16);
             this.label3.TabIndex = 5;
@@ -95,7 +95,7 @@
             // 
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(55, 249);
+            this.label4.Location = new System.Drawing.Point(40, 252);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(110, 16);
             this.label4.TabIndex = 6;
@@ -105,7 +105,7 @@
             // 
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(55, 285);
+            this.label5.Location = new System.Drawing.Point(40, 307);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(122, 16);
             this.label5.TabIndex = 7;
@@ -115,7 +115,7 @@
             // 
             this.labelListado.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelListado.AutoSize = true;
-            this.labelListado.Location = new System.Drawing.Point(356, 137);
+            this.labelListado.Location = new System.Drawing.Point(417, 117);
             this.labelListado.Name = "labelListado";
             this.labelListado.Size = new System.Drawing.Size(16, 16);
             this.labelListado.TabIndex = 8;
@@ -126,15 +126,14 @@
             this.listBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.listBox1.FormattingEnabled = true;
             this.listBox1.ItemHeight = 16;
-            this.listBox1.Location = new System.Drawing.Point(359, 179);
+            this.listBox1.Location = new System.Drawing.Point(420, 161);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(227, 132);
+            this.listBox1.Size = new System.Drawing.Size(261, 196);
             this.listBox1.TabIndex = 9;
             // 
             // labelQuantity
             // 
-            this.labelQuantity.AutoSize = true;
-            this.labelQuantity.Location = new System.Drawing.Point(262, 179);
+            this.labelQuantity.Location = new System.Drawing.Point(231, 176);
             this.labelQuantity.Name = "labelQuantity";
             this.labelQuantity.Size = new System.Drawing.Size(16, 16);
             this.labelQuantity.TabIndex = 10;
@@ -143,30 +142,27 @@
             // labelAverage
             // 
             this.labelAverage.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.labelAverage.AutoSize = true;
-            this.labelAverage.Location = new System.Drawing.Point(262, 214);
+            this.labelAverage.Location = new System.Drawing.Point(231, 206);
             this.labelAverage.Name = "labelAverage";
-            this.labelAverage.Size = new System.Drawing.Size(16, 16);
+            this.labelAverage.Size = new System.Drawing.Size(72, 16);
             this.labelAverage.TabIndex = 11;
             this.labelAverage.Text = "...";
             // 
             // labelExpensive
             // 
             this.labelExpensive.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.labelExpensive.AutoSize = true;
-            this.labelExpensive.Location = new System.Drawing.Point(262, 249);
+            this.labelExpensive.Location = new System.Drawing.Point(231, 252);
             this.labelExpensive.Name = "labelExpensive";
-            this.labelExpensive.Size = new System.Drawing.Size(16, 16);
+            this.labelExpensive.Size = new System.Drawing.Size(150, 50);
             this.labelExpensive.TabIndex = 12;
             this.labelExpensive.Text = "...";
             // 
             // labelCheapest
             // 
             this.labelCheapest.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.labelCheapest.AutoSize = true;
-            this.labelCheapest.Location = new System.Drawing.Point(262, 285);
+            this.labelCheapest.Location = new System.Drawing.Point(231, 307);
             this.labelCheapest.Name = "labelCheapest";
-            this.labelCheapest.Size = new System.Drawing.Size(16, 16);
+            this.labelCheapest.Size = new System.Drawing.Size(150, 50);
             this.labelCheapest.TabIndex = 13;
             this.labelCheapest.Text = "...";
             // 
@@ -174,7 +170,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(645, 444);
+            this.ClientSize = new System.Drawing.Size(726, 444);
             this.Controls.Add(this.labelCheapest);
             this.Controls.Add(this.labelExpensive);
             this.Controls.Add(this.labelAverage);
@@ -188,7 +184,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.comboBoxFamily);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "PStats";
             this.Text = "Estadísticas";
             this.Load += new System.EventHandler(this.PStats_Load);
