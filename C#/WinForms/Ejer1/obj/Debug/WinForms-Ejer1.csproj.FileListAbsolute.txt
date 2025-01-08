@@ -1,0 +1,10 @@
+D:\Code\_FP2\Interfaces\WinForms-Ejer1\bin\Debug\WinForms-Ejer1.exe.config
+D:\Code\_FP2\Interfaces\WinForms-Ejer1\bin\Debug\WinForms-Ejer1.exe
+D:\Code\_FP2\Interfaces\WinForms-Ejer1\bin\Debug\WinForms-Ejer1.pdb
+D:\Code\_FP2\Interfaces\WinForms-Ejer1\obj\Debug\WinForms-Ejer1.csproj.AssemblyReference.cache
+D:\Code\_FP2\Interfaces\WinForms-Ejer1\obj\Debug\WinForms_Ejer1.Form1.resources
+D:\Code\_FP2\Interfaces\WinForms-Ejer1\obj\Debug\WinForms_Ejer1.Properties.Resources.resources
+D:\Code\_FP2\Interfaces\WinForms-Ejer1\obj\Debug\WinForms-Ejer1.csproj.GenerateResource.cache
+D:\Code\_FP2\Interfaces\WinForms-Ejer1\obj\Debug\WinForms-Ejer1.csproj.CoreCompileInputs.cache
+D:\Code\_FP2\Interfaces\WinForms-Ejer1\obj\Debug\WinForms-Ejer1.exe
+D:\Code\_FP2\Interfaces\WinForms-Ejer1\obj\Debug\WinForms-Ejer1.pdb

@@ -1,0 +1,13 @@
+C:\Users\DAM-A\Sync\DAM2-Code\C#\WinForms-Examen1\bin\Debug\WinForms-Examen1.exe.config
+C:\Users\DAM-A\Sync\DAM2-Code\C#\WinForms-Examen1\bin\Debug\WinForms-Examen1.exe
+C:\Users\DAM-A\Sync\DAM2-Code\C#\WinForms-Examen1\bin\Debug\WinForms-Examen1.pdb
+C:\Users\DAM-A\Sync\DAM2-Code\C#\WinForms-Examen1\obj\Debug\WinForms-Examen1.csproj.AssemblyReference.cache
+C:\Users\DAM-A\Sync\DAM2-Code\C#\WinForms-Examen1\obj\Debug\WinForms_Examen1.PAlumnoMod.resources
+C:\Users\DAM-A\Sync\DAM2-Code\C#\WinForms-Examen1\obj\Debug\WinForms_Examen1.PAlumnos.resources
+C:\Users\DAM-A\Sync\DAM2-Code\C#\WinForms-Examen1\obj\Debug\WinForms_Examen1.PBuscador.resources
+C:\Users\DAM-A\Sync\DAM2-Code\C#\WinForms-Examen1\obj\Debug\WinForms_Examen1.PPrincipal.resources
+C:\Users\DAM-A\Sync\DAM2-Code\C#\WinForms-Examen1\obj\Debug\WinForms_Examen1.Properties.Resources.resources
+C:\Users\DAM-A\Sync\DAM2-Code\C#\WinForms-Examen1\obj\Debug\WinForms-Examen1.csproj.GenerateResource.cache
+C:\Users\DAM-A\Sync\DAM2-Code\C#\WinForms-Examen1\obj\Debug\WinForms-Examen1.csproj.CoreCompileInputs.cache
+C:\Users\DAM-A\Sync\DAM2-Code\C#\WinForms-Examen1\obj\Debug\WinForms-Examen1.exe
+C:\Users\DAM-A\Sync\DAM2-Code\C#\WinForms-Examen1\obj\Debug\WinForms-Examen1.pdb
