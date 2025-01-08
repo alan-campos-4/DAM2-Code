@@ -1,30 +1,18 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\DAM-A\\Sync\\Code\\C#\\WinForms-Examen2\\",
+  "WorkspaceRootPath": "D:\\Code\\FP2\\C#\\WinForms-Examen2\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{50525ADA-0DD1-4445-B19F-ED0E099F6054}|WinForms-Examen2.csproj|C:\\Users\\DAM-A\\Sync\\Code\\C#\\WinForms-Examen2\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{50525ADA-0DD1-4445-B19F-ED0E099F6054}|WinForms-Examen2.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{50525ADA-0DD1-4445-B19F-ED0E099F6054}|WinForms-Examen2.csproj|D:\\Code\\FP2\\C#\\WinForms-Examen2\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{50525ADA-0DD1-4445-B19F-ED0E099F6054}|WinForms-Examen2.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{50525ADA-0DD1-4445-B19F-ED0E099F6054}|WinForms-Examen2.csproj|C:\\Users\\DAM-A\\Sync\\Code\\C#\\WinForms-Examen2\\pcategorias.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{50525ADA-0DD1-4445-B19F-ED0E099F6054}|WinForms-Examen2.csproj|solutionrelative:pcategorias.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{50525ADA-0DD1-4445-B19F-ED0E099F6054}|WinForms-Examen2.csproj|C:\\Users\\DAM-A\\Sync\\Code\\C#\\WinForms-Examen2\\pcategorias.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{50525ADA-0DD1-4445-B19F-ED0E099F6054}|WinForms-Examen2.csproj|solutionrelative:pcategorias.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{50525ADA-0DD1-4445-B19F-ED0E099F6054}|WinForms-Examen2.csproj|C:\\Users\\DAM-A\\Sync\\Code\\C#\\WinForms-Examen2\\global.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{50525ADA-0DD1-4445-B19F-ED0E099F6054}|WinForms-Examen2.csproj|d:\\code\\fp2\\c#\\winforms-examen2\\global.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{50525ADA-0DD1-4445-B19F-ED0E099F6054}|WinForms-Examen2.csproj|solutionrelative:global.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{50525ADA-0DD1-4445-B19F-ED0E099F6054}|WinForms-Examen2.csproj|c:\\users\\dam-a\\sync\\code\\c#\\winforms-examen2\\pstats.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{50525ADA-0DD1-4445-B19F-ED0E099F6054}|WinForms-Examen2.csproj|solutionrelative:pstats.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{50525ADA-0DD1-4445-B19F-ED0E099F6054}|WinForms-Examen2.csproj|C:\\Users\\DAM-A\\Sync\\Code\\C#\\WinForms-Examen2\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{50525ADA-0DD1-4445-B19F-ED0E099F6054}|WinForms-Examen2.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{50525ADA-0DD1-4445-B19F-ED0E099F6054}|WinForms-Examen2.csproj|D:\\Code\\FP2\\C#\\WinForms-Examen2\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{50525ADA-0DD1-4445-B19F-ED0E099F6054}|WinForms-Examen2.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -33,18 +21,18 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 79,
-          "SelectedChildIndex": 2,
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "Global.cs",
-              "DocumentMoniker": "C:\\Users\\DAM-A\\Sync\\Code\\C#\\WinForms-Examen2\\Global.cs",
+              "DocumentMoniker": "D:\\Code\\FP2\\C#\\WinForms-Examen2\\Global.cs",
               "RelativeDocumentMoniker": "Global.cs",
-              "ToolTip": "C:\\Users\\DAM-A\\Sync\\Code\\C#\\WinForms-Examen2\\Global.cs",
+              "ToolTip": "D:\\Code\\FP2\\C#\\WinForms-Examen2\\Global.cs",
               "RelativeToolTip": "Global.cs",
-              "ViewState": "AgIAADAAAAAAAAAAAAAmwDIAAAANAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAACEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-13T11:14:47.305Z",
               "IsPinned": true,
@@ -52,11 +40,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 0,
               "Title": "Form1.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\DAM-A\\Sync\\Code\\C#\\WinForms-Examen2\\Form1.cs",
+              "DocumentMoniker": "D:\\Code\\FP2\\C#\\WinForms-Examen2\\Form1.cs",
               "RelativeDocumentMoniker": "Form1.cs",
-              "ToolTip": "C:\\Users\\DAM-A\\Sync\\Code\\C#\\WinForms-Examen2\\Form1.cs [Dise\u00F1o]",
+              "ToolTip": "D:\\Code\\FP2\\C#\\WinForms-Examen2\\Form1.cs [Dise\u00F1o]",
               "RelativeToolTip": "Form1.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-13T11:14:56.05Z",
@@ -65,56 +53,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "Form1.cs",
-              "DocumentMoniker": "C:\\Users\\DAM-A\\Sync\\Code\\C#\\WinForms-Examen2\\Form1.cs",
+              "DocumentMoniker": "D:\\Code\\FP2\\C#\\WinForms-Examen2\\Form1.cs",
               "RelativeDocumentMoniker": "Form1.cs",
-              "ToolTip": "C:\\Users\\DAM-A\\Sync\\Code\\C#\\WinForms-Examen2\\Form1.cs",
+              "ToolTip": "D:\\Code\\FP2\\C#\\WinForms-Examen2\\Form1.cs",
               "RelativeToolTip": "Form1.cs",
-              "ViewState": "AgIAAE4AAAAAAAAAAAAUwF8AAABeAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAG4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-13T10:48:32.417Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "PStats.cs",
-              "DocumentMoniker": "C:\\Users\\DAM-A\\Sync\\Code\\C#\\WinForms-Examen2\\PStats.cs",
-              "RelativeDocumentMoniker": "PStats.cs",
-              "ToolTip": "C:\\Users\\DAM-A\\Sync\\Code\\C#\\WinForms-Examen2\\PStats.cs",
-              "RelativeToolTip": "PStats.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAABgAAAA3AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-13T10:50:53.979Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "PCategorias.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\DAM-A\\Sync\\Code\\C#\\WinForms-Examen2\\PCategorias.cs",
-              "RelativeDocumentMoniker": "PCategorias.cs",
-              "ToolTip": "C:\\Users\\DAM-A\\Sync\\Code\\C#\\WinForms-Examen2\\PCategorias.cs [Dise\u00F1o]",
-              "RelativeToolTip": "PCategorias.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-13T13:06:18.004Z",
-              "IsPinned": true,
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "PCategorias.cs",
-              "DocumentMoniker": "C:\\Users\\DAM-A\\Sync\\Code\\C#\\WinForms-Examen2\\PCategorias.cs",
-              "RelativeDocumentMoniker": "PCategorias.cs",
-              "ToolTip": "C:\\Users\\DAM-A\\Sync\\Code\\C#\\WinForms-Examen2\\PCategorias.cs",
-              "RelativeToolTip": "PCategorias.cs",
-              "ViewState": "AgIAAAQAAAAAAAAAAAAqwBYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-13T13:08:09.358Z",
               "IsPinned": true,
               "EditorCaption": ""
             },

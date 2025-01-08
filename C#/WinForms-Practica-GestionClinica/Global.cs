@@ -16,7 +16,7 @@ namespace WinForms_Practica_GestionClinica
 
         public string ConnString()
         {
-            return "Server=localhost;Database=clínica veterinaria;User ID=root;Password=root;SslMode=none";
+            return "Server=localhost;Database=clínica veterinaria;User ID=root;Password=SyncDeezNuts99...;SslMode=none";
         }
 
         public DialogResult ShowWarning(string title, string message)

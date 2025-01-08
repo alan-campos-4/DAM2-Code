@@ -113,7 +113,8 @@ def open_repository_menu(opt:str):
                             git_command(arg, "Changes have been saved.", "git add --all", "git commit -m \""+commit_name+"\"")
                         elif option == '5':
                             commit_name = input("\nWhat is the name of the commit?: ")
-                            git_command(arg, "Changes have been saved and pushed to origin.", "git add --all", "git commit -m \""+commit_name+"\"", "git push")
+                            git_command(arg, "Changes have been saved and pushed to origin.", 
+                                        "git add --all", "git commit -m \""+commit_name+"\"", "git push")
                         reload_repos()
                         clear()
                         option = "0"

@@ -135,8 +135,8 @@ namespace WinForms_Practica_GestionClinica
             {
                 foreach (DataGridViewRow row in dataGridView1.Rows)
                 {
-                    if (!row.Cells[2].Value.ToString().Contains(textBoxSearch.Text) &&
-                        !row.Cells[3].Value.ToString().Contains(textBoxSearch.Text) )
+                    string name = row.Cells[2].Value.ToString() + row.Cells[3].Value.ToString();
+                    if (!name.ToLower().Contains(textBoxSearch.Text.ToLower()))
                     {
                         CurrencyManager manager1 = (CurrencyManager)BindingContext[dataGridView1.DataSource];
                         manager1.SuspendBinding();

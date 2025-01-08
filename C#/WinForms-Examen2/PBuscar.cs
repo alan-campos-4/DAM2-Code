@@ -38,7 +38,7 @@ namespace WinForms_Examen2
             connection.Close();
         }
 
-        private void textBoxSearch_TextChanged(object sender, EventArgs e)
+        private void TextBoxSearch_TextChanged(object sender, EventArgs e)
         {
             dataGridView1.ClearSelection();
             foreach (DataGridViewRow row in dataGridView1.Rows)
@@ -49,7 +49,7 @@ namespace WinForms_Examen2
             {
                 foreach (DataGridViewRow row in dataGridView1.Rows)
                 {
-                    if (!row.Cells[1].Value.ToString().Contains(textBoxSearch.Text))
+                    if (!row.Cells[1].Value.ToString().ToLower().Contains(textBoxSearch.Text.ToLower()))
                     {
                         CurrencyManager manager1 = (CurrencyManager)BindingContext[dataGridView1.DataSource];
                         manager1.SuspendBinding();
@@ -58,7 +58,8 @@ namespace WinForms_Examen2
                     }
                 }
             }
-
         }
+
+
     }
 }
