@@ -17,6 +17,8 @@ namespace WF_PracticaCRUD
             InitializeComponent();
         }
 
+        static Global g = new Global();
+
         private void PModificar_Load(object sender, EventArgs e)
         {
             comboBoxFuel.Items.Clear();
@@ -44,7 +46,10 @@ namespace WF_PracticaCRUD
         {
             if (DialogResult == DialogResult.OK)
             {
-                DialogResult = DialogResult.OK;
+                if (g.ShowWarning(Text, "¿Son los datos correctos?") == DialogResult.OK)
+                    {DialogResult = DialogResult.OK;}
+                else
+                    { DialogResult = DialogResult.Cancel; }
             }
 
             /*

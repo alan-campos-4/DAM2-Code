@@ -8,7 +8,7 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace WinForms_Examen2
+namespace WF_PracticaCRUD
 {
     internal class Global
     {
