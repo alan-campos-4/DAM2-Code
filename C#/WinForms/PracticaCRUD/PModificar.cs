@@ -1,8 +1,10 @@
-﻿using System;
+﻿using Google.Protobuf.WellKnownTypes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Imaging;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,42 +17,94 @@ namespace WF_PracticaCRUD
         public PModificar()
         {
             InitializeComponent();
-        }
-
-        static Global g = new Global();
-
-        private void PModificar_Load(object sender, EventArgs e)
-        {
-            comboBoxFuel.Items.Clear();
             comboBoxFuel.Items.Add("Gasolina");
             comboBoxFuel.Items.Add("Diésel");
             comboBoxFuel.Items.Add("Eléctrico");
             comboBoxFuel.Items.Add("Híbrido");
+            labelNecessary.Visible = false;
 
-            comboBoxTrans.Items.Clear();
-            comboBoxTrans.Items.Add("Manual");
-            comboBoxTrans.Items.Add("Automático");
+            /*
+            id INT AUTO_INCREMENT PRIMARY KEY,
+            marca VARCHAR(50) NOT NULL,
+            modelo VARCHAR(50) NOT NULL,
+            año YEAR NOT NULL,
+            precio DECIMAL(10, 2) NOT NULL,
+            color VARCHAR(30),
+            kilometraje INT DEFAULT 0,
+            combustible ENUM('Gasolina', 'Diésel', 'Eléctrico', 'Híbrido') NOT NULL,
+            transmisión ENUM('Manual', 'Automático') NOT NULL,
+            puertas TINYINT DEFAULT 5,
+            stock INT DEFAULT 1,
+            descripcion TEXT,
+            fecha_ingreso DATE,
+            activo BOOLEAN DEFAULT TRUE
+             */
 
-            comboBoxDoors.Items.Clear();
-            comboBoxDoors.Items.Add(3);
-            comboBoxDoors.Items.Add(4);
-            comboBoxDoors.Items.Add(5);
-            comboBoxDoors.Items.Add(7);
-
-            comboBoxActive.Items.Clear();
-            comboBoxActive.Items.Add(0);
-            comboBoxActive.Items.Add(1);
+            NotNullFields = new System.Windows.Forms.TextBox[] {
+                textBoxMaker,
+                textBoxModel,
+                textBoxPrice
+            };
         }
+
+        static Global g = new Global();
+        public System.Windows.Forms.TextBox[] NotNullFields = new System.Windows.Forms.TextBox[10];
+
+        private void PModificar_Load(object sender, EventArgs e)
+        {
+            if (Text.Equals("Mostrar Coche"))
+            {
+                foreach (Control c in groupBox1.Controls)
+                {
+                    if (!(c is Label))
+                        { c.Enabled = false; }
+                }
+                foreach (Control c in groupBox2.Controls)
+                {
+                    if (!(c is Label))
+                        { c.Enabled = false; }
+                }
+                buttonOk.Visible = false;
+                buttonCancel.Visible = false;
+            }
+        }
+
+        public bool FieldsFull()
+        {
+            bool empty = false;
+            foreach (TextBox tb in NotNullFields)
+            {
+                if (String.IsNullOrEmpty(tb.Text))
+                {
+                    empty = true;
+                    tb.BackColor = Color.IndianRed;
+                    labelNecessary.Visible = true;
+                }
+                else
+                {
+                    tb.BackColor = Color.White;
+                    labelNecessary.Visible = false;
+                }
+            }
+            return empty;
+        }
+
 
         private void ButtonOk_Click(object sender, EventArgs e)
         {
             if (DialogResult == DialogResult.OK)
             {
-                if (g.ShowWarning(Text, "¿Son los datos correctos?") == DialogResult.OK)
-                    {DialogResult = DialogResult.OK;}
-                else
-                    { DialogResult = DialogResult.Cancel; }
+                if (!FieldsFull())
+                {
+                    if (g.ShowYesNo(Text, "¿Son los datos correctos?") == DialogResult.Yes)
+                    { DialogResult = DialogResult.OK; }
+                    else
+                    { DialogResult = DialogResult.None; }
+                }
+                else { DialogResult = DialogResult.None; }
             }
+
+            
 
             /*
             comando.Parameters.AddWithValue("@marc", pAdd.textBoxMaker.Text);

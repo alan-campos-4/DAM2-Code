@@ -21,7 +21,12 @@ namespace WF_PracticaCRUD
 
         public DialogResult ShowWarning(string title, string message)
         {
-            return MessageBox.Show(message, title, MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+            return MessageBox.Show(message, title, MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+        }
+
+        public DialogResult ShowYesNo(string title, string message)
+        {
+            return MessageBox.Show(message, title, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
         }
 
         public DialogResult ShowConfirm(string title, string message)
