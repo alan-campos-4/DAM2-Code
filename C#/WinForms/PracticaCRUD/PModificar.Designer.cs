@@ -464,16 +464,17 @@
         public System.Windows.Forms.TextBox textBoxColor;
         public System.Windows.Forms.TextBox textBoxKilom;
         public System.Windows.Forms.TextBox textBoxStock;
-        public System.Windows.Forms.ComboBox comboBoxFuel;
-        public System.Windows.Forms.DateTimePicker dateTimePicker1;
         public System.Windows.Forms.RichTextBox richTextBox1;
+        public System.Windows.Forms.ComboBox comboBoxFuel;
         public System.Windows.Forms.CheckBox checkBoxAct;
         public System.Windows.Forms.RadioButton radioButtonAuto;
         public System.Windows.Forms.RadioButton radioButtonManual;
         public System.Windows.Forms.NumericUpDown numericUpDownDoors;
+        public System.Windows.Forms.DateTimePicker dateTimePicker1;
+        public System.Windows.Forms.Label labelNecessary;
         private System.Windows.Forms.Button buttonOk;
         private System.Windows.Forms.Button buttonCancel;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label labelNecessary;
+        
     }
 }

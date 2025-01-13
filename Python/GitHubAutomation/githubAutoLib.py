@@ -1,6 +1,6 @@
 import os
 import sys
-import git
+import git # type: ignore
 
 
 
@@ -65,6 +65,35 @@ def reload_repos():
             else:
                 print(f" {i}.) Path {arg} not found")
 
+def reload_repo(num):
+    for i, arg in enumerate(sys.argv):
+        if i==num:
+            if os.path.exists(arg):
+                try:
+                    repo = git.Repo(arg)
+                    repo_name = repo.remotes.origin.url.split('.git')[0].split('/')[-1]
+                    repo.git.execute("git remote update")
+                    result = repo.git.execute("git status -uno")
+                    if result.find("nothing to commit")!=-1:
+                        if result.find("git pull")!=-1:
+                            state = "Pull available"
+                        elif result.find("git push")!=-1:
+                            state = "Push ready"
+                        else:
+                            state = "Up to date"
+                    else:
+                        state = "Changed"
+                    repo.close()
+                    numbers[num] = (i)
+                    names[num] = (repo_name)
+                    states[num] = (state)
+                    paths[num] = (arg)
+                except git.exc.InvalidGitRepositoryError:
+                    print(f" {i}.) Repository {arg} not found")
+                except git.exc.GitCommandError:
+                    print(f" {i}.) Error in command")
+            else:
+                print(f" {i}.) Path {arg} not found")
 
 
 def open_main_menu():
@@ -115,7 +144,7 @@ def open_repository_menu(opt:str):
                             commit_name = input("\nWhat is the name of the commit?: ")
                             git_command(arg, "Changes have been saved and pushed to origin.", 
                                         "git add --all", "git commit -m \""+commit_name+"\"", "git push")
-                        reload_repos()
+                        reload_repo(option)
                         clear()
                         option = "0"
                     else:

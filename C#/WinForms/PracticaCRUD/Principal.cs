@@ -1,14 +1,6 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace WF_PracticaCRUD
@@ -52,7 +44,10 @@ namespace WF_PracticaCRUD
         {
             string title = "Añadir Coche";
             PModificar pAdd = new PModificar { Text = title };
+            pAdd.labelNecessary.Visible = false;
+            pAdd.NecessaryFieldsFull = true;
             pAdd.comboBoxFuel.SelectedIndex = 0;
+            pAdd.numericUpDownDoors.Value = 5;
             pAdd.radioButtonAuto.Checked = true;
             pAdd.checkBoxAct.Checked = true;
             pAdd.dateTimePicker1.Value = DateTime.Now;
@@ -102,6 +97,8 @@ namespace WF_PracticaCRUD
             {
                 string title = "Modificar Coche";
                 PModificar pMod = new PModificar { Text = title };
+                pMod.labelNecessary.Visible = false;
+                pMod.NecessaryFieldsFull = true;
                 pMod.textBoxMaker.Text = dataGridCars.SelectedRows[0].Cells[1].Value.ToString();
                 pMod.textBoxModel.Text = dataGridCars.SelectedRows[0].Cells[2].Value.ToString();
                 pMod.textBoxYear.Text = dataGridCars.SelectedRows[0].Cells[3].Value.ToString();

@@ -40,7 +40,7 @@ namespace WF_PracticaCRUD
         }
 
 
-        public void CheckOnlyLetters_KeyPress(object sender, KeyPressEventArgs e)
+        public void CheckLetters_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = !(char.IsLetter(e.KeyChar) || e.KeyChar == (char)Keys.Back);
         }
@@ -65,6 +65,11 @@ namespace WF_PracticaCRUD
             }
         }
 
+
+        public void CheckSpecial_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+        }
 
     }
 }
