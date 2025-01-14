@@ -54,17 +54,17 @@
             this.buttonOk = new System.Windows.Forms.Button();
             this.buttonCancel = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.numericUpDownDoors = new System.Windows.Forms.NumericUpDown();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.radioButtonAuto = new System.Windows.Forms.RadioButton();
             this.radioButtonManual = new System.Windows.Forms.RadioButton();
+            this.numericUpDownDoors = new System.Windows.Forms.NumericUpDown();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.checkBoxAct = new System.Windows.Forms.CheckBox();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.labelNecessary = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
+            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDoors)).BeginInit();
             this.groupBox2.SuspendLayout();
-            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -196,6 +196,7 @@
             this.label13.Size = new System.Drawing.Size(44, 16);
             this.label13.TabIndex = 12;
             this.label13.Text = "Activo";
+
             // 
             // textBoxMaker
             // 
@@ -213,6 +214,14 @@
             this.textBoxModel.Size = new System.Drawing.Size(135, 22);
             this.textBoxModel.TabIndex = 14;
             // 
+            // textBoxColor
+            // 
+            this.textBoxColor.Location = new System.Drawing.Point(117, 95);
+            this.textBoxColor.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxColor.Name = "textBoxColor";
+            this.textBoxColor.Size = new System.Drawing.Size(93, 22);
+            this.textBoxColor.TabIndex = 15;
+            // 
             // textBoxYear
             // 
             this.textBoxYear.Location = new System.Drawing.Point(117, 125);
@@ -220,31 +229,29 @@
             this.textBoxYear.MaxLength = 4;
             this.textBoxYear.Name = "textBoxYear";
             this.textBoxYear.Size = new System.Drawing.Size(71, 22);
-            this.textBoxYear.TabIndex = 15;
+            this.textBoxYear.TabIndex = 16;
             // 
-            // textBoxPrice
+            // numericUpDownDoors
             // 
-            this.textBoxPrice.Location = new System.Drawing.Point(128, 90);
-            this.textBoxPrice.Margin = new System.Windows.Forms.Padding(4);
-            this.textBoxPrice.Name = "textBoxPrice";
-            this.textBoxPrice.Size = new System.Drawing.Size(83, 22);
-            this.textBoxPrice.TabIndex = 17;
-            // 
-            // textBoxColor
-            // 
-            this.textBoxColor.Location = new System.Drawing.Point(117, 95);
-            this.textBoxColor.Margin = new System.Windows.Forms.Padding(4);
-            this.textBoxColor.Name = "textBoxColor";
-            this.textBoxColor.Size = new System.Drawing.Size(93, 22);
-            this.textBoxColor.TabIndex = 16;
-            // 
-            // textBoxKilom
-            // 
-            this.textBoxKilom.Location = new System.Drawing.Point(128, 120);
-            this.textBoxKilom.Margin = new System.Windows.Forms.Padding(4);
-            this.textBoxKilom.Name = "textBoxKilom";
-            this.textBoxKilom.Size = new System.Drawing.Size(100, 22);
-            this.textBoxKilom.TabIndex = 21;
+            this.numericUpDownDoors.Location = new System.Drawing.Point(420, 36);
+            this.numericUpDownDoors.Maximum = new decimal(new int[] {
+            9,
+            0,
+            0,
+            0});
+            this.numericUpDownDoors.Minimum = new decimal(new int[] {
+            3,
+            0,
+            0,
+            0});
+            this.numericUpDownDoors.Name = "numericUpDownDoors";
+            this.numericUpDownDoors.Size = new System.Drawing.Size(57, 22);
+            this.numericUpDownDoors.TabIndex = 17;
+            this.numericUpDownDoors.Value = new decimal(new int[] {
+            3,
+            0,
+            0,
+            0});
             // 
             // comboBoxFuel
             // 
@@ -254,6 +261,44 @@
             this.comboBoxFuel.Size = new System.Drawing.Size(106, 24);
             this.comboBoxFuel.TabIndex = 18;
             // 
+            // radioButtonAuto
+            // 
+            this.radioButtonAuto.AutoSize = true;
+            this.radioButtonAuto.Location = new System.Drawing.Point(3, 3);
+            this.radioButtonAuto.Name = "radioButtonAuto";
+            this.radioButtonAuto.Size = new System.Drawing.Size(92, 20);
+            this.radioButtonAuto.TabIndex = 19;
+            this.radioButtonAuto.Text = "Automático";
+            this.radioButtonAuto.UseVisualStyleBackColor = true;
+            // 
+            // radioButtonManual
+            // 
+            this.radioButtonManual.AutoSize = true;
+            this.radioButtonManual.Location = new System.Drawing.Point(3, 22);
+            this.radioButtonManual.Name = "radioButtonManual";
+            this.radioButtonManual.Size = new System.Drawing.Size(69, 20);
+            this.radioButtonManual.TabIndex = 20;
+            this.radioButtonManual.Text = "Manual";
+            this.radioButtonManual.UseVisualStyleBackColor = true;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.radioButtonAuto);
+            this.panel1.Controls.Add(this.radioButtonManual);
+            this.panel1.Location = new System.Drawing.Point(323, 117);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(117, 45);
+            this.panel1.TabIndex = 21;
+            // 
+            // checkBoxAct
+            // 
+            this.checkBoxAct.AutoSize = true;
+            this.checkBoxAct.Location = new System.Drawing.Point(128, 36);
+            this.checkBoxAct.Name = "checkBoxAct";
+            this.checkBoxAct.Size = new System.Drawing.Size(15, 14);
+            this.checkBoxAct.TabIndex = 22;
+            this.checkBoxAct.UseVisualStyleBackColor = true;
+            // 
             // textBoxStock
             // 
             this.textBoxStock.Location = new System.Drawing.Point(128, 61);
@@ -261,42 +306,36 @@
             this.textBoxStock.Size = new System.Drawing.Size(66, 22);
             this.textBoxStock.TabIndex = 23;
             // 
+            // textBoxPrice
+            // 
+            this.textBoxPrice.Location = new System.Drawing.Point(128, 90);
+            this.textBoxPrice.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxPrice.Name = "textBoxPrice";
+            this.textBoxPrice.Size = new System.Drawing.Size(83, 22);
+            this.textBoxPrice.TabIndex = 24;
+            // 
+            // textBoxKilom
+            // 
+            this.textBoxKilom.Location = new System.Drawing.Point(128, 120);
+            this.textBoxKilom.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxKilom.Name = "textBoxKilom";
+            this.textBoxKilom.Size = new System.Drawing.Size(100, 22);
+            this.textBoxKilom.TabIndex = 25;
+            // 
             // dateTimePicker1
             // 
             this.dateTimePicker1.Location = new System.Drawing.Point(323, 53);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 22);
-            this.dateTimePicker1.TabIndex = 25;
+            this.dateTimePicker1.TabIndex = 26;
             // 
             // richTextBox1
             // 
             this.richTextBox1.Location = new System.Drawing.Point(323, 112);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.Size = new System.Drawing.Size(250, 60);
-            this.richTextBox1.TabIndex = 22;
+            this.richTextBox1.TabIndex = 27;
             this.richTextBox1.Text = "";
-            // 
-            // buttonOk
-            // 
-            this.buttonOk.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.buttonOk.Location = new System.Drawing.Point(251, 457);
-            this.buttonOk.Name = "buttonOk";
-            this.buttonOk.Size = new System.Drawing.Size(121, 50);
-            this.buttonOk.TabIndex = 26;
-            this.buttonOk.Text = "OK";
-            this.buttonOk.UseVisualStyleBackColor = true;
-            this.buttonOk.Click += new System.EventHandler(this.ButtonOk_Click);
-            // 
-            // buttonCancel
-            // 
-            this.buttonCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.buttonCancel.Location = new System.Drawing.Point(403, 457);
-            this.buttonCancel.Name = "buttonCancel";
-            this.buttonCancel.Size = new System.Drawing.Size(121, 50);
-            this.buttonCancel.TabIndex = 27;
-            this.buttonCancel.Text = "Cancelar";
-            this.buttonCancel.UseVisualStyleBackColor = true;
-            this.buttonCancel.Click += new System.EventHandler(this.ButtonCancel_Click);
             // 
             // groupBox1
             // 
@@ -321,50 +360,6 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Detalles del coche";
             // 
-            // numericUpDownDoors
-            // 
-            this.numericUpDownDoors.Location = new System.Drawing.Point(420, 36);
-            this.numericUpDownDoors.Maximum = new decimal(new int[] {
-            9,
-            0,
-            0,
-            0});
-            this.numericUpDownDoors.Minimum = new decimal(new int[] {
-            3,
-            0,
-            0,
-            0});
-            this.numericUpDownDoors.Name = "numericUpDownDoors";
-            this.numericUpDownDoors.Size = new System.Drawing.Size(57, 22);
-            this.numericUpDownDoors.TabIndex = 32;
-            this.numericUpDownDoors.Value = new decimal(new int[] {
-            3,
-            0,
-            0,
-            0});
-            // 
-            // radioButtonAuto
-            // 
-            this.radioButtonAuto.AutoSize = true;
-            this.radioButtonAuto.Location = new System.Drawing.Point(3, 3);
-            this.radioButtonAuto.Name = "radioButtonAuto";
-            this.radioButtonAuto.Size = new System.Drawing.Size(92, 20);
-            this.radioButtonAuto.TabIndex = 31;
-            this.radioButtonAuto.TabStop = true;
-            this.radioButtonAuto.Text = "Automático";
-            this.radioButtonAuto.UseVisualStyleBackColor = true;
-            // 
-            // radioButtonManual
-            // 
-            this.radioButtonManual.AutoSize = true;
-            this.radioButtonManual.Location = new System.Drawing.Point(3, 22);
-            this.radioButtonManual.Name = "radioButtonManual";
-            this.radioButtonManual.Size = new System.Drawing.Size(69, 20);
-            this.radioButtonManual.TabIndex = 19;
-            this.radioButtonManual.TabStop = true;
-            this.radioButtonManual.Text = "Manual";
-            this.radioButtonManual.UseVisualStyleBackColor = true;
-            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.checkBoxAct);
@@ -386,23 +381,27 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Detalles de tienda";
             // 
-            // checkBoxAct
+            // buttonOk
             // 
-            this.checkBoxAct.AutoSize = true;
-            this.checkBoxAct.Location = new System.Drawing.Point(128, 36);
-            this.checkBoxAct.Name = "checkBoxAct";
-            this.checkBoxAct.Size = new System.Drawing.Size(15, 14);
-            this.checkBoxAct.TabIndex = 26;
-            this.checkBoxAct.UseVisualStyleBackColor = true;
+            this.buttonOk.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.buttonOk.Location = new System.Drawing.Point(251, 457);
+            this.buttonOk.Name = "buttonOk";
+            this.buttonOk.Size = new System.Drawing.Size(121, 50);
+            this.buttonOk.TabIndex = 30;
+            this.buttonOk.Text = "OK";
+            this.buttonOk.UseVisualStyleBackColor = true;
+            this.buttonOk.Click += new System.EventHandler(this.ButtonOk_Click);
             // 
-            // panel1
+            // buttonCancel
             // 
-            this.panel1.Controls.Add(this.radioButtonAuto);
-            this.panel1.Controls.Add(this.radioButtonManual);
-            this.panel1.Location = new System.Drawing.Point(323, 117);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(117, 45);
-            this.panel1.TabIndex = 33;
+            this.buttonCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.buttonCancel.Location = new System.Drawing.Point(403, 457);
+            this.buttonCancel.Name = "buttonCancel";
+            this.buttonCancel.Size = new System.Drawing.Size(121, 50);
+            this.buttonCancel.TabIndex = 31;
+            this.buttonCancel.Text = "Cancelar";
+            this.buttonCancel.UseVisualStyleBackColor = true;
+            this.buttonCancel.Click += new System.EventHandler(this.ButtonCancel_Click);
             // 
             // labelNecessary
             // 
@@ -410,7 +409,7 @@
             this.labelNecessary.Location = new System.Drawing.Point(38, 431);
             this.labelNecessary.Name = "labelNecessary";
             this.labelNecessary.Size = new System.Drawing.Size(195, 16);
-            this.labelNecessary.TabIndex = 30;
+            this.labelNecessary.TabIndex = 32;
             this.labelNecessary.Text = "Estos campos son obligatorios.";
             // 
             // PModificar
@@ -430,11 +429,11 @@
             this.Load += new System.EventHandler(this.PModificar_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDoors)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 

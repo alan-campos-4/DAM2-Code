@@ -11,7 +11,7 @@
 
     <TextView
         android:id="@+id/tvFragmentA"
-        android:text="@string/hello_fragmentA"
+        android:text="@string/hello_About"
         android:textColor="@color/white"
         android:textSize="30sp"
         android:layout_width="wrap_content"

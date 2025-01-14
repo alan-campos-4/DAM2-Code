@@ -1,11 +1,9 @@
 <resources>
     <string name="app_name">ExampleNavigationMenu</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_fragmentH">Hello Home fragment</string>
     <string name="hello_fragmentS">Hello Settings fragment</string>
     <string name="hello_fragmentF">Hello Favorite fragment</string>
-    <string name="hello_fragmentA">Hello About fragment</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="hello_About">Hello %s, Welcome to About fragment</string>
     <string name="settings_fragment_two">Hello Settings 2 fragment</string>
+    <string name="btnHomeToAbout">Go to About</string>
 </resources>

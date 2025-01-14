@@ -5,24 +5,34 @@ using System.Windows.Forms;
 
 namespace WF_PracticaCRUD
 {
-    public partial class Principal : Form
+    public partial class Principal : Form1
     {
         public Principal()
         {
             InitializeComponent();
         }
 
-        static Global g = new Global();
-        public string connectionString = g.ConnString();
-
         private void Form1_Load(object sender, EventArgs e)
         {
-            ReloadGrid(); 
+            int DG_W = (int)Math.Round(this.Width * ((double)2/3));
+            int DG_H = (int)Math.Round(this.Height * ((double)1/2));
+            int DG_X = (int)((this.Width - DG_W) / 2);
+            int DG_Y = (int)((this.Height - DG_H) / 2);
+            dataGridCars.Size = new System.Drawing.Size(DG_W, DG_H);
+            dataGridCars.Location = new System.Drawing.Point(DG_X, DG_Y);
+
+            int search_X = DG_X + DG_W - textBoxSearch.Width;
+            int search_Y = DG_Y - textBoxSearch.Height - 10;
+            textBoxSearch.Location = new System.Drawing.Point(search_X, search_Y);
+            labelSearch.Location = new System.Drawing.Point(search_X - labelSearch.Width, search_Y + 3);
+
+            ReloadDataTable();
             dataGridCars.ClearSelection();
         }
 
 
-        public void ReloadGrid()
+
+        public void ReloadDataTable()
         {
             MySqlConnection connection = new MySqlConnection(connectionString);
             connection.Open();
@@ -40,6 +50,7 @@ namespace WF_PracticaCRUD
         }
 
 
+
         private void CreateToolStripMenuItem_Click(object sender, EventArgs e)
         {
             string title = "Añadir Coche";
@@ -51,9 +62,11 @@ namespace WF_PracticaCRUD
             pAdd.radioButtonAuto.Checked = true;
             pAdd.checkBoxAct.Checked = true;
             pAdd.dateTimePicker1.Value = DateTime.Now;
+            pAdd.CheckNecessaryFields();
 
             if (pAdd.ShowDialog() == DialogResult.OK)
             {
+
                 try
                 {
                     MySqlConnection connection = new MySqlConnection(connectionString);
@@ -81,15 +94,14 @@ namespace WF_PracticaCRUD
 
                     if (filasAfectadas > 0)
                     {
-                        g.ShowConfirm(title, "Se han añadido los datos correctamente.");
-                        ReloadGrid();
+                        ShowConfirm(title, "Se han añadido los datos correctamente.");
+                        ReloadDataTable();
                     }
-                    else { g.ShowError("No se ha añadido ninguna fila."); }
+                    else { ShowError("No se ha añadido ninguna fila."); }
                 }
-                catch (MySqlException ex) { g.ShowError(ex.Message); }
+                catch (MySqlException ex) { ShowError(ex.Message); }
             }
         }
-
 
         private void ModificarToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -116,7 +128,8 @@ namespace WF_PracticaCRUD
                 { pMod.radioButtonAuto.Checked = true; }
                 else
                 { pMod.radioButtonManual.Checked = true; }
-                
+                pMod.CheckNecessaryFields();
+
                 if (pMod.ShowDialog() == DialogResult.OK)
                 {
                     try
@@ -149,17 +162,16 @@ namespace WF_PracticaCRUD
 
                         if (filasAfectadas > 0)
                         {
-                            g.ShowConfirm(title, "Se han modificado los datos correctamente.");
-                            ReloadGrid();
+                            ShowConfirm(title, "Se han modificado los datos correctamente.");
+                            ReloadDataTable();
                         }
-                        else { g.ShowError("No se ha modificado ninguna fila."); }
+                        else { ShowError("No se ha modificado ninguna fila."); }
                     }
-                    catch (MySqlException ex) { g.ShowError(ex.Message); }
+                    catch (MySqlException ex) { ShowError(ex.Message); }
                 }
             }
-            else { g.ShowError("Debes seleccionar una fila."); }
+            else { ShowError("Debes seleccionar una fila."); }
         }
-
 
         private void BorrarToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -167,7 +179,7 @@ namespace WF_PracticaCRUD
             {
                 string title = "Borrar coche";
                 string car = dataGridCars.SelectedRows[0].Cells[1].Value.ToString() + " " + dataGridCars.SelectedRows[0].Cells[2].Value.ToString();
-                if (g.ShowWarning(title, "¿Estás seguro de que quieres borrar \neste coche "+car+"?") == DialogResult.OK)
+                if (ShowWarning(title, "¿Estás seguro de que quieres borrar \neste coche "+car+"?") == DialogResult.OK)
                 {
                     try
                     {
@@ -181,41 +193,17 @@ namespace WF_PracticaCRUD
 
                         if (filasAfectadas > 0)
                         {
-                            g.ShowConfirm(title, "Se han borrado los datos correctamente.");
-                            ReloadGrid();
+                            ShowConfirm(title, "Se han borrado los datos correctamente.");
+                            ReloadDataTable();
                         }
-                        else { g.ShowError("No se ha borrado ninguna fila."); }
+                        else { ShowError("No se ha borrado ninguna fila."); }
                     }
-                    catch (MySqlException ex) { g.ShowError(ex.Message); }
+                    catch (MySqlException ex) { ShowError(ex.Message); }
                 }
             }
         }
-        
 
-        private void TextBoxSearch_TextChanged(object sender, EventArgs e)
-        {
-            dataGridCars.ClearSelection();
-            foreach (DataGridViewRow row in dataGridCars.Rows)
-            {
-                row.Visible = true;
-            }
-            if (!String.IsNullOrEmpty(textBoxSearch.Text))
-            {
-                foreach (DataGridViewRow row in dataGridCars.Rows)
-                {
-                    string content = row.Cells[1].Value.ToString().ToLower() + " " + row.Cells[2].Value.ToString().ToLower();
-                    string search = textBoxSearch.Text.ToLower();
-                    if ( !content.Contains(search) )
-                    {
-                        CurrencyManager manager1 = (CurrencyManager)BindingContext[dataGridCars.DataSource];
-                        manager1.SuspendBinding();
-                        row.Visible = false;
-                        manager1.ResumeBinding();
-                    }
-                }
-            }
-        }
-        
+
 
         private void DataGridCars_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
@@ -243,5 +231,32 @@ namespace WF_PracticaCRUD
                 Mostrar.ShowDialog();
             }
         }
+
+
+
+        private void TextBoxSearch_TextChanged(object sender, EventArgs e)
+        {
+            dataGridCars.ClearSelection();
+            foreach (DataGridViewRow row in dataGridCars.Rows)
+            {
+                row.Visible = true;
+            }
+            if (!String.IsNullOrEmpty(textBoxSearch.Text))
+            {
+                foreach (DataGridViewRow row in dataGridCars.Rows)
+                {
+                    string content = row.Cells[1].Value.ToString().ToLower() + " " + row.Cells[2].Value.ToString().ToLower();
+                    string search = textBoxSearch.Text.ToLower();
+                    if ( !content.Contains(search) )
+                    {
+                        CurrencyManager manager1 = (CurrencyManager)BindingContext[dataGridCars.DataSource];
+                        manager1.SuspendBinding();
+                        row.Visible = false;
+                        manager1.ResumeBinding();
+                    }
+                }
+            }
+        }
+        
     }
 }

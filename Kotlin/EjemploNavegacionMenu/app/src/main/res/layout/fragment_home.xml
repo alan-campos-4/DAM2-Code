@@ -10,13 +10,24 @@
     >
 
     <TextView
-        android:id="@+id/tvFragmentH"
+        android:id="@+id/tvHome"
         android:text="@string/hello_fragmentH"
         android:textColor="@color/white"
         android:textSize="30sp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/btnHomeToAbout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <Button
+        android:id="@+id/btnHomeToAbout"
+        android:text="@string/btnHomeToAbout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/tvHome"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

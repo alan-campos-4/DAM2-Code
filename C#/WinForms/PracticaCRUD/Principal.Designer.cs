@@ -34,7 +34,7 @@
             this.modificarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.borrarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.textBoxSearch = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.labelSearch = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridCars)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -47,13 +47,13 @@
             this.dataGridCars.AllowUserToResizeRows = false;
             this.dataGridCars.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dataGridCars.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridCars.Location = new System.Drawing.Point(25, 50);
+            this.dataGridCars.Location = new System.Drawing.Point(15, 93);
             this.dataGridCars.MultiSelect = false;
             this.dataGridCars.Name = "dataGridCars";
             this.dataGridCars.ReadOnly = true;
             this.dataGridCars.RowHeadersVisible = false;
             this.dataGridCars.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridCars.Size = new System.Drawing.Size(1100, 500);
+            this.dataGridCars.Size = new System.Drawing.Size(1200, 500);
             this.dataGridCars.TabIndex = 0;
             this.dataGridCars.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.DataGridCars_CellMouseDoubleClick);
             // 
@@ -100,22 +100,22 @@
             this.textBoxSearch.TabIndex = 2;
             this.textBoxSearch.TextChanged += new System.EventHandler(this.TextBoxSearch_TextChanged);
             // 
-            // label1
+            // labelSearch
             // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(794, 25);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(65, 16);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Buscador";
+            this.labelSearch.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.labelSearch.AutoSize = true;
+            this.labelSearch.Location = new System.Drawing.Point(786, 25);
+            this.labelSearch.Name = "labelSearch";
+            this.labelSearch.Size = new System.Drawing.Size(65, 16);
+            this.labelSearch.TabIndex = 3;
+            this.labelSearch.Text = "Buscador";
             // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1067, 554);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.labelSearch);
             this.Controls.Add(this.textBoxSearch);
             this.Controls.Add(this.dataGridCars);
             this.Controls.Add(this.menuStrip1);
@@ -142,7 +142,7 @@
         private System.Windows.Forms.ToolStripMenuItem modificarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem borrarToolStripMenuItem;
         private System.Windows.Forms.TextBox textBoxSearch;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label labelSearch;
     }
 }
 

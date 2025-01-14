@@ -1,22 +1,14 @@
-﻿using MySql.Data.MySqlClient;
-using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Text.RegularExpressions;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using System.Windows.Forms;
 
-namespace WF_PracticaCRUD
-{
-    internal class Global
+namespace WF_PracticaCRUD 
+{ 
+    public partial class Form1 : Form
     {
-        public Global() { }
+        public string connectionString;
 
-        public string ConnString()
+        public Form1()
         {
-            return "Server=localhost;Database=concesionario;User ID=root;Password=QKEBFF;SslMode=none";
+            connectionString = "Server=localhost;Database=concesionario;User ID=root;Password=QKEBFF;SslMode=none";
         }
 
         public DialogResult ShowWarning(string title, string message)
@@ -55,6 +47,7 @@ namespace WF_PracticaCRUD
 
         public void CheckDecimal_KeyPress(object sender, KeyPressEventArgs e)
         {
+            //Numbers and one dot allowed
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
             {
                 e.Handled = true;
@@ -65,11 +58,13 @@ namespace WF_PracticaCRUD
             }
         }
 
-
-        public void CheckSpecial_KeyPress(object sender, KeyPressEventArgs e)
+        public void CheckModel_KeyPress(object sender, KeyPressEventArgs e)
         {
-
+            //Letters, numbers and dashes allowed
+            if ((e.KeyChar == '-') && ((sender as TextBox).Text.IndexOf('-') > -1))
+            {
+                e.Handled = true;
+            }
         }
-
     }
 }

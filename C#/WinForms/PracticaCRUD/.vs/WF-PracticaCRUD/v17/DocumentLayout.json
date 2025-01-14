@@ -3,18 +3,6 @@
   "WorkspaceRootPath": "C:\\Users\\DAM-A\\Sync\\Code\\C#\\WinForms\\PracticaCRUD\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{47FC2A61-593E-4188-8A8F-5336ADCCCC45}|WF-PracticaCRUD.csproj|C:\\Users\\DAM-A\\Sync\\Code\\C#\\WinForms\\PracticaCRUD\\global.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{47FC2A61-593E-4188-8A8F-5336ADCCCC45}|WF-PracticaCRUD.csproj|solutionrelative:global.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{47FC2A61-593E-4188-8A8F-5336ADCCCC45}|WF-PracticaCRUD.csproj|c:\\users\\dam-a\\sync\\code\\c#\\winforms\\practicacrud\\pmodificar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{47FC2A61-593E-4188-8A8F-5336ADCCCC45}|WF-PracticaCRUD.csproj|solutionrelative:pmodificar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{47FC2A61-593E-4188-8A8F-5336ADCCCC45}|WF-PracticaCRUD.csproj|C:\\Users\\DAM-A\\Sync\\Code\\C#\\WinForms\\PracticaCRUD\\principal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{47FC2A61-593E-4188-8A8F-5336ADCCCC45}|WF-PracticaCRUD.csproj|solutionrelative:principal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{47FC2A61-593E-4188-8A8F-5336ADCCCC45}|WF-PracticaCRUD.csproj|C:\\Users\\DAM-A\\Sync\\Code\\C#\\WinForms\\PracticaCRUD\\pmodificar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{47FC2A61-593E-4188-8A8F-5336ADCCCC45}|WF-PracticaCRUD.csproj|solutionrelative:pmodificar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
@@ -23,12 +11,24 @@
       "RelativeMoniker": "D:0:0:{47FC2A61-593E-4188-8A8F-5336ADCCCC45}|WF-PracticaCRUD.csproj|solutionrelative:principal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{47FC2A61-593E-4188-8A8F-5336ADCCCC45}|WF-PracticaCRUD.csproj|C:\\Users\\DAM-A\\Sync\\Code\\C#\\WinForms\\PracticaCRUD\\pmodificar.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{47FC2A61-593E-4188-8A8F-5336ADCCCC45}|WF-PracticaCRUD.csproj|solutionrelative:pmodificar.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{47FC2A61-593E-4188-8A8F-5336ADCCCC45}|WF-PracticaCRUD.csproj|C:\\Users\\DAM-A\\Sync\\Code\\C#\\WinForms\\PracticaCRUD\\principal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{47FC2A61-593E-4188-8A8F-5336ADCCCC45}|WF-PracticaCRUD.csproj|solutionrelative:principal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47FC2A61-593E-4188-8A8F-5336ADCCCC45}|WF-PracticaCRUD.csproj|c:\\users\\dam-a\\sync\\code\\c#\\winforms\\practicacrud\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{47FC2A61-593E-4188-8A8F-5336ADCCCC45}|WF-PracticaCRUD.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{47FC2A61-593E-4188-8A8F-5336ADCCCC45}|WF-PracticaCRUD.csproj|C:\\Users\\DAM-A\\Sync\\Code\\C#\\WinForms\\PracticaCRUD\\principal.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{47FC2A61-593E-4188-8A8F-5336ADCCCC45}|WF-PracticaCRUD.csproj|solutionrelative:principal.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47FC2A61-593E-4188-8A8F-5336ADCCCC45}|WF-PracticaCRUD.csproj|C:\\Users\\DAM-A\\Sync\\Code\\C#\\WinForms\\PracticaCRUD\\pmodificar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{47FC2A61-593E-4188-8A8F-5336ADCCCC45}|WF-PracticaCRUD.csproj|solutionrelative:pmodificar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47FC2A61-593E-4188-8A8F-5336ADCCCC45}|WF-PracticaCRUD.csproj|C:\\Users\\DAM-A\\Sync\\Code\\C#\\WinForms\\PracticaCRUD\\pmodificar.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{47FC2A61-593E-4188-8A8F-5336ADCCCC45}|WF-PracticaCRUD.csproj|solutionrelative:pmodificar.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,25 +38,25 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Global.cs",
-              "DocumentMoniker": "C:\\Users\\DAM-A\\Sync\\Code\\C#\\WinForms\\PracticaCRUD\\Global.cs",
-              "RelativeDocumentMoniker": "Global.cs",
-              "ToolTip": "C:\\Users\\DAM-A\\Sync\\Code\\C#\\WinForms\\PracticaCRUD\\Global.cs",
-              "RelativeToolTip": "Global.cs",
-              "ViewState": "AgIAAC8AAAAAAAAAAAAuwEYAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Users\\DAM-A\\Sync\\Code\\C#\\WinForms\\PracticaCRUD\\Form1.cs",
+              "RelativeDocumentMoniker": "Form1.cs",
+              "ToolTip": "C:\\Users\\DAM-A\\Sync\\Code\\C#\\WinForms\\PracticaCRUD\\Form1.cs",
+              "RelativeToolTip": "Form1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-09T09:24:26.966Z",
+              "WhenOpened": "2025-01-14T08:40:37.677Z",
               "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
               "Title": "Principal.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\DAM-A\\Sync\\Code\\C#\\WinForms\\PracticaCRUD\\Principal.cs",
               "RelativeDocumentMoniker": "Principal.cs",
@@ -69,7 +69,35 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
+              "Title": "Principal.cs",
+              "DocumentMoniker": "C:\\Users\\DAM-A\\Sync\\Code\\C#\\WinForms\\PracticaCRUD\\Principal.cs",
+              "RelativeDocumentMoniker": "Principal.cs",
+              "ToolTip": "C:\\Users\\DAM-A\\Sync\\Code\\C#\\WinForms\\PracticaCRUD\\Principal.cs",
+              "RelativeToolTip": "Principal.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAOoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-08T12:14:00.566Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Principal.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\DAM-A\\Sync\\Code\\C#\\WinForms\\PracticaCRUD\\Principal.Designer.cs",
+              "RelativeDocumentMoniker": "Principal.Designer.cs",
+              "ToolTip": "C:\\Users\\DAM-A\\Sync\\Code\\C#\\WinForms\\PracticaCRUD\\Principal.Designer.cs",
+              "RelativeToolTip": "Principal.Designer.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAgwAMAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-10T12:24:21.827Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "PModificar.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\DAM-A\\Sync\\Code\\C#\\WinForms\\PracticaCRUD\\PModificar.cs",
               "RelativeDocumentMoniker": "PModificar.cs",
@@ -82,27 +110,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Principal.cs",
-              "DocumentMoniker": "C:\\Users\\DAM-A\\Sync\\Code\\C#\\WinForms\\PracticaCRUD\\Principal.cs",
-              "RelativeDocumentMoniker": "Principal.cs",
-              "ToolTip": "C:\\Users\\DAM-A\\Sync\\Code\\C#\\WinForms\\PracticaCRUD\\Principal.cs",
-              "RelativeToolTip": "Principal.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADAAAAAwAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-08T12:14:00.566Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "PModificar.cs",
               "DocumentMoniker": "C:\\Users\\DAM-A\\Sync\\Code\\C#\\WinForms\\PracticaCRUD\\PModificar.cs",
               "RelativeDocumentMoniker": "PModificar.cs",
               "ToolTip": "C:\\Users\\DAM-A\\Sync\\Code\\C#\\WinForms\\PracticaCRUD\\PModificar.cs",
               "RelativeToolTip": "PModificar.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFcAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-08T12:29:01.801Z",
               "IsPinned": true,
@@ -111,26 +125,12 @@
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "Principal.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\DAM-A\\Sync\\Code\\C#\\WinForms\\PracticaCRUD\\Principal.Designer.cs",
-              "RelativeDocumentMoniker": "Principal.Designer.cs",
-              "ToolTip": "C:\\Users\\DAM-A\\Sync\\Code\\C#\\WinForms\\PracticaCRUD\\Principal.Designer.cs",
-              "RelativeToolTip": "Principal.Designer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADgAAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-10T12:24:21.827Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
               "Title": "PModificar.Designer.cs",
               "DocumentMoniker": "C:\\Users\\DAM-A\\Sync\\Code\\C#\\WinForms\\PracticaCRUD\\PModificar.Designer.cs",
               "RelativeDocumentMoniker": "PModificar.Designer.cs",
               "ToolTip": "C:\\Users\\DAM-A\\Sync\\Code\\C#\\WinForms\\PracticaCRUD\\PModificar.Designer.cs",
               "RelativeToolTip": "PModificar.Designer.cs",
-              "ViewState": "AgIAAMEBAAAAAAAAAAAwwNMBAAA6AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAJsBAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-10T12:24:25.884Z",
               "IsPinned": true,
