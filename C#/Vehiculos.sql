@@ -1,14 +1,14 @@
 -- Crear la tabla coches
 CREATE TABLE coches (
-    id INT AUTO_INCREMENT PRIMARY KEY,
+    id INT IDENTITY(1,1) PRIMARY KEY,
     marca VARCHAR(50) NOT NULL,
     modelo VARCHAR(50) NOT NULL,
     año YEAR NOT NULL,
     precio DECIMAL(10, 2) NOT NULL,
     color VARCHAR(30),
     kilometraje INT DEFAULT 0,
-    combustible ENUM('Gasolina', 'Diésel', 'Eléctrico', 'Híbrido') NOT NULL,
-    transmisión ENUM('Manual', 'Automático') NOT NULL,
+    combustible VARCHAR(10) NOT NULL,
+    transmisión VARCHAR(10) NOT NULL,
     puertas TINYINT DEFAULT 5,
     stock INT DEFAULT 1,
     descripcion TEXT,

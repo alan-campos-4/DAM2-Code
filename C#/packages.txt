@@ -1,0 +1,6 @@
+
+mysql
+MySQL.Data
+
+rdlc
+Microsoft.ReportingSercives.ReportViewerControl.Winforms
