@@ -98,7 +98,10 @@ namespace WF_PracticaCRUD
 
         private void ButtonCancel_Click(object sender, EventArgs e)
         {
-            this.Close();
+            if (ShowYesNo(Text, "¿Estás seguro de que quieres salir?") == DialogResult.Yes)
+            { this.Close(); }
+            else
+            { this.DialogResult = DialogResult.None; }
         }
     }
 }

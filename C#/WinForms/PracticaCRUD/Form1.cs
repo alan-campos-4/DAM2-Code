@@ -26,9 +26,9 @@ namespace WF_PracticaCRUD
             return MessageBox.Show(message, title, MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
-        public DialogResult ShowError(string message)
+        public DialogResult ShowError(string window, string message)
         {
-            return MessageBox.Show(message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            return MessageBox.Show(message, "Error en "+window, MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
 

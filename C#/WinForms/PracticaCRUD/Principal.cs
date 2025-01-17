@@ -66,7 +66,6 @@ namespace WF_PracticaCRUD
 
             if (pAdd.ShowDialog() == DialogResult.OK)
             {
-
                 try
                 {
                     MySqlConnection connection = new MySqlConnection(connectionString);
@@ -97,9 +96,9 @@ namespace WF_PracticaCRUD
                         ShowConfirm(title, "Se han añadido los datos correctamente.");
                         ReloadDataTable();
                     }
-                    else { ShowError("No se ha añadido ninguna fila."); }
+                    else { ShowError(this.Text, "No se ha añadido ninguna fila."); }
                 }
-                catch (MySqlException ex) { ShowError(ex.Message); }
+                catch (MySqlException ex) { ShowError(this.Text, ex.Message); }
             }
         }
 
@@ -165,12 +164,12 @@ namespace WF_PracticaCRUD
                             ShowConfirm(title, "Se han modificado los datos correctamente.");
                             ReloadDataTable();
                         }
-                        else { ShowError("No se ha modificado ninguna fila."); }
+                        else { ShowError(this.Text, "No se ha modificado ninguna fila."); }
                     }
-                    catch (MySqlException ex) { ShowError(ex.Message); }
+                    catch (MySqlException ex) { ShowError(this.Text, ex.Message); }
                 }
             }
-            else { ShowError("Debes seleccionar una fila."); }
+            else { ShowError(this.Text, "Debes seleccionar una fila."); }
         }
 
         private void BorrarToolStripMenuItem_Click(object sender, EventArgs e)
@@ -196,9 +195,9 @@ namespace WF_PracticaCRUD
                             ShowConfirm(title, "Se han borrado los datos correctamente.");
                             ReloadDataTable();
                         }
-                        else { ShowError("No se ha borrado ninguna fila."); }
+                        else { ShowError(this.Text, "No se ha borrado ninguna fila."); }
                     }
-                    catch (MySqlException ex) { ShowError(ex.Message); }
+                    catch (MySqlException ex) { ShowError(this.Text, ex.Message); }
                 }
             }
         }
