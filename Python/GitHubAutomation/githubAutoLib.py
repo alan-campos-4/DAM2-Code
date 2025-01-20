@@ -144,7 +144,7 @@ def open_repository_menu(opt:str):
                             commit_name = input("\nWhat is the name of the commit?: ")
                             git_command(arg, "Changes have been saved and pushed to origin.", 
                                         "git add --all", "git commit -m \""+commit_name+"\"", "git push")
-                        reload_repo(option)
+                        reload_repos()
                         clear()
                         option = "0"
                     else:
