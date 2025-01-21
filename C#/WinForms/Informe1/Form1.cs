@@ -16,5 +16,13 @@ namespace Informe1
         {
             InitializeComponent();
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            // TODO: esta línea de código carga datos en la tabla 'coches.coches' Puede moverla o quitarla según sea necesario.
+            this.cochesTableAdapter.Fill(this.coches.coches);
+
+            this.reportViewer1.RefreshReport();
+        }
     }
 }

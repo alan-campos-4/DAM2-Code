@@ -1,6 +1,5 @@
 package ej1;
 
-import info.General;
 import java.io.DataOutputStream;
 import java.io.IOException;
 import java.net.ConnectException;
@@ -21,7 +20,7 @@ public class SaludoExpressCliente
 		
 		try
 		{
-			Socket So = new Socket(General.Host, General.PortSaludo);
+			Socket So = new Socket("127.0.01", 5000);
 			
 			DataOutputStream DOS = new DataOutputStream(So.getOutputStream());
 			DOS.writeUTF(ClientMessage);

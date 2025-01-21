@@ -1,6 +1,5 @@
 package ej2;
 
-import info.General;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -10,7 +9,8 @@ import java.net.Socket;
 
 public class CalculadoraServidor
 {
-	/* Posibles operaciones que se pueden realizar en la Calculadora Remota. */
+	/* 
+	//Posibles operaciones que se pueden realizar en la Calculadora Remota.
 	public enum Operacion
 	{
 		SUMA,
@@ -18,15 +18,15 @@ public class CalculadoraServidor
 		MULTIPLICA,
 		DIVIDE,
 	}
-	/* Devuelve true si la operacion dada es válida. */
+	// Devuelve true si la operacion dada es válida.
 	public static boolean operacionValida(String test)
 	{
 	    for (Operacion o : Operacion.values())
 	    {
-	        if (o.name().equals(test))	{return true;}
+	        if (o.name().toString().toUpperCase().equals(test))	{return true;}
 	    }
 	    return false;
-	}
+	}//*/
 	
 	
 	
@@ -43,19 +43,21 @@ public class CalculadoraServidor
 		try
 		{
 			Socket S2;
-			ServerSocket SS2 = new ServerSocket(General.PortCalculadora);
+			ServerSocket SS2 = new ServerSocket(5001);
 			BufferedReader in;
-			PrintWriter out;
-			General.listening(SS2.getLocalPort());
+			PrintWriter out = null;
+			System.out.println("Listening to port "+SS2.getLocalPort()+"...");
 			
 			while (true)
 			{
 				S2 = SS2.accept();
-				General.connected();
+				System.out.println("Client connected.");
 				
 				in = new BufferedReader(new InputStreamReader(S2.getInputStream()));
+				out = new PrintWriter(S2.getOutputStream(), true);
 				String command = in.readLine();
 				String[] info = command.split(" ");
+				
 				if (info.length==3)
 				{
 					try
@@ -63,30 +65,37 @@ public class CalculadoraServidor
 						int n1 = Integer.parseInt(info[1]);
 						int n2 = Integer.parseInt(info[2]);
 						
-						if (operacionValida(info[0]))
+						double result = 0.0;
+						String op = info[0].replaceAll("","").replaceAll("\\s+","");
+						System.out.println("-"+op);
+						if (op.equals("SUMA"))
 						{
-							double result = 0;
-							Operacion op = Operacion.valueOf(info[0]);
-							switch(op)
-							{
-								case SUMA:			{result = n1 + n2;}	break;
-								case RESTA:			{result = n1 - n2;}	break;
-								case MULTIPLICA:	{result = n1 * n2;}	break;
-								case DIVIDE:
-								{
-									if (n2==0)
-										{throw new IllegalArgumentException("Error. División por cero.");}
-									else
-										{result = (double)n1 / n2;}
-								}
-								break;
-							}
-							
-							out = new PrintWriter(S2.getOutputStream(), true);
+							result = n1 + n2;
 							System.out.println("El resultado es "+result+".");
 						}
+						else if (op.equals("RESTA"))
+						{
+							result = n1 - n2;
+							System.out.println("El resultado es "+result+".");
+						}
+						else if (op.equals("MULTIPLICA"))
+						{
+							result = n1 * n2;
+							System.out.println("El resultado es "+result+".");
+						}
+						else if (op.equals("DIVIDE"))
+						{
+							if (n2==0)	{throw new IllegalArgumentException();}
+							else
+							{
+								result = (double)n1 / n2;
+								System.out.println("El resultado es "+result+".");
+							}
+						}
+						else {System.out.println("Error. Operación no válida.");}
 					}
-					catch (NumberFormatException e) {System.out.println("Error. Tipo de valor incorrecto.");}
+					catch (NumberFormatException e)		{System.out.println("Error. Tipo de valor incorrecto.");}
+					catch (IllegalArgumentException e)	{System.out.println("Error. División por cero.");}
 				}
 				else {System.out.println("Error. Número de parámetros incorrecto.");}
 				
@@ -94,7 +103,7 @@ public class CalculadoraServidor
 			}
 			
 			in.close();
-			//out.close();
+			out.close();
 			S2.close();
 			SS2.close();
 		}

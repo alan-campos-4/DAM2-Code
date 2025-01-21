@@ -1,0 +1,7 @@
+
+
+PSP_UT3
+Al leer cadena mandada desde el cliente, se añade un carácter innecesario.
+
+
+

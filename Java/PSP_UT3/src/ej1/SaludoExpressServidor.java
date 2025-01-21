@@ -1,6 +1,5 @@
 package ej1;
 
-import info.General;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -24,11 +23,11 @@ public class SaludoExpressServidor
 		try
 		{
 			Socket S1;
-			ServerSocket SS1 = new ServerSocket(General.PortSaludo);
-			General.listening(SS1.getLocalPort());
+			ServerSocket SS1 = new ServerSocket(5000);
+			System.out.println("Listening to port "+SS1.getLocalPort()+"...");
 			
 			S1 = SS1.accept();
-			General.connected();
+			System.out.println("Client connected.");
 			BufferedReader in = new BufferedReader(new InputStreamReader(S1.getInputStream()));
 			PrintWriter out = new PrintWriter(S1.getOutputStream(), true);
 			

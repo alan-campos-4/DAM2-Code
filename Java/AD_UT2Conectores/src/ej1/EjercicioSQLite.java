@@ -12,9 +12,8 @@ public class EjercicioSQLite
 	{
 		try
 		{
-			//Class.forName("com.mysql.jdbc.Driver"); deprecated for my version of MySql.
-			Class.forName("com.mysql.cj.jdbc.Driver");
-			Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/unidad2?useSSL=false", "root", "QKEBFF");
+			Class.forName("org.sqlite.JDBC");
+			Connection conn = DriverManager.getConnection("jdbc:sqlite:test.db");
 			
 			String sql = "SELECT * FROM clientes";
 			Statement query = conn.createStatement();
@@ -29,8 +28,10 @@ public class EjercicioSQLite
 			res.close();
 			query.close();
 			conn.close();
+			
 		}
 		catch (ClassNotFoundException e)	{e.printStackTrace();}
 		catch (SQLException e)				{e.printStackTrace();}
+		System.out.println("Opened database successfully");
 	}
 }
