@@ -5,8 +5,10 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.content.ContextCompat
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import com.example.ejemploviewpager2.databinding.FragmentNoticeBinding
+import com.google.android.material.badge.BadgeDrawable
 import com.google.android.material.tabs.TabLayoutMediator
 
 class NoticeFragment : Fragment() {
@@ -17,19 +19,27 @@ class NoticeFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        // Inflate the layout for this fragment
         _binding = FragmentNoticeBinding.inflate(inflater, container, false)
+        //return inflater.inflate(R.layout.fragment_notice, container, false)
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.vpNotice.adapter = NoticeAdapter(this)
-        TabLayoutMediator(binding.tabNotice, binding.vpNotice){
-            tab, position->
-                when (position) {
+        TabLayoutMediator(binding.TabNotice,binding.vpNotice) {
+            tab, position ->
+                when(position) {
                     0 -> {
                         tab.text = "Inicio"
                         tab.setIcon(R.drawable.ic_home)
+                        val badge : BadgeDrawable = tab.orCreateBadge
+                        badge.backgroundColor =
+                            ContextCompat.getColor(requireContext().applicationContext, R.color.red)
+                        badge.number=117
+                        badge.maxCharacterCount = 3
+                        badge.badgeGravity = BadgeDrawable.TOP_START
                     }
                     1 -> {
                         tab.text = "Menú"
@@ -51,5 +61,4 @@ class NoticeAdapter(fragment: Fragment) : FragmentStateAdapter(fragment) {
                 Tab2NoticeFragment()
         return fragment
     }
-
 }

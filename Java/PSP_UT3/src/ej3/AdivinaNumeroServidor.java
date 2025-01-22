@@ -35,28 +35,38 @@ public class AdivinaNumeroServidor
 			System.out.println("Client connected.");
 			
 			int secret = rand.nextInt(0, 99)+1;
+			int intentos = 0;
+			int maxIntentos = 10;
 			
-			BufferedReader in = new BufferedReader(new InputStreamReader(S3.getInputStream()));
-			while (true)
-			{
-				String guess = in.readLine();
-				
-				break;
-			}
-			
-			/*
 			BufferedReader in = new BufferedReader(new InputStreamReader(S3.getInputStream()));
 			PrintWriter out = new PrintWriter(S3.getOutputStream(), true);
 			
-			String line;
-			while ((line=in.readLine())!=null)
-				System.out.println("Client Message: "+line);
-			System.out.println("Server Reply: ");
+			while (intentos < maxIntentos)
+			{
+				try
+				{
+					int guessNum = Integer.parseInt(in.readLine());
+					
+					if (guessNum > secret)
+					{
+						System.out.println("Mayor");
+					}
+					if (guessNum < secret)
+					{
+						System.out.println("Menor");
+					}
+					else
+					{
+						System.out.println("¡Acertaste!");
+						break;
+					}
+					intentos++;
+				}
+				catch (NumberFormatException e)	{System.out.println("Error. Tipo de número no válido.");}
+			}
 			
 			in.close();
 			out.close();
-			
-			*/
 			S3.close();
 			SS3.close();
 		}

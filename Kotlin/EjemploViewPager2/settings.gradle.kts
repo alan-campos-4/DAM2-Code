@@ -21,4 +21,3 @@ dependencyResolutionManagement {
 
 rootProject.name = "EjemploViewPager2"
 include(":app")
- 

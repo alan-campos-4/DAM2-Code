@@ -92,3 +92,4 @@ C:\Users\DAM-A\Sync\Code\C#\WinForms\Informe1\obj\Debug\Informe1.csproj.CoreComp
 C:\Users\DAM-A\Sync\Code\C#\WinForms\Informe1\obj\Debug\Informe1.csproj.Up2Date
 C:\Users\DAM-A\Sync\Code\C#\WinForms\Informe1\obj\Debug\Informe1.exe
 C:\Users\DAM-A\Sync\Code\C#\WinForms\Informe1\obj\Debug\Informe1.pdb
+C:\Users\DAM-A\Sync\Code\C#\WinForms\Informe1\obj\Debug\Informe1.Form2.resources
