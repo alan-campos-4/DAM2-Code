@@ -1,4 +1,5 @@
 package RandomAccess;
+
 /*
  * 20. Modificación.
  * Crea un programa Java que reciba desde la línea de comandos un identificador de empleado y un importe. 
@@ -7,12 +8,12 @@ package RandomAccess;
  * El programa debe visualizar el apellido, el salario antiguo y el nuevo. 
  * Si el identificador no existe se visualizará mensaje indicándolo.
  */
+
 import java.io.EOFException;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.RandomAccessFile;
-import java.util.Scanner;
 
 
 public class Ejer20
@@ -50,8 +51,7 @@ public class Ejer20
 				RandomAccessFile file = new RandomAccessFile(fichero, "rw");
 				
 				double salario, nuevosalario;
-				int id, dep;
-				String apellido;
+				int id;
 				
 //				Scanner in = new Scanner(System.in);
 //				System.out.print("Introduce ID a modificar: ");
@@ -68,10 +68,10 @@ public class Ejer20
 					nuevosalario = 	Double.parseDouble(args[1]);
 					
 					file.seek(posicion);
-					id =		file.readInt();
-					apellido =	file.readUTF();
-					dep =		file.readInt();
-					salario =	file.readDouble();
+					id = file.readInt();
+					file.readUTF(); //apellido
+					file.readInt(); //dep
+					salario = file.readDouble();
 					
 					file.writeDouble(salario+nuevosalario);
 					

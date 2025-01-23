@@ -1,7 +1,6 @@
 
 package proc.javasdz;
 
-import java.io.IOException;
 
 /**
  * Aplicación que suma dos números enteros que se suministran en la linea de

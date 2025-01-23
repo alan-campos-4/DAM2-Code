@@ -9,9 +9,6 @@
  */
 package proc.windows;
 
-import java.io.IOException;
-import javax.swing.JOptionPane;
-
 /**
  *
  * @author santi

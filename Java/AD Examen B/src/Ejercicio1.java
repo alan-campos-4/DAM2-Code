@@ -7,7 +7,6 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.Serializable;
-import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -166,12 +165,11 @@ public class Ejercicio1
 	
 	
 	
-	@SuppressWarnings("unchecked")
+	
 	public static void listarLibros() throws FileNotFoundException, IOException
 	{
 		OIS = new ObjectInputStream(new FileInputStream(fichero));
 		Libro lib;
-		ArrayList <Libro> libList;
 		
 		try
 	    {

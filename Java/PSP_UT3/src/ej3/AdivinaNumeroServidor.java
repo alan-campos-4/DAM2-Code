@@ -43,26 +43,28 @@ public class AdivinaNumeroServidor
 			
 			while (intentos < maxIntentos)
 			{
+				int guessNum = 0;
+				String guess = in.readLine();
 				try
 				{
-					int guessNum = Integer.parseInt(in.readLine());
-					
-					if (guessNum > secret)
-					{
-						System.out.println("Mayor");
-					}
-					if (guessNum < secret)
-					{
-						System.out.println("Menor");
-					}
-					else
-					{
-						System.out.println("¡Acertaste!");
-						break;
-					}
-					intentos++;
+					guessNum = Integer.parseInt(guess);
 				}
 				catch (NumberFormatException e)	{System.out.println("Error. Tipo de número no válido.");}
+				
+				if (guessNum > secret)
+				{
+					System.out.println("Mayor");
+				}
+				if (guessNum < secret)
+				{
+					System.out.println("Menor");
+				}
+				else
+				{
+					System.out.println("¡Acertaste!");
+					break;
+				}
+				intentos++;
 			}
 			
 			in.close();

@@ -8,7 +8,7 @@ import org.xml.sax.helpers.DefaultHandler;
 
 public class VersionesHandler extends DefaultHandler {
 	
-  private ArrayList <Version> versiones = new ArrayList();
+  private ArrayList <Version> versiones = new ArrayList<>();
   private Version version;
   
   private StringBuilder buffer= new StringBuilder();

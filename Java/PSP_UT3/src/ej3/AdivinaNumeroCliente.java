@@ -29,7 +29,7 @@ public class AdivinaNumeroCliente
 			
 			DataOutputStream DOS = new DataOutputStream(So.getOutputStream());
 			
-			System.out.println("Escribe el comando:");
+			System.out.println("Escribe un número (1-100):");
 			String command = input.nextLine();
 			DOS.writeUTF(command);
 			DOS.flush();

@@ -23,7 +23,8 @@ import java.util.concurrent.TimeUnit;
  */
 public class E01_Notepad_1 {
 
-    public static void main(String[] args) {
+    @SuppressWarnings("deprecation")
+	public static void main(String[] args) {
         Runtime runtime = Runtime.getRuntime();
         try {
             Process process = runtime.exec("notepad");

@@ -1,7 +1,6 @@
 
 package proc.javasdz;
 
-import java.io.IOException;
 import java.util.Scanner;
 
 /**
@@ -27,6 +26,7 @@ public class E21_Suma {
             
             System.err.println("=======PROCESO HIJO ======");
             System.err.println("Suma "+num1+" + "+ num2 + " = "+resu);
+            sc.close();
         }
         catch(Exception e) {
             e.printStackTrace();
