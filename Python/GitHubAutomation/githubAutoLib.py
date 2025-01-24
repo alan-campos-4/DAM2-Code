@@ -1,5 +1,6 @@
 import os
 import sys
+import datetime
 import git # type: ignore
 
 
@@ -23,6 +24,10 @@ def connection_available():
         print("Repository checked is invalid.")
         pass
     return False
+
+def date_for_commit():
+    x = datetime.datetime.now()
+    return x.strftime("%d")+"/"+x.strftime("%m")
 
 
 numbers = []
@@ -97,6 +102,7 @@ def reload_repo(num):
 
 
 def open_main_menu():
+    print(f"\n--- Repository List --- {date_for_commit()}\n")
     states1 = []
     for st in states:
         states1.append("["+st+"]")
@@ -110,6 +116,7 @@ def open_main_menu():
         print(f" {a}.) {b} | {c} | {d}")
     print(" U.) Update.")
     print(" 0.) Exit.")
+    
 
 
 
@@ -133,7 +140,7 @@ def open_repository_menu(opt:str):
                     option = input("\tChoose an option: ")
                     if option=='0':
                         input("Exiting. Press Enter to continue...")
-                    elif option in str(opt_nums):
+                    elif option in str(opt_nums) or option=='55':
                         if option == '1':   git_command(arg, "Print", "git status")
                         elif option == '2': git_command(arg, "Changes have been retreived from origin.", "git pull")
                         elif option == '3': git_command(arg, "Recent changes have been discarded.", "git stash")
@@ -144,6 +151,9 @@ def open_repository_menu(opt:str):
                             commit_name = input("\nWhat is the name of the commit?: ")
                             git_command(arg, "Changes have been saved and pushed to origin.", 
                                         "git add --all", "git commit -m \""+commit_name+"\"", "git push")
+                        elif option == '55':
+                            git_command(arg, "Changes have been saved and pushed to origin.", 
+                                        "git add --all", f"git commit -m \"{date_for_commit()}\"", "git push")
                         reload_repos()
                         clear()
                         option = "0"
@@ -185,7 +195,6 @@ if __name__ == "__main__":
             if (numbers == []):
                 reload_repos()
             
-            print("\n--- Repository List ---\n")
             open_main_menu()
             opt = input("\nChoose a repo: ")
 

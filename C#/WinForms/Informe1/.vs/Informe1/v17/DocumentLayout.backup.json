@@ -3,23 +3,23 @@
   "WorkspaceRootPath": "C:\\Users\\DAM-A\\Sync\\Code\\C#\\WinForms\\Informe1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C16969FC-6C05-40EE-BD04-B8732E119526}|Informe1.csproj|c:\\users\\dam-a\\sync\\code\\c#\\winforms\\informe1\\informepormarca.rdlc||{46F6D2A1-5E86-4080-A799-01F3D0E23796}",
-      "RelativeMoniker": "D:0:0:{C16969FC-6C05-40EE-BD04-B8732E119526}|Informe1.csproj|solutionrelative:informepormarca.rdlc||{46F6D2A1-5E86-4080-A799-01F3D0E23796}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C16969FC-6C05-40EE-BD04-B8732E119526}|Informe1.csproj|c:\\users\\dam-a\\sync\\code\\c#\\winforms\\informe1\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C16969FC-6C05-40EE-BD04-B8732E119526}|Informe1.csproj|solutionrelative:form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{C16969FC-6C05-40EE-BD04-B8732E119526}|Informe1.csproj|c:\\users\\dam-a\\sync\\code\\c#\\winforms\\informe1\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{C16969FC-6C05-40EE-BD04-B8732E119526}|Informe1.csproj|solutionrelative:form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C16969FC-6C05-40EE-BD04-B8732E119526}|Informe1.csproj|c:\\users\\dam-a\\sync\\code\\c#\\winforms\\informe1\\datasetmarcas.xsd||{07AC752B-D2B0-4DCD-AD9C-237BF561A30A}",
+      "AbsoluteMoniker": "D:0:0:{C16969FC-6C05-40EE-BD04-B8732E119526}|Informe1.csproj|C:\\Users\\DAM-A\\Sync\\Code\\C#\\WinForms\\Informe1\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C16969FC-6C05-40EE-BD04-B8732E119526}|Informe1.csproj|solutionrelative:form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C16969FC-6C05-40EE-BD04-B8732E119526}|Informe1.csproj|C:\\Users\\DAM-A\\Sync\\Code\\C#\\WinForms\\Informe1\\informepormarca.rdlc||{46F6D2A1-5E86-4080-A799-01F3D0E23796}",
+      "RelativeMoniker": "D:0:0:{C16969FC-6C05-40EE-BD04-B8732E119526}|Informe1.csproj|solutionrelative:informepormarca.rdlc||{46F6D2A1-5E86-4080-A799-01F3D0E23796}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C16969FC-6C05-40EE-BD04-B8732E119526}|Informe1.csproj|C:\\Users\\DAM-A\\Sync\\Code\\C#\\WinForms\\Informe1\\datasetmarcas.xsd||{07AC752B-D2B0-4DCD-AD9C-237BF561A30A}",
       "RelativeMoniker": "D:0:0:{C16969FC-6C05-40EE-BD04-B8732E119526}|Informe1.csproj|solutionrelative:datasetmarcas.xsd||{07AC752B-D2B0-4DCD-AD9C-237BF561A30A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C16969FC-6C05-40EE-BD04-B8732E119526}|Informe1.csproj|c:\\users\\dam-a\\sync\\code\\c#\\winforms\\informe1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{C16969FC-6C05-40EE-BD04-B8732E119526}|Informe1.csproj|C:\\Users\\DAM-A\\Sync\\Code\\C#\\WinForms\\Informe1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C16969FC-6C05-40EE-BD04-B8732E119526}|Informe1.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -42,7 +42,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Document",
@@ -54,8 +54,7 @@
               "RelativeToolTip": "Coches.xsd",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003579|",
               "WhenOpened": "2025-01-15T11:56:02.47Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -67,8 +66,7 @@
               "RelativeToolTip": "DataSetMarcas.xsd",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003579|",
               "WhenOpened": "2025-01-22T12:48:24.42Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -80,21 +78,19 @@
               "RelativeToolTip": "ListadoCoches.rdlc [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001755|",
               "WhenOpened": "2025-01-21T08:00:44.779Z",
-              "IsPinned": true,
-              "EditorCaption": " [Dise\u00F1o]"
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "InformePorMarca.rdlc [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\DAM-A\\Sync\\Code\\C#\\WinForms\\Informe1\\InformePorMarca.rdlc",
               "RelativeDocumentMoniker": "InformePorMarca.rdlc",
-              "ToolTip": "C:\\Users\\DAM-A\\Sync\\Code\\C#\\WinForms\\Informe1\\InformePorMarca.rdlc [Dise\u00F1o]*",
-              "RelativeToolTip": "InformePorMarca.rdlc [Dise\u00F1o]*",
+              "ToolTip": "C:\\Users\\DAM-A\\Sync\\Code\\C#\\WinForms\\Informe1\\InformePorMarca.rdlc [Dise\u00F1o]",
+              "RelativeToolTip": "InformePorMarca.rdlc [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001755|",
               "WhenOpened": "2025-01-22T12:00:26.127Z",
-              "IsPinned": true,
-              "EditorCaption": " [Dise\u00F1o]"
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -106,8 +102,7 @@
               "RelativeToolTip": "Form1.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-21T07:39:06.684Z",
-              "IsPinned": true,
-              "EditorCaption": " [Dise\u00F1o]"
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -120,12 +115,11 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-22T12:50:37.884Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "Form2.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\DAM-A\\Sync\\Code\\C#\\WinForms\\Informe1\\Form2.cs",
               "RelativeDocumentMoniker": "Form2.cs",
@@ -144,11 +138,10 @@
               "RelativeDocumentMoniker": "Form2.cs",
               "ToolTip": "C:\\Users\\DAM-A\\Sync\\Code\\C#\\WinForms\\Informe1\\Form2.cs",
               "RelativeToolTip": "Form2.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAQwCMAAAA9AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACUAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-22T12:25:52.823Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Bookmark",
