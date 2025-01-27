@@ -6,7 +6,7 @@ import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.Random;
 
-/***** EJERCICIO 3: Juego de “Adivina el Número”  *****
+/***** EJERCICIO 3: Juego de “Adivina el Número” *****
  PUNTOS CLAVE
 	1. Servidor:
 		o Crea un número aleatorio (por ejemplo, usando java.util.Random).
@@ -61,39 +61,34 @@ public class Ej3_AdivinaNumero_Servidor
 		// 6. Cuando el cliente acierte o se acaben intentos (opcional), terminar la comunicación.
 		// 7. Cerrar flujos y socket.
 		
-		try
+		try (ServerSocket SS3 = new ServerSocket(5002))
 		{
 			Socket S3;
-			ServerSocket SS3 = new ServerSocket(5002);
+			BufferedReader in;
+			PrintWriter out;
 			System.out.println("Listening to port "+SS3.getLocalPort()+"...");
-			
-			S3 = SS3.accept();
-			System.out.println("Client connected.");
-			
-			int secret = rand.nextInt(0, 99)+1;
 			int intentos = 0;
 			int maxIntentos = 10;
+			int secret = rand.nextInt(0, 99)+1;
 			
-			BufferedReader in = new BufferedReader(new InputStreamReader(S3.getInputStream()));
-			PrintWriter out = new PrintWriter(S3.getOutputStream(), true);
-			
-			while (intentos < maxIntentos)
+			while (true)
 			{
-				int guessNum = 0;
-				String guess = in.readLine();
-				try
-				{
-					guessNum = Integer.parseInt(guess);
-				}
-				catch (NumberFormatException e)	{System.out.println("Error. Tipo de número no válido.");}
+				S3 = SS3.accept();
+				System.out.println("Client connected.");
 				
-				if (guessNum > secret)
+				in = new BufferedReader(new InputStreamReader(S3.getInputStream()));
+				out = new PrintWriter(S3.getOutputStream(), true);
+				
+				int guess = Integer.parseInt(in.readLine().replaceAll("","").replaceAll("\\s+","").trim());
+				
+				System.out.print("Intento "+(intentos+1)+": ");
+				if (guess > secret)
 				{
-					System.out.println("Mayor");
+					System.out.println("Mayor.");
 				}
-				if (guessNum < secret)
+				else if (guess < secret)
 				{
-					System.out.println("Menor");
+					System.out.println("Menor.");
 				}
 				else
 				{
@@ -101,14 +96,21 @@ public class Ej3_AdivinaNumero_Servidor
 					break;
 				}
 				intentos++;
+				
+				if (intentos>=maxIntentos)
+				{
+					System.out.println("Se han acabado los intentos.");
+					break;
+				}
 			}
 			
 			in.close();
 			out.close();
 			S3.close();
-			SS3.close();
 		}
-		catch (IOException e)	{e.printStackTrace();}
+		catch (IOException e)				{e.printStackTrace();}
+		catch (NumberFormatException e)		{System.out.println("Error. Tipo de valor incorrecto.");}
+		
 	}
 }
 

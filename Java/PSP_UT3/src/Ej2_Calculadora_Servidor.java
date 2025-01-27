@@ -110,7 +110,7 @@ public class Ej2_Calculadora_Servidor
 			out.close();
 			S2.close();
 		}
-		catch (IOException e)	{e.printStackTrace();}
+		catch (IOException e)				{e.printStackTrace();}
 		catch (NumberFormatException e)		{System.out.println("Error. Tipo de valor incorrecto.");}
 		catch (IllegalArgumentException e)	{System.out.println("Error. División por cero.");}
 	}

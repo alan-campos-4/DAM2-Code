@@ -23,7 +23,7 @@ public class Ej2_Calculadora_Cliente
 			
 			DataOutputStream DOS = new DataOutputStream(So.getOutputStream());
 			
-			System.out.println("Escribe el comando:");
+			System.out.print("Escribe el comando: ");
 			String command = input.nextLine();
 			
 			DOS.writeUTF(command);

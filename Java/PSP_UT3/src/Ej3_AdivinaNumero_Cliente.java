@@ -27,7 +27,7 @@ public class Ej3_AdivinaNumero_Cliente
 			
 			DataOutputStream DOS = new DataOutputStream(So.getOutputStream());
 			
-			System.out.println("Escribe un número (1-100):");
+			System.out.print("Escribe un número (1-100): ");
 			String command = input.nextLine();
 			DOS.writeUTF(command);
 			DOS.flush();
