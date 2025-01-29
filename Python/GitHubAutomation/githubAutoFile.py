@@ -47,8 +47,8 @@ def read_from_file():
 
 def write_to_file(): ############
     with open('repo states.txt', 'rw') as file:
-        for line in file:
-            line.split(',')
+        for Repository in RepoList:
+            file.append("")
 
 def print_menu():
     print("\n----- GitHub Repositories -----\n")

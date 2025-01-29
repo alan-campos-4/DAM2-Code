@@ -9,7 +9,6 @@ import androidx.navigation.fragment.findNavController
 import com.example.ejemploviewpager2.databinding.FragmentTab2NoticeBinding
 
 class Tab2NoticeFragment : Fragment() {
-
     private var _binding : FragmentTab2NoticeBinding ? = null
     private val binding get() = _binding!!
 
@@ -17,9 +16,7 @@ class Tab2NoticeFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        _binding= FragmentTab2NoticeBinding.inflate(inflater,container,false)
-        //return inflater.inflate(R.layout.fragment_tab2_notice, container, false)
+        _binding = FragmentTab2NoticeBinding.inflate(inflater,container,false)
         return binding.root
     }
 

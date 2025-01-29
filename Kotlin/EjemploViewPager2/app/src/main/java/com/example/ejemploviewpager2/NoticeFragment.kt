@@ -37,8 +37,8 @@ class NoticeFragment : Fragment() {
                         val badge : BadgeDrawable = tab.orCreateBadge
                         badge.backgroundColor =
                             ContextCompat.getColor(requireContext().applicationContext, R.color.red)
-                        badge.number=117
-                        badge.maxCharacterCount = 3
+                        //badge.number = 117
+                        badge.maxCharacterCount = 99
                         badge.badgeGravity = BadgeDrawable.TOP_START
                     }
                     1 -> {

@@ -8,5 +8,6 @@
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="lib" path="C:/Users/DAM-A/Sync/Code/Java/AD_UT2Conectores/src/mysql-connector-j-9.1.0.jar"/>
 	<classpathentry kind="lib" path="C:/Users/DAM-A/Sync/Code/Java/AD_UT2Conectores/src/sqlite-jdbc-3.48.0.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/DAM-A/Sync/Code/Java/AD_UT2Conectores/src/ojdbc17.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

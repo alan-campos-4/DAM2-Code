@@ -74,20 +74,26 @@ public class Ej4_ChatSimple_Servidor
 		//		- Hacer broadcast a los demás.
 		// 4. Manejar cierre de conexiones y remover el PrintWriter del cliente de la lista.
 		
-		try (ServerSocket SS3 = new ServerSocket(5003))
+		try (ServerSocket SS4 = new ServerSocket(5003))
 		{
-			Socket S3;
+			Socket S4;
 			BufferedReader in;
 			PrintWriter out;
-			System.out.println("Listening to port "+SS3.getLocalPort()+"...");
+			System.out.println("Listening to port "+SS4.getLocalPort()+"...");
 			
 			while (true)
 			{
-				S3 = SS3.accept();
+				S4 = SS4.accept();
 				System.out.println("Client connected.");
 				
+				in = new BufferedReader(new InputStreamReader(S4.getInputStream()));
+				out = new PrintWriter(S4.getOutputStream(), true);
+				
 				Thread t = new Thread();
+				t.start();
 				broadcast("...");
+				listaClientes.add(out);
+				break;
 				/*
 				if (intentos < maxIntentos)
 				{
@@ -114,9 +120,9 @@ public class Ej4_ChatSimple_Servidor
 				else {break;}*/
 			}
 			
-			//in.close();
-			//out.close();
-			//S3.close();
+			in.close();
+			out.close();
+			S4.close();
 		}
 		catch (IOException e)				{e.printStackTrace();}
 		catch (NumberFormatException e)		{System.out.println("Error. Tipo de valor incorrecto.");}

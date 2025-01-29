@@ -82,18 +82,18 @@ public class Ej3_AdivinaNumero_Servidor
 				int guess = Integer.parseInt(in.readLine().replaceAll("","").replaceAll("\\s+","").trim());
 				
 				System.out.print("Intento "+(intentos+1)+": ");
-				if (guess > secret)
-				{
-					System.out.println("Mayor.");
-				}
-				else if (guess < secret)
-				{
-					System.out.println("Menor.");
-				}
-				else
+				if (guess==secret)
 				{
 					System.out.println("¡Acertaste!");
 					break;
+				}
+				else if (guess < secret)
+				{
+					System.out.println("Mayor.");
+				}
+				else
+				{
+					System.out.println("Menor.");
 				}
 				intentos++;
 				

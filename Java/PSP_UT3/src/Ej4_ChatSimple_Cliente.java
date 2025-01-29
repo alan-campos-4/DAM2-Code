@@ -19,7 +19,7 @@ public class Ej4_ChatSimple_Cliente
 			
 			DataOutputStream DOS = new DataOutputStream(So.getOutputStream());
 			
-			System.out.print("Escribe un número (1-100): ");
+			System.out.print("Escribe un mensaje: ");
 			//String command = input.nextLine();
 			//DOS.writeUTF(command);
 			DOS.flush();
