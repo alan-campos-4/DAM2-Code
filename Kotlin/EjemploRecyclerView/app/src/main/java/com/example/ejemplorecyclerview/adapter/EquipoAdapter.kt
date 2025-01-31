@@ -8,14 +8,15 @@ import com.example.ejemplorecyclerview.Equipo
 import com.example.ejemplorecyclerview.R
 
 class EquipoAdapter(
-        private val equiposLista:List<Equipo>,
-        private val onClickListener: (Equipo) -> Unit
-    ) : RecyclerView.Adapter<EquipoViewHolder>() {
+    private val equiposLista:List<Equipo>,
+    private val onClickListener: (Equipo) -> Unit
+) : RecyclerView.Adapter<EquipoViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): EquipoViewHolder {
         val layoutInflater = LayoutInflater.from(parent.context)
         return EquipoViewHolder(
             layoutInflater.inflate(
-                R.layout.item_equipos,parent,false))
+                R.layout.item_equipos, parent, false)
+        )
     }
 
     override fun getItemCount(): Int = equiposLista.size

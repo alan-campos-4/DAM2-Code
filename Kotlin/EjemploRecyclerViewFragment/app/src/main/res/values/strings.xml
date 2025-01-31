@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">EjemploRecylerViewFragment</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="category">Category</string>
+    <string name="detail">Details\n</string>
+    <string name="title">Title</string>
+    <string name="fragment_1">Fragment 1</string>
+    <string name="rv_in_fragment">RecycleView In Fragment</string>
+</resources>
