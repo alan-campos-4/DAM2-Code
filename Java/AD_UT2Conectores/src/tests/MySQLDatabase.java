@@ -6,7 +6,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-public class EjercicioMySQL
+public class MySQLDatabase
 {
 	public static void main(String[] args)
 	{
