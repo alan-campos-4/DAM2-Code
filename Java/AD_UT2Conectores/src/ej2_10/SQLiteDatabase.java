@@ -55,7 +55,7 @@ public class SQLiteDatabase
 				statement.executeUpdate
 				("insert into empleados values (7499,'ARROYO', 'VENDEDOR',7698,'1990- 02-20',1500,390, 30)");
 				statement.executeUpdate
-				("insert into empleados values (7521,'SALA',	  'VENDEDOR',7698,'1991- 02-22',1625 650, 30)");
+				("insert into empleados values (7521,'SALA',   'VENDEDOR',7698,'1991- 02-22',1625,650, 30)");
 			}
 			else
 			{
