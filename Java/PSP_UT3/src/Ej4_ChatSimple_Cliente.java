@@ -3,9 +3,12 @@ import java.io.IOException;
 import java.net.ConnectException;
 import java.net.Socket;
 import java.net.UnknownHostException;
+import java.util.Scanner;
 
 public class Ej4_ChatSimple_Cliente
 {
+	static Scanner input = new Scanner (System.in);
+	
 	public static void main(String[] args)
 	{
 		// 1. Conectarse al servidor con un Socket (localhost, 5003).
@@ -19,10 +22,15 @@ public class Ej4_ChatSimple_Cliente
 			
 			DataOutputStream DOS = new DataOutputStream(So.getOutputStream());
 			
-			System.out.print("Escribe un mensaje: ");
-			//String command = input.nextLine();
-			//DOS.writeUTF(command);
-			DOS.flush();
+			while (true)
+			{
+				System.out.print("Escribe un mensaje: ");
+				String message = input.nextLine();
+				DOS.writeUTF(message);
+				DOS.flush();
+				
+				if (message.equals("Salir")) break;
+			}
 			
 			DOS.close();
 			So.close();

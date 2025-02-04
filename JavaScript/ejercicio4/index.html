@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" 
+        rel="stylesheet" 
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" 
+        crossorigin="anonymous">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: rgb(48, 48, 48);
+            color: rgb(231, 231, 231);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <h2>DOM Table Object</h2>
+        <br>
+        Código      <input type="text" id="code" size="8dp"> &nbsp;
+        Descripción <input type="text" id="desc"> &nbsp;
+        Cantidad    <input type="text" id="quant" size="8dp"> &nbsp;
+        Precio      <input type="text" id="price" size="8dp"> &nbsp;
+        <button onclick="addRow()">OK</button>
+        <br><br><br>
+
+        <table id="myTable" class="table table-striped">
+            <thead>
+                <tr>
+                    <td>Código</td>
+                    <td>Descripción</td>
+                    <td>Cantidad</td>
+                    <td>Precio</td>
+                    <td>Subtotal</td>
+                    <td>Acciones</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Tortilla</td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>12</td>
+                    <td><button onclick="deleteRow(this)">Eliminar</button></td>
+                </tr>
+            </tbody>
+        </table>
+        <span id="total"></span>
+
+
+
+        <table id="datatable">
+            <tr>
+                <td>Código</td><td>Descripción</td><td>Precio</td>
+            </tr>
+            <tr>
+                <td>1</td><td>Tornillos</td><td>2</td>
+            </tr>
+            <tr>
+                <td>2</td><td>Tuercas</td><td>3</td>
+            </tr>
+            <tr>
+                <td>3</td><td>Arandelas</td><td>1</td>
+            </tr>
+            <tr>
+                <td>4</td><td>Martillos</td><td>10</td>
+            </tr>
+        </table>
+
+
+    </div>
+
+</body>
+<script>
+
+    function addRow() {
+        table = document.getElementById("myTable");
+        row = table.insertRow(-1);
+        codigo =    document.getElementById('code').value;
+        descr =     document.getElementById('desc').value;
+        cantidad =  document.getElementById('quant').value;
+        precio =    document.getElementById('price').value;
+        subtotal =  parseInt(cantidad)*parseInt(precio);
+        row.insertCell(0).innerHTML = codigo;
+        row.insertCell(1).innerHTML = descr;
+        row.insertCell(2).innerHTML = cantidad;
+        row.insertCell(3).innerHTML = precio;
+        celda = row.insertCell(4);
+        celda.innerHTML = subtotal;
+        celda.setAttribute('name','subtotal')
+        row.insertCell(5).innerHTML = '<button onclick="deleteRow(this)">Eliminar</button>'
+        getTotal();
+    }
+
+    function getTotal() {
+        celdas = document.getElementsByName('subtotal');
+        total = 0;
+        for (i=0; i<celdas.length; i++) {
+            total = total + parseInt(celdas[i].textContent);
+        }
+        document.getElementById('total').innerHTML = "Total: "+total;
+    }
+
+    function deleteRow(r) {
+        var i = r.parentNode.parentNode.rowIndex;
+        document.getElementById("myTable").deleteRow(i);
+        getTotal();
+    }
+
+
+    function addRowByCode(code) {
+        table = document.getElementById("datatable");
+        codigos = document.getElementsByName('Código');
+        for (i=0; i<codigos.length; i++) {
+            
+        }
+        
+        /*table = document.getElementById("myTable");
+        row = table.insertRow(-1);
+        codigo =    document.getElementById('code').value;
+        descr =     document.getElementById('desc').value;
+        cantidad =  document.getElementById('quant').value;
+        precio =    document.getElementById('price').value;
+        subtotal =  parseInt(cantidad)*parseInt(precio);
+        row.insertCell(0).innerHTML = codigo;
+        row.insertCell(1).innerHTML = descr;
+        row.insertCell(2).innerHTML = cantidad;
+        row.insertCell(3).innerHTML = precio;
+        celda = row.insertCell(4);
+        celda.innerHTML = subtotal;
+        celda.setAttribute('name','subtotal')
+        row.insertCell(5).innerHTML = '<button onclick="deleteRow(this)">Eliminar</button>'
+        getTotal();*/
+    }
+
+
+</script>
+</html>

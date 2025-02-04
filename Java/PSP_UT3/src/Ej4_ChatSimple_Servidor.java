@@ -64,6 +64,7 @@ public class Ej4_ChatSimple_Servidor
 		//
 	}
 	
+	public static Socket S4;
 	
 	public static void main(String[] args)
 	{
@@ -76,9 +77,9 @@ public class Ej4_ChatSimple_Servidor
 		
 		try (ServerSocket SS4 = new ServerSocket(5003))
 		{
-			Socket S4;
-			BufferedReader in;
-			PrintWriter out;
+			
+			//BufferedReader in;
+			//PrintWriter out;
 			System.out.println("Listening to port "+SS4.getLocalPort()+"...");
 			
 			while (true)
@@ -86,43 +87,36 @@ public class Ej4_ChatSimple_Servidor
 				S4 = SS4.accept();
 				System.out.println("Client connected.");
 				
-				in = new BufferedReader(new InputStreamReader(S4.getInputStream()));
-				out = new PrintWriter(S4.getOutputStream(), true);
+				//in = new BufferedReader(new InputStreamReader(S4.getInputStream()));
+				//out = new PrintWriter(S4.getOutputStream(), true);
 				
-				Thread t = new Thread();
-				t.start();
 				broadcast("...");
-				listaClientes.add(out);
-				break;
-				/*
-				if (intentos < maxIntentos)
+				
+				Thread t = new Thread(new Runnable()
 				{
-					secret = rand.nextInt(0, 99)+1;
-					
-					guess = Integer.parseInt(in.readLine().replaceAll("","").replaceAll("\\s+","").trim());
-					
-					System.out.print("Intento "+(intentos+1)+": ");
-					if (guess > secret)
+					@Override
+					public void run()
 					{
-						System.out.println("Mayor.");
+						String line;
+						try 
+						{
+							BufferedReader in = new BufferedReader(new InputStreamReader(S4.getInputStream()));
+							line = in.readLine().replaceAll("","").replaceAll("\\s+","").trim();
+							System.out.println(line);
+							
+							System.out.println("Esperando...");
+								
+						}
+						catch (IOException e) {e.printStackTrace();} 
+						//catch (InterruptedException e) {e.printStackTrace();}
 					}
-					else if (guess < secret)
-					{
-						System.out.println("Menor.");
-					}
-					else
-					{
-						System.out.println("¡Acertaste!");
-						break;
-					}
-					intentos++;
-				}
-				else {break;}*/
+				});
+				t.start();
 			}
 			
-			in.close();
-			out.close();
-			S4.close();
+			//in.close();
+			//out.close();
+			//S4.close();
 		}
 		catch (IOException e)				{e.printStackTrace();}
 		catch (NumberFormatException e)		{System.out.println("Error. Tipo de valor incorrecto.");}
