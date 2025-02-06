@@ -1,3 +1,4 @@
-1,C:\Users\DAM-A\Sync\Work,DAM2-Work,Changed
-2,C:\Users\DAM-A\Sync\Code,DAM2-Code,Changed
-3,C:\xampp\htdocs\HLC,DAM2-PHP,Changed
+1,DAM2-Work,C:\Users\DAM-A\Sync\Work
+2,DAM2-Code,C:\Users\DAM-A\Sync\Code
+3,AndroidStudio-SocialMedia,C:\Users\DAM-A\Sync\Code\Kotlin\Practice-SocialMedia
+4,DAM2-PHP,C:\xampp\htdocs\HLC

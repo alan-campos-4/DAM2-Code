@@ -117,25 +117,11 @@
         table = document.getElementById("datatable");
         codigos = document.getElementsByName('Código');
         for (i=0; i<codigos.length; i++) {
-            
+            if (codigos[i]==code) {
+
+            }
         }
         
-        /*table = document.getElementById("myTable");
-        row = table.insertRow(-1);
-        codigo =    document.getElementById('code').value;
-        descr =     document.getElementById('desc').value;
-        cantidad =  document.getElementById('quant').value;
-        precio =    document.getElementById('price').value;
-        subtotal =  parseInt(cantidad)*parseInt(precio);
-        row.insertCell(0).innerHTML = codigo;
-        row.insertCell(1).innerHTML = descr;
-        row.insertCell(2).innerHTML = cantidad;
-        row.insertCell(3).innerHTML = precio;
-        celda = row.insertCell(4);
-        celda.innerHTML = subtotal;
-        celda.setAttribute('name','subtotal')
-        row.insertCell(5).innerHTML = '<button onclick="deleteRow(this)">Eliminar</button>'
-        getTotal();*/
     }
 
 

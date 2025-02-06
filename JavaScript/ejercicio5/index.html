@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.1/themes/base/jquery-ui.css">
+    <!--JQuery-->
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="jquery-ui/jquery-ui.js"></script>
+    <!--DataTables-->
+    <link rel="stylesheet" href="https://cdn.datatables.net/2.2.2/css/dataTables.dataTables.min.css">
+    <script src="https://cdn.datatables.net/2.2.2/js/dataTables.min.js"></script>
+</head>
+</head>
+<body>
+
+    <input type="text" id="fecha">
+    <div id="barra"></div>
+
+    <br><br><br><br>
+
+    <table id="alumnos">
+        <thead>
+            <tr>
+                <td>Nombre</td>
+                <td>Apellidos</td>
+                <td>DNI</td>
+                <td>Nota</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Pepe</td>
+                <td>Salas</td>
+                <td>989898</td>
+                <td>8</td>
+            </tr><tr>
+                <td>Luisa</td>
+                <td>Sánchez</td>
+                <td>262626</td>
+                <td>6</td>
+            </tr><tr>
+                <td>José</td>
+                <td>Díaz</td>
+                <td>777777</td>
+                <td>3</td>
+            </tr><tr>
+                <td>Luis</td>
+                <td>Aguilar</td>
+                <td>454545</td>
+                <td>10</td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+<script>
+
+    $('#fecha').datepicker({
+        numberOfMonths: 2,
+        firstDay: 1,
+        showButtonPanel: false
+    });
+    $('#barra').progressbar({
+        value: 37
+    });
+
+    let table = new DataTable('#alumnos');
+
+</script>
+</html>
