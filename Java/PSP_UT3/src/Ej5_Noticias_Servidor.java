@@ -1,4 +1,9 @@
-
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.PrintWriter;
+import java.net.ServerSocket;
+import java.net.Socket;
 
 /***** EJERCICIO 5: Servidor de Noticias “Breaking News” *****
 Objetivo:
@@ -52,9 +57,62 @@ public class Ej5_Noticias_Servidor
 		// 		- Enviar noticias de la categoría correspondiente.
 		//		- Cerrar o mantener la conexión según la lógica deseada.
 		
+		try
+		{
+			Socket S5 = null;
+			ServerSocket SS5 = new ServerSocket(5004);
+			BufferedReader in = null;
+			PrintWriter out = null;
+			System.out.println("Listening to port "+SS5.getLocalPort()+"...");
+			
+			while (true)
+			{
+				S5 = SS5.accept();
+				System.out.println("Client connected.");
+				
+				in = new BufferedReader(new InputStreamReader(S5.getInputStream()));
+				out = new PrintWriter(S5.getOutputStream(), true);
+				
+				out.println("1. Deportes");
+				out.println("2. Tecnología");
+				out.println("3. Entrenimiento");
+				out.println("4. Salir");
+				
+				int categoria = Integer.parseInt(in.readLine().replaceAll("","").replaceAll("\\s+","").trim());
+				
+				do {
+					if (categoria==4) 	{}
+					if (categoria>=1 && categoria<=3)
+					{
+						out.println(getNoticias(categoria));
+					}
+					else
+					{
+						System.out.println("Opción no válida.");
+					}
+				} while (categoria!=4);
+				break;
+			}
+			
+			in.close();
+			out.close();
+			S5.close();
+			SS5.close();
+		}
+		catch (IOException e)	{e.printStackTrace();}
 	}
 	
-	// Método (opcional) para obtener las noticias de una categoría:
-	// private static String getNoticias(String categoria) { ... }
+	// Método para obtener las noticias de una categoría:
+	private static String getNoticias(int categoria)
+	{
+		switch (categoria)
+		{
+			case 1:	return "Estas son noticias de deportes...";
+			case 2:	return "Estas son noticias de tecnología...";
+			case 3:	return "Estas son noticias de entretenimiento...";
+		}
+		return "";
+	}
+	
 }
 

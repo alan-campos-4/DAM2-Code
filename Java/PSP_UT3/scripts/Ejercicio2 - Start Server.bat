@@ -1,10 +1,9 @@
-javac ./../Ej2_Calculadora_Servidor.java
-javac ./../Ej2_Calculadora_Cliente.java
+jar cfe Ej1_SaludoExpress_Servidor.jar Ej1_SaludoExpress_Servidor "..\bin\Ej1_SaludoExpress_Servidor.class"
+jar cfe Ej1_SaludoExpress_Cliente.jar Ej1_SaludoExpress_Cliente "..\bin\Ej1_SaludoExpress_Cliente.class"
 
-jar cfe Ej2_Calculadora_Servidor.jar Ej2_Calculadora_Servidor ./../Ej2_Calculadora_Servidor.class
-jar cfe Ej2_Calculadora_Cliente.jar Ej2_Calculadora_Cliente ./../Ej2_Calculadora_Cliente.class
-
-cls
-java -jar "Ej2_Calculadora_Servidor.jar"
+java -jar "Ej1_SaludoExpress_Servidor.jar"
 
 pause
+
+del Ej1_SaludoExpress_Servidor.jar
+del Ej1_SaludoExpress_Cliente.jar
