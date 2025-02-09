@@ -6,4 +6,6 @@
     <fullyQualifiedTypeName name="java.util.Random"/>
     <fullyQualifiedTypeName name="myStreams.MyObjectInputStream"/>
     <fullyQualifiedTypeName name="java.util.InputMismatchException"/>
+    <fullyQualifiedTypeName name="java.io.File"/>
+    <fullyQualifiedTypeName name="java.io.IOException"/>
 </qualifiedTypeNameHistroy>

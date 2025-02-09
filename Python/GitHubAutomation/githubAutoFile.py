@@ -29,25 +29,24 @@ def date_for_commit():
 
 
 
-class Repository:
+class Repository: #(git.Repo) :
     id:int
     dir:str
-    name:str
-    def __init__(self, id, dir, name):
+    def __init__(self, id, dir):
         self.id = id
         self.dir = dir
-        self.name = name
 
 RepoList = []
-filepath = 'repo states.txt'
+filepath = sys.argv[1]
 
 
 def read_from_file():
     RepoList.clear()
+    i = 1
     with open(filepath, 'r') as file:
         for line in file:
-            parts = line.split(',')
-            RepoList.append(Repository(parts[0], parts[1], parts[2]))
+            RepoList.append(Repository(i, line))
+            i = i + 1
     file.close()
 
 
@@ -59,12 +58,14 @@ def id_list():
 
 
 def list_repos():
-    maxlen1 = 0
     for repo in RepoList:
-        if len(repo.dir)>maxlen1:
-            maxlen1 = len(repo.dir)
-    for repo in RepoList:
-        print(f"\t{repo.id}.) {repo.name} | {repo.dir} ")
+        try:
+            repo_obj = git.Repo(repo.dir)
+            repo_name = repo_obj.remotes.origin.url.split('.git')[0].split('/')[-1]
+            print(f"\t{repo.id}.) {repo_name} | {repo.dir} ", end='')
+            repo_obj.close()
+        except git.exc.NoSuchPathError:
+            print(f"\t{repo.id}.) No such path as {repo.dir}", end='')
 
 
 def open_repo(id):

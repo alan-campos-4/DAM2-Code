@@ -1,4 +1,5 @@
-1,DAM2-Work,C:\Users\DAM-A\Sync\Work
-2,DAM2-Code,C:\Users\DAM-A\Sync\Code
-3,AndroidStudio-SocialMedia,C:\Users\DAM-A\Sync\Code\Kotlin\Practice-SocialMedia
-4,DAM2-PHP,C:\xampp\htdocs\HLC
+C:\Users\DAM-A\Sync\Work
+C:\Users\DAM-A\Sync\Code
+C:\Users\DAM-A\Sync\Code\Kotlin\Practice-SocialMedia
+C:\Users\DAM-A\Sync\Code\Website
+C:\xampp\htdocs\HLC

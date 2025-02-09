@@ -3,12 +3,14 @@
 	<item key="hasShownOverlayPopupBefore" value="true"/>
 	<item key="replaceBarOpen" value="true"/>
 	<list key="searchhistory">
+		<item value="intentos"/>
 		<item value="TRACKLENGTH"/>
 		<item value="getPosicion"/>
 		<item value="TitleLength"/>
 		<item value="random"/>
 	</list>
 	<list key="replacehistory">
+		<item value="attempts"/>
 		<item value="TRACK_LENGTH"/>
 		<item value="getPos"/>
 	</list>
