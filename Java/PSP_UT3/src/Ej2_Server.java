@@ -53,63 +53,73 @@ public class Ej2_Server
 		// 6. Enviar el resultado al cliente.
 		// 7. Manejar excepciones y cerrar flujos/sockets.
 		
+		//Crea el ServerSocket.
 		try (ServerSocket SS2 = new ServerSocket(5001))
 		{
 			Socket S2;
 			
 			while (true)
 			{
+				//Recibe conexiones en el puerto.
 				System.out.println("Listening to port "+SS2.getLocalPort()+"...");
 				S2 = SS2.accept();
 				System.out.println("Client connected.");
 				
-				try (
-						BufferedReader in = new BufferedReader(new InputStreamReader(S2.getInputStream()));
-						PrintWriter out = new PrintWriter(S2.getOutputStream(), true);
-					)
+				try (//El stream de entrada del socket, para recibir del cliente.
+					BufferedReader in = new BufferedReader(new InputStreamReader(S2.getInputStream()));
+					//El stream de salida del socket, para enviar al cliente.
+					PrintWriter out = new PrintWriter(S2.getOutputStream(), true);)
 				{
+					//Recibe el comando del cliente y lo divide.
 					String command = in.readLine();
 					String[] info = command.split(" ");
 					
+					//Si el formato es correcto y se pueden convertir los datos,
 					if (info.length==3)
 					{
-						int n1 = Integer.parseInt(info[1]);
-						int n2 = Integer.parseInt(info[2]);
-						
-						String op = info[0].replaceAll("","").replaceAll("\\s+","").trim();
-						
-						double result = 0.0;
-						
-						if (op.equals("SUMA"))
+						try
 						{
-							result = n1 + n2;
-							out.println("El resultado es "+result+".");
-						}
-						else if (op.equals("RESTA"))
-						{
-							result = n1 - n2;
-							out.println("El resultado es "+result+".");
-						}
-						else if (op.equals("MULTIPLICA"))
-						{
-							result = n1 * n2;
-							out.println("El resultado es "+result+".");
-						}
-						else if (op.equals("DIVIDE"))
-						{
-							if (n2==0)	{throw new IllegalArgumentException();}
-							else
+							int n1 = Integer.parseInt(info[1]);
+							int n2 = Integer.parseInt(info[2]);
+							String op = info[0];
+							
+							double result = 0.0;
+							
+							//Se envía el resultado.
+							if (op.equals("SUMA"))
 							{
-								result = (double)n1 / n2;
+								result = n1 + n2;
 								out.println("El resultado es "+result+".");
 							}
+							else if (op.equals("RESTA"))
+							{
+								result = n1 - n2;
+								out.println("El resultado es "+result+".");
+							}
+							else if (op.equals("MULTIPLICA"))
+							{
+								result = n1 * n2;
+								out.println("El resultado es "+result+".");
+							}
+							else if (op.equals("DIVIDE"))
+							{
+								//Lanza la excepción si se intenta dividir por cero.
+								if (n2==0)	{throw new IllegalArgumentException();}
+								else
+								{
+									result = (double)n1 / n2;
+									out.println("El resultado es "+result+".");
+								}
+							}
+							else {out.println("Error. Operación no válida."); break;}
 						}
-						else {System.err.println("Error. Operación no válida."); break;}
+						//Lanzada si los argumentos recibidos no son enteros.
+						catch (NumberFormatException e)		{out.println("Error. Tipo de valor incorrecto.");}
+						//Lanzada si se intenta dividir por cero.
+						catch (IllegalArgumentException e)	{out.println("Error. División por cero.");}
 					}
-					else {System.err.println("Error. Número de parámetros incorrecto."); break;}
+					else {out.println("Error. Número de parámetros incorrecto."); break;}
 				}
-				catch (NumberFormatException e)		{System.err.println("Error. Tipo de valor incorrecto.");}
-				catch (IllegalArgumentException e)	{System.err.println("Error. División por cero.");}
 				
 				S2.close();
 			}

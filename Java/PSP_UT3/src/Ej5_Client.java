@@ -5,12 +5,9 @@ import java.io.PrintWriter;
 import java.net.ConnectException;
 import java.net.Socket;
 import java.net.UnknownHostException;
-import java.util.Scanner;
 
 public class Ej5_Client
 {
-	static Scanner input = new Scanner(System.in);
-	
 	public static void main(String[] args)
 	{
 		// 1. Conectarse al servidor con un Socket (localhost, 5004).
@@ -19,42 +16,40 @@ public class Ej5_Client
 		// 4. Recibir y mostrar los titulares.
 		// 5. Cerrar la conexión o preguntar si se quiere más noticias.
 		
-		// Todos los recursos dentro del paréntesis se cerrarán al final.
+		
 		try(//Socket con el que se trabaja.
 			Socket so = new Socket("127.0.0.1", 5004);
 			//El stream de salida del socket, para enviar al servidor.
 			PrintWriter out = new PrintWriter(so.getOutputStream(), true);
 			//El stream de entrada del socket, para recibir del servidor.
-			BufferedReader in = new BufferedReader(new InputStreamReader(so.getInputStream()));)
+			BufferedReader in = new BufferedReader(new InputStreamReader(so.getInputStream()));
+			//Lector por consola dentro del cliente.
+			BufferedReader input = new BufferedReader(new InputStreamReader(System.in)))
 		{
-			String line, userInput = " ";
-			
-			System.out.println(in.readLine());
-			System.out.println(in.readLine());
-			System.out.println(in.readLine());
-			System.out.println(in.readLine());
-			System.out.println(in.readLine());
-			
-			do
-			{
-				System.out.println(" -> ");
-				userInput = input.nextLine();
-				
-				out.println(userInput); //Envía la elección al servidor.
-				
-				while ((line = in.readLine()) != null) //Muestra todos los titulares y el menú.
-				{
-					System.out.println(line);
-				}
-//			    System.out.println(in.readLine());
-//				System.out.println(in.readLine());
-//				System.out.println(in.readLine());
-//				System.out.println(in.readLine());
-//				System.out.println(in.readLine());
-//				System.out.println(in.readLine());
-				System.out.println("-> ");
-			}
-			while (userInput != null);
+            while (true)
+            {
+                //Recibe todas las categorías del servidor.
+            	//Se utiliza el método isEmpty() porque si comprobamos si es nulo no el programa funciona.
+                String linea;
+                while (!(linea = in.readLine()).isEmpty())
+                {
+                    System.out.println(linea);
+                }
+                
+                // Leer la opción del usuario desde la consola
+                System.out.print("Elige una opción: ");
+                String opcion = input.readLine();
+                out.println(opcion);
+                
+                //Si el usuario selecciona "4", salimos del bucle
+                if (opcion.equals("4"))	{break;}
+
+                //Muestra las noticias enviadas por el servidor.
+                while (!(linea = in.readLine()).isEmpty())
+                {
+                    System.out.println(linea);
+                }
+            }
 		}
 		catch (ConnectException e)		{System.err.println("Connection refused.");}
 		catch (UnknownHostException e)	{e.printStackTrace();}

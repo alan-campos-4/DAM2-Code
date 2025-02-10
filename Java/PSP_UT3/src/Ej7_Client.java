@@ -21,35 +21,36 @@ public class Ej7_Client
 		//		- "¡Acertaste!" o "Se acabaron los intentos" -> terminar juego
 		// 5. Cerrar recursos.
 		
-		//Todos los recursos dentro del paréntesis se cerrarán al final.
+		
 		try (//Socket con el que se trabaja.
 			Socket so = new Socket("127.0.0.1", 5006);
 			//El stream de salida del socket, para enviar al servidor.
 			PrintWriter out = new PrintWriter(so.getOutputStream(), true);
 			//El stream de entrada del socket, para recibir del servidor.
-			BufferedReader in = new BufferedReader(new InputStreamReader(so.getInputStream()));)
+			BufferedReader in = new BufferedReader(new InputStreamReader(so.getInputStream()));
+			//El stream de entrada del socket, para recibir del servidor.
+			BufferedReader input = new BufferedReader(new InputStreamReader(System.in)))
 		{
-			String userInput = " ", serverReply, attempts;
-			
-			//Si la línea que se escribe por consola no esá vacía,
-			while (userInput != null)
-			{
-				System.out.print("Escribe un número (1-100): "); //Muestra el mensaje dentro del cliente.
-				
-				userInput = input.nextLine();		//Lee el número por consola.
-				out.println(userInput);				//Envía el mensaje al servidor.
-				
-				serverReply = in.readLine();		//Recibe la respuesta del servidor y la muestra.
-				System.out.println(serverReply);	
-				
-				//Termina el bucle si el resultado lo indica.
-				if (serverReply.equals("¡Acertaste!") || serverReply.equals("Se han acabado los intentos."))
-					{break;}
-				
-				//Si recibe los intentos restantes, los muestra.
-				if ((attempts = in.readLine()) != null)
-					{System.out.println(attempts); }
-			}
+			// Leer mensaje de bienvenida y estado inicial del juego
+            String linea;
+            while ((linea = in.readLine()) != null)
+            {
+                System.out.println(linea);
+                
+                // Si el juego termina, salir del bucle
+                if (linea.startsWith("¡Felicidades") || linea.startsWith("¡Se acabaron"))
+                {
+                    break;
+                }
+                
+                // Si el servidor solicita una letra, pedirla al usuario
+                //if (linea.startsWith("Progreso actual:") || linea.startsWith("Adivina la palabra"))
+                {
+                    System.out.print("Introduce una letra: ");
+                    String letra = input.readLine();
+                    out.println(letra);
+                }
+            }
 		}
 		catch (ConnectException e)		{System.err.println("Connection refused.");}
 		catch (UnknownHostException e)	{e.printStackTrace();}

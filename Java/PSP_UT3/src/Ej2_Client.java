@@ -39,29 +39,6 @@ public class Ej2_Client
         catch (UnknownHostException e)	{e.printStackTrace();}
         catch (IOException e)			{e.printStackTrace();}
         
-		/*
-		try
-		{
-			Socket So = new Socket("127.0.0.1", 5001);
-			
-			DataOutputStream DOS = new DataOutputStream(So.getOutputStream());
-			DataInputStream DIS = new DataInputStream(So.getInputStream());
-			
-			System.out.print("Escribe el comando: ");
-			String command = input.nextLine();
-			
-			DOS.writeUTF(command);
-			DOS.flush();
-			
-			DIS.readLine();
-			
-			DOS.close();
-			So.close();
-		}
-		catch (ConnectException e)		{System.out.println("Connection refused.");}
-		catch (UnknownHostException e)	{e.printStackTrace();}
-		catch (IOException e)			{e.printStackTrace();}
-		*/
 	}
 }
 
