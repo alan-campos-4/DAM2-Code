@@ -1,5 +1,4 @@
 import java.io.BufferedReader;
-import java.io.DataOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
@@ -10,7 +9,7 @@ import java.util.Scanner;
 
 public class Ej5_Client
 {
-	static Scanner input = new Scanner (System.in);
+	static Scanner input = new Scanner(System.in);
 	
 	public static void main(String[] args)
 	{
@@ -20,14 +19,13 @@ public class Ej5_Client
 		// 4. Recibir y mostrar los titulares.
 		// 5. Cerrar la conexión o preguntar si se quiere más noticias.
 		
-		
-		//Todos los recursos dentro del paréntesis se cerrarán al final.
-		try (//Socket con el que se trabaja.
+		// Todos los recursos dentro del paréntesis se cerrarán al final.
+		try(//Socket con el que se trabaja.
 			Socket so = new Socket("127.0.0.1", 5004);
 			//El stream de salida del socket, para enviar al servidor.
 			PrintWriter out = new PrintWriter(so.getOutputStream(), true);
 			//El stream de entrada del socket, para recibir del servidor.
-			BufferedReader in = new BufferedReader(new InputStreamReader(so.getInputStream()));) 
+			BufferedReader in = new BufferedReader(new InputStreamReader(so.getInputStream()));)
 		{
 			String line, userInput = " ";
 			
@@ -42,17 +40,26 @@ public class Ej5_Client
 				System.out.println(" -> ");
 				userInput = input.nextLine();
 				
-			    out.println(userInput);					//Envía la elección al servidor.
-			    
-			    while ((line = in.readLine()) != null)	//Muestra todos los titulares.
-					{System.out.println(line);}
+				out.println(userInput); //Envía la elección al servidor.
+				
+				while ((line = in.readLine()) != null) //Muestra todos los titulares y el menú.
+				{
+					System.out.println(line);
+				}
+//			    System.out.println(in.readLine());
+//				System.out.println(in.readLine());
+//				System.out.println(in.readLine());
+//				System.out.println(in.readLine());
+//				System.out.println(in.readLine());
+//				System.out.println(in.readLine());
+				System.out.println("-> ");
 			}
-		    while (userInput!=null);
+			while (userInput != null);
 		}
 		catch (ConnectException e)		{System.err.println("Connection refused.");}
 		catch (UnknownHostException e)	{e.printStackTrace();}
 		catch (IOException e)			{e.printStackTrace();}
-		
 	}
+	
 }
 

@@ -5,6 +5,7 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
+import java.io.PrintWriter;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.net.SocketException;
@@ -55,7 +56,7 @@ cliente. El cliente solicita un nombre de archivo, y el servidor lo envía en mo
 			...
 		o Comprobar la existencia del archivo en el servidor
 			(new File(nombreArchivo).exists()).
- */
+*/
 
 public class Ej6_Server
 {
@@ -68,56 +69,52 @@ public class Ej6_Server
 		// 5. Si existe, abrir FileInputStream y enviar su contenido binario.
 		// 6. Cerrar flujos y socket.
 		
-		try (ServerSocket SS6 = new ServerSocket(5005))
+		try (ServerSocket SSo = new ServerSocket(5005))
 		{
-			Socket S6;
-			BufferedReader in;
-			//PrintWriter out;
-			System.out.println("Listening to port "+SS6.getLocalPort()+"...");
+			Socket So;
 			
 			while (true)
 			{
-				S6 = SS6.accept();
+				System.out.println("Listening to port "+SSo.getLocalPort()+"...");
+				So = SSo.accept();
 				System.out.println("Client connected.");
 				
-				in = new BufferedReader(new InputStreamReader(S6.getInputStream()));
-				//out = new PrintWriter(S6.getOutputStream(), true);
-				
-				String filepath = in.readLine().replaceAll("","").replaceAll("\\s+","").trim();
-				File file = new File(filepath);
-				System.out.println(filepath);
-				
-				if (file.exists())
+				try (BufferedReader in = new BufferedReader(new InputStreamReader(So.getInputStream()));
+					 PrintWriter out = new PrintWriter(So.getOutputStream(), true);)
 				{
-					System.out.println("File "+filepath+" has been found.");
+					String filepath = in.readLine().replaceAll("","").replaceAll("\\s+","").trim();
+					File file = new File(filepath);
 					
-					FileInputStream fis = new FileInputStream(file);
-					BufferedInputStream bis = new BufferedInputStream(fis);
-					OutputStream out = S6.getOutputStream();
-					
-					System.out.println("Reading.");
-					byte[] buffer = new byte[4096];
-					int bytesLeidos;
-					while ((bytesLeidos = bis.read(buffer)) != -1)
+					if (file.exists())
 					{
-						out.write(buffer, 0, bytesLeidos);
-						System.out.println(bytesLeidos+" bytes read.");
+						out.println("File "+filepath+" has been found.");
+						
+						FileInputStream fis = new FileInputStream(file);
+						BufferedInputStream filereader = new BufferedInputStream(fis);
+						
+						OutputStream outS = So.getOutputStream();
+						byte[] buffer = new byte[4096];
+						int bytesLeidos;
+						while ((bytesLeidos = filereader.read(buffer)) != -1)
+						{
+							outS.write(buffer, 0, bytesLeidos);
+						}
+						
+						fis.close();
+						filereader.close();
 					}
-					bis.close();
+					else
+					{
+						out.println("The file doesn't exist.");
+						break;
+					}
 				}
-				else
-				{
-					System.out.println("The file doesn't exist.");
-					break;
-				}
+				catch (IOException e)	{e.printStackTrace();}
+				
+				So.close();
 			}
-			
-			in.close();
-			//out.close();
-			S6.close();
 		}
-		catch (NumberFormatException e)	{System.out.println("Error. Tipo de valor incorrecto.");}
-		//catch (SocketException e)		{System.out.println("Error. Se ha perdido la conexión con el socket.");}
+		catch (SocketException e)		{System.out.println("Error. Se ha perdido la conexión con el socket.");}
 		catch (IOException e)			{e.printStackTrace();}
 		
 	}

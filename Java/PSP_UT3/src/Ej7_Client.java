@@ -1,5 +1,7 @@
-import java.io.DataOutputStream;
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.PrintWriter;
 import java.net.ConnectException;
 import java.net.Socket;
 import java.net.UnknownHostException;
@@ -19,21 +21,37 @@ public class Ej7_Client
 		//		- "¡Acertaste!" o "Se acabaron los intentos" -> terminar juego
 		// 5. Cerrar recursos.
 		
-		try
+		//Todos los recursos dentro del paréntesis se cerrarán al final.
+		try (//Socket con el que se trabaja.
+			Socket so = new Socket("127.0.0.1", 5006);
+			//El stream de salida del socket, para enviar al servidor.
+			PrintWriter out = new PrintWriter(so.getOutputStream(), true);
+			//El stream de entrada del socket, para recibir del servidor.
+			BufferedReader in = new BufferedReader(new InputStreamReader(so.getInputStream()));)
 		{
-			Socket So = new Socket("127.0.0.1", 5006);
+			String userInput = " ", serverReply, attempts;
 			
-			DataOutputStream DOS = new DataOutputStream(So.getOutputStream());
-			
-			System.out.print("Escribe un número (1-100): ");
-			String command = input.nextLine();
-			DOS.writeUTF(command);
-			DOS.flush();
-			
-			DOS.close();
-			So.close();
+			//Si la línea que se escribe por consola no esá vacía,
+			while (userInput != null)
+			{
+				System.out.print("Escribe un número (1-100): "); //Muestra el mensaje dentro del cliente.
+				
+				userInput = input.nextLine();		//Lee el número por consola.
+				out.println(userInput);				//Envía el mensaje al servidor.
+				
+				serverReply = in.readLine();		//Recibe la respuesta del servidor y la muestra.
+				System.out.println(serverReply);	
+				
+				//Termina el bucle si el resultado lo indica.
+				if (serverReply.equals("¡Acertaste!") || serverReply.equals("Se han acabado los intentos."))
+					{break;}
+				
+				//Si recibe los intentos restantes, los muestra.
+				if ((attempts = in.readLine()) != null)
+					{System.out.println(attempts); }
+			}
 		}
-		catch (ConnectException e)		{System.out.println("Connection refused.");}
+		catch (ConnectException e)		{System.err.println("Connection refused.");}
 		catch (UnknownHostException e)	{e.printStackTrace();}
 		catch (IOException e)			{e.printStackTrace();}
 	}

@@ -23,25 +23,25 @@ public class Ej3_Client
 		//		e) Si es "¡Acertaste!", salir del bucle.
 		// 4. Cerrar recursos.
 		
-		// Todos los recursos dentro del paréntesis se cerrarán al final.
-		try (// Socket con el que se trabaja.
+		//Todos los recursos dentro del paréntesis se cerrarán al final.
+		try (//Socket con el que se trabaja.
 			Socket so = new Socket("127.0.0.1", 5002);
-			// El stream de salida del socket, para enviar al servidor.
+			//El stream de salida del socket, para enviar al servidor.
 			PrintWriter out = new PrintWriter(so.getOutputStream(), true);
-			// El stream de entrada del socket, para recibir del servidor.
+			//El stream de entrada del socket, para recibir del servidor.
 			BufferedReader in = new BufferedReader(new InputStreamReader(so.getInputStream()));)
 		{
 			String userInput = " ", serverReply, attempts;
 			
-			// Si la línea que se escribe por consola no esá vacía,
+			//Si la línea que se escribe por consola no esá vacía,
 			while (userInput != null)
 			{
-				System.out.print("Escribe un número (1-100): "); // Muestra el mensaje dentro del cliente.
+				System.out.print("Escribe un número (1-100): "); //Muestra el mensaje dentro del cliente.
 				
-				userInput = input.nextLine();		// Lee el número por consola.
-				out.println(userInput);				// Envía el mensaje al servidor.
+				userInput = input.nextLine();		//Lee el número por consola.
+				out.println(userInput);				//Envía el mensaje al servidor.
 				
-				serverReply = in.readLine();		// Recibe la respuesta del servidor y la muestra.
+				serverReply = in.readLine();		//Recibe la respuesta del servidor y la muestra.
 				System.out.println(serverReply);	
 				
 				//Termina el bucle si el resultado lo indica.

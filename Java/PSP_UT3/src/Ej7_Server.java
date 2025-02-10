@@ -56,11 +56,36 @@ public class Ej7_Server
 	static Scanner input = new Scanner(System.in);
 	static Random rand = new Random();
 	
+	public static final String[] possible = {"PROGRAMACION", "INTERFAZ", "SOCKET", "CONEXION", "THREAD"};
+	public static char[] progressWord;
+	
 	public static String generateWord()
 	{
-		String[] possible = {"PROGRAMACION", "INTERFAZ", "SOCKET"};
 		return possible[rand.nextInt(0, possible.length)];
 	}
+	
+	public static boolean contains(String word, char letter)
+	{
+		for (char c : word.toCharArray())
+		{
+			if (c==letter)	return true;
+		}
+		return false;
+	}
+	
+	public static char[] updateProgress(char guess)
+	{
+		char[] newWord = progressWord;
+		for (int i=0; i<newWord.length; i++)
+		{
+			if (progressWord[i]==guess)
+				{newWord[i] = '_';}
+			else
+				{newWord[i] = progressWord[i];}
+		}
+		return newWord;
+	}
+	
 	
 	public static void main(String[] args)
 	{
@@ -75,40 +100,49 @@ public class Ej7_Server
 		// 		f) Si agota intentos o completa la palabra, acabar la partida o reiniciar.
 		// 4. Cerrar los recursos al terminar la partida.
 		
-		try (ServerSocket SS7 = new ServerSocket(5006))
+		try (ServerSocket SSo = new ServerSocket(5006))
 		{
-			Socket S7;
-			BufferedReader in;
-			PrintWriter out;
-			System.out.println("Listening to port "+SS7.getLocalPort()+"...");
-			int intentos = 0;
-			int maxIntentos = 10;
+			Socket So;
+			final int maxAttempts = 10;
 			
 			while (true)
 			{
-				S7 = SS7.accept();
+				System.out.println("Listening to port "+SSo.getLocalPort()+"...");
+				So = SSo.accept();
 				System.out.println("Client connected.");
-				
-				in = new BufferedReader(new InputStreamReader(S7.getInputStream()));
-				out = new PrintWriter(S7.getOutputStream(), true);
-				
+				int attempts = 0;
 				String secretWord = generateWord();
-				out.println("You have "+(maxIntentos-intentos)+" attempts left.");
 				
-				char playerGuess = in.readLine().replaceAll("","").replaceAll("\\s+","").trim().charAt(0);
-				
-				intentos++;
-				
-				if (intentos>=maxIntentos)
+				try (BufferedReader in = new BufferedReader(new InputStreamReader(So.getInputStream()));
+					 PrintWriter out = new PrintWriter(So.getOutputStream(), true);)
 				{
-					System.out.println("Se han acabado los intentos.");
-					break;
+					do
+					{
+						char guess = in.readLine().replaceAll("","").replaceAll("\\s+","").trim().charAt(0);
+						out.println("Te quedan "+(maxAttempts-attempts)+" intentos.");
+						
+						if (contains(secretWord, guess))
+						{
+							progressWord = updateProgress(guess);
+							out.println(progressWord);
+						}
+						
+						attempts++;
+						
+					}
+					while (maxAttempts-attempts>1);
+					
+					if (maxAttempts-attempts<=1)
+					{
+						out.println("Se han acabado los intentos.");
+						break;
+					}
 				}
+				catch (NumberFormatException e)		{System.err.println("Error. Tipo de valor incorrecto.");}
+				catch (IllegalArgumentException e)	{System.err.println("Error. División por cero.");}
+				
+				So.close();
 			}
-			
-			in.close();
-			out.close();
-			S7.close();
 		}
 		catch (NumberFormatException e)	{System.out.println("Error. Tipo de valor incorrecto.");}
 		catch (SocketException e)		{System.out.println("Error. Se ha perdido la conexión con el socket.");}

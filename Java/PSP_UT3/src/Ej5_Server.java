@@ -27,8 +27,8 @@ correspondientes.
 		o Muestra las “noticias” recibidas y finaliza (o vuelve a preguntar al usuario si desea otra
 		  categoría, según se diseñe el flujo).
 	3. Consideraciones:
-		o Un enfoque básico sería que cada conexión atienda una sola consulta de noticias, luego se
-		  cierra. O se puede mantener la conexión abierta para que el usuario consulte varias veces.
+		o Un enfoque básico sería que cada conexión atienda una sola consulta de noticias, luego se cierra. 
+		  O se puede mantener la conexión abierta para que el usuario consulte varias veces.
 		o Prever que el usuario pueda introducir opciones no válidas (¿qué hace el servidor en ese
 		  caso?).
 		o Cerrar la conexión cuando la opción sea “salir”.
@@ -69,7 +69,7 @@ public class Ej5_Server
 				System.out.println("Client connected.");
 				
 				try (BufferedReader in = new BufferedReader(new InputStreamReader(So.getInputStream()));
-						PrintWriter out = new PrintWriter(So.getOutputStream(), true);)
+					 PrintWriter out = new PrintWriter(So.getOutputStream(), true);)
 				{
 					int categoria;
 					
@@ -82,19 +82,16 @@ public class Ej5_Server
 						
 						categoria = Integer.parseInt(in.readLine().replaceAll("","").replaceAll("\\s+","").trim());
 						
-						if (categoria==0) 	{break;}
+						if (categoria==0)
+							{break;}
 						else if (categoria>=1 && categoria<=3)
-						{
-							out.println(getNoticias(categoria));
-						}
+							{out.println(getNoticias(categoria));}
 						else
-						{
-							System.out.println("Opción no válida.");
-						}
+							{out.println("Opción no válida.");}
 						
 					} while (categoria!=0);
 					
-					if (categoria==0) 	{break;}
+					//if (categoria==0) 	{break;}
 				}
 				catch (IOException e)			{e.printStackTrace();}
 				So.close();
@@ -110,9 +107,9 @@ public class Ej5_Server
 	{
 		switch (categoria)
 		{
-			case 1:	return "Estas son noticias de deportes...";
-			case 2:	return "Estas son noticias de tecnología...";
-			case 3:	return "Estas son noticias de entretenimiento...";
+			case 1:	return "Estas son las noticias de deportes...";
+			case 2:	return "Estas son las noticias de tecnología...";
+			case 3:	return "Estas son las noticias de entretenimiento...";
 		}
 		return "";
 	}

@@ -1,7 +1,7 @@
-import java.io.DataOutputStream;
-import java.io.FileOutputStream;
+import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.PrintWriter;
 import java.net.ConnectException;
 import java.net.Socket;
 import java.net.UnknownHostException;
@@ -19,27 +19,24 @@ public class Ej6_Client
 		// 4. Guardarlo en un FileOutputStream local.
 		// 5. Cerrar flujos y socket.
 		
-		try
+		// Todos los recursos dentro del paréntesis se cerrarán al final.
+		try(//Socket con el que se trabaja.
+			Socket so = new Socket("127.0.0.1", 5005);
+			//El stream de salida del socket, para enviar al servidor.
+			PrintWriter out = new PrintWriter(so.getOutputStream(), true);
+			//El stream de entrada del socket, para recibir del servidor.
+			BufferedReader in = new BufferedReader(new InputStreamReader(so.getInputStream()));)
 		{
-			Socket So = new Socket("127.0.0.1", 5005);
+			String userInput;
 			
-			DataOutputStream DOS = new DataOutputStream(So.getOutputStream());
+			System.out.print("Introduzca un archivo de imagen: ");
+			if ((userInput = input.nextLine())!=null)
+			{
+				out.println(userInput);
+			}
 			
-			System.out.print("Introduzca el nombre de un archivo de imagen: ");
-			String inputline = input.nextLine();
-			DOS.writeUTF(inputline);
-			//DOS.flush();
-			
-			InputStream in = So.getInputStream();
-			FileOutputStream fos = new FileOutputStream("descargado_" + inputline);
-			DOS.flush();
-			
-			fos.close();
-			in.close();
-			DOS.close();
-			So.close();
 		}
-		catch (ConnectException e)		{System.out.println("Connection refused.");}
+		catch (ConnectException e)		{System.err.println("Connection refused.");}
 		catch (UnknownHostException e)	{e.printStackTrace();}
 		catch (IOException e)			{e.printStackTrace();}
 	}
