@@ -43,6 +43,6 @@ C:\Users\DAM-A\Sync\Code\C#\WinForms\ExamenRecuperacion\bin\Debug\System.Memory.
 C:\Users\DAM-A\Sync\Code\C#\WinForms\ExamenRecuperacion\bin\Debug\System.Numerics.Vectors.xml
 C:\Users\DAM-A\Sync\Code\C#\WinForms\ExamenRecuperacion\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\DAM-A\Sync\Code\C#\WinForms\ExamenRecuperacion\bin\Debug\System.Threading.Tasks.Extensions.xml
-C:\Users\DAM-A\Sync\Code\C#\WinForms\ExamenRecuperacion\obj\Debug\ExamenRe.ADFAA2A2.Up2Date
 C:\Users\DAM-A\Sync\Code\C#\WinForms\ExamenRecuperacion\obj\Debug\ExamenRecuperacion.PModVentas.resources
 C:\Users\DAM-A\Sync\Code\C#\WinForms\ExamenRecuperacion\obj\Debug\ExamenRecuperacion.PShowVendedores.resources
+C:\Users\DAM-A\Sync\Code\C#\WinForms\ExamenRecuperacion\obj\Debug\ExamenRecuperacion.csproj.CopyComplete

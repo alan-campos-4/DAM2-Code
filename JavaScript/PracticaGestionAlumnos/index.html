@@ -3,11 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    <!--<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
         rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-        crossorigin="anonymous">
-    <title>Document</title>
+        crossorigin="anonymous">-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <title>Práctica de Gestión de Alumnos</title>
 
 <!--
     Objetivo:
@@ -45,8 +48,192 @@
         · Filtrar alumnos por nombre o grupo.
         · Confirmación antes de eliminar un alumno o asignatura.
 -->
+
+    <style>
+        #header-title {
+            margin: 20px 30px;
+        }
+        .sidebar {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            top: 0;
+            left: 0;
+            overflow-x: hidden;
+            transition: 0.5s;
+            margin-top: 80px;
+            background-color: hsl(0, 0%, 85%);
+        }
+        .sidebar .closebtn {
+            position: absolute;
+            top: 8px;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+        .sidebar input {
+            margin: 5px 15px;
+            size: 150px;
+        }
+
+        .openbtn {
+            font-size: 20px;
+            cursor: pointer;
+            background-color: #111;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+        }
+        .openbtn:hover {
+            background-color: #444;
+        }
+
+        #main {
+            transition: margin-left .5s;
+            padding: 16px;
+        }
+
+        /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+        @media screen and (max-height: 450px) {
+            .sidebar {padding-top: 15px;}
+            .sidebar a {font-size: 18px;}
+        }
+    </style>
+
 </head>
 <body>
 
+    <h1 id="header-title">Práctica de Gestión de Alumnos</h1><br>
+    
+    <div class="container">
+        
+        <div id="main">
+
+            <div id="mySidebar" class="sidebar">
+                <div class="row"><div class="col-5">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">x</a>
+                </div></div><!--
+                    DNI:                <input type="text" id="dni"   class="form-control">
+                    Nombre:             <input type="text" id="name"  class="form-control"><br>
+                    Fecha de nacimiento:<input type="text" id="date"  class="form-control"><br>
+                    Correo electrónico: <input type="text" id="email" class="form-control"><br>
+                    Teléfono:           <input type="text" id="phone" class="form-control"><br>
+                    Grupo:              <input type="text" id="group" class="form-control"><br>
+                    <button type="button" onclick="addRow()">Añadir</button>-->
+                <div class="row"><div class="col-6">
+                    DNI:       <input type="text" class="form-control">
+                </div></div>
+                <div class="row"><div class="col-8">
+                    Nombre:    <input type="text" class="form-control">
+                </div></div>
+                <div class="row"><div class="col-8">
+                    Apellidos: <input type="text" class="form-control">
+                </div></div>
+                <div class="row"><div class="col-6">
+                    CP:        <input type="text" class="form-control">
+                </div></div>
+                <div class="row"><div class="col-6">
+                    Localidad: <input type="text" class="form-control">
+                </div></div>
+                <div class="row"><div class="col-6">
+                    Provincia: <input type="text" class="form-control">
+                </div></div>
+                <div class="row"><div class="col-6">
+                    Teléfono:  <input type="text" class="form-control">
+                </div></div>
+                <div class="row"><div class="col-6">
+                    E-mail:    <input type="text" class="form-control">
+                </div></div>
+            </div>
+
+            <table id="tabla-alumnos" class="table table-striped">
+                <thead><tr>
+                        <td>ID</td>
+                        <td>Nombre completo</td>
+                        <td>DNI</td>
+                        <td>Fecha de nacimiento</td>
+                        <td>Correo electrónico</td>
+                        <td>Teléfono</td>
+                        <td>Grupo</td>
+                        <td>Ver notas</td>
+                        <td>Eliminar</td>
+                </tr></thead>
+                <tbody>
+                    
+                </tbody>
+            </table>
+
+            <button class="openbtn" onclick="openNav()">Añadir alumno a la tabla</button>
+            
+        </div>
+
+    </div>
+
+
+
+    
 </body>
+<script>
+    function addRow() {
+        var tbodyRef = document.getElementById('tabla-alumnos').getElementsByTagName('tbody')[0];
+        var row = tbodyRef.insertRow();
+        dni =       document.getElementById('dni').value;
+        nombre =    document.getElementById('name').value;
+        fecha =     document.getElementById('date').value;
+        correo =    document.getElementById('email').value;
+        telefono =  document.getElementById('phone').value;
+        grupo =     document.getElementById('group').value;
+        row.insertCell(0).innerHTML = getNewID();
+        row.insertCell(1).innerHTML = nombre;
+        row.insertCell(2).innerHTML = dni;
+        row.insertCell(3).innerHTML = fecha;
+        row.insertCell(4).innerHTML = correo;
+        row.insertCell(5).innerHTML = telefono;
+        row.insertCell(6).innerHTML = grupo;
+        row.insertCell(7).innerHTML = '<button>Ver notas</button>';
+        row.insertCell(8).innerHTML = '<button onclick="deleteRow(this)">Eliminar</button>';
+    }
+
+    var table_ids = new Set();
+    function getNewID() {
+        //*
+        table = document.getElementById("tabla-alumnos");
+        rows = table.rows;
+        const table_ids = new Set();
+
+        for (var i = 1; i < rows.length; i++) {
+            var cols = rows[i].cells;
+            table_ids.add(parseInt(cols[0].innerText))
+        }
+        var newID = 1;
+        while (table_ids.has(newID)) {
+            newID++;
+        }
+        return newID;//*/
+        /*
+        var newID = 1;
+        if (table_ids.size>0) {
+            while (table_ids.has(newID)) {
+                newID++;
+            }
+        }
+        table_ids.add(newID);
+        return newID;*/
+    }
+
+    function deleteRow(r) {
+        var i = r.parentNode.parentNode.rowIndex;
+        document.getElementById("tabla-alumnos").deleteRow(i);
+    }
+
+    function openNav() {
+        document.getElementById("mySidebar").style.width = "350px";
+        document.getElementById("main").style.marginLeft = "350px";
+    }
+    function closeNav() {
+        document.getElementById("mySidebar").style.width = "0";
+        document.getElementById("main").style.marginLeft= "0";
+    }
+
+</script>
 </html>

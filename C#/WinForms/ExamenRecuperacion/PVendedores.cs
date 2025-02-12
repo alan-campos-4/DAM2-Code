@@ -93,7 +93,7 @@ namespace ExamenRecuperacion
                         MySqlConnection connection = new MySqlConnection(connectionString);
                         connection.Open();
 
-                        string sql = "UPDATE Vendedores SET" +
+                        string sql = "UPDATE Vendedores SET " +
                             "Nombre=@nom, Apellidos=@apell, Provincia=@provin, Poblacion=@poblac, Telefono=@tel, FechaAlta=@fecha "+
                             "WHERE Codigo=@cod";
                         var comando = new MySqlCommand(sql, connection);
