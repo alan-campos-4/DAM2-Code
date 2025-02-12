@@ -24,7 +24,7 @@ public class Ej1_Client
         	//El stream de entrada del socket, para recibir del servidor.
             BufferedReader in = new BufferedReader(new InputStreamReader(so.getInputStream()));
         	//Lector de consola.
-        	BufferedReader stdIn = new BufferedReader(new InputStreamReader(System.in));)
+        	BufferedReader stdIn = new BufferedReader(new InputStreamReader(System.in)))
         {
         	System.out.print("Escribe tu mensaje: ");	//Muestra el mensaje dentro del cliente.
     		String userInput;
@@ -39,23 +39,6 @@ public class Ej1_Client
         catch (UnknownHostException e)	{e.printStackTrace();}
         catch (IOException e)			{e.printStackTrace();}
 		
-		
-		/*
-		try
-		{
-			Socket So = new Socket("127.0.01", 5000);
-			
-			DataOutputStream DOS = new DataOutputStream(So.getOutputStream());
-			DOS.writeUTF("Hola servidor.");
-			DOS.flush();
-			
-			DOS.close();
-			So.close();
-		}
-		catch (ConnectException e)		{System.out.println("Connection refused.");}
-		catch (UnknownHostException e)	{e.printStackTrace();}
-		catch (IOException e)			{e.printStackTrace();}
-		*/
 	}
 }
 

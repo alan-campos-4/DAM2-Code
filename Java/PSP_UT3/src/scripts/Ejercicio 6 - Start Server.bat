@@ -15,3 +15,4 @@ del Ej6_Server.jar
 del "./../Ej6_Server.class"
 del Ej6_Client.jar
 del "./../Ej6_Client.class"
+

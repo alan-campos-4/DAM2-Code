@@ -5,6 +5,10 @@ import java.io.PrintWriter;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.net.SocketException;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 /***** EJERCICIO 5: Servidor de Noticias “Breaking News” *****
 Objetivo:
@@ -48,71 +52,73 @@ correspondientes.
 
 public class Ej5_Server
 {
-	public static void main(String[] args)
-	{
-		// 1. Crear ServerSocket (puerto 5004).
-		// 2. Bucle infinito que acepte conexiones (accept()).
-		// 3. Por cada cliente:
-		//		- Enviar menú de categorías.
-		//		- Leer opción del cliente.
-		// 		- Enviar noticias de la categoría correspondiente.
-		//		- Cerrar o mantener la conexión según la lógica deseada.
-		
-		try (ServerSocket SSo = new ServerSocket(5004))
-		{
-			Socket So = null;
-			
-			while (true)
-			{
-				System.out.println("Listening to port "+SSo.getLocalPort()+"...");
-				So = SSo.accept();
-				System.out.println("Client connected.");
-				
-				try (BufferedReader in = new BufferedReader(new InputStreamReader(So.getInputStream()));
-					 PrintWriter out = new PrintWriter(So.getOutputStream(), true);)
+	// 1. Crear ServerSocket (puerto 5004).
+	// 2. Bucle infinito que acepte conexiones (accept()).
+	// 3. Por cada cliente:
+	//		- Enviar menú de categorías.
+	//		- Leer opción del cliente.
+	// 		- Enviar noticias de la categoría correspondiente.
+	//		- Cerrar o mantener la conexión según la lógica deseada.
+	
+	private static final Map<String, List<String>> noticias = new HashMap<>();
+	
+    public static void main(String[] args)
+    {
+        //Inicializar las noticias por categoría.
+        noticias.put("1", Arrays.asList("111111", "11111"));
+        noticias.put("2", Arrays.asList("22222", "2222"));
+        noticias.put("3", Arrays.asList("33", "33333333"));
+
+        
+        try (ServerSocket serverSocket = new ServerSocket(5004))
+        {
+            while (true)
+            {
+            	System.out.println("Listening to port "+serverSocket.getLocalPort()+"...");
+                Socket socket = serverSocket.accept();
+                System.out.println("Client connected.");
+                
+                try (//El stream de entrada del socket, para recibir del cliente.
+					BufferedReader in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+					//El stream de salida del socket, para enviar al cliente.
+					PrintWriter out = new PrintWriter(socket.getOutputStream(), true);)
 				{
-					int categoria;
-					
-					do {
-						out.println("--- Noticias ---");
+					while (true)
+					{
+						//Muestra las categorías al cliente.
+						out.println("--- Noticicas ---");
 						out.println("1. Deportes");
 						out.println("2. Tecnología");
-						out.println("3. Entrenimiento");
-						out.println("0. Salir");
-						
-						categoria = Integer.parseInt(in.readLine().replaceAll("","").replaceAll("\\s+","").trim());
-						
-						if (categoria==0)
+						out.println("3. Entretenimiento");
+						out.println("4. Salir");
+						out.println("\nSeleccione una categoría:");
+
+						//Recibe la opción del cliente
+						String opcion = in.readLine();
+
+						//Si la opción existe dentro del Hash,
+						if (noticias.containsKey(opcion))
+						{
+							//Muestra todos los titulares de la categoria;
+							out.println("Titulares:");
+							for (String titular : noticias.get(opcion))
+							{
+								out.println("- " + titular);
+							}
+							out.println();
+						}
+						else if ("4".equals(opcion))
 							{break;}
-						else if (categoria>=1 && categoria<=3)
-							{out.println(getNoticias(categoria));}
 						else
-							{out.println("Opción no válida.");}
-						
-					} while (categoria!=0);
-					
-					//if (categoria==0) 	{break;}
+							{out.println("Error. Opción no válida.");}
+					}
+					socket.close();
 				}
-				catch (IOException e)			{e.printStackTrace();}
-				So.close();
 			}
 		}
-		catch (SocketException e)		{System.out.println("Error. Se ha perdido la conexión con el socket.");}
-		catch (IOException e)			{e.printStackTrace();}
-	}
-	
-	
-	// Método para obtener las noticias de una categoría:
-	private static String getNoticias(int categoria)
-	{
-		switch (categoria)
-		{
-			case 1:	return "Estas son las noticias de deportes...";
-			case 2:	return "Estas son las noticias de tecnología...";
-			case 3:	return "Estas son las noticias de entretenimiento...";
-		}
-		return "";
-	}
-	
+        catch (SocketException e)	{System.err.println("Error. Se ha perdido la conexión con el socket.");}
+        catch (IOException e)		{e.printStackTrace();}
+    }
+
 }
 

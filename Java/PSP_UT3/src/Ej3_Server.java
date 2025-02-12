@@ -62,7 +62,7 @@ public class Ej3_Server
 		// 6. Cuando el cliente acierte o se acaben attempts (opcional), terminar la comunicación.
 		// 7. Cerrar flujos y socket.
 		
-		
+		//Crea el ServerSocket.
 		try (ServerSocket SSo = new ServerSocket(5002))
 		{
 			Socket So;
@@ -71,20 +71,25 @@ public class Ej3_Server
 			
 			while (true)
 			{
+				//Recibe conexiones en el puerto.
 				System.out.println("Listening to port "+SSo.getLocalPort()+"...");
 				So = SSo.accept();
 				System.out.println("Client connected.");
-				attempts = 0;
+				//Genera el número aleatorio y resetea los intentos si recibe otro cliente.
 				secret = rand.nextInt(0, 99)+1;
+				attempts = 0;
 				
-				try (
-						BufferedReader in = new BufferedReader(new InputStreamReader(So.getInputStream()));
-						PrintWriter out = new PrintWriter(So.getOutputStream(), true);
-					)
+				try (//El stream de entrada del socket, para recibir del cliente.
+					BufferedReader in = new BufferedReader(new InputStreamReader(So.getInputStream()));
+					//El stream de salida del socket, para enviar al cliente.
+					PrintWriter out = new PrintWriter(So.getOutputStream(), true);)
 				{
-					do
+					//Mientras no la línea recibida del cliente no sea nula,
+					String line;
+					while ((line = in.readLine()) != null)
 					{
-						int guess = Integer.parseInt(in.readLine().replaceAll("","").replaceAll("\\s+","").trim());
+						//Obtiene el número y lo compara.
+						int guess = Integer.parseInt(line);
 						
 						if (guess < secret)
 							{out.println("Mayor.");}
@@ -96,77 +101,24 @@ public class Ej3_Server
 							break;
 						}
 						attempts++;
-						out.println("Te quedan "+(maxAttempts-attempts)+" intentos.");
-					}
-					while (maxAttempts-attempts>1);
-					
-					if (maxAttempts-attempts<=1)
-					{
-						out.println("Se han acabado los intentos.");
-						break;
-					}
+						
+						//Muestra si le quedan intentos o si se han acabado.
+						if (maxAttempts-attempts<=1)
+						{
+							out.println("Se han acabado los intentos.");
+							break;
+						}
+						else {out.println("Te quedan "+(maxAttempts-attempts)+" intentos.");}
+                    }
 				}
-				catch (NumberFormatException e)		{System.err.println("Error. Tipo de valor incorrecto.");}
-				catch (IllegalArgumentException e)	{System.err.println("Error. División por cero.");}
+				//Lanzada si el mensaje recibido del cliente no es un entero.
+				catch (NumberFormatException e)	{System.err.println("Error. Tipo de valor incorrecto.");}
+				So.close();
 			}
-			So.close();
 		}
 		catch (SocketException e)	{System.err.println("Error. Se ha perdido la conexión con el socket.");}
 		catch (IOException e)		{e.printStackTrace();}
 		
-		
-		/*
-		try (ServerSocket SS3 = new ServerSocket(5002))
-		{
-			Socket S3;
-			BufferedReader in;
-			PrintWriter out;
-			System.out.println("Listening to port "+SS3.getLocalPort()+"...");
-			int attempts = 0;
-			int maxattempts = 10;
-			int secret = rand.nextInt(0, 99)+1;
-			
-			while (true)
-			{
-				S3 = SS3.accept();
-				System.out.println("Client connected.");
-				
-				in = new BufferedReader(new InputStreamReader(S3.getInputStream()));
-				out = new PrintWriter(S3.getOutputStream(), true);
-				
-				int guess = Integer.parseInt(in.readLine().replaceAll("","").replaceAll("\\s+","").trim());
-				
-				System.out.print("Intento "+(attempts+1)+": ");
-				if (guess==secret)
-				{
-					System.out.println("¡Acertaste!");
-					break;
-				}
-				else if (guess < secret)
-				{
-					System.out.println("Mayor.");
-				}
-				else
-				{
-					System.out.println("Menor.");
-				}
-				attempts++;
-				
-				if (attempts>=maxattempts)
-				{
-					System.out.println("Se han acabado los attempts.");
-					break;
-				}
-			}
-			
-			in.close();
-			out.close();
-			S3.close();
-		}
-		catch (NumberFormatException e)	{System.out.println("Error. Tipo de valor incorrecto.");}
-		catch (SocketException e)		{System.out.println("Error. Se ha perdido la conexión con el socket.");}
-		catch (IOException e)			{e.printStackTrace();}
-		*/
 	}
 }
 

@@ -6,6 +6,7 @@ import java.net.ServerSocket;
 import java.net.Socket;
 import java.net.SocketException;
 import java.util.List;
+import java.util.concurrent.CopyOnWriteArrayList;
 
 /***** EJERCICIO 4: Chat Simple de Una Sola Sala *****
 Objetivo:
@@ -46,77 +47,89 @@ Cuando un cliente envía un mensaje, el servidor lo retransmite a todos los clie
 		o Uso de una colección global (por ejemplo static List<PrintWriter> listaClientes
 		  = ...;) que almacena los flujos de salida a cada cliente.
 		o Acciones de difusión:
-				synchronized(listaClientes) {
-					for (PrintWriter pw : listaClientes) {
-						pw.println(mensaje);
-					}
+			synchronized(listaClientes) {
+				for (PrintWriter pw : listaClientes) {
+					pw.println(mensaje);
 				}
+			}
  */
-
 public class Ej4_Server
 {
-	// Estructura para almacenar PrintWriters de clientes, por ejemplo:
-	private static List<PrintWriter> listaClientes;
+	// 1. Crear ServerSocket en un puerto, p.ej. 5003
+	// 2. Bucle infinito aceptando conexiones (accept())
+	// 3. Por cada conexión, crear un Thread para manejar la comunicación con ese cliente
+	//		- En el Runnable, leer en un bucle los mensajes del cliente
+	//		- Hacer broadcast a los demás
+	// 4. Manejar cierre de conexiones y remover el PrintWriter del cliente de la lista
 	
 	
-	// Método (opcional) para enviar un mensaje a todos los clientes (broadcast).
-	private static void broadcast(String mensaje)
-	{
-		//
-	}
-	
-	public static Socket S4;
-	
-	public static void main(String[] args)
-	{
-		// 1. Crear ServerSocket en un puerto, p.ej. 5003.
-		// 2. Bucle infinito aceptando conexiones (accept()).
-		// 3. Por cada conexión, crear un Thread para manejar la comunicación con ese  cliente.
-		//		- En el Runnable, leer en un bucle los mensajes del cliente.
-		//		- Hacer broadcast a los demás.
-		// 4. Manejar cierre de conexiones y remover el PrintWriter del cliente de la lista.
-		
-		try (ServerSocket SS4 = new ServerSocket(5003))
-		{
-			while (true)
-			{
-				System.out.println("Listening to port "+SS4.getLocalPort()+"...");
-				S4 = SS4.accept();
-				System.out.println("Client connected.");
-				
-				//in = new BufferedReader(new InputStreamReader(S4.getInputStream()));
-				//out = new PrintWriter(S4.getOutputStream(), true);
-				
-				broadcast("...");
-				
-				Thread t = new Thread(new Runnable()
-				{
-					@Override
-					public void run()
-					{
-						String line;
-						try 
-						{
-							BufferedReader in = new BufferedReader(new InputStreamReader(S4.getInputStream()));
-							line = in.readLine().replaceAll("","").replaceAll("\\s+","").trim();
-							System.out.println(line);
-							
-							System.out.println("Esperando...");
-						}
-						catch (IOException e) {e.printStackTrace();} 
-						//catch (InterruptedException e) {e.printStackTrace();}
-					}
-				});
-				t.start();
-			}
-			
-			//in.close();
-			//out.close();
-			//S4.close();
-		}
-		catch (NumberFormatException e)	{System.out.println("Error. Tipo de valor incorrecto.");}
-		catch (SocketException e)		{System.out.println("Error. Se ha perdido la conexión con el socket.");}
-		catch (IOException e)			{e.printStackTrace();}
-	}
+	/* Hilo para el manejo de los mensajes de los clientes. */
+    private static class ClientHandler implements Runnable
+    {
+        private Socket socket;
+        private PrintWriter out;
+        
+        public ClientHandler(Socket socket) {this.socket = socket;}
+        
+        @Override
+        public void run()
+        {
+        	//El stream de entrada del socket, para recibir del cliente.
+            try (BufferedReader in = new BufferedReader(new InputStreamReader(socket.getInputStream())))
+            {
+            	//Crea el stream de salida del socket y lo guarda en la lista.
+                out = new PrintWriter(socket.getOutputStream(), true);
+                listaClientes.add(out);
+                
+                //Mientras reciba mensajes del cliente, los comparte con broadcast.
+                out.println("Escribe tus mensajes: ");
+                String message;
+                while ((message = in.readLine()) != null)
+                {
+                    broadcast("Cliente dice: " + message);
+                }
+                
+                //Quita el PrintWriter de la lista si puede.
+                if (out != null)	{listaClientes.remove(out);}
+                
+                socket.close();
+            }
+            catch (IOException e)	{e.printStackTrace();}
+        }
+        
+        //Muestra el mensaje de un cliente a todos los demás.
+        private void broadcast(String mensaje)
+        {
+            for (PrintWriter cliente : listaClientes)
+            	{cliente.println(mensaje);}
+        }
+    }
+    
+    
+	/* Lista de todos los PrintWriter de los clientes. */
+    private static List<PrintWriter> listaClientes = new CopyOnWriteArrayList<>();
+    
+    
+    /* Main */
+    public static void main(String[] args)
+    {
+        try (ServerSocket serverSocket = new ServerSocket(5003))
+        {
+            while (true)
+            {
+            	//Recibe conexiones del puerto.
+            	System.out.println("Listening to port "+serverSocket.getLocalPort()+"...");
+                Socket so = serverSocket.accept();
+                System.out.println("Client connected.");
+                
+                //Empieza el hilo con el socket.
+                Thread clientThread = new Thread(new ClientHandler(so));
+                clientThread.start();
+            }
+        }
+        catch (SocketException e)	{System.err.println("Error. Se ha perdido la conexión con el socket.");}
+        catch (IOException e)		{e.printStackTrace();}
+    }
+    
 }
 

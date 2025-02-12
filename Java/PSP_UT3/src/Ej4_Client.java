@@ -1,5 +1,7 @@
-import java.io.DataOutputStream;
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.PrintWriter;
 import java.net.ConnectException;
 import java.net.Socket;
 import java.net.UnknownHostException;
@@ -11,29 +13,35 @@ public class Ej4_Client
 	
 	public static void main(String[] args)
 	{
-		// 1. Conectarse al servidor con un Socket (localhost, 5003).
-		// 2. Preparar un hilo que reciba mensajes del servidor y los imprima en consola.
-		// 3. En un bucle, leer mensajes de la consola local y enviarlos al servidor.
-		// 4. Manejar cierre de la conexión al escribir un comando de salida.
-		
-		try
+		try (//Socket con el que se trabaja.
+			Socket so = new Socket("127.0.0.1", 5003);
+			//El stream de salida del socket, para enviar al servidor.
+			PrintWriter out = new PrintWriter(so.getOutputStream(), true);
+			//El stream de entrada del socket, para recibir del servidor.
+			BufferedReader in = new BufferedReader(new InputStreamReader(so.getInputStream()));
+			//Lector de consola.
+			BufferedReader input = new BufferedReader(new InputStreamReader(System.in)))
 		{
-			Socket So = new Socket("127.0.0.1", 5003);
-			
-			DataOutputStream DOS = new DataOutputStream(So.getOutputStream());
-			
-			while (true)
-			{
-				System.out.print("Escribe un mensaje: ");
-				String message = input.nextLine();
-				DOS.writeUTF(message);
-				DOS.flush();
-				
-				if (message.equals("Salir")) break;
-			}
-			
-			DOS.close();
-			So.close();
+            //Hilo que recibe todos los mensajes del servidor y los muestra aquí.
+            Thread hiloEscucha = new Thread(() -> {
+                try
+                {
+                    String message;
+                    while ((message = in.readLine()) != null)
+                    {
+                        System.out.println(message);
+                    }
+                }
+                catch (IOException e)	{e.printStackTrace();}
+            });
+            hiloEscucha.start();
+
+            //Envia los mensajes escritos en consola al servidor.
+            String userInput;
+            while ((userInput = input.readLine()) != null)
+            {
+                out.println(userInput);
+            }
 		}
 		catch (ConnectException e)		{System.out.println("Connection refused.");}
 		catch (UnknownHostException e)	{e.printStackTrace();}

@@ -1,7 +1,9 @@
+import java.io.BufferedOutputStream;
 import java.io.BufferedReader;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.io.PrintWriter;
+import java.io.OutputStream;
 import java.net.ConnectException;
 import java.net.Socket;
 import java.net.UnknownHostException;
@@ -19,22 +21,44 @@ public class Ej6_Client
 		// 4. Guardarlo en un FileOutputStream local.
 		// 5. Cerrar flujos y socket.
 		
-		// Todos los recursos dentro del paréntesis se cerrarán al final.
-		try(//Socket con el que se trabaja.
+		
+		try (//Socket con el que se trabaja.
 			Socket so = new Socket("127.0.0.1", 5005);
 			//El stream de salida del socket, para enviar al servidor.
-			PrintWriter out = new PrintWriter(so.getOutputStream(), true);
+			OutputStream out = so.getOutputStream();
 			//El stream de entrada del socket, para recibir del servidor.
-			BufferedReader in = new BufferedReader(new InputStreamReader(so.getInputStream()));)
+			BufferedReader in = new BufferedReader(new InputStreamReader(so.getInputStream()));
+			//Lector de consola.
+			BufferedReader input = new BufferedReader(new InputStreamReader(System.in)))
 		{
-			String userInput;
+			System.out.print("Introduzca el nombre del archivo: ");
+
+			//Lee el nombre del archivo y lo envía al servidor.
+			String filepath = input.readLine();
+			out.write((filepath + "\n").getBytes());
 			
-			System.out.print("Introduzca un archivo de imagen: ");
-			if ((userInput = input.nextLine())!=null)
+			//Recibe la respuesta del servidor.
+			String serverReply = in.readLine();
+			
+			//Leer el tamaño del archivo.
+			long filesize = Long.parseLong(serverReply);
+			
+			//Descarga el archivo, usando el stream de salida al archivo nuevo.
+			try (BufferedOutputStream bos = new BufferedOutputStream(new FileOutputStream("descargado_"+filepath)))
 			{
-				out.println(userInput);
+				byte[] buffer = new byte[4096];
+				int bytesLeidos;
+				int bytesTotalesLeidos = 0;
+				
+				//Escribe los bytes leidos al BOS mientras no llegue al final.
+				while ((bytesTotalesLeidos<filesize) && (bytesLeidos=so.getInputStream().read(buffer)) != -1)
+				{
+					bos.write(buffer, 0, bytesLeidos);
+					bytesTotalesLeidos += bytesLeidos;
+				}
+				System.out.println("Archivo descargado como: descargado_" + filepath);
 			}
-			
+
 		}
 		catch (ConnectException e)		{System.err.println("Connection refused.");}
 		catch (UnknownHostException e)	{e.printStackTrace();}

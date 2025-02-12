@@ -5,7 +5,6 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
-import java.io.PrintWriter;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.net.SocketException;
@@ -58,65 +57,64 @@ cliente. El cliente solicita un nombre de archivo, y el servidor lo envía en mo
 			(new File(nombreArchivo).exists()).
 */
 
+
+
 public class Ej6_Server
 {
-	public static void main(String[] args)
-	{
-		// 1. Crear ServerSocket (puerto 5005).
-		// 2. Aceptar conexiones (accept()).
-		// 3. Leer (en modo texto) el nombre del archivo solicitado.
-		// 4. Buscar el archivo en el sistema local.
-		// 5. Si existe, abrir FileInputStream y enviar su contenido binario.
-		// 6. Cerrar flujos y socket.
-		
-		try (ServerSocket SSo = new ServerSocket(5005))
-		{
-			Socket So;
-			
-			while (true)
-			{
-				System.out.println("Listening to port "+SSo.getLocalPort()+"...");
-				So = SSo.accept();
-				System.out.println("Client connected.");
-				
-				try (BufferedReader in = new BufferedReader(new InputStreamReader(So.getInputStream()));
-					 PrintWriter out = new PrintWriter(So.getOutputStream(), true);)
+	// 1. Crear ServerSocket (puerto 5005).
+	// 2. Aceptar conexiones (accept()).
+	// 3. Leer (en modo texto) el nombre del archivo solicitado.
+	// 4. Buscar el archivo en el sistema local.
+	// 5. Si existe, abrir FileInputStream y enviar su contenido binario.
+	// 6. Cerrar flujos y socket.
+	
+	
+    public static void main(String[] args)
+    {
+        try (ServerSocket serverSocket = new ServerSocket(5005))
+        {
+            while (true)
+            {
+            	System.out.println("Listening to port "+serverSocket.getLocalPort()+"...");
+                Socket socket = serverSocket.accept();
+                System.out.println("Client connected.");
+                
+				try (//El stream de entrada del socket, recibe del cliente.
+					BufferedReader in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+					//El stream de salida del servidor.
+					OutputStream out = socket.getOutputStream())
 				{
-					String filepath = in.readLine().replaceAll("","").replaceAll("\\s+","").trim();
-					File file = new File(filepath);
+					//Lee por consola el nombre del archivo.
+					String filepath = in.readLine();
 					
-					if (file.exists())
+					//Si el fichero existe y no es un directorio.
+					File file = new File(filepath);
+					if (file.exists() && !file.isDirectory())
 					{
-						out.println("File "+filepath+" has been found.");
+						//Escribe la longitud del fichero.
+						out.write((file.length() + "\n").getBytes());
 						
-						FileInputStream fis = new FileInputStream(file);
-						BufferedInputStream filereader = new BufferedInputStream(fis);
-						
-						OutputStream outS = So.getOutputStream();
-						byte[] buffer = new byte[4096];
-						int bytesLeidos;
-						while ((bytesLeidos = filereader.read(buffer)) != -1)
+						//El Stream de entrada del archivo
+						try (BufferedInputStream bis = new BufferedInputStream(new FileInputStream(file)))
 						{
-							outS.write(buffer, 0, bytesLeidos);
+							byte[] buffer = new byte[4096];
+							int bytesLeidos;
+							//Recorre todo el archivo y lo escribe en el stream de salida del socket.
+							while ((bytesLeidos = bis.read(buffer)) != -1)
+							{
+								out.write(buffer, 0, bytesLeidos);
+							}
 						}
-						
-						fis.close();
-						filereader.close();
+						System.out.println("Archivo enviado correctamente.");
 					}
-					else
-					{
-						out.println("The file doesn't exist.");
-						break;
-					}
+					else {System.out.println("Error. El archivo no existe.");}
+					socket.close();
 				}
-				catch (IOException e)	{e.printStackTrace();}
-				
-				So.close();
-			}
-		}
-		catch (SocketException e)		{System.out.println("Error. Se ha perdido la conexión con el socket.");}
-		catch (IOException e)			{e.printStackTrace();}
-		
-	}
+            }
+        }
+        catch (SocketException e)	{System.err.println("Error. Se ha perdido la conexión con el socket.");}
+        catch (IOException e)		{e.printStackTrace();}
+    }
+
 }
 

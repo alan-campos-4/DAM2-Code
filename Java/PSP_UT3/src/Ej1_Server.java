@@ -50,32 +50,32 @@ public class Ej1_Server
 		// 5. Enviar la respuesta con “Hola, recibí tu mensaje: <mensaje>”.
 		// 6. Cerrar recursos.
 		
+		//Crea el ServerSocket.
 		try (ServerSocket SS1 = new ServerSocket(5000);)
 		{
-			Socket S1;
-			System.out.println("Listening to port "+SS1.getLocalPort()+"...");
+			Socket So;
 			
-			S1 = SS1.accept();
-			System.out.println("Client connected.");
-			
-			BufferedReader in = new BufferedReader(new InputStreamReader(S1.getInputStream()));
-			PrintWriter out = new PrintWriter(S1.getOutputStream(), true);
-			
-			String message = in.readLine().replaceAll("","").replaceAll("\\s+","").trim();
-			System.out.println("Client Message: "+message);
-			
-			out.println("Server Reply: Hola, recibí tu mensaje.");
-			
-			/*
-			String line;
-			while ((line=in.readLine())!=null)
-				System.out.println("Client Message: "+line);
-			out.println("Server Reply: Hola, recibí tu mensaje.");
-			*/
-			
-			in.close();
-			out.close();
-			S1.close();
+			while (true)
+			{
+				//Recibe conexiones en el puerto.
+				System.out.println("Listening to port "+SS1.getLocalPort()+"...");
+				So = SS1.accept();
+				System.out.println("Client connected.");
+				
+				try (//El stream de entrada del socket, para recibir del cliente.
+					BufferedReader in = new BufferedReader(new InputStreamReader(So.getInputStream()));
+					//El stream de salida del socket, para enviar al cliente.
+					PrintWriter out = new PrintWriter(So.getOutputStream(), true);)
+				{
+					//Lee el mensaje del cliente y lo muestra.
+					String message = in.readLine();
+					System.out.println("Client Message: "+message);
+					
+					//Envía el mensaje de vuelta al cliente.
+					out.println("Server Reply: Hola, recibí tu mensaje: "+message+".");
+				}
+				So.close();
+			}
 		}
 		catch (SocketException e)		{System.out.println("Error. Se ha perdido la conexión con el socket.");}
 		catch (IOException e)			{e.printStackTrace();}
