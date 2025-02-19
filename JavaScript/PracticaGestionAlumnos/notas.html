@@ -16,6 +16,18 @@
     <div class="container">
         <h3>Gestión de notas</h3>
         <h4>Nombre: <span id="nombre"></span> <span id="apellidos"></span>. Grupo <span id="grupo"></span> </h4>
+        <table>
+            <tr>
+                <td>Alumno</td>
+                <td>Asignatura</td>
+                <td>Nota</td>
+            </tr>
+            <tr>
+                <td>.</td>
+                <td>Matemáticas</td>
+                <td>7</td>
+            </tr>
+        </table>
     </div>
 
     <script>
@@ -26,6 +38,7 @@
         para1.innerHTML = unescape(params["firstname"]);
         para2.innerHTML = unescape(params["lastname"]);
         para3.innerHTML = unescape(params["group"]);
+
         function getParams() {
             var idx = document.URL.indexOf('&');
             var params = new Array();
@@ -34,7 +47,6 @@
                 for (var i=0; i<pairs.length; i++) {
                     nameVal = pairs[i].split('=');
                     params[nameVal[0]] = nameVal[1];
-                    console.log(nameVal[0] + " - " + nameVal[1]);
                 }
             }
             return params;
@@ -42,21 +54,4 @@
     </script>
 
 </body>
-<script>
-
-    function getParams() {
-        var idx = document.URL.indexOf('&');
-        var params = new Array();
-        if (idx != -1) {
-            var pairs = document.URL.substring(idx+1, document.URL.length).split('&');
-            for (var i=0; i<pairs.length; i++) {
-                nameVal = pairs[i].split('=');
-                params[nameVal[0]] = nameVal[1];
-                console.log(nameVal[0] + " - " + nameVal[1]);
-            }
-        }
-        return params;
-    }
-
-</script>
 </html>
