@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+    <title>Vue.js</title>
+
+</head>
+<body>
+
+    <div id="app">
+
+        <h1>{{ titulo }}</h1>
+
+        <input type="text" id="num1" v-model.number="number1"><br>
+        <input type="text" id="num2" v-model.number="number2"><br>
+        <button v-on:click="operation(1)">Sumar</button>
+        <button v-on:click="operation(2)">Restar</button>
+        <button v-on:click="operation(3)">Multiplicar</button>
+        <button v-on:click="operation(4)">Dividir</button> <br>
+        Resultado: {{result}}
+
+        <br><br>
+
+        {{message}}
+
+        <br><br>
+
+        <!--FRUTAS:
+        <ul>
+            <li v-for="fruit in fruits">
+                {{ fruit }}
+            </li>
+        </ul>-->
+
+        <br><br>
+
+        Fruta:    <input type="text" id="fruitnew" v-model="newFruit"><br>
+        Cantidad: <input type="text" id="quant" v-model.number="newQuant"><br>
+        <button v-on:click="addFruit()">Añade fruta</button>
+        <table border="1">
+            <tr v-for="fruit in fruits">
+                <td>{{ fruit.nombre }}</td><td>{{ fruit.cantidad }}</td>
+            </tr>
+        </table>
+        Total: {{ total }}
+
+
+    </div>
+
+
+</body>
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            titulo: 'Calculadora',
+            number1: 0,
+            number2: 0,
+            result: 0,
+            message: '',
+            fruits: [
+                {nombre:'Manzanas',     cantidad:50},
+                {nombre:'Fresas',       cantidad:20},
+                {nombre:'Peras',        cantidad:30},
+                {nombre:'Chirimollas',  cantidad:50},
+            ],
+            newFruit: '',
+            newQuant: 0,
+            total: 0,
+        },
+        mounted:function() {
+            this.getTotal();
+        },
+        methods: {
+            operation(type) {
+                if (type==1)    {this.result = this.number1 + this.number2;}
+                if (type==2)    {this.result = this.number1 - this.number2;}
+                if (type==3)    {this.result = this.number1 * this.number2;}
+                else {
+                    if (this.number2==0) {
+                        this.message = 'No se puede dividir por cero';
+                    } else {
+                        this.message = '';
+                        this.result = this.number1 / this.number2;
+                    }
+                }
+            },
+            getTotal() {
+                cantidadtotal = 0;
+                for (let i=0; i<this.fruits.length; i++) {
+                    cantidadtotal += parseInt(this.fruits[i].cantidad);
+                }
+                this.total = cantidadtotal;
+            },
+            addFruit() {
+                this.fruits.push({nombre:this.newFruit, cantidad:this.newQuant});
+                //await nextTick();
+                this.getTotal();
+            },
+        }
+    })
+</script>
+</html>
