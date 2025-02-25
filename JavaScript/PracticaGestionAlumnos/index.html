@@ -46,10 +46,11 @@
 -->
 
 </head>
-<body>
+<body onload="onLoad()">
 
     <h1 id="header-title">Pr&aacute;ctica de Gesti&oacute;n de Alumnos</h1><br>
     <div class="container"><div id="main">
+
         <h3>Gesti&oacute;n de alumnos</h3>
         <div id="mySidebar" class="sidebar">
             <div class="row"><div class="col-12">
@@ -85,9 +86,10 @@
                 Group:              <input type="text" id="group" class="form-control">
             </div></div>
             <div class="row">
-                <button class="button" onclick="addRow()">Añadir</button>
+                <button class="button" onclick="addRow()">A&ntilde;adir</button>
             </div>
         </div>
+
         <table id="tabla-alumnos" class="table table-striped">
             <thead><tr>
                     <td>ID</td>
@@ -95,21 +97,12 @@
                     <td>DNI</td>
                     <td>Fecha de nacimiento</td>
                     <td>Correo electronico</td>
-                    <td>Telefono</td>
+                    <td>Tel&eacute;fono</td>
                     <td>Grupo</td>
                     <td>Ver notas</td>
                     <td>Eliminar</td>
             </tr></thead>
             <tbody><tr>
-                    <td>1</td>
-                    <td>P&eacute;rez, Pablo</td>
-                    <td>777777</td>
-                    <td>24/05/2010</td>
-                    <td>ppp@gmail.com</td>
-                    <td>656565</td>
-                    <td>A</td>
-                    <td><button onclick="goToScorePage('Pablo', 'Perez', 'A')">Ver notas</button></td>
-                    <td><button onclick="deleteRow(this)">Eliminar</button></td>
             </tr></tbody>
         </table>
         <button class="openbtn" onclick="openNav()">Añadir alumno a la tabla</button>
@@ -120,6 +113,30 @@
 
 </body>
 <script>
+
+    alumnos = [
+        [1, 'P&eacute;rez', 'Pablo',   777777, '24/05/2010', 'ppp@gmail.com', 656565, 'A'],
+        [2, 'Machado', 'Laura', 666666, '06/04/2012', 'mach@gmail.com', 656565, 'B'],
+        [3, 'Mata', 'Sergio',   181818, '12/09/2011', 'smata@gmail.com', 656565, 'C'],
+        [4, 'Medina', 'Carlos', 552255, '03/11/2015', 'carlosm@gmail.com', 656565, 'A'],
+    ]
+
+    function onLoad() {
+        var tbodyRef = document.getElementById('tabla-alumnos').getElementsByTagName('tbody')[0];
+        for (let i=0; i<alumnos.length; i++) {
+            var row = tbodyRef.insertRow();
+            row.insertCell(0).innerHTML = alumnos[i][0];
+            row.insertCell(1).innerHTML = alumnos[i][2] + ', ' + alumnos[i][1];
+            row.insertCell(2).innerHTML = alumnos[i][3];
+            row.insertCell(3).innerHTML = alumnos[i][4];
+            row.insertCell(4).innerHTML = alumnos[i][5];
+            row.insertCell(5).innerHTML = alumnos[i][6];
+            row.insertCell(6).innerHTML = alumnos[i][7];
+            row.insertCell(7).innerHTML = '<button onclick="goToScorePage('+alumnos[i][0]+', '
+                                    +'\''+alumnos[i][2]+'\', \''+alumnos[i][1]+'\', \''+alumnos[i][7]+'\')">Ver notas</button>';
+            row.insertCell(8).innerHTML = '<button onclick="deleteRow(this, '+alumnos[i][0]+')">Eliminar</button>';
+        }
+    }
 
     function addRow() {
         var tbodyRef = document.getElementById('tabla-alumnos').getElementsByTagName('tbody')[0];
@@ -134,25 +151,33 @@
             alert("Debes rellenar todos los campos.");
         } else {
             var row = tbodyRef.insertRow();
-            row.insertCell(0).innerHTML = getNewID();
+            let id = getNewID();
+            row.insertCell(0).innerHTML = id;
             row.insertCell(1).innerHTML = apellidos + ", " + nombre;
             row.insertCell(2).innerHTML = dni;
             row.insertCell(3).innerHTML = fecha;
             row.insertCell(4).innerHTML = correo;
             row.insertCell(5).innerHTML = telefono;
             row.insertCell(6).innerHTML = grupo;
-            row.insertCell(7).innerHTML = '<button onclick="goToScorePage(nombre, apellidos, grupo)">Ver notas</button>';
-            row.insertCell(8).innerHTML = '<button onclick="deleteRow(this)">Eliminar</button>';
+            row.insertCell(7).innerHTML = '<button onclick="goToScorePage('+id+', '
+                                    +'\''+nombre+'\', \''+apellidos+'\', \''+grupo+'\')">Ver notas</button>';
+            row.insertCell(8).innerHTML = '<button onclick="deleteRow(this, '+id+')">Eliminar</button>';
+            //[1, 'Perez', 'Pablo',   777777, '24/05/2010', 'ppp@gmail.com', 656565, 'A']
+            alumnos.push([id, apellidos, nombre, dni, fecha, correo, telefono, grupo])
         }
     }
 
     function getNewID() {
-        table = document.getElementById("tabla-alumnos");
+        /*table = document.getElementById("tabla-alumnos");
         rows = table.rows;
         const table_ids = new Set();
         for (var i = 1; i < rows.length; i++) {
             var cols = rows[i].cells;
             table_ids.add(parseInt(cols[0].innerText))
+        }*/
+        const table_ids = new Set();
+        for (let i=0; i<alumnos.length; i++) {
+            table_ids.add(alumnos[i][0])
         }
         var newID = 1;
         while (table_ids.has(newID)) {
@@ -161,13 +186,21 @@
         return newID;
     }
 
-    function goToScorePage(nombre, apellido, grupo) {
-        parent.location.href = "./notas.html?&firstname="+nombre+"&lastname="+apellido+"&group="+grupo;
+    function goToScorePage(id, nombre, apellido, grupo) {
+        parent.location.href = "./notas.html?&id="+id+"&firstname="+nombre+"&lastname="+apellido+"&group="+grupo;
     }
-    function deleteRow(r) {
+    function deleteRow(r, id) {
         var i = r.parentNode.parentNode.rowIndex;
         document.getElementById("tabla-alumnos").deleteRow(i);
+        
+        const index = alumnos.indexOf(id);
+        if (index > -1) { // only splice array when item is found
+            alumnos.splice(index, 1); // 2nd parameter means remove one item only
+        }
+
     }
+
+
 
     function openNav() {
         document.getElementById("mySidebar").style.width = "350px";

@@ -9,37 +9,37 @@
     <title>Pr&aacute;ctica de Gesti&oacute;n de Alumnos</title>
 
 </head>
-<body>
+<body onload="onLoad()">
     
 <!--Load data from array-->
 
     <h1 id="header-title">Pr&aacute;ctica de Gesti&oacute;n de Alumnos</h1><br>
 
     <div class="container">
+
         <h3>Gesti&oacute;n de notas</h3>
         <h4>Nombre: <span id="nombre"></span> <span id="apellidos"></span>. Grupo <span id="grupo"></span> </h4>
-        <table>
-            <tr>
-                <td>Alumno</td>
+
+        <table id="tabla-notas"  class="table table-striped">
+            <thead><tr>
                 <td>Asignatura</td>
                 <td>Nota</td>
-            </tr>
-            <tr>
-                <td>.</td>
-                <td>Matem&aacute;ticas</td>
-                <td>7</td>
-            </tr>
+                <td>Eliminar</td>
+            </tr></thead>
+            <tbody><tr>
+            </tr></tbody>
         </table>
+
     </div>
 
     <script>
-        var para1 = document.getElementById('nombre');
-        var para2 = document.getElementById('apellidos');
-        var para3 = document.getElementById('grupo');
+        var para2 = document.getElementById('nombre');
+        var para3 = document.getElementById('apellidos');
+        var para4 = document.getElementById('grupo');
         var params = getParams();
-        para1.innerHTML = unescape(params["firstname"]);
-        para2.innerHTML = unescape(params["lastname"]);
-        para3.innerHTML = unescape(params["group"]);
+        para2.innerHTML = unescape(params["firstname"]);
+        para3.innerHTML = unescape(params["lastname"]);
+        para4.innerHTML = unescape(params["group"]);
 
         function getParams() {
             var idx = document.URL.indexOf('&');
@@ -56,4 +56,56 @@
     </script>
 
 </body>
+<script>
+
+    notas = [
+        [1, 'Matematicas',  10],
+        [1, 'Fisica',       8],
+        [1, 'Quimica',      6],
+        [2, 'Filosofia',    7],
+        [2, 'Historia',     7],
+        [2, 'Fisica',       5],
+        [3, 'Matematicas',  8],
+        [3, 'Dibujo Tecnico',6],
+        [3, 'Geologia',     7],
+        [4, 'Matematicas',  5],
+        [4, 'Historia',     4],
+        [4, 'Lengua',       8],
+    ]
+
+    function onLoad() {
+        var tbodyRef = document.getElementById('tabla-notas').getElementsByTagName('tbody')[0];
+        for (let i=0; i<notas.length; i++) {
+            if (notas[i][0]==params["id"]) {
+                var row = tbodyRef.insertRow();
+                row.insertCell(0).innerHTML = notas[i][1];
+                row.insertCell(1).innerHTML = notas[i][2];
+                row.insertCell(2).innerHTML = '<button onclick="deleteRow(this, '+notas[i][0]+', \''+notas[i][1]+'\')">Eliminar</button>';
+            }
+        }
+    }
+
+    function addScore() {
+        var tbodyRef = document.getElementById('tabla-notas').getElementsByTagName('tbody')[0];
+        for (let i=0; i<notas.length; i++) {
+            if (notas[i][0]==params["id"]) {
+                var row = tbodyRef.insertRow();
+                row.insertCell(0).innerHTML = notas[i][0];
+                row.insertCell(1).innerHTML = notas[i][1];
+                row.insertCell(2).innerHTML = notas[i][2];
+            }
+        }
+    }
+
+    function deleteRow(r, id, asignatura) {
+        var i = r.parentNode.parentNode.rowIndex;
+        document.getElementById("tabla-alumnos").deleteRow(i);
+        
+        const index = alumnos.indexOf(id, asignatura);
+        if (index > -1) { // only splice array when item is found
+            alumnos.splice(index, 1); // 2nd parameter means remove one item only
+        }
+    }
+
+</script>
 </html>
