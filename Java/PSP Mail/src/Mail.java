@@ -2,6 +2,7 @@ import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.Reader;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
@@ -68,7 +69,7 @@ public class Mail
 				if (line.contains("@") && line.contains("."))
 				{
 					list.add(line);
-					System.out.println("Dirección encontrada: "+line);
+					//System.out.println("Dirección encontrada: "+line);
 				}
 				else {System.err.println("Error. Dirección no válida: "+line);}
 			}
@@ -93,6 +94,7 @@ public class Mail
 		}
 		catch (FileNotFoundException e)	{System.err.println("Error. No se encontró el fichero.");}
 		catch (IOException e)			{e.printStackTrace();}
+		
 		return sb.toString();
 	}
 	
@@ -100,7 +102,14 @@ public class Mail
 	public static Properties configurarServidorSMTP()
 	{
 		// Configurar los parámetros del servidor SMTP de Gmail.
-		Properties propiedadesSMTP = null;
+		Properties propiedadesSMTP = new Properties();
+		try (FileReader fr = new FileReader("src/Propiedades.txt"))
+		{
+			propiedadesSMTP.load(fr);
+		}
+		catch (FileNotFoundException e)	{System.err.println("Error. No se encontró el fichero.");}
+		catch (IOException e)			{e.printStackTrace();}
+
 		return propiedadesSMTP;
 	}
 	

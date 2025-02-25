@@ -48,10 +48,10 @@
 </head>
 <body onload="onLoad()">
 
-    <h1 id="header-title">Pr&aacute;ctica de Gesti&oacute;n de Alumnos</h1><br>
+    <h1 id="header-title">Gesti&oacute;n de Alumnos</h1><br>
     <div class="container"><div id="main">
 
-        <h3>Gesti&oacute;n de alumnos</h3>
+        <h3>Todos los alumnos</h3>
         <div id="mySidebar" class="sidebar">
             <div class="row"><div class="col-12">
                 <a class="closebtn" onclick="closeNav()">x</a>
@@ -190,12 +190,14 @@
         parent.location.href = "./notas.html?&id="+id+"&firstname="+nombre+"&lastname="+apellido+"&group="+grupo;
     }
     function deleteRow(r, id) {
-        var i = r.parentNode.parentNode.rowIndex;
-        document.getElementById("tabla-alumnos").deleteRow(i);
-        
         const index = alumnos.indexOf(id);
         if (index > -1) { // only splice array when item is found
             alumnos.splice(index, 1); // 2nd parameter means remove one item only
+
+            var i = r.parentNode.parentNode.rowIndex;
+            document.getElementById("tabla-alumnos").deleteRow(i);
+        } else {
+            alert('No se ha podido borrar el elemento.');
         }
 
     }

@@ -1,0 +1,4 @@
+Server=ftp.dlptest.com
+User=dlpuser
+Password=rNrKYTX9g7z3RgJRmxWuGHbeu
+Port=21
