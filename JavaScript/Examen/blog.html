@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Examen - Noticias</title>
+
+</head>
+<body onload="saveNews()">
+    
+    <h2>Blog de Noticias</h2>
+
+    <div class="container" id="noticias">
+        
+        <!--<div class="card">
+            <div class="card-head"><b>Título</b></div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-2">
+                        <button>Leer más</button>
+                    </div>
+                </div>
+                <div class="row float-end">
+                    <div class="col-2">
+                        <button>Borrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>-->
+    </div>
+
+</body>
+<script>
+
+    let numero_visitas = 0;
+    if (getNumVisitas()==null)    {setNumVisitas(numero_visitas);}
+
+
+    function getNumVisitas() {
+        return JSON.parse(localStorage.getItem('num-visitas'));
+    }
+    function setNumVisitas(num) {
+        localStorage.setItem('num-visitas', JSON.stringify(num.toString()));
+    }
+
+
+    function saveNews() {
+        fetch('https://jsonplaceholder.typicode.com/posts')
+            .then(response => response.json())
+            .then(json => createTable(json))
+    }
+    function createTable(noticias) {
+        console.log(noticias)
+        for (let i=0; i<noticias.length; i++) {
+            let card = document.createElement('div');
+            let card_head = document.createElement('div');
+            let card_body = document.createElement('div');
+            let row1 = document.createElement('div');
+            let row2 = document.createElement('div');
+            let col1 = document.createElement('div');
+            let col2 = document.createElement('div');
+            card.className = 'card';
+            card_head.className = 'card-head';
+            card_body.className = 'card-body';
+            row1.className = 'row';
+            row2.className = 'row float-end';
+            col1.className = 'col-2';
+            col2.className = 'col-2'
+
+            card_head.innerHTML = '<b>'+noticias[i].title+'</b>'
+            col1.innerHTML = '<button onclick="goToNewPage('+noticias[i].id+')">Leer más</button>'
+            col2.innerHTML = '<button onclick="deleteNews('+noticias[i].id+')">Borrar</button>';
+            row1.appendChild(col1);
+            row2.appendChild(col2);
+            card_body.appendChild(row1);
+            card_body.appendChild(row2);
+            card.appendChild(card_head);
+            card.appendChild(card_body);
+            document.getElementById('noticias').appendChild(card);
+        }
+    }
+
+    function goToNewPage(id) {
+        visitas = getNumVisitas();
+        visitas++;
+        setNumVisitas(visitas);
+        parent.location.href = "./noticia.html?id="+id;
+    }
+
+    function deleteNews(id) {
+        if (confirm("Quieres borrar esta noticia?")) {
+            fetch('https://jsonplaceholder.typicode.com/posts/'+id, { method: 'DELETE' })
+                .then(
+                    fetch('https://jsonplaceholder.typicode.com/posts')
+                    .then(response => response.json())
+                    .then(json => console.log(json))
+                )
+        }
+    }
+
+</script>
+</html>
