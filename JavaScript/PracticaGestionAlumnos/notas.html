@@ -10,8 +10,6 @@
 
 </head>
 <body onload="onLoad()">
-    
-<!--Load data from array-->
 
     <h1 id="header-title">Gesti&oacute;n de Notas</h1><br>
 
@@ -31,9 +29,19 @@
             </tr></tbody>
         </table>
 
-        Asignatura: <input type="text" id="subject" class="form-control"><br>
-        Nota:       <input type="text" id="score"   class="form-control"><br>
-        <button type="button" onclick="addRow()">AÃ±adir</button>
+        <div class="row">
+            <div class="col-3">
+                Asignatura: <input type="text" id="subject" class="form-control">
+            </div>
+            <div class="col-3">
+                Nota:       <input type="text" id="score"   class="form-control">
+            </div>
+            <div class="col-2 align-self-end">
+                <button class="openbtn addbtn" onclick="addScore()">A&ntilde;adir nota</button>
+            </div>
+        </div>
+        <br>
+        <button class="openbtn resetbtn" onclick="resetToDefaut()">Volver a los datos por defecto</button>
 
     </div>
 
@@ -60,61 +68,108 @@
         }
     </script>
 
+
+
 </body>
 <script>
 
-    notas = [
-        [1, 'Matematicas',  10],
-        [1, 'Fisica',       8],
-        [1, 'Quimica',      6],
-        [2, 'Filosofia',    7],
-        [2, 'Historia',     7],
-        [2, 'Fisica',       5],
-        [3, 'Matematicas',  8],
-        [3, 'Dibujo Tecnico',6],
-        [3, 'Geologia',     7],
-        [4, 'Matematicas',  5],
-        [4, 'Historia',     4],
-        [4, 'Lengua',       8],
-    ]
+    let notas_default = [
+        ['1', '1', 'Matematicas', '10'],
+        ['2', '1', 'Fisica', '8'],
+        ['3', '1', 'Quimica', '6'],
+        ['4', '2', 'Filosofia', '7'],
+        ['5', '2', 'Historia', '7'],
+        ['5', '2', 'Historia', '7'],
+        ['6', '2', 'Fisica', '5'],
+        ['7', '3', 'Matematicas', '8'],
+        ['8', '3', 'Dibujo Tecnico','6'],
+        ['9', '3', 'Geologia', '7'],
+        ['10', '4', 'Matematicas', '5'],
+        ['11', '4', 'Historia', '4'],
+        ['12', '4', 'Lengua', '8'],
+    ];
+
+    if (getStorageArray()==null) {
+        setStorageArray(notas);
+    }
+
+
+    function getStorageArray() {
+        return JSON.parse(localStorage.getItem('array-notas'));
+    }
+    function setStorageArray(array) {
+        localStorage.setItem('array-notas', JSON.stringify(array));
+    }
+
 
     function onLoad() {
+        let notas = getStorageArray();
         var tbodyRef = document.getElementById('tabla-notas').getElementsByTagName('tbody')[0];
         for (let i=0; i<notas.length; i++) {
-            if (notas[i][0]==params["id"]) {
+            if (notas[i][1]==params["id"]) {
                 var row = tbodyRef.insertRow();
-                row.insertCell(0).innerHTML = notas[i][1];
-                row.insertCell(1).innerHTML = notas[i][2];
-                row.insertCell(2).innerHTML = '<button onclick="deleteRow(this, '+notas[i][0]+', \''+notas[i][1]+'\')">Eliminar</button>';
+                row.insertCell(0).innerHTML = notas[i][2];
+                row.insertCell(1).innerHTML = notas[i][3];
+                row.insertCell(2).innerHTML = '<button onclick="deleteRow(this, '+notas[i][0]+')">Eliminar</button>';
             }
         }
     }
 
     function addScore() {
+        let notas = getStorageArray();
         var tbodyRef = document.getElementById('tabla-notas').getElementsByTagName('tbody')[0];
-        let asignatura = document.getElementById("score").value;
-        for (let i=0; i<notas.length; i++) {
-            if (notas[i][0]==params["id"]) {
-                notas.push
-                var row = tbodyRef.insertRow();
-                row.insertCell(0).innerHTML = asignatura;
-                row.insertCell(1).innerHTML = nota;
-                row.insertCell(2).innerHTML = '<button onclick="deleteRow(this, '+notas[i][0]+', \''+notas[i][1]+'\')">Eliminar</button>';
-            }
+        let asignatura =    document.getElementById("subject").value;
+        let nota =          document.getElementById("score").value;
+        if (asignatura=="" || nota=="") {
+            alert("Debes rellenar todos los campos.");
+        } else {
+            let newID = getNewID();
+            let alumn = parseInt(params["id"]);
+            var row = tbodyRef.insertRow();
+            row.insertCell(0).innerHTML = asignatura;
+            row.insertCell(1).innerHTML = nota;
+            row.insertCell(2).innerHTML = '<button onclick="deleteRow(this, '+notas[newID-1][0]+')">Eliminar</button>';
+            
+            notas.push([newID, alumn, asignatura, nota])
+            setStorageArray(notas);
         }
     }
 
-    function deleteRow(r, id, asignatura) {
-        const index = alumnos.indexOf(id, asignatura);
-        if (index > -1) { // only splice array when item is found
-            alumnos.splice(index, 1); // 2nd parameter means remove one item only
-            
+    function getNewID() {
+        let notas = getStorageArray();
+        const table_ids = new Set();
+        for (let i=0; i<notas.length; i++) {
+            table_ids.add(notas[i][0])
+        }
+        var newID = 1;
+        while (table_ids.has(newID.toString())) {
+            newID++;
+        }
+        return newID;
+    }
+
+    function deleteRow(r, id) {
+        let notas = getStorageArray();
+        const index = id-1;
+        if (index > -1) {
             var i = r.parentNode.parentNode.rowIndex;
             document.getElementById("tabla-notas").deleteRow(i);
+
+            notas.splice(index, 1);
+            setStorageArray(notas);
         } else {
             alert('No se ha podido borrar el elemento.');
         }
     }
+
+
+    function resetToDefaut() {
+        if (confirm("¿Quieres volver a los datos por defecto?")) {
+            setStorageArray(notas_default);
+            location.reload();
+        }
+    }
+
 
 </script>
 </html>

@@ -25,15 +25,27 @@
 }
 
 .openbtn {
-    font-size: 20px;
-    cursor: pointer;
     background-color: #111;
     color: white;
+    font-size: 18px;
     padding: 10px 15px;
+    cursor: pointer;
     border: none;
 }
 .openbtn:hover {
     background-color: #444;
+}
+
+.resetbtn {
+    background-color: #721313;
+    color: white;
+    font-size: 18px;
+    padding: 10px 15px;
+    cursor: pointer;
+    border: none;
+}
+.resetbtn:hover {
+    background-color: #822b2b;
 }
 
 #main {

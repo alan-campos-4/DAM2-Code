@@ -49,21 +49,15 @@
 <body onload="onLoad()">
 
     <h1 id="header-title">Gesti&oacute;n de Alumnos</h1><br>
+
     <div class="container"><div id="main">
 
         <h3>Todos los alumnos</h3>
+
         <div id="mySidebar" class="sidebar">
             <div class="row"><div class="col-12">
                 <a class="closebtn" onclick="closeNav()">x</a>
             </div></div>
-            <!--
-                DNI:                <input type="text" id="dni"   class="form-control">
-                Nombre:             <input type="text" id="name"  class="form-control"><br>
-                Fecha de nacimiento:<input type="text" id="date"  class="form-control"><br>
-                Correo electronico: <input type="text" id="email" class="form-control"><br>
-                Telefono:           <input type="text" id="phone" class="form-control"><br>
-                Grupo:              <input type="text" id="group" class="form-control"><br>
-                <button type="button" onclick="addRow()">Añadir</button>-->
             <div class="row"><div class="col-6">
                 DNI:                <input type="text" id="dni"   class="form-control">
             </div></div>
@@ -83,7 +77,7 @@
                 Telefono:           <input type="text" id="phone" class="form-control">
             </div></div>
             <div class="row"><div class="col-6">
-                Group:              <input type="text" id="group" class="form-control">
+                Grupo:              <input type="text" id="group" class="form-control">
             </div></div>
             <div class="row">
                 <button class="button" onclick="addRow()">A&ntilde;adir</button>
@@ -105,7 +99,9 @@
             <tbody><tr>
             </tr></tbody>
         </table>
-        <button class="openbtn" onclick="openNav()">Añadir alumno a la tabla</button>
+        <button class="openbtn" onclick="openNav()">A&ntilde;adir alumno a la tabla</button>
+        <br><br>
+        <button class="resetbtn" onclick="resetToDefaut()">Volver a los datos por defecto</button>
         
     </div></div>
 
@@ -114,19 +110,30 @@
 </body>
 <script>
 
-    alumnos = [
-        [1, 'P&eacute;rez', 'Pablo',   777777, '24/05/2010', 'ppp@gmail.com', 656565, 'A'],
-        [2, 'Machado', 'Laura', 666666, '06/04/2012', 'mach@gmail.com', 656565, 'B'],
-        [3, 'Mata', 'Sergio',   181818, '12/09/2011', 'smata@gmail.com', 656565, 'C'],
-        [4, 'Medina', 'Carlos', 552255, '03/11/2015', 'carlosm@gmail.com', 656565, 'A'],
-    ]
+    let alumnos_default = [
+        ['1', "Perez", 'Pablo', '777777',   '24/05/2010', 'ppp@gmail.com', '65656', 'A'],
+        ['2', 'Machado', 'Laura', '666666', '06/04/2012', 'mach@gmail.com', '656565', 'B'],
+        ['3', 'Mata', 'Sergio',   '181818', '12/09/2011', 'smata@gmail.com', '656565', 'C'],
+        ['4', 'Medina', 'Carlos', '552255', '03/11/2015', 'carlosm@gmail.com', '656565', 'A'],
+    ];
+    if (getArrayAlumnos()==null)    {setArrayAlumnos(alumnos_default);}
+
+
+    function getArrayAlumnos() {
+        return JSON.parse(localStorage.getItem('array-alumnos'));
+    }
+    function setArrayAlumnos(array) {
+        localStorage.setItem('array-alumnos', JSON.stringify(array));
+    }
+
 
     function onLoad() {
+        let alumnos = getArrayAlumnos();
         var tbodyRef = document.getElementById('tabla-alumnos').getElementsByTagName('tbody')[0];
         for (let i=0; i<alumnos.length; i++) {
             var row = tbodyRef.insertRow();
             row.insertCell(0).innerHTML = alumnos[i][0];
-            row.insertCell(1).innerHTML = alumnos[i][2] + ', ' + alumnos[i][1];
+            row.insertCell(1).innerHTML = alumnos[i][1] + ', ' + alumnos[i][2];
             row.insertCell(2).innerHTML = alumnos[i][3];
             row.insertCell(3).innerHTML = alumnos[i][4];
             row.insertCell(4).innerHTML = alumnos[i][5];
@@ -139,6 +146,8 @@
     }
 
     function addRow() {
+        let alumnos = getArrayAlumnos();
+
         var tbodyRef = document.getElementById('tabla-alumnos').getElementsByTagName('tbody')[0];
         dni =       document.getElementById('dni').value;
         nombre =    document.getElementById('name1').value;
@@ -150,8 +159,8 @@
         if (dni=="" || nombre=="" || apellidos=="" || fecha=="" || correo=="" || telefono=="" || grupo=="") {
             alert("Debes rellenar todos los campos.");
         } else {
-            var row = tbodyRef.insertRow();
             let id = getNewID();
+            var row = tbodyRef.insertRow();
             row.insertCell(0).innerHTML = id;
             row.insertCell(1).innerHTML = apellidos + ", " + nombre;
             row.insertCell(2).innerHTML = dni;
@@ -162,44 +171,50 @@
             row.insertCell(7).innerHTML = '<button onclick="goToScorePage('+id+', '
                                     +'\''+nombre+'\', \''+apellidos+'\', \''+grupo+'\')">Ver notas</button>';
             row.insertCell(8).innerHTML = '<button onclick="deleteRow(this, '+id+')">Eliminar</button>';
-            //[1, 'Perez', 'Pablo',   777777, '24/05/2010', 'ppp@gmail.com', 656565, 'A']
-            alumnos.push([id, apellidos, nombre, dni, fecha, correo, telefono, grupo])
+
+            alumnos.push([id, apellidos, nombre, dni, fecha, correo, telefono, grupo]);
+            setArrayAlumnos(alumnos);
         }
     }
 
     function getNewID() {
-        /*table = document.getElementById("tabla-alumnos");
-        rows = table.rows;
+        let alumnos = getArrayAlumnos();
         const table_ids = new Set();
-        for (var i = 1; i < rows.length; i++) {
-            var cols = rows[i].cells;
-            table_ids.add(parseInt(cols[0].innerText))
-        }*/
-        const table_ids = new Set();
+        console.log(table_ids);
         for (let i=0; i<alumnos.length; i++) {
             table_ids.add(alumnos[i][0])
         }
         var newID = 1;
-        while (table_ids.has(newID)) {
+        while (table_ids.has(newID.toString())) {
             newID++;
         }
-        return newID;
+        return newID.toString();
+    }
+    
+    function deleteRow(r, id) {
+        let alumnos = getArrayAlumnos();
+        const index = id-1;
+        if (index > -1) {
+            var i = r.parentNode.parentNode.rowIndex;
+            document.getElementById("tabla-alumnos").deleteRow(i);
+
+            alumnos.splice(index, 1);
+            setArrayAlumnos(alumnos);;
+        } else {
+            alert('No se ha podido borrar el elemento.');
+        }
     }
 
     function goToScorePage(id, nombre, apellido, grupo) {
         parent.location.href = "./notas.html?&id="+id+"&firstname="+nombre+"&lastname="+apellido+"&group="+grupo;
     }
-    function deleteRow(r, id) {
-        const index = alumnos.indexOf(id);
-        if (index > -1) { // only splice array when item is found
-            alumnos.splice(index, 1); // 2nd parameter means remove one item only
 
-            var i = r.parentNode.parentNode.rowIndex;
-            document.getElementById("tabla-alumnos").deleteRow(i);
-        } else {
-            alert('No se ha podido borrar el elemento.');
+
+    function resetToDefaut() {
+        if (confirm("�Quieres volver a los datos por defecto?")) {
+            setArrayAlumnos(alumnos_default);
+            location.reload();
         }
-
     }
 
 
