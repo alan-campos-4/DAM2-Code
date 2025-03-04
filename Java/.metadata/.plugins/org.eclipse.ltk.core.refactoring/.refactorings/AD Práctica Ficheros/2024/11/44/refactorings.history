@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring accessors="true" comment="Delete element from project &apos;AD Práctica Ficheros&apos;&#x0D;&#x0A;- Original project: &apos;AD Práctica Ficheros&apos;&#x0D;&#x0A;- Original element: &apos;cotizaciones.txt&apos;" description="Delete element" element1="src/ej6/cotizaciones.txt" elements="0" flags="589830" id="org.eclipse.jdt.ui.delete" resources="1" stamp="1730504040545" subPackages="false" version="1.0"/>
-</session>

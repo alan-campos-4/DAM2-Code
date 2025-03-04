@@ -1,178 +1,448 @@
-2024-11-02 00:15:51,796 [Worker-4: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
-2024-11-02 00:20:42,461 [Worker-4: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
-2024-11-02 12:07:23,542 [Worker-4: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
-2024-11-03 20:17:32,410 [Worker-5: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
-2024-11-04 17:01:44,250 [Worker-7: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
-2024-11-04 18:26:25,863 [Worker-2: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
-2024-11-05 18:22:31,739 [Worker-5: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
-2024-11-06 16:39:10,159 [Worker-1: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
-2024-11-20 17:30:59,546 [Worker-5: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
-2024-11-24 23:05:50,234 [Worker-6: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
-2024-11-25 00:10:37,546 [Worker-1: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
-2024-11-26 18:32:00,952 [Worker-2: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
-2024-11-26 20:37:10,900 [Worker-0: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
-2024-11-28 17:27:39,120 [Worker-2: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
-2024-12-04 23:42:22,435 [Worker-4: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
-2024-12-05 16:59:03,748 [Worker-6: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
-2024-12-06 19:48:50,740 [Worker-4: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
-2024-12-06 19:48:51,242 [Worker-4: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Updating Gradle version information cache failed. Using outdated cache.
-2024-12-07 11:51:27,086 [Worker-2: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
-2024-12-08 21:28:21,157 [Worker-4: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
-2024-12-09 17:10:35,249 [Worker-2: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
-2024-12-09 21:54:04,840 [Worker-5: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
-2024-12-09 23:15:27,929 [Worker-3: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
-2024-12-10 19:40:54,786 [Worker-6: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
-2024-12-11 18:00:00,066 [Worker-1: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
-2024-12-12 19:54:47,939 [Worker-5: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
-2024-12-12 21:48:05,157 [Worker-5: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
-2025-01-31 23:38:05,571 [Worker-1: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
-2025-02-02 18:11:00,637 [Worker-5: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
-2025-02-08 15:39:18,235 [Worker-5: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
-2025-02-09 17:37:10,773 [Worker-5: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
-2025-02-10 16:28:14,116 [Worker-5: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
-2025-02-10 18:22:44,565 [Worker-5: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
-2025-02-25 19:26:58,924 [main] ERROR o.e.m2e.editor.pom.MavenPomEditor - Cannot determine URI for '/prueba/pom.xml'.
-org.eclipse.ui.PartInitException: Cannot determine URI for '/prueba/pom.xml'.
-	at org.eclipse.ui.texteditor.AbstractTextEditor.internalInit(AbstractTextEditor.java:3202)
-	at org.eclipse.ui.texteditor.AbstractTextEditor.init(AbstractTextEditor.java:3213)
-	at org.eclipse.ui.part.MultiPageEditorPart.addPage(MultiPageEditorPart.java:224)
-	at org.eclipse.ui.forms.editor.FormEditor.addPage(FormEditor.java:331)
-	at org.eclipse.ui.part.MultiPageEditorPart.addPage(MultiPageEditorPart.java:203)
-	at org.eclipse.ui.forms.editor.FormEditor.addPage(FormEditor.java:313)
-	at org.eclipse.m2e.editor.pom.MavenPomEditor.addFallbackEditors(MavenPomEditor.java:361)
-	at org.eclipse.m2e.editor.pom.MavenPomEditor.addPages(MavenPomEditor.java:337)
-	at org.eclipse.ui.forms.editor.FormEditor.createPages(FormEditor.java:143)
-	at org.eclipse.ui.part.MultiPageEditorPart.createPartControl(MultiPageEditorPart.java:332)
-	at org.eclipse.ui.internal.e4.compatibility.CompatibilityPart.createPartControl(CompatibilityPart.java:158)
-	at org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor.createPartControl(CompatibilityEditor.java:96)
-	at org.eclipse.ui.internal.e4.compatibility.CompatibilityPart.create(CompatibilityPart.java:365)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:56)
-	at org.eclipse.e4.core.internal.di.InjectorImpl.processAnnotated(InjectorImpl.java:977)
-	at org.eclipse.e4.core.internal.di.InjectorImpl.processAnnotated(InjectorImpl.java:939)
-	at org.eclipse.e4.core.internal.di.InjectorImpl.internalInject(InjectorImpl.java:139)
-	at org.eclipse.e4.core.internal.di.InjectorImpl.internalMake(InjectorImpl.java:386)
-	at org.eclipse.e4.core.internal.di.InjectorImpl.make(InjectorImpl.java:312)
-	at org.eclipse.e4.core.contexts.ContextInjectionFactory.make(ContextInjectionFactory.java:203)
-	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.createFromBundle(ReflectionContributionFactory.java:90)
-	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.doCreate(ReflectionContributionFactory.java:59)
-	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.create(ReflectionContributionFactory.java:42)
-	at org.eclipse.e4.ui.workbench.renderers.swt.ContributedPartRenderer.createWidget(ContributedPartRenderer.java:132)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createWidget(PartRenderingEngine.java:991)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:658)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:762)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:727)
-	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:711)
-	at org.eclipse.e4.ui.workbench.renderers.swt.StackRenderer.showTab(StackRenderer.java:1389)
-	at org.eclipse.e4.ui.workbench.renderers.swt.LazyStackRenderer.postProcess(LazyStackRenderer.java:114)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:676)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:762)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:727)
-	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:711)
-	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:72)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:672)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$1.run(PartRenderingEngine.java:543)
-	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:527)
-	at org.eclipse.e4.ui.workbench.renderers.swt.ElementReferenceRenderer.createWidget(ElementReferenceRenderer.java:73)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createWidget(PartRenderingEngine.java:991)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:658)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:762)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:727)
-	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:711)
-	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:72)
-	at org.eclipse.e4.ui.workbench.renderers.swt.SashRenderer.processContents(SashRenderer.java:147)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:672)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:762)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:727)
-	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:711)
-	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:72)
-	at org.eclipse.e4.ui.workbench.renderers.swt.SashRenderer.processContents(SashRenderer.java:147)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:672)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:762)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:727)
-	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:711)
-	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:72)
-	at org.eclipse.e4.ui.workbench.renderers.swt.SashRenderer.processContents(SashRenderer.java:147)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:672)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:762)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:727)
-	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:711)
-	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:72)
-	at org.eclipse.e4.ui.workbench.renderers.swt.PerspectiveRenderer.processContents(PerspectiveRenderer.java:48)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:672)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:762)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:727)
-	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:711)
-	at org.eclipse.e4.ui.workbench.renderers.swt.PerspectiveStackRenderer.showTab(PerspectiveStackRenderer.java:79)
-	at org.eclipse.e4.ui.workbench.renderers.swt.LazyStackRenderer.postProcess(LazyStackRenderer.java:114)
-	at org.eclipse.e4.ui.workbench.renderers.swt.PerspectiveStackRenderer.postProcess(PerspectiveStackRenderer.java:61)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:676)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:762)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:727)
-	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:711)
-	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:72)
-	at org.eclipse.e4.ui.workbench.renderers.swt.SashRenderer.processContents(SashRenderer.java:147)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:672)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:762)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:727)
-	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:711)
-	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:72)
-	at org.eclipse.e4.ui.workbench.renderers.swt.WBWRenderer.processContents(WBWRenderer.java:662)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:672)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:762)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:727)
-	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:711)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1079)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1042)
-	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:153)
-	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:639)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
-	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:546)
-	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:173)
-	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
-	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:208)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:143)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:109)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:439)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:271)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:668)
-	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:605)
-	at org.eclipse.equinox.launcher.Main.run(Main.java:1481)
-	at org.eclipse.equinox.launcher.Main.main(Main.java:1454)
-Caused by: org.eclipse.core.runtime.CoreException: Cannot determine URI for '/prueba/pom.xml'.
-	at org.eclipse.core.internal.filebuffers.ResourceFileBuffer.create(ResourceFileBuffer.java:239)
-	at org.eclipse.core.internal.filebuffers.TextFileBufferManager.connect(TextFileBufferManager.java:116)
-	at org.eclipse.ui.editors.text.TextFileDocumentProvider.createFileInfo(TextFileDocumentProvider.java:565)
-	at org.eclipse.ui.editors.text.TextFileDocumentProvider.connect(TextFileDocumentProvider.java:481)
-	at org.eclipse.ui.texteditor.AbstractTextEditor.doSetInput(AbstractTextEditor.java:4187)
-	at org.eclipse.ui.texteditor.StatusTextEditor.doSetInput(StatusTextEditor.java:262)
-	at org.eclipse.ui.texteditor.AbstractDecoratedTextEditor.doSetInput(AbstractDecoratedTextEditor.java:1521)
-	at org.eclipse.ui.editors.text.TextEditor.doSetInput(TextEditor.java:153)
-	at org.eclipse.ui.internal.genericeditor.ExtensionBasedTextEditor.doSetInput(ExtensionBasedTextEditor.java:92)
-	at org.eclipse.ui.texteditor.AbstractTextEditor.lambda$1(AbstractTextEditor.java:3171)
-	at org.eclipse.ui.internal.WorkbenchWindow.run(WorkbenchWindow.java:2285)
-	at org.eclipse.ui.texteditor.AbstractTextEditor.internalInit(AbstractTextEditor.java:3188)
-	... 120 common frames omitted
-2025-02-25 19:27:08,583 [Worker-1: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
-2025-02-25 19:28:13,170 [Worker-9: Updating Maven Dependencies] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.marisma:prueba:0.0.1-SNAPSHOT @ D:\Code\FP2\Maven\Prueba\prueba\pom.xml.
-2025-02-25 19:28:13,170 [Worker-14: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.marisma:prueba:0.0.1-SNAPSHOT @ D:\Code\FP2\Maven\Prueba\prueba\pom.xml.
-2025-02-25 19:28:14,746 [Worker-14: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
-2025-02-25 19:28:14,747 [Worker-14: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Code\FP2\Maven\Prueba\prueba\src\main\resources
-2025-02-25 19:28:14,751 [Worker-14: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
-2025-02-25 19:28:14,752 [Worker-14: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Code\FP2\Maven\Prueba\prueba\src\test\resources
-2025-02-25 19:28:16,450 [Worker-14: Updating Maven Dependencies] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.marisma:prueba:0.0.1-SNAPSHOT @ D:\Code\FP2\Maven\Prueba\prueba\pom.xml.
+2025-02-27 13:42:41,311 [Worker-1: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2025-02-27 13:47:38,214 [Worker-11: Launching mavenrun-27e992cd-9a31-4d09-b277-deef30a6f157] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409 [297])
+2025-02-27 13:47:38,217 [Worker-11: Launching mavenrun-27e992cd-9a31-4d09-b277-deef30a6f157] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\alvar\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409
+2025-02-27 13:47:38,217 [Worker-11: Launching mavenrun-27e992cd-9a31-4d09-b277-deef30a6f157] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\alvar\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\aopalliance-1.0.jar
+2025-02-27 13:47:38,218 [Worker-11: Launching mavenrun-27e992cd-9a31-4d09-b277-deef30a6f157] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\alvar\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\guice-5.1.0.jar
+2025-02-27 13:47:38,218 [Worker-11: Launching mavenrun-27e992cd-9a31-4d09-b277-deef30a6f157] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\alvar\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\httpclient-4.5.14.jar
+2025-02-27 13:47:38,219 [Worker-11: Launching mavenrun-27e992cd-9a31-4d09-b277-deef30a6f157] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\alvar\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\httpcore-4.4.16.jar
+2025-02-27 13:47:38,219 [Worker-11: Launching mavenrun-27e992cd-9a31-4d09-b277-deef30a6f157] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\alvar\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\jansi-2.4.1.jar
+2025-02-27 13:47:38,219 [Worker-11: Launching mavenrun-27e992cd-9a31-4d09-b277-deef30a6f157] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\alvar\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\jcl-over-slf4j-1.7.36.jar
+2025-02-27 13:47:38,219 [Worker-11: Launching mavenrun-27e992cd-9a31-4d09-b277-deef30a6f157] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\alvar\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-artifact-3.9.9.jar
+2025-02-27 13:47:38,219 [Worker-11: Launching mavenrun-27e992cd-9a31-4d09-b277-deef30a6f157] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\alvar\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-builder-support-3.9.9.jar
+2025-02-27 13:47:38,219 [Worker-11: Launching mavenrun-27e992cd-9a31-4d09-b277-deef30a6f157] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\alvar\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-compat-3.9.9.jar
+2025-02-27 13:47:38,219 [Worker-11: Launching mavenrun-27e992cd-9a31-4d09-b277-deef30a6f157] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\alvar\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-core-3.9.9.jar
+2025-02-27 13:47:38,219 [Worker-11: Launching mavenrun-27e992cd-9a31-4d09-b277-deef30a6f157] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\alvar\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-embedder-3.9.9.jar
+2025-02-27 13:47:38,220 [Worker-11: Launching mavenrun-27e992cd-9a31-4d09-b277-deef30a6f157] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\alvar\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-model-3.9.9.jar
+2025-02-27 13:47:38,220 [Worker-11: Launching mavenrun-27e992cd-9a31-4d09-b277-deef30a6f157] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\alvar\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-model-builder-3.9.9.jar
+2025-02-27 13:47:38,220 [Worker-11: Launching mavenrun-27e992cd-9a31-4d09-b277-deef30a6f157] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\alvar\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-plugin-api-3.9.9.jar
+2025-02-27 13:47:38,220 [Worker-11: Launching mavenrun-27e992cd-9a31-4d09-b277-deef30a6f157] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\alvar\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-repository-metadata-3.9.9.jar
+2025-02-27 13:47:38,220 [Worker-11: Launching mavenrun-27e992cd-9a31-4d09-b277-deef30a6f157] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\alvar\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-resolver-api-1.9.22.jar
+2025-02-27 13:47:38,220 [Worker-11: Launching mavenrun-27e992cd-9a31-4d09-b277-deef30a6f157] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\alvar\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-resolver-connector-basic-1.9.22.jar
+2025-02-27 13:47:38,220 [Worker-11: Launching mavenrun-27e992cd-9a31-4d09-b277-deef30a6f157] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\alvar\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-resolver-impl-1.9.22.jar
+2025-02-27 13:47:38,221 [Worker-11: Launching mavenrun-27e992cd-9a31-4d09-b277-deef30a6f157] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\alvar\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-resolver-named-locks-1.9.22.jar
+2025-02-27 13:47:38,221 [Worker-11: Launching mavenrun-27e992cd-9a31-4d09-b277-deef30a6f157] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\alvar\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-resolver-provider-3.9.9.jar
+2025-02-27 13:47:38,221 [Worker-11: Launching mavenrun-27e992cd-9a31-4d09-b277-deef30a6f157] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\alvar\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-resolver-spi-1.9.22.jar
+2025-02-27 13:47:38,221 [Worker-11: Launching mavenrun-27e992cd-9a31-4d09-b277-deef30a6f157] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\alvar\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-resolver-transport-file-1.9.22.jar
+2025-02-27 13:47:38,221 [Worker-11: Launching mavenrun-27e992cd-9a31-4d09-b277-deef30a6f157] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\alvar\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-resolver-transport-http-1.9.22.jar
+2025-02-27 13:47:38,221 [Worker-11: Launching mavenrun-27e992cd-9a31-4d09-b277-deef30a6f157] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\alvar\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-resolver-transport-wagon-1.9.22.jar
+2025-02-27 13:47:38,221 [Worker-11: Launching mavenrun-27e992cd-9a31-4d09-b277-deef30a6f157] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\alvar\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-resolver-util-1.9.22.jar
+2025-02-27 13:47:38,222 [Worker-11: Launching mavenrun-27e992cd-9a31-4d09-b277-deef30a6f157] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\alvar\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-settings-3.9.9.jar
+2025-02-27 13:47:38,222 [Worker-11: Launching mavenrun-27e992cd-9a31-4d09-b277-deef30a6f157] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\alvar\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-settings-builder-3.9.9.jar
+2025-02-27 13:47:38,222 [Worker-11: Launching mavenrun-27e992cd-9a31-4d09-b277-deef30a6f157] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\alvar\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-shared-utils-3.4.2.jar
+2025-02-27 13:47:38,222 [Worker-11: Launching mavenrun-27e992cd-9a31-4d09-b277-deef30a6f157] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\alvar\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\org.eclipse.sisu.inject-0.9.0.M3.jar
+2025-02-27 13:47:38,222 [Worker-11: Launching mavenrun-27e992cd-9a31-4d09-b277-deef30a6f157] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\alvar\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\org.eclipse.sisu.plexus-0.9.0.M3.jar
+2025-02-27 13:47:38,222 [Worker-11: Launching mavenrun-27e992cd-9a31-4d09-b277-deef30a6f157] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\alvar\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\plexus-build-api-0.0.7.jar
+2025-02-27 13:47:38,223 [Worker-11: Launching mavenrun-27e992cd-9a31-4d09-b277-deef30a6f157] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\alvar\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\plexus-build-api-1.2.0.jar
+2025-02-27 13:47:38,223 [Worker-11: Launching mavenrun-27e992cd-9a31-4d09-b277-deef30a6f157] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\alvar\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\plexus-cipher-2.0.jar
+2025-02-27 13:47:38,223 [Worker-11: Launching mavenrun-27e992cd-9a31-4d09-b277-deef30a6f157] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\alvar\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\plexus-classworlds-2.8.0.jar
+2025-02-27 13:47:38,223 [Worker-11: Launching mavenrun-27e992cd-9a31-4d09-b277-deef30a6f157] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\alvar\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\plexus-component-annotations-2.1.0.jar
+2025-02-27 13:47:38,223 [Worker-11: Launching mavenrun-27e992cd-9a31-4d09-b277-deef30a6f157] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\alvar\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\plexus-interpolation-1.27.jar
+2025-02-27 13:47:38,223 [Worker-11: Launching mavenrun-27e992cd-9a31-4d09-b277-deef30a6f157] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\alvar\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\plexus-sec-dispatcher-2.0.jar
+2025-02-27 13:47:38,224 [Worker-11: Launching mavenrun-27e992cd-9a31-4d09-b277-deef30a6f157] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\alvar\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\plexus-utils-3.5.1.jar
+2025-02-27 13:47:38,224 [Worker-11: Launching mavenrun-27e992cd-9a31-4d09-b277-deef30a6f157] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\alvar\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\plexus-xml-3.0.1.jar
+2025-02-27 13:47:38,224 [Worker-11: Launching mavenrun-27e992cd-9a31-4d09-b277-deef30a6f157] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\alvar\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\wagon-file-3.5.3.jar
+2025-02-27 13:47:38,224 [Worker-11: Launching mavenrun-27e992cd-9a31-4d09-b277-deef30a6f157] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\alvar\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\wagon-http-3.5.3.jar
+2025-02-27 13:47:38,225 [Worker-11: Launching mavenrun-27e992cd-9a31-4d09-b277-deef30a6f157] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\alvar\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\wagon-http-shared-3.5.3.jar
+2025-02-27 13:47:38,225 [Worker-11: Launching mavenrun-27e992cd-9a31-4d09-b277-deef30a6f157] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\alvar\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\wagon-provider-api-3.5.3.jar
+2025-02-27 13:47:38,226 [Worker-11: Launching mavenrun-27e992cd-9a31-4d09-b277-deef30a6f157] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=com.google.guava_33.3.0.jre [10])
+2025-02-27 13:47:38,227 [Worker-11: Launching mavenrun-27e992cd-9a31-4d09-b277-deef30a6f157] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\alvar\.p2\pool\plugins\com.google.guava_33.3.0.jre.jar
+2025-02-27 13:47:38,227 [Worker-11: Launching mavenrun-27e992cd-9a31-4d09-b277-deef30a6f157] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=slf4j.api_2.0.16 [519])
+2025-02-27 13:47:38,227 [Worker-11: Launching mavenrun-27e992cd-9a31-4d09-b277-deef30a6f157] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\alvar\.p2\pool\plugins\slf4j.api_2.0.16.jar
+2025-02-27 13:47:38,227 [Worker-11: Launching mavenrun-27e992cd-9a31-4d09-b277-deef30a6f157] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=javax.inject_1.0.0.v20091030 [527])
+2025-02-27 13:47:38,228 [Worker-11: Launching mavenrun-27e992cd-9a31-4d09-b277-deef30a6f157] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\alvar\.p2\pool\plugins\javax.inject_1.0.0.v20091030.jar
+2025-02-27 13:47:38,228 [Worker-11: Launching mavenrun-27e992cd-9a31-4d09-b277-deef30a6f157] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=javax.annotation_1.3.5.v20200909-1856 [526])
+2025-02-27 13:47:38,229 [Worker-11: Launching mavenrun-27e992cd-9a31-4d09-b277-deef30a6f157] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\alvar\.p2\pool\plugins\javax.annotation_1.3.5.v20200909-1856.jar
+2025-02-27 13:47:38,229 [Worker-11: Launching mavenrun-27e992cd-9a31-4d09-b277-deef30a6f157] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=org.apache.commons.cli_1.9.0 [47])
+2025-02-27 13:47:38,230 [Worker-11: Launching mavenrun-27e992cd-9a31-4d09-b277-deef30a6f157] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\alvar\.p2\pool\plugins\org.apache.commons.cli_1.9.0.jar
+2025-02-27 13:47:38,230 [Worker-11: Launching mavenrun-27e992cd-9a31-4d09-b277-deef30a6f157] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=org.apache.commons.commons-codec_1.16.0 [50])
+2025-02-27 13:47:38,230 [Worker-11: Launching mavenrun-27e992cd-9a31-4d09-b277-deef30a6f157] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\alvar\.p2\pool\plugins\org.apache.commons.commons-codec_1.16.0.jar
+2025-02-27 13:47:38,230 [Worker-11: Launching mavenrun-27e992cd-9a31-4d09-b277-deef30a6f157] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=com.google.guava.failureaccess_1.0.2 [11])
+2025-02-27 13:47:38,231 [Worker-11: Launching mavenrun-27e992cd-9a31-4d09-b277-deef30a6f157] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\alvar\.p2\pool\plugins\com.google.guava.failureaccess_1.0.2.jar
+2025-02-27 13:47:38,240 [Worker-11: Launching mavenrun-27e992cd-9a31-4d09-b277-deef30a6f157] INFO  o.e.m.i.launch.MavenLaunchDelegate - Run build in "C:\Users\alvar\AppData\Local\Temp\m2e-archetypeGenerator5049409469592459939":
+2025-02-27 13:47:38,243 [Worker-11: Launching mavenrun-27e992cd-9a31-4d09-b277-deef30a6f157] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn  -DjavaCompilerVersion=17 -DjunitVersion=5.11.0 -DarchetypeGroupId=org.apache.maven.archetypes -DarchetypeArtifactId=maven-archetype-quickstart -DarchetypeVersion=1.5 -DgroupId=com.marisma -DartifactId=prueba -Dversion=0.0.1-SNAPSHOT -Dpackage=com.marisma.prueba -DoutputDirectory=D:\Code\FP2\Maven\Prueba -Dstyle.color=always -U archetype:generate
+2025-02-27 13:47:52,444 [Worker-18: Creating maven-archetype-quickstart] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Collecting project info '/pom.xml' D:\Code\FP2\Maven\Prueba\prueba\pom.xml
+2025-02-27 13:47:53,150 [Worker-18: Creating maven-archetype-quickstart] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-clean-plugin/3.4.0/maven-clean-plugin-3.4.0.jar
+2025-02-27 13:47:53,184 [Worker-18: Creating maven-archetype-quickstart] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-clean-plugin/3.4.0/maven-clean-plugin-3.4.0.jar
+2025-02-27 13:47:53,236 [Worker-18: Creating maven-archetype-quickstart] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-surefire-plugin/3.3.0/maven-surefire-plugin-3.3.0.jar
+2025-02-27 13:47:53,255 [Worker-18: Creating maven-archetype-quickstart] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-surefire-plugin/3.3.0/maven-surefire-plugin-3.3.0.jar
+2025-02-27 13:47:53,291 [Worker-18: Creating maven-archetype-quickstart] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-jar-plugin/3.4.2/maven-jar-plugin-3.4.2.jar
+2025-02-27 13:47:53,298 [Worker-18: Creating maven-archetype-quickstart] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-jar-plugin/3.4.2/maven-jar-plugin-3.4.2.jar
+2025-02-27 13:47:53,676 [Worker-18: Creating maven-archetype-quickstart] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.marisma:prueba:0.0.1-SNAPSHOT @ D:\Code\FP2\Maven\Prueba\prueba\pom.xml.
+2025-02-27 13:47:53,711 [Worker-18: Creating maven-archetype-quickstart] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/junit/jupiter/junit-jupiter-api/5.11.0/junit-jupiter-api-5.11.0.pom
+2025-02-27 13:47:53,718 [Worker-18: Creating maven-archetype-quickstart] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/junit/jupiter/junit-jupiter-api/5.11.0/junit-jupiter-api-5.11.0.pom
+2025-02-27 13:47:53,754 [Worker-18: Creating maven-archetype-quickstart] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.pom
+2025-02-27 13:47:53,759 [Worker-18: Creating maven-archetype-quickstart] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.pom
+2025-02-27 13:47:53,793 [Worker-18: Creating maven-archetype-quickstart] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/junit/platform/junit-platform-commons/1.11.0/junit-platform-commons-1.11.0.pom
+2025-02-27 13:47:53,798 [Worker-18: Creating maven-archetype-quickstart] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/junit/platform/junit-platform-commons/1.11.0/junit-platform-commons-1.11.0.pom
+2025-02-27 13:47:53,837 [Worker-18: Creating maven-archetype-quickstart] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.pom
+2025-02-27 13:47:53,843 [Worker-18: Creating maven-archetype-quickstart] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.pom
+2025-02-27 13:47:53,882 [Worker-18: Creating maven-archetype-quickstart] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/junit/jupiter/junit-jupiter-params/5.11.0/junit-jupiter-params-5.11.0.pom
+2025-02-27 13:47:53,887 [Worker-18: Creating maven-archetype-quickstart] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/junit/jupiter/junit-jupiter-params/5.11.0/junit-jupiter-params-5.11.0.pom
+2025-02-27 13:47:53,936 [Worker-18: Creating maven-archetype-quickstart] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/junit/jupiter/junit-jupiter-api/5.11.0/junit-jupiter-api-5.11.0.jar
+2025-02-27 13:47:54,012 [Worker-18: Creating maven-archetype-quickstart] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/junit/jupiter/junit-jupiter-api/5.11.0/junit-jupiter-api-5.11.0.jar
+2025-02-27 13:47:54,054 [BasicRepositoryConnector-repo.maven.apache.org-0-0] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar
+2025-02-27 13:47:54,061 [BasicRepositoryConnector-repo.maven.apache.org-0-0] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar
+2025-02-27 13:47:54,096 [BasicRepositoryConnector-repo.maven.apache.org-0-2] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar
+2025-02-27 13:47:54,117 [BasicRepositoryConnector-repo.maven.apache.org-0-3] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/junit/jupiter/junit-jupiter-params/5.11.0/junit-jupiter-params-5.11.0.jar
+2025-02-27 13:47:54,118 [BasicRepositoryConnector-repo.maven.apache.org-0-1] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/junit/platform/junit-platform-commons/1.11.0/junit-platform-commons-1.11.0.jar
+2025-02-27 13:47:54,123 [BasicRepositoryConnector-repo.maven.apache.org-0-2] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar
+2025-02-27 13:47:54,230 [BasicRepositoryConnector-repo.maven.apache.org-0-1] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/junit/platform/junit-platform-commons/1.11.0/junit-platform-commons-1.11.0.jar
+2025-02-27 13:47:54,387 [BasicRepositoryConnector-repo.maven.apache.org-0-3] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/junit/jupiter/junit-jupiter-params/5.11.0/junit-jupiter-params-5.11.0.jar
+2025-02-27 13:47:54,468 [Worker-18: Creating maven-archetype-quickstart] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-surefire-plugin/3.3.0/maven-surefire-plugin-3.3.0.pom
+2025-02-27 13:47:54,473 [Worker-18: Creating maven-archetype-quickstart] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-surefire-plugin/3.3.0/maven-surefire-plugin-3.3.0.pom
+2025-02-27 13:47:54,511 [Worker-18: Creating maven-archetype-quickstart] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire/3.3.0/surefire-3.3.0.pom
+2025-02-27 13:47:54,517 [Worker-18: Creating maven-archetype-quickstart] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire/3.3.0/surefire-3.3.0.pom
+2025-02-27 13:47:54,565 [Worker-18: Creating maven-archetype-quickstart] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-jar-plugin/3.4.2/maven-jar-plugin-3.4.2.pom
+2025-02-27 13:47:54,573 [Worker-18: Creating maven-archetype-quickstart] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-jar-plugin/3.4.2/maven-jar-plugin-3.4.2.pom
+2025-02-27 13:47:55,179 [Worker-18: Creating maven-archetype-quickstart] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /prueba/src/main/java
+2025-02-27 13:47:55,181 [Worker-18: Creating maven-archetype-quickstart] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /prueba/src/main/resources
+2025-02-27 13:47:55,193 [Worker-18: Creating maven-archetype-quickstart] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /prueba/src/test/java
+2025-02-27 13:47:55,194 [Worker-18: Creating maven-archetype-quickstart] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /prueba/src/test/resources
+2025-02-27 13:47:55,673 [Worker-18: Creating maven-archetype-quickstart] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Imported and configured 1 project(s) in 3 sec
+2025-02-27 13:47:56,068 [Worker-22: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/junit/jupiter/junit-jupiter-api/5.11.0/junit-jupiter-api-5.11.0-sources.jar
+2025-02-27 13:47:56,190 [Worker-22: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/junit/jupiter/junit-jupiter-api/5.11.0/junit-jupiter-api-5.11.0-sources.jar
+2025-02-27 13:47:56,195 [Worker-22: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.junit.jupiter:junit-jupiter-api:5.11.0
+2025-02-27 13:47:56,277 [Worker-22: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0-sources.jar
+2025-02-27 13:47:56,296 [Worker-22: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0-sources.jar
+2025-02-27 13:47:56,301 [Worker-22: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.opentest4j:opentest4j:1.3.0
+2025-02-27 13:47:56,393 [Worker-22: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/junit/platform/junit-platform-commons/1.11.0/junit-platform-commons-1.11.0-sources.jar
+2025-02-27 13:47:56,464 [Worker-22: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/junit/platform/junit-platform-commons/1.11.0/junit-platform-commons-1.11.0-sources.jar
+2025-02-27 13:47:56,470 [Worker-22: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.junit.platform:junit-platform-commons:1.11.0
+2025-02-27 13:47:56,555 [Worker-22: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2-sources.jar
+2025-02-27 13:47:56,571 [Worker-22: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2-sources.jar
+2025-02-27 13:47:56,577 [Worker-22: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.apiguardian:apiguardian-api:1.1.2
+2025-02-27 13:47:56,692 [Worker-22: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/junit/jupiter/junit-jupiter-params/5.11.0/junit-jupiter-params-5.11.0-sources.jar
+2025-02-27 13:47:56,765 [Worker-22: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/junit/jupiter/junit-jupiter-params/5.11.0/junit-jupiter-params-5.11.0-sources.jar
+2025-02-27 13:47:56,771 [Worker-22: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.junit.jupiter:junit-jupiter-params:5.11.0
+2025-02-27 13:47:57,786 [Worker-22: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Code\FP2\Maven\Prueba\prueba\src\main\resources
+2025-02-27 13:47:57,795 [Worker-22: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Code\FP2\Maven\Prueba\prueba\src\test\resources
+2025-02-27 13:48:39,270 [Worker-13: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.marisma:prueba:0.0.1-SNAPSHOT @ D:\Code\FP2\Maven\Prueba\prueba\pom.xml.
+2025-02-27 13:48:39,577 [Worker-13: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Code\FP2\Maven\Prueba\prueba\src\main\resources
+2025-02-27 13:48:39,583 [Worker-13: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Code\FP2\Maven\Prueba\prueba\src\test\resources
+2025-02-27 13:48:40,781 [Worker-22: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Code\FP2\Maven\Prueba\prueba\src\main\resources
+2025-02-27 13:48:40,786 [Worker-22: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Code\FP2\Maven\Prueba\prueba\src\test\resources
+2025-02-27 13:49:05,813 [Worker-11: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.marisma:prueba:0.0.1-SNAPSHOT @ D:\Code\FP2\Maven\Prueba\prueba\pom.xml.
+2025-02-27 13:49:06,240 [Worker-11: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Code\FP2\Maven\Prueba\prueba\src\main\resources
+2025-02-27 13:49:06,244 [Worker-11: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Code\FP2\Maven\Prueba\prueba\src\test\resources
+2025-02-27 13:49:07,550 [Worker-23: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Code\FP2\Maven\Prueba\prueba\src\main\resources
+2025-02-27 13:49:07,554 [Worker-23: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Code\FP2\Maven\Prueba\prueba\src\test\resources
+2025-02-27 13:49:17,176 [Worker-18: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update started
+2025-02-27 13:49:17,234 [Worker-18: Updating Maven Project] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.marisma:prueba:0.0.1-SNAPSHOT @ D:\Code\FP2\Maven\Prueba\prueba\pom.xml.
+2025-02-27 13:49:17,493 [Worker-18: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /prueba/src/main/java
+2025-02-27 13:49:17,495 [Worker-18: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /prueba/src/main/resources
+2025-02-27 13:49:17,496 [Worker-18: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /prueba/src/test/java
+2025-02-27 13:49:17,496 [Worker-18: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /prueba/src/test/resources
+2025-02-27 13:49:17,617 [Worker-18: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed for 1 poms: local refresh takes 0,00 sec, refresh facades takes 0,00 sec, update config takes 0,00 sec 
+2025-02-27 13:49:17,932 [Worker-11: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Code\FP2\Maven\Prueba\prueba\src\main\resources
+2025-02-27 13:49:17,937 [Worker-11: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Code\FP2\Maven\Prueba\prueba\src\test\resources
+2025-02-27 13:49:34,961 [main] INFO  org.hibernate.cfg.Environment - Hibernate 3.5.6-Final
+2025-02-27 13:49:34,972 [main] INFO  org.hibernate.cfg.Environment - hibernate.properties not found
+2025-02-27 13:49:34,974 [main] INFO  org.hibernate.cfg.Environment - Bytecode provider name : javassist
+2025-02-27 13:49:34,979 [main] INFO  org.hibernate.cfg.Environment - using JDK 1.4 java.sql.Timestamp handling
+2025-02-27 13:50:32,376 [Worker-18: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Code\FP2\Maven\Prueba\prueba\src\main\resources
+2025-02-27 13:50:32,379 [Worker-18: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Code\FP2\Maven\Prueba\prueba\src\test\resources
+2025-02-27 13:55:42,112 [Worker-11: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Code\FP2\Maven\Prueba\prueba\src\main\resources
+2025-02-27 13:55:42,115 [Worker-11: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Code\FP2\Maven\Prueba\prueba\src\test\resources
+2025-02-27 13:55:50,981 [Worker-24: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update started
+2025-02-27 13:55:51,038 [Worker-24: Updating Maven Project] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.marisma:prueba:0.0.1-SNAPSHOT @ D:\Code\FP2\Maven\Prueba\prueba\pom.xml.
+2025-02-27 13:55:51,269 [Worker-24: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /prueba/src/main/java
+2025-02-27 13:55:51,270 [Worker-24: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /prueba/src/main/resources
+2025-02-27 13:55:51,270 [Worker-24: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /prueba/src/test/java
+2025-02-27 13:55:51,270 [Worker-24: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /prueba/src/test/resources
+2025-02-27 13:55:51,341 [Worker-24: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed for 1 poms: local refresh takes 0,00 sec, refresh facades takes 0,00 sec, update config takes 0,00 sec 
+2025-02-27 13:55:51,730 [Worker-26: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Code\FP2\Maven\Prueba\prueba\src\main\resources
+2025-02-27 13:55:51,736 [Worker-26: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Code\FP2\Maven\Prueba\prueba\src\test\resources
+2025-02-27 13:56:42,937 [Worker-24: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Code\FP2\Maven\Prueba\prueba\src\main\resources
+2025-02-27 13:56:42,941 [Worker-24: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Code\FP2\Maven\Prueba\prueba\src\test\resources
+2025-02-27 13:58:03,242 [Worker-11: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Code\FP2\Maven\Prueba\prueba\src\main\resources
+2025-02-27 13:58:03,245 [Worker-11: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Code\FP2\Maven\Prueba\prueba\src\test\resources
+2025-02-27 13:58:44,767 [Worker-11: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Code\FP2\Maven\Prueba\prueba\src\main\resources
+2025-02-27 13:58:44,773 [Worker-11: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Code\FP2\Maven\Prueba\prueba\src\test\resources
+2025-02-27 14:00:04,869 [main] INFO  org.hibernate.cfg.Configuration - configuring from XML document
+2025-02-27 14:00:04,872 [main] INFO  org.hibernate.cfg.Configuration - Configured SessionFactory: null
+2025-02-27 14:00:20,925 [Worker-22: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Code\FP2\Maven\Prueba\prueba\src\main\resources
+2025-02-27 14:00:20,928 [Worker-22: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Code\FP2\Maven\Prueba\prueba\src\test\resources
+2025-02-27 14:00:31,653 [Worker-22: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Code\FP2\Maven\Prueba\prueba\src\main\resources
+2025-02-27 14:00:31,656 [Worker-22: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Code\FP2\Maven\Prueba\prueba\src\test\resources
+2025-02-27 14:03:06,943 [Worker-27: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Code\FP2\Maven\Prueba\prueba\src\main\resources
+2025-02-27 14:03:06,945 [Worker-27: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Code\FP2\Maven\Prueba\prueba\src\test\resources
+2025-02-27 14:03:15,821 [Worker-28: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Code\FP2\Maven\Prueba\prueba\src\main\resources
+2025-02-27 14:03:15,824 [Worker-28: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Code\FP2\Maven\Prueba\prueba\src\test\resources
+2025-02-27 14:03:33,748 [Worker-27: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Code\FP2\Maven\Prueba\prueba\src\main\resources
+2025-02-27 14:03:33,751 [Worker-27: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Code\FP2\Maven\Prueba\prueba\src\test\resources
+2025-02-27 14:03:38,578 [Worker-26: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Code\FP2\Maven\Prueba\prueba\src\main\resources
+2025-02-27 14:03:38,580 [Worker-26: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Code\FP2\Maven\Prueba\prueba\src\test\resources
+2025-02-27 14:07:20,577 [Worker-30: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Code\FP2\Maven\Prueba\prueba\src\main\resources
+2025-02-27 14:07:20,580 [Worker-30: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Code\FP2\Maven\Prueba\prueba\src\test\resources
+2025-02-27 14:15:39,815 [Worker-32: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Code\FP2\Maven\Prueba\prueba\src\main\resources
+2025-02-27 14:15:39,818 [Worker-32: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Code\FP2\Maven\Prueba\prueba\src\test\resources
+2025-02-27 14:16:03,952 [Worker-32: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Code\FP2\Maven\Prueba\prueba\src\main\resources
+2025-02-27 14:16:03,954 [Worker-32: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Code\FP2\Maven\Prueba\prueba\src\test\resources
+2025-02-27 14:16:17,799 [Worker-33: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Code\FP2\Maven\Prueba\prueba\src\main\resources
+2025-02-27 14:16:17,800 [Worker-33: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Code\FP2\Maven\Prueba\prueba\src\test\resources
+2025-02-27 14:16:49,031 [Worker-33: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Code\FP2\Maven\Prueba\prueba\src\main\resources
+2025-02-27 14:16:49,033 [Worker-33: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Code\FP2\Maven\Prueba\prueba\src\test\resources
+2025-02-27 14:17:05,534 [Worker-30: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Code\FP2\Maven\Prueba\prueba\src\main\resources
+2025-02-27 14:17:05,536 [Worker-30: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Code\FP2\Maven\Prueba\prueba\src\test\resources
+2025-02-27 14:17:14,555 [Worker-26: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Code\FP2\Maven\Prueba\prueba\src\main\resources
+2025-02-27 14:17:14,558 [Worker-26: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Code\FP2\Maven\Prueba\prueba\src\test\resources
+2025-02-27 14:17:18,505 [Worker-33: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Code\FP2\Maven\Prueba\prueba\src\main\resources
+2025-02-27 14:17:18,509 [Worker-33: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Code\FP2\Maven\Prueba\prueba\src\test\resources
+2025-02-27 14:17:44,475 [Worker-30: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Code\FP2\Maven\Prueba\prueba\src\main\resources
+2025-02-27 14:17:44,478 [Worker-30: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Code\FP2\Maven\Prueba\prueba\src\test\resources
+2025-02-27 14:18:12,073 [Worker-32: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Code\FP2\Maven\Prueba\prueba\src\main\resources
+2025-02-27 14:18:12,076 [Worker-32: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Code\FP2\Maven\Prueba\prueba\src\test\resources
+2025-02-27 14:18:20,863 [Worker-26: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Code\FP2\Maven\Prueba\prueba\src\main\resources
+2025-02-27 14:18:20,865 [Worker-26: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Code\FP2\Maven\Prueba\prueba\src\test\resources
+2025-02-27 14:19:39,067 [Worker-30: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Code\FP2\Maven\Prueba\prueba\src\main\resources
+2025-02-27 14:19:39,069 [Worker-30: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Code\FP2\Maven\Prueba\prueba\src\test\resources
+2025-02-27 14:21:52,145 [Worker-26: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Code\FP2\Maven\Prueba\prueba\src\main\resources
+2025-02-27 14:21:52,147 [Worker-26: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Code\FP2\Maven\Prueba\prueba\src\test\resources
+2025-02-27 14:22:03,600 [Worker-26: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Code\FP2\Maven\Prueba\prueba\src\main\resources
+2025-02-27 14:22:03,603 [Worker-26: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Code\FP2\Maven\Prueba\prueba\src\test\resources
+2025-02-27 14:22:27,864 [Worker-26: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Code\FP2\Maven\Prueba\prueba\src\main\resources
+2025-02-27 14:22:27,867 [Worker-26: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Code\FP2\Maven\Prueba\prueba\src\test\resources
+2025-02-27 14:22:37,919 [Worker-31: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Code\FP2\Maven\Prueba\prueba\src\main\resources
+2025-02-27 14:22:37,922 [Worker-31: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Code\FP2\Maven\Prueba\prueba\src\test\resources
+2025-02-27 14:22:45,597 [Worker-30: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Code\FP2\Maven\Prueba\prueba\src\main\resources
+2025-02-27 14:22:45,601 [Worker-30: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Code\FP2\Maven\Prueba\prueba\src\test\resources
+2025-02-27 14:22:58,468 [Worker-30: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Code\FP2\Maven\Prueba\prueba\src\main\resources
+2025-02-27 14:22:58,472 [Worker-30: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Code\FP2\Maven\Prueba\prueba\src\test\resources
+2025-02-27 14:23:15,277 [Worker-30: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Code\FP2\Maven\Prueba\prueba\src\main\resources
+2025-02-27 14:23:15,283 [Worker-30: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Code\FP2\Maven\Prueba\prueba\src\test\resources
+2025-02-27 14:23:20,920 [Worker-33: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Code\FP2\Maven\Prueba\prueba\src\main\resources
+2025-02-27 14:23:20,922 [Worker-33: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Code\FP2\Maven\Prueba\prueba\src\test\resources
+2025-02-27 14:23:34,130 [Worker-26: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Code\FP2\Maven\Prueba\prueba\src\main\resources
+2025-02-27 14:23:34,132 [Worker-26: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Code\FP2\Maven\Prueba\prueba\src\test\resources
+2025-02-27 14:23:44,395 [Worker-26: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Code\FP2\Maven\Prueba\prueba\src\main\resources
+2025-02-27 14:23:44,398 [Worker-26: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Code\FP2\Maven\Prueba\prueba\src\test\resources
+2025-02-27 14:24:35,185 [Worker-33: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Code\FP2\Maven\Prueba\prueba\src\main\resources
+2025-02-27 14:24:35,187 [Worker-33: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Code\FP2\Maven\Prueba\prueba\src\test\resources
+2025-02-27 14:24:49,978 [Worker-30: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Code\FP2\Maven\Prueba\prueba\src\main\resources
+2025-02-27 14:24:49,982 [Worker-30: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Code\FP2\Maven\Prueba\prueba\src\test\resources
+2025-02-27 14:24:54,255 [Worker-31: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Code\FP2\Maven\Prueba\prueba\src\main\resources
+2025-02-27 14:24:54,259 [Worker-31: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Code\FP2\Maven\Prueba\prueba\src\test\resources
+2025-02-27 14:25:08,522 [Worker-30: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Code\FP2\Maven\Prueba\prueba\src\main\resources
+2025-02-27 14:25:08,524 [Worker-30: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Code\FP2\Maven\Prueba\prueba\src\test\resources
+2025-02-27 14:25:14,007 [Worker-28: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Code\FP2\Maven\Prueba\prueba\src\main\resources
+2025-02-27 14:25:14,011 [Worker-28: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Code\FP2\Maven\Prueba\prueba\src\test\resources
+2025-02-27 14:25:23,336 [Worker-28: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Code\FP2\Maven\Prueba\prueba\src\main\resources
+2025-02-27 14:25:23,339 [Worker-28: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Code\FP2\Maven\Prueba\prueba\src\test\resources
+2025-02-28 20:09:02,285 [Worker-4: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2025-02-28 20:16:18,900 [Worker-22: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Code\FP2\Maven\Prueba\prueba\src\main\resources
+2025-02-28 20:16:18,905 [Worker-22: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Code\FP2\Maven\Prueba\prueba\src\test\resources
+2025-02-28 20:16:23,106 [Worker-12: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Code\FP2\Maven\Prueba\prueba\src\main\resources
+2025-02-28 20:16:23,111 [Worker-12: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Code\FP2\Maven\Prueba\prueba\src\test\resources
+2025-02-28 20:16:48,942 [Worker-12: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Code\FP2\Maven\Prueba\prueba\src\main\resources
+2025-02-28 20:16:48,946 [Worker-12: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Code\FP2\Maven\Prueba\prueba\src\test\resources
+2025-02-28 20:16:53,028 [Worker-23: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Code\FP2\Maven\Prueba\prueba\src\main\resources
+2025-02-28 20:16:53,030 [Worker-23: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Code\FP2\Maven\Prueba\prueba\src\test\resources
+2025-02-28 20:17:09,376 [Worker-21: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Code\FP2\Maven\Prueba\prueba\src\main\resources
+2025-02-28 20:17:09,378 [Worker-21: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Code\FP2\Maven\Prueba\prueba\src\test\resources
+2025-02-28 20:18:41,608 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Code\FP2\Maven\Prueba\prueba\src\main\resources
+2025-02-28 20:18:41,610 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Code\FP2\Maven\Prueba\prueba\src\test\resources
+2025-02-28 20:18:58,382 [Worker-24: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Code\FP2\Maven\Prueba\prueba\src\main\resources
+2025-02-28 20:18:58,384 [Worker-24: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Code\FP2\Maven\Prueba\prueba\src\test\resources
+2025-02-28 20:19:02,962 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Code\FP2\Maven\Prueba\prueba\src\main\resources
+2025-02-28 20:19:02,964 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Code\FP2\Maven\Prueba\prueba\src\test\resources
+2025-02-28 20:51:26,421 [Worker-34: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Code\FP2\Maven\Prueba\prueba\src\main\resources
+2025-02-28 20:51:26,423 [Worker-34: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Code\FP2\Maven\Prueba\prueba\src\test\resources
+2025-02-28 20:51:39,057 [Worker-32: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Code\FP2\Maven\Prueba\prueba\src\main\resources
+2025-02-28 20:51:39,058 [Worker-32: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Code\FP2\Maven\Prueba\prueba\src\test\resources
+2025-02-28 20:51:47,255 [Worker-33: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Code\FP2\Maven\Prueba\prueba\src\main\resources
+2025-02-28 20:51:47,257 [Worker-33: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Code\FP2\Maven\Prueba\prueba\src\test\resources
+2025-02-28 20:51:54,108 [Worker-32: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Code\FP2\Maven\Prueba\prueba\src\main\resources
+2025-02-28 20:51:54,109 [Worker-32: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Code\FP2\Maven\Prueba\prueba\src\test\resources
+2025-02-28 20:58:25,382 [Worker-38: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Code\FP2\Maven\Prueba\prueba\src\main\resources
+2025-02-28 20:58:25,387 [Worker-38: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Code\FP2\Maven\Prueba\prueba\src\test\resources
+2025-02-28 21:01:14,071 [Worker-33: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Code\FP2\Maven\Prueba\prueba\src\main\resources
+2025-02-28 21:01:14,074 [Worker-33: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Code\FP2\Maven\Prueba\prueba\src\test\resources
+2025-02-28 21:01:28,606 [Worker-37: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Code\FP2\Maven\Prueba\prueba\src\main\resources
+2025-02-28 21:01:28,609 [Worker-37: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Code\FP2\Maven\Prueba\prueba\src\test\resources
+2025-02-28 21:01:33,539 [Worker-40: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Code\FP2\Maven\Prueba\prueba\src\main\resources
+2025-02-28 21:01:33,542 [Worker-40: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Code\FP2\Maven\Prueba\prueba\src\test\resources
+2025-02-28 21:01:34,895 [Worker-37: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Code\FP2\Maven\Prueba\prueba\src\main\resources
+2025-02-28 21:01:34,901 [Worker-37: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Code\FP2\Maven\Prueba\prueba\src\test\resources
+2025-02-28 21:01:50,073 [Worker-37: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Code\FP2\Maven\Prueba\prueba\src\main\resources
+2025-02-28 21:01:50,077 [Worker-37: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Code\FP2\Maven\Prueba\prueba\src\test\resources
+2025-02-28 21:01:53,297 [Worker-41: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Code\FP2\Maven\Prueba\prueba\src\main\resources
+2025-02-28 21:01:53,301 [Worker-41: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Code\FP2\Maven\Prueba\prueba\src\test\resources
+2025-02-28 21:02:09,419 [Worker-40: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Code\FP2\Maven\Prueba\prueba\src\main\resources
+2025-02-28 21:02:09,423 [Worker-40: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Code\FP2\Maven\Prueba\prueba\src\test\resources
+2025-02-28 21:02:16,744 [Worker-37: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Code\FP2\Maven\Prueba\prueba\src\main\resources
+2025-02-28 21:02:16,746 [Worker-37: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Code\FP2\Maven\Prueba\prueba\src\test\resources
+2025-02-28 21:02:30,836 [Worker-39: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Code\FP2\Maven\Prueba\prueba\src\main\resources
+2025-02-28 21:02:30,840 [Worker-39: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Code\FP2\Maven\Prueba\prueba\src\test\resources
+2025-02-28 21:02:35,051 [Worker-39: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Code\FP2\Maven\Prueba\prueba\src\main\resources
+2025-02-28 21:02:35,054 [Worker-39: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Code\FP2\Maven\Prueba\prueba\src\test\resources
+2025-02-28 21:02:59,254 [Worker-37: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Code\FP2\Maven\Prueba\prueba\src\main\resources
+2025-02-28 21:02:59,257 [Worker-37: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Code\FP2\Maven\Prueba\prueba\src\test\resources
+2025-02-28 21:03:07,118 [Worker-41: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Code\FP2\Maven\Prueba\prueba\src\main\resources
+2025-02-28 21:03:07,121 [Worker-41: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Code\FP2\Maven\Prueba\prueba\src\test\resources
+2025-02-28 21:03:27,231 [Worker-40: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Code\FP2\Maven\Prueba\prueba\src\main\resources
+2025-02-28 21:03:27,237 [Worker-40: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Code\FP2\Maven\Prueba\prueba\src\test\resources
+2025-02-28 21:04:32,663 [Worker-37: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Code\FP2\Maven\Prueba\prueba\src\main\resources
+2025-02-28 21:04:32,667 [Worker-37: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Code\FP2\Maven\Prueba\prueba\src\test\resources
+2025-02-28 22:25:03,048 [Worker-50: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Code\FP2\Maven\Prueba\prueba\src\main\resources
+2025-02-28 22:25:03,053 [Worker-50: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Code\FP2\Maven\Prueba\prueba\src\test\resources
+2025-02-28 22:33:24,797 [Worker-46: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Code\FP2\Maven\Prueba\prueba\src\main\resources
+2025-02-28 22:33:24,803 [Worker-46: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Code\FP2\Maven\Prueba\prueba\src\test\resources
+2025-02-28 22:34:21,966 [Worker-53: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Code\FP2\Maven\Prueba\prueba\src\main\resources
+2025-02-28 22:34:21,970 [Worker-53: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Code\FP2\Maven\Prueba\prueba\src\test\resources
+2025-02-28 22:34:30,725 [Worker-43: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Code\FP2\Maven\Prueba\prueba\src\main\resources
+2025-02-28 22:34:30,728 [Worker-43: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Code\FP2\Maven\Prueba\prueba\src\test\resources
+2025-02-28 22:35:08,750 [Worker-53: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Code\FP2\Maven\Prueba\prueba\src\main\resources
+2025-02-28 22:35:08,753 [Worker-53: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Code\FP2\Maven\Prueba\prueba\src\test\resources
+2025-02-28 22:39:39,394 [Worker-5: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2025-02-28 22:41:44,949 [Worker-1: Launching mavenrun-8155e28a-be36-4800-8e65-bd1d9e0eca5b] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409 [297])
+2025-02-28 22:41:44,953 [Worker-1: Launching mavenrun-8155e28a-be36-4800-8e65-bd1d9e0eca5b] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\alvar\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409
+2025-02-28 22:41:44,954 [Worker-1: Launching mavenrun-8155e28a-be36-4800-8e65-bd1d9e0eca5b] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\alvar\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\aopalliance-1.0.jar
+2025-02-28 22:41:44,955 [Worker-1: Launching mavenrun-8155e28a-be36-4800-8e65-bd1d9e0eca5b] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\alvar\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\guice-5.1.0.jar
+2025-02-28 22:41:44,955 [Worker-1: Launching mavenrun-8155e28a-be36-4800-8e65-bd1d9e0eca5b] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\alvar\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\httpclient-4.5.14.jar
+2025-02-28 22:41:44,955 [Worker-1: Launching mavenrun-8155e28a-be36-4800-8e65-bd1d9e0eca5b] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\alvar\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\httpcore-4.4.16.jar
+2025-02-28 22:41:44,955 [Worker-1: Launching mavenrun-8155e28a-be36-4800-8e65-bd1d9e0eca5b] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\alvar\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\jansi-2.4.1.jar
+2025-02-28 22:41:44,956 [Worker-1: Launching mavenrun-8155e28a-be36-4800-8e65-bd1d9e0eca5b] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\alvar\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\jcl-over-slf4j-1.7.36.jar
+2025-02-28 22:41:44,956 [Worker-1: Launching mavenrun-8155e28a-be36-4800-8e65-bd1d9e0eca5b] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\alvar\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-artifact-3.9.9.jar
+2025-02-28 22:41:44,956 [Worker-1: Launching mavenrun-8155e28a-be36-4800-8e65-bd1d9e0eca5b] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\alvar\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-builder-support-3.9.9.jar
+2025-02-28 22:41:44,956 [Worker-1: Launching mavenrun-8155e28a-be36-4800-8e65-bd1d9e0eca5b] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\alvar\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-compat-3.9.9.jar
+2025-02-28 22:41:44,956 [Worker-1: Launching mavenrun-8155e28a-be36-4800-8e65-bd1d9e0eca5b] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\alvar\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-core-3.9.9.jar
+2025-02-28 22:41:44,957 [Worker-1: Launching mavenrun-8155e28a-be36-4800-8e65-bd1d9e0eca5b] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\alvar\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-embedder-3.9.9.jar
+2025-02-28 22:41:44,957 [Worker-1: Launching mavenrun-8155e28a-be36-4800-8e65-bd1d9e0eca5b] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\alvar\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-model-3.9.9.jar
+2025-02-28 22:41:44,957 [Worker-1: Launching mavenrun-8155e28a-be36-4800-8e65-bd1d9e0eca5b] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\alvar\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-model-builder-3.9.9.jar
+2025-02-28 22:41:44,957 [Worker-1: Launching mavenrun-8155e28a-be36-4800-8e65-bd1d9e0eca5b] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\alvar\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-plugin-api-3.9.9.jar
+2025-02-28 22:41:44,957 [Worker-1: Launching mavenrun-8155e28a-be36-4800-8e65-bd1d9e0eca5b] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\alvar\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-repository-metadata-3.9.9.jar
+2025-02-28 22:41:44,958 [Worker-1: Launching mavenrun-8155e28a-be36-4800-8e65-bd1d9e0eca5b] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\alvar\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-resolver-api-1.9.22.jar
+2025-02-28 22:41:44,958 [Worker-1: Launching mavenrun-8155e28a-be36-4800-8e65-bd1d9e0eca5b] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\alvar\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-resolver-connector-basic-1.9.22.jar
+2025-02-28 22:41:44,958 [Worker-1: Launching mavenrun-8155e28a-be36-4800-8e65-bd1d9e0eca5b] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\alvar\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-resolver-impl-1.9.22.jar
+2025-02-28 22:41:44,958 [Worker-1: Launching mavenrun-8155e28a-be36-4800-8e65-bd1d9e0eca5b] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\alvar\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-resolver-named-locks-1.9.22.jar
+2025-02-28 22:41:44,958 [Worker-1: Launching mavenrun-8155e28a-be36-4800-8e65-bd1d9e0eca5b] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\alvar\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-resolver-provider-3.9.9.jar
+2025-02-28 22:41:44,959 [Worker-1: Launching mavenrun-8155e28a-be36-4800-8e65-bd1d9e0eca5b] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\alvar\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-resolver-spi-1.9.22.jar
+2025-02-28 22:41:44,959 [Worker-1: Launching mavenrun-8155e28a-be36-4800-8e65-bd1d9e0eca5b] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\alvar\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-resolver-transport-file-1.9.22.jar
+2025-02-28 22:41:44,959 [Worker-1: Launching mavenrun-8155e28a-be36-4800-8e65-bd1d9e0eca5b] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\alvar\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-resolver-transport-http-1.9.22.jar
+2025-02-28 22:41:44,959 [Worker-1: Launching mavenrun-8155e28a-be36-4800-8e65-bd1d9e0eca5b] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\alvar\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-resolver-transport-wagon-1.9.22.jar
+2025-02-28 22:41:44,959 [Worker-1: Launching mavenrun-8155e28a-be36-4800-8e65-bd1d9e0eca5b] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\alvar\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-resolver-util-1.9.22.jar
+2025-02-28 22:41:44,959 [Worker-1: Launching mavenrun-8155e28a-be36-4800-8e65-bd1d9e0eca5b] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\alvar\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-settings-3.9.9.jar
+2025-02-28 22:41:44,960 [Worker-1: Launching mavenrun-8155e28a-be36-4800-8e65-bd1d9e0eca5b] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\alvar\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-settings-builder-3.9.9.jar
+2025-02-28 22:41:44,960 [Worker-1: Launching mavenrun-8155e28a-be36-4800-8e65-bd1d9e0eca5b] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\alvar\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-shared-utils-3.4.2.jar
+2025-02-28 22:41:44,960 [Worker-1: Launching mavenrun-8155e28a-be36-4800-8e65-bd1d9e0eca5b] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\alvar\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\org.eclipse.sisu.inject-0.9.0.M3.jar
+2025-02-28 22:41:44,960 [Worker-1: Launching mavenrun-8155e28a-be36-4800-8e65-bd1d9e0eca5b] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\alvar\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\org.eclipse.sisu.plexus-0.9.0.M3.jar
+2025-02-28 22:41:44,960 [Worker-1: Launching mavenrun-8155e28a-be36-4800-8e65-bd1d9e0eca5b] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\alvar\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\plexus-build-api-0.0.7.jar
+2025-02-28 22:41:44,961 [Worker-1: Launching mavenrun-8155e28a-be36-4800-8e65-bd1d9e0eca5b] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\alvar\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\plexus-build-api-1.2.0.jar
+2025-02-28 22:41:44,961 [Worker-1: Launching mavenrun-8155e28a-be36-4800-8e65-bd1d9e0eca5b] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\alvar\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\plexus-cipher-2.0.jar
+2025-02-28 22:41:44,961 [Worker-1: Launching mavenrun-8155e28a-be36-4800-8e65-bd1d9e0eca5b] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\alvar\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\plexus-classworlds-2.8.0.jar
+2025-02-28 22:41:44,961 [Worker-1: Launching mavenrun-8155e28a-be36-4800-8e65-bd1d9e0eca5b] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\alvar\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\plexus-component-annotations-2.1.0.jar
+2025-02-28 22:41:44,961 [Worker-1: Launching mavenrun-8155e28a-be36-4800-8e65-bd1d9e0eca5b] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\alvar\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\plexus-interpolation-1.27.jar
+2025-02-28 22:41:44,962 [Worker-1: Launching mavenrun-8155e28a-be36-4800-8e65-bd1d9e0eca5b] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\alvar\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\plexus-sec-dispatcher-2.0.jar
+2025-02-28 22:41:44,962 [Worker-1: Launching mavenrun-8155e28a-be36-4800-8e65-bd1d9e0eca5b] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\alvar\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\plexus-utils-3.5.1.jar
+2025-02-28 22:41:44,962 [Worker-1: Launching mavenrun-8155e28a-be36-4800-8e65-bd1d9e0eca5b] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\alvar\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\plexus-xml-3.0.1.jar
+2025-02-28 22:41:44,962 [Worker-1: Launching mavenrun-8155e28a-be36-4800-8e65-bd1d9e0eca5b] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\alvar\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\wagon-file-3.5.3.jar
+2025-02-28 22:41:44,962 [Worker-1: Launching mavenrun-8155e28a-be36-4800-8e65-bd1d9e0eca5b] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\alvar\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\wagon-http-3.5.3.jar
+2025-02-28 22:41:44,962 [Worker-1: Launching mavenrun-8155e28a-be36-4800-8e65-bd1d9e0eca5b] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\alvar\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\wagon-http-shared-3.5.3.jar
+2025-02-28 22:41:44,963 [Worker-1: Launching mavenrun-8155e28a-be36-4800-8e65-bd1d9e0eca5b] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\alvar\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\wagon-provider-api-3.5.3.jar
+2025-02-28 22:41:44,964 [Worker-1: Launching mavenrun-8155e28a-be36-4800-8e65-bd1d9e0eca5b] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=com.google.guava_33.3.0.jre [10])
+2025-02-28 22:41:44,964 [Worker-1: Launching mavenrun-8155e28a-be36-4800-8e65-bd1d9e0eca5b] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\alvar\.p2\pool\plugins\com.google.guava_33.3.0.jre.jar
+2025-02-28 22:41:44,965 [Worker-1: Launching mavenrun-8155e28a-be36-4800-8e65-bd1d9e0eca5b] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=slf4j.api_2.0.16 [519])
+2025-02-28 22:41:44,965 [Worker-1: Launching mavenrun-8155e28a-be36-4800-8e65-bd1d9e0eca5b] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\alvar\.p2\pool\plugins\slf4j.api_2.0.16.jar
+2025-02-28 22:41:44,965 [Worker-1: Launching mavenrun-8155e28a-be36-4800-8e65-bd1d9e0eca5b] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=javax.inject_1.0.0.v20091030 [527])
+2025-02-28 22:41:44,965 [Worker-1: Launching mavenrun-8155e28a-be36-4800-8e65-bd1d9e0eca5b] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\alvar\.p2\pool\plugins\javax.inject_1.0.0.v20091030.jar
+2025-02-28 22:41:44,965 [Worker-1: Launching mavenrun-8155e28a-be36-4800-8e65-bd1d9e0eca5b] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=javax.annotation_1.3.5.v20200909-1856 [526])
+2025-02-28 22:41:44,966 [Worker-1: Launching mavenrun-8155e28a-be36-4800-8e65-bd1d9e0eca5b] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\alvar\.p2\pool\plugins\javax.annotation_1.3.5.v20200909-1856.jar
+2025-02-28 22:41:44,966 [Worker-1: Launching mavenrun-8155e28a-be36-4800-8e65-bd1d9e0eca5b] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=org.apache.commons.cli_1.9.0 [47])
+2025-02-28 22:41:44,966 [Worker-1: Launching mavenrun-8155e28a-be36-4800-8e65-bd1d9e0eca5b] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\alvar\.p2\pool\plugins\org.apache.commons.cli_1.9.0.jar
+2025-02-28 22:41:44,966 [Worker-1: Launching mavenrun-8155e28a-be36-4800-8e65-bd1d9e0eca5b] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=org.apache.commons.commons-codec_1.16.0 [50])
+2025-02-28 22:41:44,966 [Worker-1: Launching mavenrun-8155e28a-be36-4800-8e65-bd1d9e0eca5b] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\alvar\.p2\pool\plugins\org.apache.commons.commons-codec_1.16.0.jar
+2025-02-28 22:41:44,966 [Worker-1: Launching mavenrun-8155e28a-be36-4800-8e65-bd1d9e0eca5b] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=com.google.guava.failureaccess_1.0.2 [11])
+2025-02-28 22:41:44,966 [Worker-1: Launching mavenrun-8155e28a-be36-4800-8e65-bd1d9e0eca5b] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\alvar\.p2\pool\plugins\com.google.guava.failureaccess_1.0.2.jar
+2025-02-28 22:41:44,975 [Worker-1: Launching mavenrun-8155e28a-be36-4800-8e65-bd1d9e0eca5b] INFO  o.e.m.i.launch.MavenLaunchDelegate - Run build in "C:\Users\alvar\AppData\Local\Temp\m2e-archetypeGenerator11397896414253674446":
+2025-02-28 22:41:44,978 [Worker-1: Launching mavenrun-8155e28a-be36-4800-8e65-bd1d9e0eca5b] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn  -DjavaCompilerVersion=17 -DjunitVersion=5.11.0 -DarchetypeGroupId=org.apache.maven.archetypes -DarchetypeArtifactId=maven-archetype-quickstart -DarchetypeVersion=1.5 -DgroupId=com.marisma -DartifactId=pruebamaven1 -Dversion=0.0.1-SNAPSHOT -Dpackage=com.marisma.pruebamaven1 -DoutputDirectory=D:\Code\FP2\Maven\prueba11 -Dstyle.color=always -U archetype:generate
+2025-02-28 22:42:02,338 [Worker-14: Creating maven-archetype-quickstart] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Collecting project info '/pom.xml' D:\Code\FP2\Maven\prueba11\pruebamaven1\pom.xml
+2025-02-28 22:42:03,334 [Worker-14: Creating maven-archetype-quickstart] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.marisma:pruebamaven1:0.0.1-SNAPSHOT @ D:\Code\FP2\Maven\prueba11\pruebamaven1\pom.xml.
+2025-02-28 22:42:04,179 [Worker-14: Creating maven-archetype-quickstart] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /pruebamaven1/src/main/java
+2025-02-28 22:42:04,181 [Worker-14: Creating maven-archetype-quickstart] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /pruebamaven1/src/main/resources
+2025-02-28 22:42:04,195 [Worker-14: Creating maven-archetype-quickstart] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /pruebamaven1/src/test/java
+2025-02-28 22:42:04,196 [Worker-14: Creating maven-archetype-quickstart] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /pruebamaven1/src/test/resources
+2025-02-28 22:42:04,743 [Worker-14: Creating maven-archetype-quickstart] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Imported and configured 1 project(s) in 2 sec
+2025-02-28 22:42:06,639 [Worker-8: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Code\FP2\Maven\prueba11\pruebamaven1\src\main\resources
+2025-02-28 22:42:06,648 [Worker-8: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Code\FP2\Maven\prueba11\pruebamaven1\src\test\resources
+2025-02-28 22:46:26,945 [Worker-23: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Code\FP2\Maven\prueba11\pruebamaven1\src\main\resources
+2025-02-28 22:46:26,948 [Worker-23: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Code\FP2\Maven\prueba11\pruebamaven1\src\test\resources
+2025-02-28 22:47:24,853 [Worker-24: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-02-28 22:47:24,858 [Worker-24: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
+2025-02-28 22:47:43,968 [Worker-23: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.marisma:pruebamaven1:0.0.1-SNAPSHOT @ D:\Code\FP2\Maven\prueba11\pruebamaven1\pom.xml.
+2025-02-28 22:47:44,177 [Worker-23: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-02-28 22:47:44,182 [Worker-23: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
+2025-02-28 22:50:36,491 [Worker-15: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.marisma:pruebamaven1:0.0.1-SNAPSHOT @ D:\Code\FP2\Maven\prueba11\pruebamaven1\pom.xml.
+2025-02-28 22:50:36,818 [Worker-15: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-02-28 22:50:36,824 [Worker-15: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
+2025-02-28 22:50:37,952 [Worker-27: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-02-28 22:50:37,954 [Worker-27: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
+2025-02-28 22:51:06,521 [Worker-27: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.marisma:pruebamaven1:0.0.1-SNAPSHOT @ D:\Code\FP2\Maven\prueba11\pruebamaven1\pom.xml.
+2025-02-28 22:51:07,336 [Worker-27: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/hibernate/orm/hibernate-core/6.6.9.Final/hibernate-core-6.6.9.Final.pom
+2025-02-28 22:51:07,363 [Worker-27: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/hibernate/orm/hibernate-core/6.6.9.Final/hibernate-core-6.6.9.Final.pom
+2025-02-28 22:51:07,723 [Worker-27: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/net/bytebuddy/byte-buddy/1.15.11/byte-buddy-1.15.11.pom
+2025-02-28 22:51:07,745 [Worker-27: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/net/bytebuddy/byte-buddy/1.15.11/byte-buddy-1.15.11.pom
+2025-02-28 22:51:07,800 [Worker-27: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/net/bytebuddy/byte-buddy-parent/1.15.11/byte-buddy-parent-1.15.11.pom
+2025-02-28 22:51:07,991 [Worker-27: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/net/bytebuddy/byte-buddy-parent/1.15.11/byte-buddy-parent-1.15.11.pom
+2025-02-28 22:51:08,453 [Worker-27: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/hibernate/orm/hibernate-core/6.6.9.Final/hibernate-core-6.6.9.Final.jar
+2025-02-28 22:51:16,083 [Worker-27: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/hibernate/orm/hibernate-core/6.6.9.Final/hibernate-core-6.6.9.Final.jar
+2025-02-28 22:51:16,219 [BasicRepositoryConnector-repo.maven.apache.org-0-0] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/net/bytebuddy/byte-buddy/1.15.11/byte-buddy-1.15.11.jar
+2025-02-28 22:51:20,283 [BasicRepositoryConnector-repo.maven.apache.org-0-0] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/net/bytebuddy/byte-buddy/1.15.11/byte-buddy-1.15.11.jar
+2025-02-28 22:51:20,556 [Worker-27: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-02-28 22:51:20,562 [Worker-27: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
+2025-02-28 22:51:21,834 [Worker-15: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-02-28 22:51:21,837 [Worker-15: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
+2025-02-28 22:51:22,519 [Worker-27: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/hibernate/orm/hibernate-core/6.6.9.Final/hibernate-core-6.6.9.Final-sources.jar
+2025-02-28 22:51:25,813 [Worker-27: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/hibernate/orm/hibernate-core/6.6.9.Final/hibernate-core-6.6.9.Final-sources.jar
+2025-02-28 22:51:25,822 [Worker-27: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.hibernate.orm:hibernate-core:6.6.9.Final
+2025-02-28 22:51:26,015 [Worker-27: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/net/bytebuddy/byte-buddy/1.15.11/byte-buddy-1.15.11-sources.jar
+2025-02-28 22:51:26,705 [Worker-27: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/net/bytebuddy/byte-buddy/1.15.11/byte-buddy-1.15.11-sources.jar
+2025-02-28 22:51:26,713 [Worker-27: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for net.bytebuddy:byte-buddy:1.15.11
+2025-02-28 22:52:10,069 [Worker-15: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update started
+2025-02-28 22:52:10,128 [Worker-15: Updating Maven Project] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.marisma:pruebamaven1:0.0.1-SNAPSHOT @ D:\Code\FP2\Maven\prueba11\pruebamaven1\pom.xml.
+2025-02-28 22:52:10,425 [Worker-15: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /pruebamaven1/src/main/java
+2025-02-28 22:52:10,427 [Worker-15: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /pruebamaven1/src/main/resources
+2025-02-28 22:52:10,453 [Worker-15: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /pruebamaven1/src/test/java
+2025-02-28 22:52:10,453 [Worker-15: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /pruebamaven1/src/test/resources
+2025-02-28 22:52:10,606 [Worker-15: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed for 1 poms: local refresh takes 0,00 sec, refresh facades takes 0,00 sec, update config takes 0,00 sec 
+2025-02-28 22:52:11,004 [Worker-25: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-02-28 22:52:11,011 [Worker-25: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
+2025-02-28 22:52:21,456 [Worker-27: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-02-28 22:52:21,459 [Worker-27: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
+2025-02-28 22:52:32,742 [Worker-25: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-02-28 22:52:32,745 [Worker-25: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
+2025-02-28 22:56:10,497 [Worker-29: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-02-28 22:56:10,502 [Worker-29: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
+2025-02-28 22:56:24,445 [main] INFO  org.hibernate.cfg.Environment - Hibernate 3.5.6-Final
+2025-02-28 22:56:24,459 [main] INFO  org.hibernate.cfg.Environment - hibernate.properties not found
+2025-02-28 22:56:24,461 [main] INFO  org.hibernate.cfg.Environment - Bytecode provider name : javassist
+2025-02-28 22:56:24,468 [main] INFO  org.hibernate.cfg.Environment - using JDK 1.4 java.sql.Timestamp handling
+2025-02-28 22:57:23,928 [Worker-15: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-02-28 22:57:23,939 [Worker-15: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
+2025-02-28 23:01:51,088 [Worker-29: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-02-28 23:01:51,096 [Worker-29: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
+2025-02-28 23:02:04,897 [Worker-29: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-02-28 23:02:04,904 [Worker-29: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
+2025-02-28 23:02:23,781 [Worker-32: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-02-28 23:02:23,788 [Worker-32: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
+2025-02-28 23:04:52,162 [Worker-30: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update started
+2025-02-28 23:04:52,222 [Worker-30: Updating Maven Project] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.marisma:pruebamaven1:0.0.1-SNAPSHOT @ D:\Code\FP2\Maven\prueba11\pruebamaven1\pom.xml.
+2025-02-28 23:04:52,538 [Worker-30: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /pruebamaven1/src/main/java
+2025-02-28 23:04:52,539 [Worker-30: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /pruebamaven1/src/main/resources
+2025-02-28 23:04:52,539 [Worker-30: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /pruebamaven1/src/test/java
+2025-02-28 23:04:52,540 [Worker-30: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /pruebamaven1/src/test/resources
+2025-02-28 23:04:52,790 [Worker-30: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed for 1 poms: local refresh takes 0,00 sec, refresh facades takes 0,00 sec, update config takes 0,00 sec 
+2025-02-28 23:04:53,138 [Worker-29: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-02-28 23:04:53,149 [Worker-29: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
+2025-02-28 23:05:10,943 [Worker-30: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-02-28 23:05:10,946 [Worker-30: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
+2025-02-28 23:05:30,012 [Worker-35: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-02-28 23:05:30,016 [Worker-35: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
+2025-02-28 23:05:31,520 [Worker-29: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-02-28 23:05:31,524 [Worker-29: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
+2025-02-28 23:06:03,078 [Worker-36: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-02-28 23:06:03,082 [Worker-36: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
+2025-02-28 23:08:43,127 [Worker-2: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2025-02-28 23:08:49,652 [Worker-9: Updating Maven Dependencies] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.marisma:pruebamaven1:0.0.1-SNAPSHOT @ D:\Code\FP2\Maven\prueba11\pruebamaven1\pom.xml.
+2025-03-01 18:25:34,334 [Worker-5: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2025-03-02 14:44:19,296 [Worker-7: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2025-03-02 21:40:47,642 [Worker-2: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.

@@ -1,22 +1,25 @@
 @echo off
 
 echo Iniciando pruebas de descarga...
+
 echo Probando con http://elpais.es
-java DescargaURL http://elpais.es elpais_es.html
+java DescargaURL.java http://elpais.es elpais_es.html
 echo Código HTTP: %errorlevel%
 echo.
-
-pause
 
 echo Probando con https://elpais.com
-java DescargaURL https://elpais.com elpais_com.html
+java DescargaURL.java https://elpais.com elpais_com.html
 echo Código HTTP: %errorlevel%
 echo.
 
-pause
-
 echo Probando con https://elpais.com/paginainexistente
-java DescargaURL https://elpais.com/paginainexistente noexiste.html
+java DescargaURL.java https://elpais.com/paginainexistente noexiste.html
+echo Código HTTP: %errorlevel%
+echo.
+
+
+echo Probando con https://github.com/
+java DescargaURL.java https://github.com github.html
 echo Código HTTP: %errorlevel%
 echo.
 
