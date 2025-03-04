@@ -22,10 +22,6 @@ class GameFragment : Fragment() {
         // Inflate view and obtain an instance of the binding class
         binding = FragmentGameBinding.inflate(inflater,container,false)
 
-        //initialization.
-        updateScoreText()
-        updateWordText()
-
         //Listeners
         binding.correctButton.setOnClickListener { onCorrect() }
         binding.skipButton.setOnClickListener { onSkip() }
@@ -33,6 +29,10 @@ class GameFragment : Fragment() {
 
         val appContainer = (requireActivity().application as MyApplication).appContainer
         gameVM = appContainer.gameVMFactory.create()
+
+        //initialization.
+        updateScoreText()
+        updateWordText()
 
         return binding.root
     }
