@@ -556,3 +556,252 @@
 2025-03-05 12:02:10,105 [Worker-58: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
 2025-03-05 12:02:22,247 [Worker-58: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
 2025-03-05 12:02:22,248 [Worker-58: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\test\resources to target\test-classes
+2025-03-06 12:54:25,197 [Worker-5: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2025-03-06 12:55:00,840 [Worker-12: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.marisma:maventest:0.0.1-SNAPSHOT @ D:\Code\FP2\Maven\maventest\pom.xml.
+2025-03-06 12:55:00,839 [Worker-10: Updating Maven Dependencies] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.marisma:maventest:0.0.1-SNAPSHOT @ D:\Code\FP2\Maven\maventest\pom.xml.
+2025-03-06 12:55:01,281 [Worker-10: Updating Maven Dependencies] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/hibernate/orm/hibernate-core/6.6.3.Final/hibernate-core-6.6.3.Final.pom
+2025-03-06 12:55:01,304 [Worker-10: Updating Maven Dependencies] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/hibernate/orm/hibernate-core/6.6.3.Final/hibernate-core-6.6.3.Final.pom
+2025-03-06 12:55:01,627 [Worker-10: Updating Maven Dependencies] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/com/mysql/mysql-connector-j/8.3.0/mysql-connector-j-8.3.0.pom
+2025-03-06 12:55:01,637 [Worker-10: Updating Maven Dependencies] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/mysql/mysql-connector-j/8.3.0/mysql-connector-j-8.3.0.pom
+2025-03-06 12:55:01,724 [Worker-12: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/com/google/protobuf/protobuf-java/3.25.1/protobuf-java-3.25.1.pom
+2025-03-06 12:55:01,733 [Worker-12: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/google/protobuf/protobuf-java/3.25.1/protobuf-java-3.25.1.pom
+2025-03-06 12:55:01,771 [Worker-12: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/com/google/protobuf/protobuf-parent/3.25.1/protobuf-parent-3.25.1.pom
+2025-03-06 12:55:01,786 [Worker-12: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/google/protobuf/protobuf-parent/3.25.1/protobuf-parent-3.25.1.pom
+2025-03-06 12:55:01,822 [Worker-12: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/com/google/protobuf/protobuf-bom/3.25.1/protobuf-bom-3.25.1.pom
+2025-03-06 12:55:01,829 [Worker-12: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/google/protobuf/protobuf-bom/3.25.1/protobuf-bom-3.25.1.pom
+2025-03-06 12:55:01,952 [Worker-12: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/hibernate/orm/hibernate-core/6.6.3.Final/hibernate-core-6.6.3.Final.jar
+2025-03-06 12:55:02,885 [Worker-12: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/hibernate/orm/hibernate-core/6.6.3.Final/hibernate-core-6.6.3.Final.jar
+2025-03-06 12:55:02,922 [BasicRepositoryConnector-repo.maven.apache.org-0-0] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/com/mysql/mysql-connector-j/8.3.0/mysql-connector-j-8.3.0.jar
+2025-03-06 12:55:03,044 [BasicRepositoryConnector-repo.maven.apache.org-0-1] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/com/google/protobuf/protobuf-java/3.25.1/protobuf-java-3.25.1.jar
+2025-03-06 12:55:03,090 [BasicRepositoryConnector-repo.maven.apache.org-0-0] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/mysql/mysql-connector-j/8.3.0/mysql-connector-j-8.3.0.jar
+2025-03-06 12:55:03,308 [BasicRepositoryConnector-repo.maven.apache.org-0-1] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/google/protobuf/protobuf-java/3.25.1/protobuf-java-3.25.1.jar
+2025-03-06 12:55:04,497 [Worker-12: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-06 12:55:04,510 [Worker-12: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Code\FP2\Maven\maventest\src\test\resources
+2025-03-06 12:55:05,300 [Worker-8: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/hibernate/orm/hibernate-core/6.6.3.Final/hibernate-core-6.6.3.Final-sources.jar
+2025-03-06 12:55:05,676 [Worker-9: Updating Maven Dependencies] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.marisma:maventest:0.0.1-SNAPSHOT @ D:\Code\FP2\Maven\maventest\pom.xml.
+2025-03-06 12:55:05,911 [Worker-8: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/hibernate/orm/hibernate-core/6.6.3.Final/hibernate-core-6.6.3.Final-sources.jar
+2025-03-06 12:55:05,920 [Worker-8: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.hibernate.orm:hibernate-core:6.6.3.Final
+2025-03-06 12:55:05,942 [Worker-23: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-06 12:55:05,954 [Worker-23: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Code\FP2\Maven\maventest\src\test\resources
+2025-03-06 12:55:06,006 [Worker-8: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/com/mysql/mysql-connector-j/8.3.0/mysql-connector-j-8.3.0-sources.jar
+2025-03-06 12:55:06,235 [Worker-8: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/mysql/mysql-connector-j/8.3.0/mysql-connector-j-8.3.0-sources.jar
+2025-03-06 12:55:06,241 [Worker-8: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for com.mysql:mysql-connector-j:8.3.0
+2025-03-06 12:55:06,336 [Worker-8: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/com/google/protobuf/protobuf-java/3.25.1/protobuf-java-3.25.1-sources.jar
+2025-03-06 12:55:06,498 [Worker-8: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/google/protobuf/protobuf-java/3.25.1/protobuf-java-3.25.1-sources.jar
+2025-03-06 12:55:06,503 [Worker-8: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for com.google.protobuf:protobuf-java:3.25.1
+2025-03-06 12:55:07,068 [Worker-10: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-06 12:55:07,074 [Worker-10: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Code\FP2\Maven\maventest\src\test\resources
+2025-03-06 13:04:10,067 [Worker-27: Launching mavenrun-3da79f78-b148-42ec-82a5-c66e7fb969b6] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409 [297])
+2025-03-06 13:04:10,069 [Worker-27: Launching mavenrun-3da79f78-b148-42ec-82a5-c66e7fb969b6] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\alvar\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409
+2025-03-06 13:04:10,070 [Worker-27: Launching mavenrun-3da79f78-b148-42ec-82a5-c66e7fb969b6] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\alvar\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\aopalliance-1.0.jar
+2025-03-06 13:04:10,070 [Worker-27: Launching mavenrun-3da79f78-b148-42ec-82a5-c66e7fb969b6] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\alvar\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\guice-5.1.0.jar
+2025-03-06 13:04:10,070 [Worker-27: Launching mavenrun-3da79f78-b148-42ec-82a5-c66e7fb969b6] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\alvar\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\httpclient-4.5.14.jar
+2025-03-06 13:04:10,070 [Worker-27: Launching mavenrun-3da79f78-b148-42ec-82a5-c66e7fb969b6] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\alvar\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\httpcore-4.4.16.jar
+2025-03-06 13:04:10,070 [Worker-27: Launching mavenrun-3da79f78-b148-42ec-82a5-c66e7fb969b6] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\alvar\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\jansi-2.4.1.jar
+2025-03-06 13:04:10,070 [Worker-27: Launching mavenrun-3da79f78-b148-42ec-82a5-c66e7fb969b6] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\alvar\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\jcl-over-slf4j-1.7.36.jar
+2025-03-06 13:04:10,071 [Worker-27: Launching mavenrun-3da79f78-b148-42ec-82a5-c66e7fb969b6] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\alvar\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-artifact-3.9.9.jar
+2025-03-06 13:04:10,071 [Worker-27: Launching mavenrun-3da79f78-b148-42ec-82a5-c66e7fb969b6] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\alvar\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-builder-support-3.9.9.jar
+2025-03-06 13:04:10,071 [Worker-27: Launching mavenrun-3da79f78-b148-42ec-82a5-c66e7fb969b6] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\alvar\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-compat-3.9.9.jar
+2025-03-06 13:04:10,071 [Worker-27: Launching mavenrun-3da79f78-b148-42ec-82a5-c66e7fb969b6] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\alvar\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-core-3.9.9.jar
+2025-03-06 13:04:10,071 [Worker-27: Launching mavenrun-3da79f78-b148-42ec-82a5-c66e7fb969b6] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\alvar\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-embedder-3.9.9.jar
+2025-03-06 13:04:10,071 [Worker-27: Launching mavenrun-3da79f78-b148-42ec-82a5-c66e7fb969b6] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\alvar\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-model-3.9.9.jar
+2025-03-06 13:04:10,072 [Worker-27: Launching mavenrun-3da79f78-b148-42ec-82a5-c66e7fb969b6] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\alvar\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-model-builder-3.9.9.jar
+2025-03-06 13:04:10,072 [Worker-27: Launching mavenrun-3da79f78-b148-42ec-82a5-c66e7fb969b6] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\alvar\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-plugin-api-3.9.9.jar
+2025-03-06 13:04:10,072 [Worker-27: Launching mavenrun-3da79f78-b148-42ec-82a5-c66e7fb969b6] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\alvar\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-repository-metadata-3.9.9.jar
+2025-03-06 13:04:10,072 [Worker-27: Launching mavenrun-3da79f78-b148-42ec-82a5-c66e7fb969b6] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\alvar\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-resolver-api-1.9.22.jar
+2025-03-06 13:04:10,072 [Worker-27: Launching mavenrun-3da79f78-b148-42ec-82a5-c66e7fb969b6] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\alvar\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-resolver-connector-basic-1.9.22.jar
+2025-03-06 13:04:10,072 [Worker-27: Launching mavenrun-3da79f78-b148-42ec-82a5-c66e7fb969b6] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\alvar\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-resolver-impl-1.9.22.jar
+2025-03-06 13:04:10,073 [Worker-27: Launching mavenrun-3da79f78-b148-42ec-82a5-c66e7fb969b6] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\alvar\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-resolver-named-locks-1.9.22.jar
+2025-03-06 13:04:10,073 [Worker-27: Launching mavenrun-3da79f78-b148-42ec-82a5-c66e7fb969b6] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\alvar\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-resolver-provider-3.9.9.jar
+2025-03-06 13:04:10,073 [Worker-27: Launching mavenrun-3da79f78-b148-42ec-82a5-c66e7fb969b6] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\alvar\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-resolver-spi-1.9.22.jar
+2025-03-06 13:04:10,073 [Worker-27: Launching mavenrun-3da79f78-b148-42ec-82a5-c66e7fb969b6] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\alvar\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-resolver-transport-file-1.9.22.jar
+2025-03-06 13:04:10,073 [Worker-27: Launching mavenrun-3da79f78-b148-42ec-82a5-c66e7fb969b6] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\alvar\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-resolver-transport-http-1.9.22.jar
+2025-03-06 13:04:10,073 [Worker-27: Launching mavenrun-3da79f78-b148-42ec-82a5-c66e7fb969b6] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\alvar\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-resolver-transport-wagon-1.9.22.jar
+2025-03-06 13:04:10,073 [Worker-27: Launching mavenrun-3da79f78-b148-42ec-82a5-c66e7fb969b6] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\alvar\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-resolver-util-1.9.22.jar
+2025-03-06 13:04:10,074 [Worker-27: Launching mavenrun-3da79f78-b148-42ec-82a5-c66e7fb969b6] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\alvar\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-settings-3.9.9.jar
+2025-03-06 13:04:10,074 [Worker-27: Launching mavenrun-3da79f78-b148-42ec-82a5-c66e7fb969b6] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\alvar\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-settings-builder-3.9.9.jar
+2025-03-06 13:04:10,074 [Worker-27: Launching mavenrun-3da79f78-b148-42ec-82a5-c66e7fb969b6] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\alvar\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-shared-utils-3.4.2.jar
+2025-03-06 13:04:10,074 [Worker-27: Launching mavenrun-3da79f78-b148-42ec-82a5-c66e7fb969b6] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\alvar\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\org.eclipse.sisu.inject-0.9.0.M3.jar
+2025-03-06 13:04:10,074 [Worker-27: Launching mavenrun-3da79f78-b148-42ec-82a5-c66e7fb969b6] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\alvar\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\org.eclipse.sisu.plexus-0.9.0.M3.jar
+2025-03-06 13:04:10,074 [Worker-27: Launching mavenrun-3da79f78-b148-42ec-82a5-c66e7fb969b6] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\alvar\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\plexus-build-api-0.0.7.jar
+2025-03-06 13:04:10,075 [Worker-27: Launching mavenrun-3da79f78-b148-42ec-82a5-c66e7fb969b6] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\alvar\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\plexus-build-api-1.2.0.jar
+2025-03-06 13:04:10,075 [Worker-27: Launching mavenrun-3da79f78-b148-42ec-82a5-c66e7fb969b6] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\alvar\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\plexus-cipher-2.0.jar
+2025-03-06 13:04:10,075 [Worker-27: Launching mavenrun-3da79f78-b148-42ec-82a5-c66e7fb969b6] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\alvar\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\plexus-classworlds-2.8.0.jar
+2025-03-06 13:04:10,075 [Worker-27: Launching mavenrun-3da79f78-b148-42ec-82a5-c66e7fb969b6] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\alvar\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\plexus-component-annotations-2.1.0.jar
+2025-03-06 13:04:10,075 [Worker-27: Launching mavenrun-3da79f78-b148-42ec-82a5-c66e7fb969b6] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\alvar\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\plexus-interpolation-1.27.jar
+2025-03-06 13:04:10,075 [Worker-27: Launching mavenrun-3da79f78-b148-42ec-82a5-c66e7fb969b6] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\alvar\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\plexus-sec-dispatcher-2.0.jar
+2025-03-06 13:04:10,075 [Worker-27: Launching mavenrun-3da79f78-b148-42ec-82a5-c66e7fb969b6] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\alvar\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\plexus-utils-3.5.1.jar
+2025-03-06 13:04:10,076 [Worker-27: Launching mavenrun-3da79f78-b148-42ec-82a5-c66e7fb969b6] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\alvar\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\plexus-xml-3.0.1.jar
+2025-03-06 13:04:10,076 [Worker-27: Launching mavenrun-3da79f78-b148-42ec-82a5-c66e7fb969b6] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\alvar\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\wagon-file-3.5.3.jar
+2025-03-06 13:04:10,076 [Worker-27: Launching mavenrun-3da79f78-b148-42ec-82a5-c66e7fb969b6] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\alvar\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\wagon-http-3.5.3.jar
+2025-03-06 13:04:10,076 [Worker-27: Launching mavenrun-3da79f78-b148-42ec-82a5-c66e7fb969b6] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\alvar\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\wagon-http-shared-3.5.3.jar
+2025-03-06 13:04:10,076 [Worker-27: Launching mavenrun-3da79f78-b148-42ec-82a5-c66e7fb969b6] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\alvar\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\wagon-provider-api-3.5.3.jar
+2025-03-06 13:04:10,077 [Worker-27: Launching mavenrun-3da79f78-b148-42ec-82a5-c66e7fb969b6] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=com.google.guava_33.3.0.jre [10])
+2025-03-06 13:04:10,078 [Worker-27: Launching mavenrun-3da79f78-b148-42ec-82a5-c66e7fb969b6] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\alvar\.p2\pool\plugins\com.google.guava_33.3.0.jre.jar
+2025-03-06 13:04:10,078 [Worker-27: Launching mavenrun-3da79f78-b148-42ec-82a5-c66e7fb969b6] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=slf4j.api_2.0.16 [519])
+2025-03-06 13:04:10,078 [Worker-27: Launching mavenrun-3da79f78-b148-42ec-82a5-c66e7fb969b6] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\alvar\.p2\pool\plugins\slf4j.api_2.0.16.jar
+2025-03-06 13:04:10,078 [Worker-27: Launching mavenrun-3da79f78-b148-42ec-82a5-c66e7fb969b6] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=javax.inject_1.0.0.v20091030 [527])
+2025-03-06 13:04:10,078 [Worker-27: Launching mavenrun-3da79f78-b148-42ec-82a5-c66e7fb969b6] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\alvar\.p2\pool\plugins\javax.inject_1.0.0.v20091030.jar
+2025-03-06 13:04:10,078 [Worker-27: Launching mavenrun-3da79f78-b148-42ec-82a5-c66e7fb969b6] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=javax.annotation_1.3.5.v20200909-1856 [526])
+2025-03-06 13:04:10,079 [Worker-27: Launching mavenrun-3da79f78-b148-42ec-82a5-c66e7fb969b6] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\alvar\.p2\pool\plugins\javax.annotation_1.3.5.v20200909-1856.jar
+2025-03-06 13:04:10,079 [Worker-27: Launching mavenrun-3da79f78-b148-42ec-82a5-c66e7fb969b6] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=org.apache.commons.cli_1.9.0 [47])
+2025-03-06 13:04:10,079 [Worker-27: Launching mavenrun-3da79f78-b148-42ec-82a5-c66e7fb969b6] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\alvar\.p2\pool\plugins\org.apache.commons.cli_1.9.0.jar
+2025-03-06 13:04:10,079 [Worker-27: Launching mavenrun-3da79f78-b148-42ec-82a5-c66e7fb969b6] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=org.apache.commons.commons-codec_1.16.0 [50])
+2025-03-06 13:04:10,079 [Worker-27: Launching mavenrun-3da79f78-b148-42ec-82a5-c66e7fb969b6] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\alvar\.p2\pool\plugins\org.apache.commons.commons-codec_1.16.0.jar
+2025-03-06 13:04:10,079 [Worker-27: Launching mavenrun-3da79f78-b148-42ec-82a5-c66e7fb969b6] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=com.google.guava.failureaccess_1.0.2 [11])
+2025-03-06 13:04:10,080 [Worker-27: Launching mavenrun-3da79f78-b148-42ec-82a5-c66e7fb969b6] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\alvar\.p2\pool\plugins\com.google.guava.failureaccess_1.0.2.jar
+2025-03-06 13:04:10,087 [Worker-27: Launching mavenrun-3da79f78-b148-42ec-82a5-c66e7fb969b6] INFO  o.e.m.i.launch.MavenLaunchDelegate - Run build in "C:\Users\alvar\AppData\Local\Temp\m2e-archetypeGenerator4271163801250267556":
+2025-03-06 13:04:10,092 [Worker-27: Launching mavenrun-3da79f78-b148-42ec-82a5-c66e7fb969b6] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn  -DarchetypeGroupId=org.apache.maven.archetypes -DarchetypeArtifactId=maven-archetype-quickstart -DarchetypeVersion=1.4 -DgroupId=com.marisma -DartifactId=pruebamaven -Dversion=0.0.1-SNAPSHOT -Dpackage=com.marisma.pruebamaven -DoutputDirectory=D:\Code\FP2\Maven -Dstyle.color=always -U archetype:generate
+2025-03-06 13:04:19,019 [Worker-28: Creating maven-archetype-quickstart] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Collecting project info '/pom.xml' D:\Code\FP2\Maven\pruebamaven\pom.xml
+2025-03-06 13:04:19,781 [Worker-28: Creating maven-archetype-quickstart] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.marisma:pruebamaven:0.0.1-SNAPSHOT @ D:\Code\FP2\Maven\pruebamaven\pom.xml.
+2025-03-06 13:04:20,353 [Worker-28: Creating maven-archetype-quickstart] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /pruebamaven/src/main/java
+2025-03-06 13:04:20,356 [Worker-28: Creating maven-archetype-quickstart] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /pruebamaven/src/main/resources
+2025-03-06 13:04:20,366 [Worker-28: Creating maven-archetype-quickstart] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /pruebamaven/src/test/java
+2025-03-06 13:04:20,367 [Worker-28: Creating maven-archetype-quickstart] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /pruebamaven/src/test/resources
+2025-03-06 13:04:20,478 [Worker-28: Creating maven-archetype-quickstart] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Imported and configured 1 project(s) in 1 sec
+2025-03-06 13:04:20,902 [Worker-32: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2025-03-06 13:04:20,903 [Worker-32: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Code\FP2\Maven\pruebamaven\src\main\resources
+2025-03-06 13:04:20,907 [Worker-32: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2025-03-06 13:04:20,908 [Worker-32: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Code\FP2\Maven\pruebamaven\src\test\resources
+2025-03-06 13:06:28,877 [Worker-28: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.marisma:pruebamaven:0.0.1-SNAPSHOT @ D:\Code\FP2\Maven\pruebamaven\pom.xml.
+2025-03-06 13:06:29,218 [Worker-28: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2025-03-06 13:06:29,219 [Worker-28: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Code\FP2\Maven\pruebamaven\src\main\resources
+2025-03-06 13:06:29,222 [Worker-28: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2025-03-06 13:06:29,222 [Worker-28: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Code\FP2\Maven\pruebamaven\src\test\resources
+2025-03-06 13:06:30,582 [Worker-30: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2025-03-06 13:06:30,582 [Worker-30: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Code\FP2\Maven\pruebamaven\src\main\resources
+2025-03-06 13:06:30,586 [Worker-30: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2025-03-06 13:06:30,586 [Worker-30: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Code\FP2\Maven\pruebamaven\src\test\resources
+2025-03-06 13:08:36,790 [Worker-29: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update started
+2025-03-06 13:08:37,256 [Worker-29: Updating Maven Project] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.marisma:pruebamaven:0.0.1-SNAPSHOT @ D:\Code\FP2\Maven\pruebamaven\pom.xml.
+2025-03-06 13:08:37,535 [Worker-29: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /pruebamaven/src/main/java
+2025-03-06 13:08:37,536 [Worker-29: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /pruebamaven/src/main/resources
+2025-03-06 13:08:37,537 [Worker-29: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /pruebamaven/src/test/java
+2025-03-06 13:08:37,537 [Worker-29: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /pruebamaven/src/test/resources
+2025-03-06 13:08:37,728 [Worker-29: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed for 1 poms: local refresh takes 0,00 sec, refresh facades takes 0,00 sec, update config takes 0,00 sec 
+2025-03-06 13:08:37,944 [Worker-1: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2025-03-06 13:08:37,945 [Worker-1: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Code\FP2\Maven\pruebamaven\src\main\resources
+2025-03-06 13:08:37,948 [Worker-1: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2025-03-06 13:08:37,948 [Worker-1: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Code\FP2\Maven\pruebamaven\src\test\resources
+2025-03-06 13:09:35,424 [Worker-30: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.marisma:pruebamaven:0.0.1-SNAPSHOT @ D:\Code\FP2\Maven\pruebamaven\pom.xml.
+2025-03-06 13:09:35,729 [Worker-30: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2025-03-06 13:09:35,729 [Worker-30: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Code\FP2\Maven\pruebamaven\src\main\resources
+2025-03-06 13:09:35,732 [Worker-30: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2025-03-06 13:09:35,732 [Worker-30: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Code\FP2\Maven\pruebamaven\src\test\resources
+2025-03-06 13:10:47,433 [main] INFO  org.hibernate.cfg.Environment - Hibernate 3.5.6-Final
+2025-03-06 13:10:47,446 [main] INFO  org.hibernate.cfg.Environment - hibernate.properties not found
+2025-03-06 13:10:47,449 [main] INFO  org.hibernate.cfg.Environment - Bytecode provider name : javassist
+2025-03-06 13:10:47,454 [main] INFO  org.hibernate.cfg.Environment - using JDK 1.4 java.sql.Timestamp handling
+2025-03-06 13:11:45,088 [Worker-28: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2025-03-06 13:11:45,089 [Worker-28: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Code\FP2\Maven\pruebamaven\src\main\resources
+2025-03-06 13:11:45,091 [Worker-28: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2025-03-06 13:11:45,091 [Worker-28: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Code\FP2\Maven\pruebamaven\src\test\resources
+2025-03-06 13:12:27,878 [Worker-32: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2025-03-06 13:12:27,878 [Worker-32: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Code\FP2\Maven\pruebamaven\src\main\resources
+2025-03-06 13:12:27,882 [Worker-32: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2025-03-06 13:12:27,882 [Worker-32: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Code\FP2\Maven\pruebamaven\src\test\resources
+2025-03-06 13:12:50,451 [Worker-32: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update started
+2025-03-06 13:12:50,989 [Worker-32: Updating Maven Project] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.marisma:pruebamaven:0.0.1-SNAPSHOT @ D:\Code\FP2\Maven\pruebamaven\pom.xml.
+2025-03-06 13:12:51,285 [Worker-32: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /pruebamaven/src/main/java
+2025-03-06 13:12:51,286 [Worker-32: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /pruebamaven/src/main/resources
+2025-03-06 13:12:51,286 [Worker-32: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /pruebamaven/src/test/java
+2025-03-06 13:12:51,287 [Worker-32: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /pruebamaven/src/test/resources
+2025-03-06 13:12:51,351 [Worker-32: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed for 1 poms: local refresh takes 0,00 sec, refresh facades takes 0,00 sec, update config takes 0,00 sec 
+2025-03-06 13:12:51,563 [Worker-33: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2025-03-06 13:12:51,564 [Worker-33: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Code\FP2\Maven\pruebamaven\src\main\resources
+2025-03-06 13:12:51,568 [Worker-33: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2025-03-06 13:12:51,568 [Worker-33: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Code\FP2\Maven\pruebamaven\src\test\resources
+2025-03-06 13:20:51,265 [Worker-27: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2025-03-06 13:20:51,265 [Worker-27: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Code\FP2\Maven\pruebamaven\src\main\resources
+2025-03-06 13:20:51,268 [Worker-27: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2025-03-06 13:20:51,268 [Worker-27: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Code\FP2\Maven\pruebamaven\src\test\resources
+2025-03-06 14:05:55,934 [Worker-47: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2025-03-06 14:05:55,935 [Worker-47: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Code\FP2\Maven\pruebamaven\src\main\resources
+2025-03-06 14:05:55,937 [Worker-47: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2025-03-06 14:05:55,937 [Worker-47: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Code\FP2\Maven\pruebamaven\src\test\resources
+2025-03-06 14:06:15,892 [Worker-46: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2025-03-06 14:06:15,892 [Worker-46: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Code\FP2\Maven\pruebamaven\src\main\resources
+2025-03-06 14:06:15,894 [Worker-46: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2025-03-06 14:06:15,894 [Worker-46: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Code\FP2\Maven\pruebamaven\src\test\resources
+2025-03-06 14:06:41,867 [Worker-48: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2025-03-06 14:06:41,867 [Worker-48: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Code\FP2\Maven\pruebamaven\src\main\resources
+2025-03-06 14:06:41,869 [Worker-48: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2025-03-06 14:06:41,869 [Worker-48: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Code\FP2\Maven\pruebamaven\src\test\resources
+2025-03-06 14:07:13,078 [Worker-46: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2025-03-06 14:07:13,078 [Worker-46: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Code\FP2\Maven\pruebamaven\src\main\resources
+2025-03-06 14:07:13,081 [Worker-46: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2025-03-06 14:07:13,082 [Worker-46: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Code\FP2\Maven\pruebamaven\src\test\resources
+2025-03-06 14:07:53,195 [Worker-46: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2025-03-06 14:07:53,196 [Worker-46: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Code\FP2\Maven\pruebamaven\src\main\resources
+2025-03-06 14:07:53,198 [Worker-46: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2025-03-06 14:07:53,198 [Worker-46: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Code\FP2\Maven\pruebamaven\src\test\resources
+2025-03-06 14:08:06,063 [Worker-46: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2025-03-06 14:08:06,063 [Worker-46: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Code\FP2\Maven\pruebamaven\src\main\resources
+2025-03-06 14:08:06,067 [Worker-46: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2025-03-06 14:08:06,067 [Worker-46: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Code\FP2\Maven\pruebamaven\src\test\resources
+2025-03-06 14:08:19,109 [Worker-42: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2025-03-06 14:08:19,109 [Worker-42: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Code\FP2\Maven\pruebamaven\src\main\resources
+2025-03-06 14:08:19,112 [Worker-42: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2025-03-06 14:08:19,112 [Worker-42: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Code\FP2\Maven\pruebamaven\src\test\resources
+2025-03-06 14:08:32,246 [Worker-44: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2025-03-06 14:08:32,247 [Worker-44: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Code\FP2\Maven\pruebamaven\src\main\resources
+2025-03-06 14:08:32,249 [Worker-44: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2025-03-06 14:08:32,249 [Worker-44: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Code\FP2\Maven\pruebamaven\src\test\resources
+2025-03-06 14:11:35,333 [Worker-44: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2025-03-06 14:11:35,334 [Worker-44: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Code\FP2\Maven\pruebamaven\src\main\resources
+2025-03-06 14:11:35,336 [Worker-44: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2025-03-06 14:11:35,336 [Worker-44: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Code\FP2\Maven\pruebamaven\src\test\resources
+2025-03-06 14:11:38,950 [Worker-47: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2025-03-06 14:11:38,951 [Worker-47: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Code\FP2\Maven\pruebamaven\src\main\resources
+2025-03-06 14:11:38,953 [Worker-47: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2025-03-06 14:11:38,954 [Worker-47: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Code\FP2\Maven\pruebamaven\src\test\resources
+2025-03-06 14:11:43,796 [Worker-44: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2025-03-06 14:11:43,796 [Worker-44: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Code\FP2\Maven\pruebamaven\src\main\resources
+2025-03-06 14:11:43,798 [Worker-44: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2025-03-06 14:11:43,799 [Worker-44: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Code\FP2\Maven\pruebamaven\src\test\resources
+2025-03-06 14:11:53,347 [Worker-44: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2025-03-06 14:11:53,347 [Worker-44: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Code\FP2\Maven\pruebamaven\src\main\resources
+2025-03-06 14:11:53,349 [Worker-44: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2025-03-06 14:11:53,349 [Worker-44: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Code\FP2\Maven\pruebamaven\src\test\resources
+2025-03-06 14:12:56,663 [Worker-47: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2025-03-06 14:12:56,663 [Worker-47: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Code\FP2\Maven\pruebamaven\src\main\resources
+2025-03-06 14:12:56,665 [Worker-47: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2025-03-06 14:12:56,665 [Worker-47: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Code\FP2\Maven\pruebamaven\src\test\resources
+2025-03-06 14:13:12,005 [Worker-45: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2025-03-06 14:13:12,005 [Worker-45: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Code\FP2\Maven\pruebamaven\src\main\resources
+2025-03-06 14:13:12,007 [Worker-45: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2025-03-06 14:13:12,007 [Worker-45: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Code\FP2\Maven\pruebamaven\src\test\resources
+2025-03-06 14:13:13,740 [Worker-47: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2025-03-06 14:13:13,740 [Worker-47: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Code\FP2\Maven\pruebamaven\src\main\resources
+2025-03-06 14:13:13,741 [Worker-47: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2025-03-06 14:13:13,741 [Worker-47: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Code\FP2\Maven\pruebamaven\src\test\resources
+2025-03-06 14:14:09,593 [Worker-49: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2025-03-06 14:14:09,593 [Worker-49: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Code\FP2\Maven\pruebamaven\src\main\resources
+2025-03-06 14:14:09,596 [Worker-49: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2025-03-06 14:14:09,596 [Worker-49: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Code\FP2\Maven\pruebamaven\src\test\resources
+2025-03-06 14:14:17,841 [Worker-49: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2025-03-06 14:14:17,841 [Worker-49: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Code\FP2\Maven\pruebamaven\src\main\resources
+2025-03-06 14:14:17,842 [Worker-49: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2025-03-06 14:14:17,842 [Worker-49: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Code\FP2\Maven\pruebamaven\src\test\resources
+2025-03-06 14:15:33,998 [Worker-49: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2025-03-06 14:15:33,999 [Worker-49: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Code\FP2\Maven\pruebamaven\src\main\resources
+2025-03-06 14:15:34,000 [Worker-49: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2025-03-06 14:15:34,001 [Worker-49: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Code\FP2\Maven\pruebamaven\src\test\resources
+2025-03-06 14:15:46,295 [Worker-44: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2025-03-06 14:15:46,295 [Worker-44: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Code\FP2\Maven\pruebamaven\src\main\resources
+2025-03-06 14:15:46,297 [Worker-44: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2025-03-06 14:15:46,297 [Worker-44: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Code\FP2\Maven\pruebamaven\src\test\resources
+2025-03-06 14:16:59,538 [Worker-49: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2025-03-06 14:16:59,538 [Worker-49: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Code\FP2\Maven\pruebamaven\src\main\resources
+2025-03-06 14:16:59,540 [Worker-49: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2025-03-06 14:16:59,540 [Worker-49: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Code\FP2\Maven\pruebamaven\src\test\resources
+2025-03-06 14:17:24,775 [Worker-49: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2025-03-06 14:17:24,775 [Worker-49: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Code\FP2\Maven\pruebamaven\src\main\resources
+2025-03-06 14:17:24,776 [Worker-49: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2025-03-06 14:17:24,776 [Worker-49: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Code\FP2\Maven\pruebamaven\src\test\resources
+2025-03-06 14:18:41,454 [Worker-47: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2025-03-06 14:18:41,454 [Worker-47: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Code\FP2\Maven\pruebamaven\src\main\resources
+2025-03-06 14:18:41,456 [Worker-47: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2025-03-06 14:18:41,456 [Worker-47: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Code\FP2\Maven\pruebamaven\src\test\resources
+2025-03-06 14:23:00,684 [main] INFO  org.hibernate.cfg.Configuration - configuring from XML document
+2025-03-06 14:23:00,686 [main] INFO  org.hibernate.cfg.Configuration - Configured SessionFactory: null
