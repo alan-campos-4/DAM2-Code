@@ -151,11 +151,13 @@
         let notas = getStorageArray();
         const index = id-1;
         if (index > -1) {
-            var i = r.parentNode.parentNode.rowIndex;
-            document.getElementById("tabla-notas").deleteRow(i);
+            if (confirm("\u{00BF}Quieres borrar esta nota?")) {
+                var i = r.parentNode.parentNode.rowIndex;
+                document.getElementById("tabla-notas").deleteRow(i);
 
-            notas.splice(index, 1);
-            setStorageArray(notas);
+                notas.splice(index, 1);
+                setStorageArray(notas);
+            }
         } else {
             alert('No se ha podido borrar el elemento.');
         }

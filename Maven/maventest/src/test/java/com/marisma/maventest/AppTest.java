@@ -1,4 +1,4 @@
-package com.marisma.testproject;
+package com.marisma.maventest;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 

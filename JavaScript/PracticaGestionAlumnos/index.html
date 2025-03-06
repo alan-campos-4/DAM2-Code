@@ -111,7 +111,7 @@
 <script>
 
     let alumnos_default = [
-        ['1', "Perez", 'Pablo', '777777',   '24/05/2010', 'ppp@gmail.com', '65656', 'A'],
+        ['1', "Perez", 'Pablo',   '777777', '24/05/2010', 'ppp@gmail.com', '65656', 'A'],
         ['2', 'Machado', 'Laura', '666666', '06/04/2012', 'mach@gmail.com', '656565', 'B'],
         ['3', 'Mata', 'Sergio',   '181818', '12/09/2011', 'smata@gmail.com', '656565', 'C'],
         ['4', 'Medina', 'Carlos', '552255', '03/11/2015', 'carlosm@gmail.com', '656565', 'A'],
@@ -194,11 +194,13 @@
         let alumnos = getArrayAlumnos();
         const index = id-1;
         if (index > -1) {
-            var i = r.parentNode.parentNode.rowIndex;
-            document.getElementById("tabla-alumnos").deleteRow(i);
+            if (confirm("\u{00BF}Quieres borrar este alumno?")) {
+                var i = r.parentNode.parentNode.rowIndex;
+                document.getElementById("tabla-alumnos").deleteRow(i);
 
-            alumnos.splice(index, 1);
-            setArrayAlumnos(alumnos);;
+                alumnos.splice(index, 1);
+                setArrayAlumnos(alumnos);
+            }
         } else {
             alert('No se ha podido borrar el elemento.');
         }

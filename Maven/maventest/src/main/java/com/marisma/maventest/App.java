@@ -1,4 +1,4 @@
-package com.marisma.testproject;
+package com.marisma.maventest;
 
 /**
  * Hello world!
