@@ -23,6 +23,19 @@ import java.net.UnknownHostException;
   ejecutar la aplicación con múltiples URLs.
 • Comparar y analizar el contenido descargado versus lo que se visualiza en un navegador, 
   utilizando herramientas de desarrollo web para investigar posibles discrepancias.
+
+✔ La aplicación debe ser completamente funcional, cumpliendo con los siguientes requisitos:
+   ✔ Conectar a una URL utilizando la clase URLConnection (o HttpURLConnection en el caso de HTTP).
+   ✔ Descargar el contenido HTML (cuerpo del mensaje) de la URL indicada.
+   ✔ Guardar correctamente el contenido descargado en un fichero en disco.
+✔ El código debe estar bien estructurado, modular y correctamente comentado para facilitar su comprensión.
+✔ Se debe incluir un script (.bat para Windows) que automatice la ejecución de la aplicación con diversas 
+URLs de prueba.
+✔ Gestión adecuada de excepciones y errores, incluyendo casos de URL mal formadas, fallos de conexión 
+y códigos HTTP de error (por ejemplo, 404).
+✔ Configuración de timeouts para evitar bloqueos en conexiones lentas o no respondientes.
+✔ Notificar al usuario de forma clara y precisa el estado de la descarga, mostrando los códigos HTTP 
+correspondientes (200, 301, 404, etc.).
 */
 
 public class DescargaURL
@@ -43,7 +56,7 @@ public class DescargaURL
 				//Obtiene el código de respuesta de la conexión.
 				int responseCode = connection.getResponseCode();
 				
-				//Recorre la conexión y guarda su contenido en un StringBuilder.
+				//Recorre el contenido y guarda su contenido en un StringBuilder.
 				String line;
 				StringBuilder content = new StringBuilder();
 				try (BufferedReader in = new BufferedReader(new InputStreamReader(connection.getInputStream())))
