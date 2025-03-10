@@ -1807,3 +1807,4 @@
 2025-03-07 21:52:49,923 [Worker-82: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Code\FP2\Maven\pruebamaven\src\main\resources
 2025-03-07 21:52:49,923 [Worker-82: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2025-03-07 21:52:49,923 [Worker-82: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Code\FP2\Maven\pruebamaven\src\test\resources
+2025-03-10 11:35:06,691 [Worker-5: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is not available. Remote download required.

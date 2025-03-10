@@ -50,19 +50,19 @@ utilizando JavaMail API.
 	- Muestra en la terminal si el correo fue enviado correctamente o si hubo un error
 */
 
+
 public class EMail
 {
-	public static Scanner input;
 	public static String userAddress, userPass;
-	public final static String ficheroClientes = "resources/Clientes.txt";
-	public final static String ficheroMensaje = "resources/Mensaje.txt";
-	public final static String ficheroPropiedades = "resources/Propiedades.txt";
+	public final static String ficheroClientes =	"resources/Clientes.txt";
+	public final static String ficheroMensaje =		"resources/Mensaje.txt";
+	public final static String ficheroPropiedades =	"resources/Propiedades.txt";
 	
 	
 	// Pedir al usuario que introduzca su dirección de correo y contraseña.
 	public static void solicitarCredenciales()
 	{
-		input = new Scanner(System.in);
+		Scanner input = new Scanner(System.in);
 		
 		System.out.println("Introduce tu dirección de correo: ");
 		userAddress = input.nextLine();
@@ -117,7 +117,7 @@ public class EMail
 		try (FileReader fr = new FileReader(ficheroPropiedades))
 		{
 			propiedadesSMTP.load(fr);
-			System.out.println(propiedadesSMTP.toString());
+			//System.out.println(propiedadesSMTP.toString());
 		}
 		return propiedadesSMTP;
 	}
@@ -127,38 +127,7 @@ public class EMail
 	public static void enviarCorreo(String remitente, String clave, 
 			List<String> destinatarios, String mensaje) 
 					throws FileNotFoundException, IOException, MessagingException
-	{
-		/*
-		Properties prop = configurarServidorSMTP();
-		Session session = Session.getInstance(prop, new Authenticator()
-		{
-		    @Override
-		    protected PasswordAuthentication getPasswordAuthentication() {
-		        return new PasswordAuthentication(userAddress, userPass);
-		    }
-		});
-		Address[] recipients = new InternetAddress[destinatarios.size()];
-		for (int i=0; i<destinatarios.size(); i++)
-		{
-			recipients[i] = new InternetAddress(destinatarios.get(i));
-		}
-		MimeMessage mm = new MimeMessage(session);
-		MimeBodyPart mimeBodyPart = new MimeBodyPart();
-		MimeMultipart multipart = new MimeMultipart();
-		
-		mm.setFrom(remitente);
-		mm.setRecipients(Message.RecipientType.TO, recipients);
-		mm.setSubject("Mail Subject");
-
-		String content = "This is my first email using JavaMailer";
-		mimeBodyPart.setContent(content, "text/html; charset=utf-8");
-		multipart.addBodyPart(mimeBodyPart);
-
-		mm.setContent(multipart);
-
-		Transport.send(mm);	
-		*/
-		
+	{	
 		//Obtiene las propiedades del fichero y crea la sesion y el mensaje.
 		Properties props = configurarServidorSMTP();
 		Session session = Session.getInstance(props, new Authenticator()
